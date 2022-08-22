@@ -1,0 +1,29 @@
+{
+	"name": "next",
+	"private": true,
+	"scripts": {
+    "dev": "sanity start",
+    "build": "sanity build"
+  },
+	"version": "1.0.0",
+	"description": "",
+	"main": "package.json",
+	"author": "DavidAyala-DW <luis.zanabria2@unmsm.edu.pe>",
+	"license": "UNLICENSED",
+	"keywords": [
+		"sanity"
+	],
+	"dependencies": {
+		"@sanity/base": "^2.30.5",
+		"@sanity/core": "^2.30.5",
+		"@sanity/default-layout": "^2.30.5",
+		"@sanity/default-login": "^2.30.5",
+		"@sanity/desk-tool": "^2.30.5",
+		"@sanity/eslint-config-studio": "^2.0.0",
+		"@sanity/vision": "^2.30.5",
+		"prop-types": "^15.7",
+		"react": "^17.0",
+		"react-dom": "^17.0",
+		"styled-components": "^5.2.0"
+	}
+}
