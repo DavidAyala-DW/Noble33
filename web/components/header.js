@@ -119,18 +119,20 @@ export default function Header(props) {
 
             })}
 
-            <a href="/reservation" className="md:hidden block uppercase tracking-[.05em] text-[32px] md:text-[48px] leading-[1.2] font-light opacity-90">
-              RESERVATIONS
-            </a>
-
+            <Link href="/" passHref>
+              <a className="md:hidden block uppercase tracking-[.05em] text-[32px] md:text-[48px] leading-[1.2] font-light opacity-90">
+                RESERVATIONS
+              </a>
+            </Link>
+            
             <div className="pt-6 hidden md:flex flex-col space-y-2">
 
-              {secondHeaderNav.map( item  => {
+              {secondHeaderNav.map( (item,i)  => {
 
                 const {title,link} = item;
 
                 return (
-                  <a href={link} className="block uppercase tracking-[.05em] text-[24px] leading-[28px] font-light opacity-80">
+                  <a href={link} key={i} className="block uppercase tracking-[.05em] text-[24px] leading-[28px] font-light opacity-80">
                     {title}
                   </a>
                 )
