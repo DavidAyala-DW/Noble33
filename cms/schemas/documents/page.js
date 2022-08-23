@@ -18,6 +18,11 @@ export default {
       of: [
         { type: 'heading' },
         { type: 'testSection' },
+        { type: 'heroHomepage' },
+        { type: 'space' },
+        { type: 'collectionGrid' },
+        { type: 'textContentCenter' },
+        { type: 'heroText' },
       ],
     },
   ],

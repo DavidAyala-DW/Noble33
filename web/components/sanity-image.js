@@ -9,7 +9,7 @@ export default function SanityImage(props) {
   const imageProps = useNextSanityImage(client, image)
 
   // SVG images don't load without this
-  if (imageProps.src.includes('.svg')) {
+  if (imageProps?.src?.includes('.svg')) {
     const url = new URL(imageProps.src)
     imageProps.src = url.origin + url.pathname
   }

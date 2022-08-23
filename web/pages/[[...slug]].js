@@ -7,15 +7,15 @@ import RenderSections from '@/components/render-sections'
 import { getSlugVariations, slugParamToPath } from '@/lib/urls'
 
 export default function Page({props}) {
-  
   const {
     title = 'Missing title',
     content = [],
     slug,
+    siteSettings
   } = props
 
   return (    
-    <Layout>
+    <Layout siteSettings={siteSettings}>
       <NextSeo
         title={title}
       />
@@ -25,6 +25,7 @@ export default function Page({props}) {
 }
 
 async function fulfillSectionQueries(page) {
+
   if (!page.content) {
     return page
   }
@@ -42,6 +43,7 @@ async function fulfillSectionQueries(page) {
   )
 
   return { ...page, content: sectionsWithQueryData }
+
 }
 
 export async function getStaticPaths() {
@@ -71,12 +73,14 @@ export const getStaticProps = async ({ params }) => {
     { possibleSlugs: getSlugVariations(slug) }
   )
 
+  const siteSettings = await client.fetch(groq`*[_type == "siteSettings"][0]{...}`);
+
   let data = request?.page
   data = await fulfillSectionQueries(data)
   data.slug = slug;
   return {
     props:{
-      props: { ...data} || {},
+      props: { ...data, siteSettings } || {},
     }
   }
 }

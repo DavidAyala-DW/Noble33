@@ -7,6 +7,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 // We import object and document schemas
 import route from './documents/route'
 import page from './documents/page'
+import siteSettings from './documents/siteSettings'
 import blockContent from './blockContent'
 import category from './category'
 import post from './post'
@@ -16,10 +17,16 @@ import author from './author'
 //We import Page sections
 import heading from "./objects/heading"
 import testSection from './objects/testSection'
+import backgroundImage from './objects/backgroundImage'
+import heroHomepage from './objects/heroHomepage'
 import simplePortableText from './objects/simple-portable-text'
 import link from './objects/link'
+import space from "./objects/space"
+import collectionCard from './objects/collectionCard'
+import collectionGrid from './objects/collectionGrid'
 import internalLink from './objects/internal-link'
-
+import textContentCenter from './objects/textContentCenter'
+import heroText from "./objects/heroText"
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -28,7 +35,8 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     // The following are document types which will appear
-    // in the studio.    
+    // in the studio.   
+    siteSettings, 
     page,
     route,
     // When added to this list, object types can be used as
@@ -38,7 +46,13 @@ export default createSchema({
     internalLink,
     simplePortableText,
     heading,
-    
+    backgroundImage,
+    heroHomepage,
+    space,
+    collectionCard,
+    collectionGrid,
+    textContentCenter,
+    heroText,
     testSection
   ]),
 })

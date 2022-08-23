@@ -3,3 +3,7 @@
 @tailwind utilities;
 
 @import "./fonts";
+body, *{
+  font-family: "Sofia Pro";
+  color: white;
+}

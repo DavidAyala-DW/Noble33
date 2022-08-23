@@ -6,9 +6,9 @@ export default function Heading(prop) {
 
   return (
 
-    <div className="text-4xl text-center w-full font-bold text-indigo-400 py-5">
+    <h1 className="text-4xl text-center w-full font-mediumpy-5">
       {heading}
-    </div>
+    </h1>
 
   )
 }
