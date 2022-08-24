@@ -102,7 +102,7 @@ export default function Header(props) {
               if(index < 4){
 
                 const {title,link} = item;
-                console.log(link);
+
                 return (
                   <a href={link} key={index} className="block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[3.33vw] leading-[1.2] font-light opacity-90">
                     {title}

@@ -30,6 +30,9 @@ import heroText from "./objects/heroText"
 import eventsCarousel from "./objects/eventsCarousel"
 import gallery from "./objects/gallery"
 import imageWithText from './objects/imageWithText'
+import bannerWithText from './objects/bannerWithText'
+import restaurantsCarousel from "./objects/restaurantsCarousel"
+
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -59,6 +62,8 @@ export default createSchema({
     eventsCarousel,
     gallery,
     imageWithText,
+    bannerWithText,
+    restaurantsCarousel,
     testSection
   ]),
 })

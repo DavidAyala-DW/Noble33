@@ -26,6 +26,8 @@ export default {
         { type: 'eventsCarousel' },
         { type: 'gallery' },
         { type: 'imageWithText' },
+        { type: 'bannerWithText' },
+        { type: 'restaurantsCarousel' },
       ],
     },
     {
