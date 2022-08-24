@@ -23,8 +23,16 @@ export default {
         { type: 'collectionGrid' },
         { type: 'textContentCenter' },
         { type: 'heroText' },
+        { type: 'eventsCarousel' },
+        { type: 'gallery' },
+        { type: 'imageWithText' },
       ],
     },
+    {
+      title: 'Sticky Header?',
+      name: 'stickyHeader',
+      type: 'boolean'
+    }
   ],
 
   preview: {

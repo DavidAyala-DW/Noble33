@@ -7,3 +7,24 @@ body, *{
   font-family: "Sofia Pro";
   color: white;
 }
+
+.gallery .swiper-wrapper{
+  padding-left: 35px!important;
+}
+
+@media(min-width: 768px) {
+.gallery .swiper-wrapper{
+    padding-left: 0;
+  } 
+}
+
+.portableText ul{
+  list-style: disc;
+  padding-left: 22px;
+}
+
+@media(min-width: 1440px){
+  .portableText ul{
+    padding-left: 1.527vw;
+  }
+}

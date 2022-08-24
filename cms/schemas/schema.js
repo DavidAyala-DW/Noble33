@@ -27,6 +27,9 @@ import collectionGrid from './objects/collectionGrid'
 import internalLink from './objects/internal-link'
 import textContentCenter from './objects/textContentCenter'
 import heroText from "./objects/heroText"
+import eventsCarousel from "./objects/eventsCarousel"
+import gallery from "./objects/gallery"
+import imageWithText from './objects/imageWithText'
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -53,6 +56,9 @@ export default createSchema({
     collectionGrid,
     textContentCenter,
     heroText,
+    eventsCarousel,
+    gallery,
+    imageWithText,
     testSection
   ]),
 })

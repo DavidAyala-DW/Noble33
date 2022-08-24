@@ -11,11 +11,12 @@ export default function Page({props}) {
     title = 'Missing title',
     content = [],
     slug,
+    stickyHeader,
     siteSettings
   } = props
 
   return (    
-    <Layout siteSettings={siteSettings}>
+    <Layout siteSettings={siteSettings} stickyHeader={stickyHeader}>
       <NextSeo
         title={title}
       />

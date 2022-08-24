@@ -9,12 +9,12 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@svgr/webpack": "^6.2.1",
 		"@fevernova90/next-sanity-image": "^0.0.4",
 		"@portabletext/react": "^1.0.6",
 		"@sanity/client": "^3.3.2",
 		"@sanity/image-url": "^1.0.1",
 		"@sanity/webhook": "^2.0.0",
+		"@svgr/webpack": "^6.2.1",
 		"clsx": "^1.2.0",
 		"groq": "^2.29.3",
 		"lodash-es": "^4.17.21",
@@ -22,15 +22,16 @@
 		"next-seo": "^5.4.0",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
-		"sass": "^1.54.5"
+		"sass": "^1.54.5",
+		"swiper": "^8.3.2"
 	},
 	"devDependencies": {
+		"@tailwindcss/aspect-ratio": "^0.4.0",
+		"@tailwindcss/typography": "^0.5.2",
 		"autoprefixer": "^10.4.8",
 		"eslint": "8.22.0",
 		"eslint-config-next": "12.2.5",
 		"postcss": "^8.4.16",
-		"tailwindcss": "^3.1.8",
-		"@tailwindcss/typography": "^0.5.2",
-		"@tailwindcss/aspect-ratio": "^0.4.0"
+		"tailwindcss": "^3.1.8"
 	}
 }

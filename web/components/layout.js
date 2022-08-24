@@ -16,6 +16,7 @@ function Layout(props) {
 
   const {
     children,
+    stickyHeader,
     siteSettings:{
       mainNav,
       secondHeaderNav,
@@ -45,7 +46,8 @@ function Layout(props) {
           mainNav,
           secondHeaderNav,
           facebookHandle,
-          instagramHandle
+          instagramHandle,
+          stickyHeader
         }}/>
 
         <div className="w-full min-h-screen flex flex-col relative">

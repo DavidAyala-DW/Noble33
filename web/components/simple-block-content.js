@@ -6,6 +6,7 @@ import Figure from './figure'
 import ToggleText from './toggle-text'
 
 function SimpleBlockContent(props) {
+  
   const { blocks } = props
 
   if (!blocks) {
@@ -14,16 +15,20 @@ function SimpleBlockContent(props) {
   }
 
   return (
-    <PortableText
-      value={blocks}
-      components={{
-        types: {
-          embedHTML: EmbedHTML,
-          figure: Figure,
-          toggleText: ToggleText,
-        },
-      }}
-    />
+    
+    <div className="portableText">
+      <PortableText
+        value={blocks}
+        components={{
+          types: {
+            embedHTML: EmbedHTML,
+            figure: Figure,
+            toggleText: ToggleText,
+          },
+        }}
+      />
+    </div>
+    
   )
 }
 

@@ -5,3 +5,6 @@ export {default as Space} from './space'
 export {default as CollectionGrid} from './collectionGrid'
 export {default as TextContentCenter} from "./textContentCenter"
 export {default as HeroText} from "./heroText"
+export {default as EventsCarousel} from "./eventsCarousel"
+export {default as Gallery} from "./gallery"
+export {default as ImageWithText} from "./imageWithText"

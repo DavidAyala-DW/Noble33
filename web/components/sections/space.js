@@ -15,6 +15,12 @@ const Space = (props) => {
           }
         }
 
+        @media(min-width: 1440px){
+          .space{
+            height: ${(heightDesktop/1440)*100}vw;
+          }
+        }
+
 
       `}</style>
 
