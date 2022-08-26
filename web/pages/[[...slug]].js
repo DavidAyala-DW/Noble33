@@ -61,6 +61,7 @@ export async function getStaticPaths() {
     fallback: false,
   }
 }
+
 export const getStaticProps = async ({ params }) => {
 
   const slug = slugParamToPath(params?.slug)
@@ -84,4 +85,5 @@ export const getStaticProps = async ({ params }) => {
       props: { ...data, siteSettings } || {},
     }
   }
+  
 }

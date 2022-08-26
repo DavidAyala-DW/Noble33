@@ -36,11 +36,11 @@ export default function Header(props) {
     <>
 
       <header
-      className={`bg-body transition-all duration-300 md:bg-transparent z-[100] ${openModal ? "justify-center !pl-0 right-0 fixed md:inset-x-0" : `justify-between ${stickyHeader ? "sticky" :  "fixed inset-x-0"} `} top-0 px-4 md:px-0 
+      className={`transition-all duration-300 md:bg-transparent z-[100] ${openModal ? "justify-center !pl-0 right-0 fixed md:inset-x-0" : `justify-between ${stickyHeader ? "sticky bg-body" :  "fixed inset-x-0"} `} top-0 px-4 md:px-0 
       md:max-w-[93.3%] w-full md:mx-auto flex items-center md:justify-between py-6 md:pt-8 vw:pt-[2.22vw] md:pb-10 vw:pb-[2.77vw]`}
       >
 
-        <div className={`cursor-pointer order-3 md:order-1 select-none opacity-50 ${openModal && "absolute md:relative right-3 vw:right-[.83vw]"}`}>
+        <div className={`cursor-pointer order-3 md:order-1 select-none md:opacity-50 ${openModal && "absolute md:relative right-3 vw:right-[.83vw]"}`}>
 
           <div onClick={handleClick} className={`${openModal && "hidden"} w-[25px] vw:!w-[1.736vw]`}>
             <Image

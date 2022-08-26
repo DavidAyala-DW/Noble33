@@ -28,6 +28,9 @@ export default {
         { type: 'imageWithText' },
         { type: 'bannerWithText' },
         { type: 'restaurantsCarousel' },
+        { type: 'heroWithText' },
+        { type: 'details' },
+        { type: 'team' },
       ],
     },
     {

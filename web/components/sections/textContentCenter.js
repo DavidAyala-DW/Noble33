@@ -8,7 +8,7 @@ export default function TextContentCenter(props) {
       
       <div className="flex flex-col space-y-6 vw:space-y-[1.666vw]">
 
-        <h2 className="uppercase opacity-80 tracking-[.05em] text-center text-lg vw:text-[1.25vw] leading-[21px] vw:leading-[1.166] font-medium">
+        <h2 className="uppercase opacity-80 tracking-[.05em] text-center text-base md:text-lg vw:text-[1.25vw] leading-[21px] vw:leading-[1.166] font-medium">
           {title}
         </h2>
 
@@ -23,7 +23,7 @@ export default function TextContentCenter(props) {
           {learn_more.title}
         </a>
 
-      </div>
+      </div>g
       
     </section>
 

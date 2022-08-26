@@ -9,10 +9,6 @@ import route from './documents/route'
 import page from './documents/page'
 import siteSettings from './documents/siteSettings'
 import blockContent from './blockContent'
-import category from './category'
-import post from './post'
-import author from './author'
-
 
 //We import Page sections
 import heading from "./objects/heading"
@@ -32,6 +28,11 @@ import gallery from "./objects/gallery"
 import imageWithText from './objects/imageWithText'
 import bannerWithText from './objects/bannerWithText'
 import restaurantsCarousel from "./objects/restaurantsCarousel"
+import heroWithText from './objects/heroWithText'
+import detail from './objects/detail'
+import details from "./objects/details"
+import member from "./objects/member"
+import team from "./objects/team"
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -64,6 +65,11 @@ export default createSchema({
     imageWithText,
     bannerWithText,
     restaurantsCarousel,
+    heroWithText,
+    detail,
+    details,
+    member,
+    team,
     testSection
   ]),
 })
