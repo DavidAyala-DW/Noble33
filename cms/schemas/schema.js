@@ -33,6 +33,9 @@ import detail from './objects/detail'
 import details from "./objects/details"
 import member from "./objects/member"
 import team from "./objects/team"
+import newsItem from './objects/newsItem'
+import news from './objects/news'
+import newsletter from './objects/newsletter'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -70,6 +73,9 @@ export default createSchema({
     details,
     member,
     team,
+    newsItem,
+    news,
+    newsletter,
     testSection
   ]),
 })

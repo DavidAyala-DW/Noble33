@@ -2,17 +2,17 @@ import SanityImage from './sanity-image'
 
 export default function BackgroundImage(props) {
   
-  const {image, imageMobile, ...rest} = props;
+  const {image, imageMobile, layout = "responsive", ...rest} = props;
   return (
     
-    <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full h-full">
 
       <div className="block md:hidden w-full">
-        <SanityImage quality={100}  src={imageMobile} alt="mobile" layout="responsive"  />
+        <SanityImage quality={100}  src={imageMobile} alt="mobile" layout={layout}  {...rest}/>
       </div>
 
       <div className="md:block hidden w-full">
-        <SanityImage quality={100} src={image} layout="responsive"  />
+        <SanityImage quality={100} src={image} layout={layout} {...rest} />
       </div>
 
     </div>

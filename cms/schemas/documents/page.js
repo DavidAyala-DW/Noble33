@@ -31,6 +31,8 @@ export default {
         { type: 'heroWithText' },
         { type: 'details' },
         { type: 'team' },
+        { type: 'news' },
+        { type: 'newsletter' },
       ],
     },
     {

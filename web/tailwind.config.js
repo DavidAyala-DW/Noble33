@@ -26,7 +26,8 @@ module.exports = {
       'xl': '1280px',
       'vw': "1440px",
       'xl2': '1465px',
-      '2xl': '1536px'
+      '2xl': '1536px',
+      '3xl': '1920px',
     },
   },
   corePlugins: {
