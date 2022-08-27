@@ -2,20 +2,33 @@ import Image from "next/image"
 
 export default function Newsletter(props) {
 
-  const {title, description, placeholder} = props;
+  const {title, titleSize, description, descriptionSize, placeholder} = props;
+
+  const titleOptions = {
+    "normal" : "text-base lg:text-lg vw:text-[1.25vw] leading-[18px] lg:leading-[21px] vw:leading-[1.1666vw] font-medium tracking-[.05em]",
+    "large" : "font-extralight text-[32px] md:text-[40px] vw:text-[2.777vw] leading-[1.2] text-center tracking-[.05em] uppercase",
+  }
+
+  const descriptionOptions = {
+    "normal" : "font-light text-center text-[24px] lg:text-[32px] vw:text-[2.222vw] leading-[1.2]  md:max-w-[500px] lg:max-w-[660px] vw:max-w-[45.83vw] tracking-[.05em]",
+    "large": "font-light text-center opacity-80 text-[20px] vw:text-[1.3888vw] leading-[1.5] md:max-w-[500px] lg:max-w-[675px] vw:max-w-[46.875vw] "
+  }
 
   return (
 
     <section className='px-4 md:px-0 md:max-w-[93.3%] w-full mx-auto flex flex-col'>
 
       <h2
-        className='opacity-80 text-center uppercase text-base lg:text-lg vw:text-[1.25vw] leading-[18px] lg:leading-[21px] vw:leading-[1.1666vw]
-        font-medium tracking-[.05em] mb-6 vw:mb-[1.666vw]'
+        className={`opacity-80 text-center uppercase mb-6 vw:mb-[1.666vw]
+        ${ titleSize ? titleOptions[titleSize] : titleOptions["normal"] }`}
       >
         {title}
       </h2>
 
-      <p className='font-light tracking-[.05em] text-center text-[24px] lg:text-[32px] vw:text-[2.222vw] leading-[1.2] opacity-80 mb-9 md:mb-10 vw:mb-[2.777vw] md:max-w-[500px] lg:max-w-[660px] vw:max-w-[45.83vw] md:mx-auto'>
+      <p
+        className={`opacity-80 mb-9 md:mb-10 vw:mb-[2.777vw]  md:mx-auto
+        ${descriptionSize ? descriptionOptions[descriptionSize] : descriptionOptions["normal"] }`}
+      >
         {description}
       </p>
 

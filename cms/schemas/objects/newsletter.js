@@ -9,9 +9,31 @@ export default {
       type: "string"      
     },
     {
+      title: 'Title size',
+      name: 'titleSize',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Normal', value: 'normal'},
+          {title: 'Large', value: 'large'},
+        ]
+      }
+    },
+    {
       name: 'description',
       title: 'Description',
       type: "text"      
+    },
+    {
+      title: 'Description size',
+      name: 'descriptionSize',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Normal', value: 'normal'},
+          {title: 'Large', value: 'large'},
+        ]
+      }
     },
     {
       name: 'placeholder',

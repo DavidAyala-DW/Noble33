@@ -33,6 +33,8 @@ export default {
         { type: 'team' },
         { type: 'news' },
         { type: 'newsletter' },
+        { type: 'hero' },
+        { type: 'events' },
       ],
     },
     {

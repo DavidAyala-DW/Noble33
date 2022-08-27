@@ -23,7 +23,7 @@ export default function TextContentCenter(props) {
           {learn_more.title}
         </a>
 
-      </div>g
+      </div>
       
     </section>
 

@@ -36,6 +36,9 @@ import team from "./objects/team"
 import newsItem from './objects/newsItem'
 import news from './objects/news'
 import newsletter from './objects/newsletter'
+import hero from "./objects/hero"
+import event from './objects/event'
+import events from "./objects/events"
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -76,6 +79,9 @@ export default createSchema({
     newsItem,
     news,
     newsletter,
+    hero,
+    event,
+    events,
     testSection
   ]),
 })
