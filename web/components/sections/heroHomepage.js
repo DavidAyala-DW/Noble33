@@ -7,7 +7,7 @@ const HeroHomepage = (props) => {
 
   return (
 
-     <section className="px-4 md:px-6 lg:px-0 lg:max-w-[93.3%] w-full mx-auto flex flex-col space-y-8 md:space-y-[37px] lg:space-y-8 vw:space-y-[2.22vw]">
+     <section className="px-4 md:px-6 lg:px-0 lg:max-w-[93.3%] pt-[68px] md:pt-[88px] vw:pt-[6.111vw]  w-full mx-auto flex flex-col space-y-8 md:space-y-[37px] lg:space-y-8 vw:space-y-[2.22vw]">
 
       <div className="w-full">
         <BackgroundImage {...{...backgroundImage,priority:true}} />

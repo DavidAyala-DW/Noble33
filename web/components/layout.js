@@ -9,6 +9,7 @@ function Layout(props) {
     stickyHeader,
     siteSettings:{
       mainNav,
+      menuImage,
       secondHeaderNav,
       footerNav,
       facebookHandle,
@@ -76,6 +77,7 @@ function Layout(props) {
 
         <Header {...{
           mainNav,
+          menuImage,
           secondHeaderNav,
           facebookHandle,
           instagramHandle,

@@ -31,6 +31,13 @@ export default {
       ]
     },
     {
+      type: "image",
+      title: "Menu image",
+      name: "menuImage",
+      group: 'header',
+      fieldset: 'header',
+    },
+    {
       name: 'secondHeaderNav',
       type: 'array',
       title: 'Second nav menu',

@@ -18,6 +18,11 @@ export default {
       name: "title",
       type: "string",
       title: 'Title'
+    },
+    {
+      name: "image",
+      title: 'Image',
+      type: 'image'
     }
   ]
 }
