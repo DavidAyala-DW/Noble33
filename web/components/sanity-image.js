@@ -25,7 +25,7 @@ export default function SanityImage(props) {
       {...imageProps}
       quality={quality}
       // Smoothly transition from placeholder
-      className={clsx('transition duration-500', className)}
+      className={clsx('transition duration-200', className)}
       {...rest}
     />
   )

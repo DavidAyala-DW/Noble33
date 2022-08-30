@@ -9,10 +9,10 @@ export default function DetailCard({detail}) {
     <div className="flex flex-col w-full">
 
       <div className="w-full relative mb-6 vw:mb-[1.666vw]">
-        <div className="aspect-h-1 w-full aspect-w-[1.719]">
+        <div className="aspect-h-1 w-full aspect-w-[1.491] md:aspect-w-[3.06] lg:aspect-w-[1.719]">
           <div className="w-full h-full">
             <div className="relative w-full h-full">
-              <SanityImage src={image} layout={"fill"}/>
+              <SanityImage src={image} className="object-cover" layout={"fill"}/>
             </div>
           </div>
         </div>
@@ -22,7 +22,7 @@ export default function DetailCard({detail}) {
         {title}
       </h3>
 
-      <p className="md:max-w-[340px] vw:max-w-[23.611vw] w-full text-lg vw:text-[1.25vw] leading-[21px] vw:leading-[1.1666] opacity-80 font-light">
+      <p className="md:max-w-[500px] vw:max-w-[34.722vw] w-full text-lg vw:text-[1.25vw] leading-[21px] vw:leading-[1.1666] opacity-80 font-light">
         {description}
       </p>
 

@@ -8,8 +8,13 @@ export default function HeroWithText(props) {
 
     <section className="w-full flex flex-col">
 
-      <div className="w-full">
-        <BackgroundImage {...{...backgroundImage}} />
+      <div className="w-full aspect-h-1 aspect-w-[1.82] md:aspect-w-[2.0666] lg:aspect-w-[2.944] 3xl:aspect-w-[3.9263]">
+        <div className="w-full h-full">
+          <div className="relative w-full h-full">
+            <BackgroundImage {...{...backgroundImage}} layout="fill"/>
+          </div>          
+        </div>
+        
       </div>
 
       <div className="flex flex-col px-4 md:px-0 space-y-6 md:space-y-3 vw:space-y-[.8333vw] mt-8 md:mt-[-55px] vw:mt-[-3.8194vw] z-10">

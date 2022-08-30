@@ -8,7 +8,7 @@ export default function CollectionGrid(props) {
 
     <section className="px-4 md:px-0 md:max-w-[93.3%] w-full mx-auto flex flex-col">
 
-      <div className="flex flex-col space-y-2 vw:space-y-[.5vw] mb-[22px] vw:mb-[1.52vw]">
+      <div className="flex flex-col space-y-2 vw:space-y-[.5vw] mb-8 lg:mb-[22px] vw:mb-[1.52vw]">
 
         <h2 className="uppercase tracking-[.05em] opacity-80 text-lg vw:text-[1.25vw] leading-[21px] vw:leading-[1.16] font-medium" >
           {title}
@@ -29,7 +29,7 @@ export default function CollectionGrid(props) {
 
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-5 vw:gap-x-[1.38vw] gap-y-4 vw:gap-y-[1.11vw] w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-6 vw:gap-x-[1.666vw] gap-y-4 md:gap-y-6 lg:gap-y-3 vw:gap-y-[.8333vw] w-full">
 
         {collections && collections.map( collection => {
           const {_key} = collection;

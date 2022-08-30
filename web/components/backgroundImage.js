@@ -8,11 +8,11 @@ export default function BackgroundImage(props) {
     <div className="flex flex-col w-full h-full">
 
       <div className="block md:hidden w-full">
-        <SanityImage quality={100}  src={imageMobile} alt="mobile" layout={layout}  {...rest}/>
+        <SanityImage  src={imageMobile} alt="mobile" layout={layout}  {...rest}/>
       </div>
 
       <div className="md:block hidden w-full">
-        <SanityImage quality={100} src={image} layout={layout} {...rest} />
+        <SanityImage src={image} layout={layout} {...rest} />
       </div>
 
     </div>

@@ -84,6 +84,7 @@ export async function getStaticPaths() {
     paths: paths,
     fallback: false,
   }
+  
 }
 
 async function getMenus(){

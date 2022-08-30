@@ -9,13 +9,16 @@ body, *{
 }
 
 .gallery .swiper-wrapper{
-  padding-left: 35px!important;
-}
-
-@media(min-width: 768px) {
-.gallery .swiper-wrapper{
-    padding-left: 0;
-  } 
+  margin-left: -16%!important;
+  @media(min-width: 768px){
+    margin-left: -2.688%!important;
+  }
+  @media(min-width: 1024px){
+    margin-left: 10.763%!important;
+  }
+  @media(min-width: 1920px){
+    margin-left: 0!important;
+  }
 }
 
 .portableText ul{

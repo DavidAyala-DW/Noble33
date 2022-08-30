@@ -10,7 +10,7 @@ export default function MemberCard({member}) {
 
       <div className="w-full h-full">
         <div className="relative w-full h-full">
-          <SanityImage src={image} layout="fill" quality={100} />
+          <SanityImage src={image} layout="fill" />
         </div>
       </div>
 

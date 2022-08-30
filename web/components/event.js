@@ -73,7 +73,6 @@ export default function Event({event}) {
               width={13}
               height={7}
               layout="responsive"
-              quality={100}
             />
           </div>
 

@@ -68,7 +68,7 @@ export default {
     prepare({ title, media }) {
       return {
         title,
-        subtitle: 'Hero Homepage',
+        subtitle: 'Banner with text',
         media,
       }
     },

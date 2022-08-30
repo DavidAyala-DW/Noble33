@@ -14,7 +14,7 @@ export default function NewsCard({news}) {
       >
         <a className="block w-full h-full" href={`/news/${slug.current}`}>
           <div className="relative w-full h-full">
-            <SanityImage src={image} layout="fill" quality={100} />
+            <SanityImage src={image} layout="fill" />
           </div>
         </a>
       </div>

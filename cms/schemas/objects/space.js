@@ -9,6 +9,11 @@ export default {
       type: 'number',
     },
     {
+      name: 'heightTablet',
+      title: 'Define space (Tablet)',
+      type: 'number',
+    },
+    {
       name: 'heightMobile',
       title: 'Define space (Mobile)',
       type: 'number',
@@ -17,12 +22,19 @@ export default {
   preview: {
     select: {
       heightDesktop: 'heightDesktop',
-      heightMobile: 'heightMobile'
+      heightMobile: 'heightMobile',
+      heightTablet: 'heightTablet'
     },
-    prepare({heightDesktop,heightMobile}) {
+    prepare({
+      heightDesktop,
+      heightTablet,
+      heightMobile}) {
       return {
         title: "Space between sections",
-        subtitle: `desktop: ${heightDesktop}px and mobile: ${heightMobile}px `,
+        subtitle: `
+        desktop: ${heightDesktop}px,
+        tablet: ${heightTablet ?? heightDesktop}px and
+        mobile: ${heightMobile}px `,
       }
     },
   },

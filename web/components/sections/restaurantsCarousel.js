@@ -36,7 +36,7 @@ export default function RestaurantsCarousel(props) {
         breakpoints = {{
 
           320: {
-            slidesPerView: 1,
+            slidesPerView: 1.08,
             spaceBetween: 12
           },
           768: {

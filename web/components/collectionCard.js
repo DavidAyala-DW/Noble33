@@ -16,15 +16,15 @@ export default function CollectionCard({collection}) {
 
       <div className="absolute w-full h-full inset-0 flex flex-col justify-end pb-5 vw:pb-[1.3888vw] pl-4 md:pl-6 vw:pl-[1.66vw] pr-7 md:pr-9 vw:pr-[2.5vw]">
 
-        <div className="flex items-end md:items-center justify-between">
+        <div className="flex items-end lg:items-center justify-between">
 
           <div className="flex flex-col space-y-2 vw:space-y-[.5vw]">
       
-            <h3 className="uppercase tracking-[.05em] text-[20px] md:text-[24px] vw:text-[1.66vw] leading-[23px] md:leading-[28px] vw:leading-[1.166] font-medium">
+            <h3 className="uppercase tracking-[.05em] text-[20px] lg:text-[24px] vw:text-[1.66vw] leading-[23px] lg:leading-[28px] vw:leading-[1.166] font-medium">
               {title}
             </h3>
 
-            <p className="opacity-80 max-w-[260px] md:max-w-full text-lg vw:text-[1.25vw] leading-[21px] vw:leading-[1.166] font-medium">
+            <p className="opacity-80 max-w-[260px] lg:max-w-full text-lg vw:text-[1.25vw] leading-[21px] vw:leading-[1.166] font-medium">
               {location}
             </p>
             

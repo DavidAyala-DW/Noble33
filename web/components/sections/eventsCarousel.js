@@ -3,8 +3,6 @@ import SanityImage from '../sanity-image'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Navigation } from "swiper";
-import Prev from "@/public/images/prev.svg";
-import Next from "@/public/images/next.svg";
 
 export default function EventsCarousel(props) {
 
@@ -12,11 +10,11 @@ export default function EventsCarousel(props) {
 
   return (
 
-    <section className="pl-4 md:pl-[3.33%] w-full flex flex-col pb-[56px] md:pb-[95px] vw:pb-[6.59vw] relative">
+    <section className="pl-4 md:pl-[3.33%] w-full flex flex-col pb-[74px] md:pb-[95px] vw:pb-[6.59vw] relative">
 
       <div className="flex flex-col w-full space-y-2 vw:space-y-[.5vw] mb-8 md:mb-[52px] vw:mb-[3.61vw]">
 
-        <h2 className="opacity-80 uppercase tracking-[.05em] text-lg vw:text-[1.25vw] leading-[21px] vw:leading-[1.166] font-medium">
+        <h2 className="opacity-80 uppercase tracking-[.05em] text-lg vw:text-[1.25vw] leading-[21px] vw:leading-[1.166] font-medium mb-2">
           {title}
         </h2>
 
@@ -38,12 +36,16 @@ export default function EventsCarousel(props) {
         breakpoints = {{
 
           320: {
-            slidesPerView: 1.05,
+            slidesPerView: 1.08,
             spaceBetween: 12
           },
           768: {
+            slidesPerView: 2.08,
+            spaceBetween: 12
+          },
+          1024: {
             slidesPerView: 3.2,
-            spaceBetween: 60,
+            spaceBetween: 60
           }
 
         }}

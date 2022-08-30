@@ -18,21 +18,21 @@ export default function BannerWithText(props) {
 
   return (
 
-    <section className="px-4 md:px-0 md:max-w-[93.3%] w-full mx-auto flex flex-col space-y-11 vw:space-y-[3.05vw]">
+    <section className="lg:max-w-[93.3%] w-full mx-auto flex flex-col space-y-4 lg:space-y-11 vw:space-y-[3.05vw]">
 
       <div className={`w-full aspect-h-1 ${image_size ? ratio[image_size] : ratio["original"]}`}>
         <div className="w-full h-full">
 
           <div className="relative w-full h-full">
-            <BackgroundImage {...{...backgroundImage}} layout={(image_size && image_size != "original" ? "fill" : "responsive"  )} />
+            <BackgroundImage {...{...backgroundImage}} className="object-cover" layout={(image_size && image_size != "original" ? "fill" : "responsive"  )} />
           </div>
 
         </div>
       </div>
       
-      <div className="flex flex-col">
+      <div className="flex flex-col px-4 md:px-10 lg:px-0 ">
 
-        <h2 className="tracking-[.05em] font-extralight text-[24px] md:text-[32px] vw:text-[2.222vw] leading-[30px] md:leading-[37px] vw:leading-[1.156] mb-6 md:mb-[1.666vw]">
+        <h2 className="tracking-[.05em] font-extralight text-[24px] lg:text-[32px] vw:text-[2.222vw] leading-[28px] lg:leading-[37px] vw:leading-[1.156] mb-6 vw:mb-[1.666vw]">
           {title}
         </h2>
 

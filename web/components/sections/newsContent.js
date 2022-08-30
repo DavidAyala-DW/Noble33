@@ -3,7 +3,9 @@ import SanityImage from "../sanity-image";
 export default function NewsContent(props) {
 
   const {show, query} = props;
+  
   if(!query) return (<></>);
+
   const {
     title = "",
     description = "",

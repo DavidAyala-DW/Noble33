@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/public/images/logo.png"
@@ -15,22 +15,16 @@ export default function Header(props) {
   } = props;
   
   const [openModal, setOpenModal] = useState(false);
+  const [activeModal, setActiveModal] = useState(false);
 
   function handleClick(){
-
     const updatedModalValue = !openModal;
     setOpenModal(updatedModalValue);
-
-    const body = document.querySelector('body');
-
-    if(updatedModalValue){
-      body.classList.add("overflow-hidden");
-      return;
-    }
-
-    body.classList.remove("overflow-hidden");
-
   }
+
+  useEffect(() => {
+    setActiveModal(true);
+  }, []);
 
   return (
 
@@ -41,7 +35,7 @@ export default function Header(props) {
       md:max-w-[93.3%] w-full md:mx-auto flex items-center md:justify-between py-6 md:pt-8 vw:pt-[2.22vw] md:pb-10 vw:pb-[2.77vw]`}
       >
 
-        <div className={`cursor-pointer order-3 md:order-1 select-none md:opacity-50 ${openModal && "absolute md:relative right-3 vw:right-[.83vw]"}`}>
+        <div className={`cursor-pointer order-3 md:order-1 select-none md:opacity-50 ${openModal && "absolute md:relative"}`}>
 
           <div onClick={handleClick} className={`${openModal && "hidden"} w-[25px] vw:!w-[1.736vw]`}>
             <Image
@@ -90,7 +84,7 @@ export default function Header(props) {
       </header>
 
       <div
-        className={`pl-[3.35%] fixed inset-0 h-full w-full transition-transform duration-300 ${openModal && "!translate-x-0"} -translate-x-full bg-body
+        className={`pl-[3.35%] fixed inset-0 h-full w-full transition-transform duration-300 ${openModal ? "!translate-x-0" : (!activeModal && "invisible")}  -translate-x-full bg-body
         pt-[152px] md:pt-[108px] vw:pt-[7.5vw] pb-6 vw:pb-[1.666vw] min-h-screen flex flex-col items-center md:items-start justify-between z-[90] w-full max-w-full md2:max-w-[73.6%]`}
       >
 
