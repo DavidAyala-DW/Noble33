@@ -1,16 +1,6 @@
-// import { useEffect } from 'react'
-// import Head from 'next/head'
-// import { LogoJsonLd } from 'next-seo'
-// import { useRouter } from 'next/router'
-// import clsx from 'clsx'
-
-// import { useAppContext } from '@/contexts/app-context'
 import Header from './header'
+import Head from "next/head"
 import Footer from './footer'
-// import dynamic from 'next/dynamic'
-// import { useHijackTourLinks } from '@/lib/use-hijack-tour-links'
-
-// const ReserveDialog = dynamic(() => import('@/components/reserve-dialog'))
 
 function Layout(props) {
 
@@ -24,19 +14,61 @@ function Layout(props) {
       facebookHandle,
       instagramHandle,
       privacyPolicyHandle,
-      cookiesPreferencesHandle
-    }
+      cookiesPreferencesHandle,
+      reservationsButton
+    },
+    menus
   } = props
+
+  const globalMenus = [
+    mainNav,
+    secondHeaderNav,
+    footerNav
+  ]
+
+  const setGlobalURL = [
+    privacyPolicyHandle,
+    cookiesPreferencesHandle,
+    reservationsButton,
+  ]
+
+  setGlobalURL.forEach(menuItem => {
+
+    const {slug} = menus.find(item => item._id == menuItem.link._ref);
+    
+    if(!slug) {
+      menuItem.link.url = "/";
+      return;
+    }
+
+    menuItem.link.url = slug.current != "/" ? `/${slug.current}`: "/"; 
+
+  })
+  
+  globalMenus.forEach(menuItem => {
+    menuItem.forEach(menu => {
+
+      const {slug} = menus.find(item => item._id == menu.link._ref);
+      
+      if(!slug) {
+        menu.link.url = "/";
+        return;
+      }
+
+      menu.link.url = slug.current != "/" ? `/${slug.current}`: "/"; 
+
+    })
+  });
 
   return (
     <>
 
-      {/* <Head>
+      <Head>
         <meta
           name="viewport"
           content="initial-scale=1.0, width=device-width, viewport-fit=cover"
         />
-      </Head> */}
+      </Head>
     
       <div
       className="bg-body flex flex-col"
@@ -47,6 +79,8 @@ function Layout(props) {
           secondHeaderNav,
           facebookHandle,
           instagramHandle,
+          reservationsButton,
+          menus,
           stickyHeader
         }}/>
 
@@ -57,6 +91,7 @@ function Layout(props) {
         <Footer {...{
           facebookHandle,
           instagramHandle,
+          menus,
           privacyPolicyHandle,
           cookiesPreferencesHandle,
           footerNav

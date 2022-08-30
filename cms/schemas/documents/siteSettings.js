@@ -26,26 +26,9 @@ export default {
       description: 'Select pages for the overlay menu.',
       group: 'header',
       fieldset: 'header',
-      of: [
-        {
-          name: 'myObject',
-          type: 'object',
-          fields: [
-            {
-              name: "link",
-              type: "string",
-              title: "Link",
-              initialValue: '/'
-            },
-            {
-              name: 'title',
-              type: 'string',
-              title: 'Title',
-            },
-          ],
-          
-        },
-      ],
+      of:[
+        {type: "links"}
+      ]
     },
     {
       name: 'secondHeaderNav',
@@ -53,26 +36,9 @@ export default {
       title: 'Second nav menu',
       group: 'header',
       fieldset: 'header',
-      of: [
-        {
-          name: 'myObject',
-          type: 'object',
-          fields: [
-            {
-              name: "link",
-              type: "string",
-              title: "Link",
-              initialValue: '/'
-            },
-            {
-              name: 'title',
-              type: 'string',
-              title: 'Title',
-            },
-          ],
-          
-        },
-      ],
+      of:[
+        {type: "links"}
+      ]
     },
     {
       name: 'footerNav',
@@ -80,26 +46,9 @@ export default {
       title: 'Footer nav menu',
       group: 'footer',
       fieldset: 'footer',
-      of: [
-        {
-          name: 'myObject',
-          type: 'object',
-          fields: [
-            {
-              name: "link",
-              type: "string",
-              title: "Link",
-              initialValue: '/'
-            },
-            {
-              name: 'title',
-              type: 'string',
-              title: 'Title',
-            },
-          ],
-          
-        },
-      ],
+      of:[
+        {type: "links"}
+      ]
     },
     {
       name: 'facebookHandle',
@@ -119,43 +68,24 @@ export default {
     },
     {
       name: 'privacyPolicyHandle',
-      type: 'object',
+      type: 'links',
       title: 'Privacy policy handle',
-      placeholder: 'link',
       group: 'general',
       fieldset: 'general',
-      fields: [
-        {
-          title: "Title",
-          name: "title",
-          type: "string",
-        },
-        {
-          title: "Link",
-          name: "link",
-          type: "string",
-        }
-      ]
     },
     {
       name: 'cookiesPreferencesHandle',
-      type: 'object',
+      type: 'links',
       title: 'Cookies preferences Handle',
-      placeholder: 'link',
       group: 'general',
       fieldset: 'general',
-      fields: [
-        {
-          title: "Title",
-          name: "title",
-          type: "string",
-        },
-        {
-          title: "Link",
-          name: "link",
-          type: "string",
-        }
-      ]
+    },
+    {
+      name: 'reservationsButton',
+      type: 'links',
+      title: 'Reservations Button',
+      group: 'header',
+      fieldset: 'header',
     },
   ],
   preview: {

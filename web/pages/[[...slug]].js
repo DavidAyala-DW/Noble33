@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import groq from 'groq'
 import { NextSeo } from 'next-seo'
 import client from '@/lib/sanity-client'
@@ -12,11 +11,12 @@ export default function Page({props}) {
     content = [],
     slug,
     stickyHeader,
-    siteSettings
+    siteSettings,  
+    menus // Crear bloque en cms para permitir links internos,externos y crear un provider donde guardar los valores del cms y luego un hook para consumirlo desde ahi con facilidad.
   } = props
 
   return (    
-    <Layout siteSettings={siteSettings} stickyHeader={stickyHeader}>
+    <Layout menus={menus} siteSettings={siteSettings} stickyHeader={stickyHeader}>
       <NextSeo
         title={title}
       />
@@ -33,6 +33,30 @@ async function fulfillSectionQueries(page) {
 
   const sectionsWithQueryData = await Promise.all(
     page.content.map(async (section) => {
+
+      if(section.news){
+        
+        if(Array.isArray(section.news)){
+
+          await Promise.all(section.news.map(async (news) => {
+            const queryData = await client.fetch(groq`*[_type == "newsPT" && _id == "${news._ref}" ][0]{
+              title,description,slug,image
+            }`)
+            news.query = queryData;
+          }
+
+          ))
+
+        }else{
+          const queryData = await client.fetch(groq`*[_type == "newsPT" && _id == "${section.news._ref}" ][0]{
+            title,description,slug,image
+          }`)
+          section.news.query = queryData;
+        }
+
+      }
+
+      console.log(section._type); //Detectar _type-> el nombre de un documento y para cada documento se tendra un objeto desde el server con query groq, revisar que solo se ejecute una vez
       if (section.query) {
         const queryData = await client.fetch(groq`${section.query}`)
 
@@ -62,11 +86,19 @@ export async function getStaticPaths() {
   }
 }
 
-export const getStaticProps = async ({ params }) => {
+async function getMenus(){
+  const request = await client.fetch(groq`*[_type == "route"] {_id, slug {current}} `);
+  return request;
+}
 
-  const slug = slugParamToPath(params?.slug)
+async function getSiteConfig(){
+  const siteSettings = await client.fetch(groq`*[_type == "siteSettings"][0]{...}`);
+  return siteSettings;
+}
+
+async function getPageSections(slug){
+
   const request = await client.fetch(
-    // Get the route document with one of the possible slugs for the given requested path
     groq`
       *[_type == "route" && slug.current in $possibleSlugs][0]{
         page -> {...}
@@ -75,14 +107,19 @@ export const getStaticProps = async ({ params }) => {
     { possibleSlugs: getSlugVariations(slug) }
   )
 
-  const siteSettings = await client.fetch(groq`*[_type == "siteSettings"][0]{...}`);
+  return request?.page;
+}
 
-  let data = request?.page
+export const getStaticProps = async ({ params }) => {
+
+  const slug = slugParamToPath(params?.slug)
+  let [data, siteSettings, menus] = await Promise.all([getPageSections(slug), getSiteConfig(), getMenus()])
   data = await fulfillSectionQueries(data)
   data.slug = slug;
+
   return {
     props:{
-      props: { ...data, siteSettings } || {},
+      props: { ...data, siteSettings, menus } || {},
     }
   }
   

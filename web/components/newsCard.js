@@ -2,7 +2,7 @@ import SanityImage from "./sanity-image";
 
 export default function NewsCard({news}) {
 
-  const {title, link, image} = news;
+  const {title, slug, image} = news;
 
   return (
 
@@ -12,11 +12,11 @@ export default function NewsCard({news}) {
       className="mb-4 lg:mb-6 vw:mb-[1.666vw] w-full aspect-h-1
       aspect-w-[1.435] md:aspect-w-[1.469] lg:aspect-w-[1.308] 3xl:aspect-w-[1.78]"
       >
-        <div className="w-full h-full">
+        <a className="block w-full h-full" href={`/news/${slug.current}`}>
           <div className="relative w-full h-full">
             <SanityImage src={image} layout="fill" quality={100} />
           </div>
-        </div>
+        </a>
       </div>
 
       <h3
@@ -26,8 +26,8 @@ export default function NewsCard({news}) {
         {title}
       </h3>
 
-      <a href={link.url} className="block font-light lg:font-normal text-[10px] vw:text-[.694vw] leading-[13px] vw:leading-[1.3] tracking-[.05em] uppercase">
-        {link.title}
+      <a href={`/news/${slug.current}`} className="block font-light lg:font-normal text-[10px] vw:text-[.694vw] leading-[13px] vw:leading-[1.3] tracking-[.05em] uppercase">
+        View
       </a>
 
     </div>

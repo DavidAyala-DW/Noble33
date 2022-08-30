@@ -9,9 +9,9 @@ export default function Footer(props) {
     instagramHandle,
     privacyPolicyHandle,
     cookiesPreferencesHandle,
-    footerNav
+    footerNav,
   } = props;
-
+  
   return (
 
     <footer className="px-4 md:px-0 pb-[22px] md2:pb-[50px] vw:pb-[3.472vw] md:max-w-[93.3%] w-full md:mx-auto flex flex-col md2:flex-row items-start">
@@ -36,11 +36,11 @@ export default function Footer(props) {
 
         <div className="grid grid-cols-3 gap-x-[65px] vw:gap-x-[4.51vw] gap-y-8 vw:gap-y-[2.22vw]">
 
-          {footerNav.map( (item,i) => {
+          {footerNav.map( (item, i) => {
 
             const {title,link} = item;
             return (
-              <a href={link} key={i} className={`uppercase ${i == 4 && "col-start-2 col-end-4"} opacity-80 text-[10px] vw:text-[.694vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal`} >
+              <a href={link.url} key={i} className={`uppercase ${i == 4 && "col-start-2 col-end-4"} opacity-80 text-[10px] vw:text-[.694vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal`} >
                 {title}
               </a>
             )
@@ -51,11 +51,11 @@ export default function Footer(props) {
 
         <div className="hidden md2:flex items-center space-x-[30px] vw:space-x-[2.08vw]">
 
-          <a href={privacyPolicyHandle.link} className="block opacity-80 text-[10px] vw:text-[.694vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
+          <a href={privacyPolicyHandle.link.url} className="block opacity-80 text-[10px] vw:text-[.694vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
             {privacyPolicyHandle.title}
           </a>
 
-          <a href={privacyPolicyHandle.link} className="block opacity-80 text-[10px] vw:text-[.694vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
+          <a href={privacyPolicyHandle.link.url} className="block opacity-80 text-[10px] vw:text-[.694vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
             {cookiesPreferencesHandle.title}
           </a>
 
@@ -132,11 +132,11 @@ export default function Footer(props) {
 
           <div className="flex md2:hidden items-center space-x-[50px] vw:space-x-[3.472vw]">
 
-            <a href={privacyPolicyHandle.link} className="block opacity-80 text-[10px] vw:text-[.694vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
+            <a href={privacyPolicyHandle.link.url} className="block opacity-80 text-[10px] vw:text-[.694vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
               {privacyPolicyHandle.title}
             </a>
 
-            <a href={privacyPolicyHandle.link} className="block opacity-80 text-[10px] vw:text-[.694vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
+            <a href={privacyPolicyHandle.link.url} className="block opacity-80 text-[10px] vw:text-[.694vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
               {cookiesPreferencesHandle.title}
             </a>
 

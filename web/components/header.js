@@ -10,9 +10,10 @@ export default function Header(props) {
     secondHeaderNav,
     facebookHandle,
     instagramHandle,
+    reservationsButton,
     stickyHeader
   } = props;
-
+  
   const [openModal, setOpenModal] = useState(false);
 
   function handleClick(){
@@ -80,9 +81,9 @@ export default function Header(props) {
 
         <div className="hidden md:block order-3 select-none">
 
-          <Link href="/reservations">
-            <p className="font-medium text-lg vw:text-[1.25vw] leading-[21px] vw:leading-[1.166] tracking-[.05em] uppercase opacity-70">Reservations</p>
-          </Link>
+          <a href={reservationsButton.link.url}>
+            <p className="font-medium text-lg vw:text-[1.25vw] leading-[21px] vw:leading-[1.166] tracking-[.05em] uppercase opacity-70">{reservationsButton.title}</p>
+          </a>
 
         </div>
         
@@ -104,7 +105,7 @@ export default function Header(props) {
                 const {title,link} = item;
 
                 return (
-                  <a href={link} key={index} className="block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[3.33vw] leading-[1.2] font-light opacity-90">
+                  <a href={link.url} key={index} className="block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[3.33vw] leading-[1.2] font-light opacity-90">
                     {title}
                   </a>
                 )
@@ -124,7 +125,7 @@ export default function Header(props) {
                 const {title,link} = item;
 
                 return (
-                  <a href={link} key={index} className="block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[3.33vw] leading-[1.2] font-light opacity-90">
+                  <a href={link.url} key={index} className="block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[3.33vw] leading-[1.2] font-light opacity-90">
                     {title}
                   </a>
                 )
@@ -146,7 +147,7 @@ export default function Header(props) {
                 const {title,link} = item;
 
                 return (
-                  <a href={link} key={i} className="block uppercase tracking-[.05em] text-[24px] vw:text-[1.66vw] leading-[28px] vw:leading-[1.166] font-light opacity-80">
+                  <a href={link.url} key={i} className="block uppercase tracking-[.05em] text-[24px] vw:text-[1.66vw] leading-[28px] vw:leading-[1.166] font-light opacity-80">
                     {title}
                   </a>
                 )

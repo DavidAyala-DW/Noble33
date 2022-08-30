@@ -9,6 +9,7 @@ import route from './documents/route'
 import page from './documents/page'
 import siteSettings from './documents/siteSettings'
 import blockContent from './blockContent'
+import newsPT from './documents/news'
 
 //We import Page sections
 import heading from "./objects/heading"
@@ -39,6 +40,9 @@ import newsletter from './objects/newsletter'
 import hero from "./objects/hero"
 import event from './objects/event'
 import events from "./objects/events"
+import links from "./objects/links"
+import newsContent from "./objects/newsContent"
+import moreNews from './objects/moreNews' 
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -52,6 +56,7 @@ export default createSchema({
     siteSettings, 
     page,
     route,
+    newsPT,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
@@ -82,6 +87,9 @@ export default createSchema({
     hero,
     event,
     events,
+    links,
+    newsContent,
+    moreNews,
     testSection
   ]),
 })

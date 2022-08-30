@@ -13,10 +13,10 @@ export default function News(props) {
         {
           news.map( newsItem => {
 
-            const {_key} = newsItem;
-
+            const {_key, query} = newsItem;
+            console.log(newsItem);
             return (
-              <NewsCard key={_key} news={newsItem} />
+              <NewsCard key={_key} news={query} />
             )
             
           })

@@ -5,12 +5,15 @@ export default {
   fields: [
     {
       name: 'news',
-      title: 'News',
       type: 'array',
-      of:[
-        {type: "newsItem"}
-      ]
-      
+      of: [
+        {
+          type: 'reference',
+          to: [
+            {type: "newsPT"}
+          ]
+        },
+      ],
     },
   ],
   
