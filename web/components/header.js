@@ -62,7 +62,7 @@ export default function Header(props) {
         <div className={`order order-1 select-none md:order-2 ${openModal && "ml-[50px] md:ml-0"}`}>
           
           <Link href="/" passHref>
-            <a className="block cursor-pointer w-[115px] vw:w-[7.98vw]">
+            <a onClick={handleClick} className="block cursor-pointer w-[115px] vw:w-[7.98vw] md:absolute">
               <Image
                 src={Logo}
                 alt="logo.png"
@@ -75,7 +75,7 @@ export default function Header(props) {
 
         <div className="hidden md:block order-3 select-none">
 
-          <a href={reservationsButton.link.url}>
+          <a onClick={handleClick} href={reservationsButton.link.url}>
             <p className="font-medium text-lg vw:text-[1.25vw] leading-[21px] vw:leading-[1.166] tracking-[.05em] uppercase opacity-70">{reservationsButton.title}</p>
           </a>
 
@@ -99,7 +99,7 @@ export default function Header(props) {
                 const {title,link} = item;
 
                 return (
-                  <a href={link.url} key={index} className="block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[3.33vw] leading-[1.2] font-light opacity-90">
+                  <a onClick={handleClick} href={link.url} key={index} className="block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[3.33vw] leading-[1.2] font-light opacity-90">
                     {title}
                   </a>
                 )
@@ -119,7 +119,7 @@ export default function Header(props) {
                 const {title,link} = item;
 
                 return (
-                  <a href={link.url} key={index} className="block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[3.33vw] leading-[1.2] font-light opacity-90">
+                  <a onClick={handleClick} href={link.url} key={index} className="block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[3.33vw] leading-[1.2] font-light opacity-90">
                     {title}
                   </a>
                 )
@@ -129,7 +129,7 @@ export default function Header(props) {
             })}
 
             <Link href="/" passHref>
-              <a className="md:hidden block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[3.33vw] leading-[1.2] font-light opacity-90">
+              <a onClick={handleClick} className="md:hidden block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[3.33vw] leading-[1.2] font-light opacity-90">
                 RESERVATIONS
               </a>
             </Link>
@@ -141,7 +141,7 @@ export default function Header(props) {
                 const {title,link} = item;
 
                 return (
-                  <a href={link.url} key={i} className="block uppercase tracking-[.05em] text-[24px] vw:text-[1.66vw] leading-[28px] vw:leading-[1.166] font-light opacity-80">
+                  <a onClick={handleClick} href={link.url} key={i} className="block uppercase tracking-[.05em] text-[24px] vw:text-[1.66vw] leading-[28px] vw:leading-[1.166] font-light opacity-80">
                     {title}
                   </a>
                 )
@@ -156,7 +156,7 @@ export default function Header(props) {
 
         <div className="flex items-center space-x-6 vw:space-x-[1.666vw]">
 
-          <a href={facebookHandle} className="block w-6 vw:w-[1.666vw]">
+          <a onClick={handleClick} href={facebookHandle} className="block w-6 vw:w-[1.666vw]">
 
             <Image
               src={"/images/facebook.svg"}
@@ -168,7 +168,7 @@ export default function Header(props) {
 
           </a>
 
-          <a href={instagramHandle} className="block w-6 vw:w-[1.666vw]">
+          <a onClick={handleClick} href={instagramHandle} className="block w-6 vw:w-[1.666vw]">
 
             <Image
               src={"/images/instagram.svg"}
