@@ -35,7 +35,7 @@ export default function Header(props) {
       md:max-w-[93.3%] w-full md:mx-auto flex items-center md:justify-between py-6 md:pt-8 vw:pt-[2.22vw] md:pb-10 vw:pb-[2.77vw]`}
       >
 
-        <div className={`cursor-pointer order-3 md:order-1 select-none md:opacity-50 ${openModal && "absolute md:relative"}`}>
+        <div className={`cursor-pointer order-3 md:order-1 select-none md:opacity-50 ${openModal && "absolute left-4 md:relative"}`}>
 
           <div onClick={handleClick} className={`${openModal && "hidden"} w-[25px] vw:!w-[1.736vw]`}>
             <Image
