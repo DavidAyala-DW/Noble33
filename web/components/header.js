@@ -118,9 +118,11 @@ export default function Header(props) {
                   const {title, link, image} = item;
 
                   return (
-                    <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} href={link.url} key={index} className="block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[3.33vw] leading-[1.2] font-light opacity-90">
-                      {title}
-                    </a>
+                    <Link href={link.url} passHref key={index} >
+                      <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} className="block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[3.33vw] leading-[1.2] font-light opacity-90">
+                        {title}
+                      </a>
+                    </Link>
                   )
 
                 }
@@ -138,9 +140,11 @@ export default function Header(props) {
                   const {title, link, image} = item;
 
                   return (
-                    <a onMouseLeave={handleMouseDown} onMouseEnter={() => setActiveMenuImage(image)} onClick={handleClick} href={link.url} key={index} className="block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[3.33vw] leading-[1.2] font-light opacity-90">
-                      {title}
-                    </a>
+                    <Link href={link.url} passHref key={index} >
+                      <a onMouseLeave={handleMouseDown} onMouseEnter={() => setActiveMenuImage(image)} onClick={handleClick} className="block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[3.33vw] leading-[1.2] font-light opacity-90">
+                        {title}
+                      </a>
+                    </Link>
                   )
 
                 }
@@ -209,7 +213,7 @@ export default function Header(props) {
             activeMenuImage && (
               <SanityImage priority={true} className="object-cover" src={activeMenuImage} layout="fill" />
             )
-          }gi
+          }
           
         </div>
 
