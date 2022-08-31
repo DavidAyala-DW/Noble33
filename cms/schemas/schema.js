@@ -43,6 +43,8 @@ import events from "./objects/events"
 import links from "./objects/links"
 import newsContent from "./objects/newsContent"
 import moreNews from './objects/moreNews' 
+import contact from "./objects/contact"
+import richtext from "./objects/richtext"
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -90,6 +92,8 @@ export default createSchema({
     links,
     newsContent,
     moreNews,
+    contact,
+    richtext,
     testSection
   ]),
 })

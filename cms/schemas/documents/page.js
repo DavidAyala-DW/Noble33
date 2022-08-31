@@ -35,6 +35,8 @@ export default {
         { type: 'newsletter' },
         { type: 'hero' },
         { type: 'events' },
+        { type: 'contact' },
+        { type: 'richtext' },
       ],
     },
     {

@@ -14,7 +14,7 @@ export default function Footer(props) {
   
   return (
 
-    <footer className="px-4 md:px-0 pb-[22px] md2:pb-[50px] vw:pb-[3.472vw] md:max-w-[93.3%] w-full md:mx-auto flex flex-col md2:flex-row items-start">
+    <footer className="px-4 md:px-0 pb-[22px] md:pb-[36px] md2:pb-[50px] vw:pb-[3.472vw] md:max-w-[93.3%] w-full md:mx-auto flex flex-col md2:flex-row items-start">
 
       <div className="mb-[42px] md2:mb-0 md2:mr-[5.8%] w-max">
 
@@ -34,7 +34,7 @@ export default function Footer(props) {
 
       <div className="flex flex-col mb-[86px] md2:mb-0 md2:space-y-[110px] vw:space-y-[7.638vw] justify-between md2:mr-[20%] w-full">
 
-        <div className="grid grid-cols-3 gap-x-[65px] vw:gap-x-[4.51vw] gap-y-8 vw:gap-y-[2.22vw]">
+        <div className="grid md:max-w-[35%] md2:max-w-full grid-cols-3 gap-x-[65px] vw:gap-x-[4.51vw] gap-y-8 vw:gap-y-[2.22vw]">
 
           {footerNav.map( (item, i) => {
 
@@ -51,13 +51,17 @@ export default function Footer(props) {
 
         <div className="hidden md2:flex items-center space-x-[30px] vw:space-x-[2.08vw]">
 
-          <a href={privacyPolicyHandle.link.url} className="block opacity-80 text-[10px] vw:text-[.694vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
-            {privacyPolicyHandle.title}
-          </a>
+          <Link href={privacyPolicyHandle.link.url} passHref>
+            <a className="block opacity-80 text-[10px] vw:text-[.694vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
+              {privacyPolicyHandle.title}
+            </a>
+          </Link>
 
-          <a href={privacyPolicyHandle.link.url} className="block opacity-80 text-[10px] vw:text-[.694vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
-            {cookiesPreferencesHandle.title}
-          </a>
+          <Link href={cookiesPreferencesHandle.link.url} passHref>  
+            <a className="block opacity-80 text-[10px] vw:text-[.694vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
+              {cookiesPreferencesHandle.title}
+            </a>
+          </Link>
 
         </div>
 
@@ -71,7 +75,7 @@ export default function Footer(props) {
             Newsletter
           </h3>  
 
-          <form className="w-full" action="">
+          <form className="w-full md:max-w-[70%] md2:max-w-full" action="">
 
             <fieldset className="flex pl-4 md2:pl-6 vw:pl-[1.666vw] pr-7 md2:pr-[14px] vw:pr-[.972vw] item-center space-x-5 vw:space-x-[1.3888vw] border-2 border-[rgba(205,_205,_205,_0.2)] py-3 vw:py-[.83vw]">
 
@@ -132,13 +136,17 @@ export default function Footer(props) {
 
           <div className="flex md2:hidden items-center space-x-[50px] vw:space-x-[3.472vw]">
 
-            <a href={privacyPolicyHandle.link.url} className="block opacity-80 text-[10px] vw:text-[.694vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
-              {privacyPolicyHandle.title}
-            </a>
+            <Link href={privacyPolicyHandle.link.url} passHref>
+              <a className="block opacity-80 text-[10px] vw:text-[.694vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
+                {privacyPolicyHandle.title}
+              </a>
+            </Link>
 
-            <a href={privacyPolicyHandle.link.url} className="block opacity-80 text-[10px] vw:text-[.694vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
-              {cookiesPreferencesHandle.title}
-            </a>
+            <Link href={cookiesPreferencesHandle.link.url} passHref>
+              <a className="block opacity-80 text-[10px] vw:text-[.694vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
+                {cookiesPreferencesHandle.title}
+              </a>
+            </Link>
 
           </div>
 
