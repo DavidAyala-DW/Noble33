@@ -8,8 +8,9 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import route from './documents/route'
 import page from './documents/page'
 import siteSettings from './documents/siteSettings'
-import blockContent from './blockContent'
 import newsPT from './documents/news'
+import pagesCasaMadera from './documents/pagesCasaMadera'
+import routesCasaMadera from "./documents/routesCasaMadera"
 
 //We import Page sections
 import heading from "./objects/heading"
@@ -34,6 +35,7 @@ import detail from './objects/detail'
 import details from "./objects/details"
 import member from "./objects/member"
 import team from "./objects/team"
+import blockContent from './blockContent'
 import newsItem from './objects/newsItem'
 import news from './objects/news'
 import newsletter from './objects/newsletter'
@@ -46,6 +48,7 @@ import moreNews from './objects/moreNews'
 import contact from "./objects/contact"
 import richtext from "./objects/richtext"
 
+
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -57,8 +60,10 @@ export default createSchema({
     // in the studio.   
     siteSettings, 
     page,
-    route,
     newsPT,
+    route,
+    pagesCasaMadera,
+    routesCasaMadera,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,

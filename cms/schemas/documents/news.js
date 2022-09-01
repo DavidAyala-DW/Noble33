@@ -3,7 +3,7 @@ import { FolderIcon } from '@sanity/icons'
 export default {
   name: 'newsPT',
   type: 'document',
-  title: 'News',
+  title: 'Noble33 - News',
   icon: FolderIcon,
   groups: [
     { name: 'general', title: 'General' },

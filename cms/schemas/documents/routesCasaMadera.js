@@ -1,9 +1,9 @@
 import { LinkIcon } from '@sanity/icons'
 
 export default {
-  name: 'route',
+  name: 'routesCasaMadera',
   type: 'document',
-  title: 'Noble33 - Routes',
+  title: 'Casa madera - Routes',
   description: 'Map urls to pages',
   icon: LinkIcon,
   fields: [
@@ -18,7 +18,7 @@ export default {
       description: 'Select the page that this route should point to',
       to: [
         {
-          type: 'page',
+          type: 'pagesCasaMadera',
         },
       ],
     },

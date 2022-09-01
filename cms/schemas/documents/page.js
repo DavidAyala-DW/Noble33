@@ -3,7 +3,7 @@ import { DocumentIcon } from '@sanity/icons'
 export default {
   name: 'page',
   type: 'document',
-  title: 'Page',
+  title: 'Noble33 - pages',
   icon: DocumentIcon,
   fields: [
     {
