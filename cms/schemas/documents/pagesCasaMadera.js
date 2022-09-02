@@ -12,11 +12,27 @@ export default {
       title: 'Title',
     },
     {
+      name: "site",
+      title: "Site",
+      type: "string",
+      readOnly: true,
+      hidden: true,
+      options: {
+        list: [
+          { title: "Noble33", value: "noble33" },
+          { title: "Casa Madera", value: "casaMadera" },
+        ],
+      },
+      initialValue: "casaMadera"
+    },
+    {
       name: 'content',
       type: 'array',
       title: 'Page sections',
       of: [
         { type: 'hero' },
+        { type: 'space' },
+        { type: 'textContentCenter' },
         { type: 'imageWithText' },
       ],
     },

@@ -7,7 +7,33 @@ export default {
       name: 'link',
       title: 'Internal link',
       type: 'reference',
-      to: [{type: 'route'}]
+      to: [
+        {type: 'route'},
+        {type: 'routesCasaMadera'},
+      ],
+      options: {
+        filter: (props) => {
+
+          const {document} = props;
+
+          if(document?.site == "casaMadera"){
+            return {
+              filter: '_type == "routesCasaMadera" '
+            }
+          }
+
+          if(document?.site == "noble33"){
+            return {
+              filter: '_type == "route" '
+            }
+          }
+
+          return {
+            
+          }
+
+        }
+      }
     },
     {
       name: 'externalLink',

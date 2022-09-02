@@ -5,7 +5,7 @@ export default {
   type: 'document',
   title: 'Site configuration',
   icon: CogIcon,
-  __experimental_actions: ['update', 'publish'],
+  // __experimental_actions: ['update', 'publish'],
   groups: [
     { name: 'header', title: 'Header' },
     { name: 'footer', title: 'Footer' },
@@ -19,6 +19,19 @@ export default {
     { name: 'general', title: 'General' },
   ],
   fields: [
+    {
+      name: "site",
+      title: "Site",
+      readOnly: true,
+      hidden: true,
+      type: "string",
+      options: {
+        list: [
+          { title: "Noble33", value: "noble33" },
+          { title: "Casa Madera", value: "casaMadera" },
+        ],
+      },
+    },
     {
       name: 'mainNav',
       type: 'array',
@@ -72,6 +85,26 @@ export default {
       placeholder: 'link',
       group: 'social',
       fieldset: 'social',
+      hidden: ({document}) => document?.site != "casaMadera"
+
+    },
+    {
+      name: 'spotifyHandle',
+      type: 'url',
+      title: 'Spotify handle',
+      placeholder: 'link',
+      group: 'social',
+      fieldset: 'social',
+      hidden: ({document}) => document?.site != "casaMadera"
+
+    },
+    {
+      name: 'soundCloudHandle',
+      type: 'url',
+      title: 'SoundCloud Handle',
+      placeholder: 'link',
+      group: 'social',
+      fieldset: 'social',
     },
     {
       name: 'privacyPolicyHandle',
@@ -96,9 +129,18 @@ export default {
     },
   ],
   preview: {
-    prepare() {
+    select: {
+      site: "site",
+    },
+    prepare({site}) {
+
+      const sites = {
+        casaMadera: "Casa madera",
+        noble33: "Noble33",
+      }
+
       return {
-        title: "Site configuration", 
+        title: sites[site], 
       }
     },
   },

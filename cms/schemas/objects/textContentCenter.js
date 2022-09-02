@@ -31,6 +31,19 @@ export default {
       ]
       
     },
+    {
+      name: "mobileAlignment",
+      title: "Mobile alignment",
+      hidden: ({document}) => document?.site != "casaMadera",
+      type: "string",
+      options: {
+        list: [
+          { title: "Left", value: "left" },
+          { title: "Center", value: "center" },
+        ],
+      },
+      initialValue: "center"
+    },
   ],
   preview: {
     select: {
