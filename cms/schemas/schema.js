@@ -47,6 +47,7 @@ import newsContent from "./objects/newsContent"
 import moreNews from './objects/moreNews' 
 import contact from "./objects/contact"
 import richtext from "./objects/richtext"
+import socialMedia from './objects/socialMedia'
 
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -99,6 +100,7 @@ export default createSchema({
     moreNews,
     contact,
     richtext,
+    socialMedia,
     testSection
   ]),
 })

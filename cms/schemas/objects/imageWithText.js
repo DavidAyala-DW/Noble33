@@ -28,6 +28,30 @@ export default {
           {title: "First text", value: "fistText"},
         ]
       }
+    },
+    {
+      name: "links",
+      title: "Link",
+      type: "links",
+      hidden: ({document}) => document?.site != "casaMadera",
+    },
+    {
+      name: "socialMedias",
+      type: "socialMedias"
+    },
+    {
+      name: "alignment",
+      title: "Alignment",
+      type: "string",
+      hidden: ({document}) => document?.site != "casaMadera",
+      options: {
+        list: [
+          { title: "Top", value: "top" },
+          { title: "Center", value: "center" },
+          { title: "Bottom", value: "bottom" },
+        ],
+      },
+      initialValue: "center"
     }
   ],
   preview: {
