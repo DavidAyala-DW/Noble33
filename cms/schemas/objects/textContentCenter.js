@@ -12,6 +12,13 @@ export default {
       name: 'description',
       type: 'string',
       title: 'Description',
+      hidden: ({document}) => document?.site == "casaMadera",
+    },
+    {
+      name: "description2",
+      title: "Description",
+      type: 'simplePortableText',
+      hidden: ({document}) => document?.site != "casaMadera",
     },
     {
       name: 'learn_more',
@@ -43,6 +50,34 @@ export default {
         ],
       },
       initialValue: "center"
+    },
+    {
+      name: "titleSize",
+      title: "Size title",
+      hidden: ({document}) => document?.site != "casaMadera",
+      type: "string",
+      options: {
+        list: [
+          { title: "Small", value: "small" },
+          { title: "Normal", value: "normal" },
+          { title: "Large", value: "large" },
+        ],
+      },
+      initialValue: "normal"
+    },
+    {
+      name: "descriptionContent",
+      title: "Description content",
+      hidden: ({document}) => document?.site != "casaMadera",
+      type: "string",
+      options: {
+        list: [
+          { title: "Small", value: "small" },
+          { title: "Normal", value: "normal" },
+          { title: "Large", value: "large" },
+        ],
+      },
+      initialValue: "normal"
     },
   ],
   preview: {

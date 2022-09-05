@@ -48,7 +48,8 @@ import moreNews from './objects/moreNews'
 import contact from "./objects/contact"
 import richtext from "./objects/richtext"
 import socialMedia from './objects/socialMedia'
-
+import imageFullWidth from './objects/imageFullWidth'
+import eventsSlider from "./objects/eventsSlider"
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -101,6 +102,8 @@ export default createSchema({
     contact,
     richtext,
     socialMedia,
+    imageFullWidth,
+    eventsSlider,
     testSection
   ]),
 })

@@ -1,7 +1,10 @@
+import { ExpandIcon } from '@sanity/icons'
+
 export default {
   name: 'space',
   title: 'Space between sections',
   type: 'object',
+  icon: ExpandIcon,
   fields: [
     {
       name: 'heightDesktop',

@@ -27,7 +27,8 @@ export default {
           {title: "First image", value: "firstImage"},
           {title: "First text", value: "fistText"},
         ]
-      }
+      },
+      initialValue: "firstImage"
     },
     {
       name: "links",
