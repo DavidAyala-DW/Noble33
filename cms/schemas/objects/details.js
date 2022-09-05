@@ -7,11 +7,13 @@ export default {
       name: 'title',
       type: 'string',
       title: 'Title',
+      hidden: ({document}) => document?.site == "casaMadera",
     },
     {
       name: "description",
       type: 'text',
-      title: "Description"
+      title: "Description",
+      hidden: ({document}) => document?.site == "casaMadera",
     },
     {
       name: 'details',
@@ -30,7 +32,7 @@ export default {
     },
     prepare({ title, media }) {
       return {
-        title,
+        title : (title ? title : "Details"),
         subtitle: 'Details',
         media,
       }

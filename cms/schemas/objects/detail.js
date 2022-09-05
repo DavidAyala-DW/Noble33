@@ -21,7 +21,9 @@ export default {
     {
       name: "featuredDetail",
       type: "boolean",
-      title: 'Featured detail'
-    }
+      title: 'Featured detail',
+      hidden: ({document}) => document?.site == "casaMadera",
+    },
+    
   ]
 }
