@@ -10,7 +10,7 @@ export default function RestaurantsCarousel(props) {
 
   return (
 
-    <section className="pl-4 md:pl-[3.33%] w-full flex flex-col pb-12 vw:pb-[2.5vw] relative">
+    <section className="pl-4 md:pl-6 lg:pl-[3.33%] 3xl:pl-[2.5%] w-full flex flex-col pb-12 vw:pb-[2.5vw] relative">
 
       <div className="flex flex-col w-full space-y-2 vw:space-y-[.416vw] mb-8 md:mb-[52px] vw:mb-[2.708vw]">
 
@@ -36,13 +36,21 @@ export default function RestaurantsCarousel(props) {
         breakpoints = {{
 
           320: {
-            slidesPerView: 1.08,
+            slidesPerView: 1.065,
             spaceBetween: 12
           },
-          768: {
-            slidesPerView: 2.1,
+          744: {
+            slidesPerView: 2.05,
             spaceBetween: 16,
-          }
+          },
+          1440: {
+            slidesPerView: 2.07,
+            spaceBetween: 16,
+          },
+          1920: {
+            slidesPerView: 2.025,
+            spaceBetween: 16,
+          },
 
         }}
       >

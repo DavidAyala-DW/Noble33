@@ -2,11 +2,11 @@ import React from 'react'
 
 export default function HeroText(props) {
 
-  const {title, description} = props;
+  const {title, description, onlyPaddingTop} = props;
 
   return (
 
-    <section className='px-4 md:px-0 pt-[120px] md:pt-[208px] vw:pt-[10.8333vw] pb-[120px] md:pb-[122px] vw:pb-[6.354vw] md:max-w-[93.3%] w-full mx-auto flex flex-col justify-center'>
+    <section className={`px-4 md:px-0 pt-[120px] md:pt-[208px] vw:pt-[10.8333vw]  ${!onlyPaddingTop && "pb-[120px] md:pb-[122px]" }  vw:pb-[6.354vw] md:max-w-[93.3%] w-full mx-auto flex flex-col justify-center`}>
 
       <div className="flex flex-col space-y-6 vw:space-y-[1.25vw]">
 

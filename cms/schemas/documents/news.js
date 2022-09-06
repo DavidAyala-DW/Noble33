@@ -89,12 +89,21 @@ export default {
         { 
           _type: 'space',
           heightDesktop: 110,
+          heightTablet: 77,
           heightMobile: 120
         },
-        { _type: 'moreNews' },
+        { 
+          _type: 'moreNews',
+          title: "More in the News",
+          Link: {
+            title: "VIEW ALL",
+            url: "/press"
+          }
+        },
         {
           _type: 'space',
           heightDesktop: 210,
+          heightTablet: 150,
           heightMobile: 120
         },
         {
@@ -108,6 +117,7 @@ export default {
         {
           _type: 'space',
           heightDesktop: 277,
+          heightTablet: 196,
           heightMobile: 190
         },
       ]

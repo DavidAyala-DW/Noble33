@@ -6,7 +6,7 @@ export default function CollectionCard({collection}) {
   const {title, location, image, link} = collection;
 
   return (
-    <div className="relative w-full aspect-w-[1.37] md:aspect-w-[1.34] aspect-h-1">
+    <div className="relative w-full aspect-w-[1.37] md:aspect-w-[1.324] lg:aspect-w-[1.349] 3xl:aspect-w-[1.859] aspect-h-1">
 
       <div className="w-full h-full">
         <a href={link} className="h-full block w-full relative">

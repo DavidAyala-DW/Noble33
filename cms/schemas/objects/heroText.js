@@ -13,7 +13,12 @@ export default {
       type: 'string',
       title: 'Description',
     },
-
+    {
+      name: "onlyPaddingTop",
+      type: 'boolean',
+      title: 'Only padding top',
+      initialValue: false
+    }
   ],
   preview: {
     select: {

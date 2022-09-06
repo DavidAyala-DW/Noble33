@@ -12,13 +12,13 @@ export default function BannerWithText(props) {
 
   const ratio = {
     "format-1": "aspect-w-[1.150] md:aspect-w-[2.289] lg:aspect-w-[3.26] 3xl:aspect-w-[4.38]",
-    "format-2": "aspect-w-[.70] md:aspect-w-[2.286] lg:aspect-w-[1.7] 3xl:aspect-w-[2.28]",
+    "format-2": "aspect-w-[1.153] md:aspect-w-[2.289] lg:aspect-w-[1.7] 3xl:aspect-w-[2.28]",
     "original": "",
   }
 
   return (
 
-    <section className="lg:max-w-[93.3%] w-full mx-auto flex flex-col space-y-4 lg:space-y-11 vw:space-y-[2.291vw]">
+    <section className="lg:max-w-[93.3%] 3xl:max-w-[95%] w-full mx-auto flex flex-col space-y-4 lg:space-y-11 vw:space-y-[2.291vw]">
 
       <div className={`w-full aspect-h-1 ${image_size ? ratio[image_size] : ratio["original"]}`}>
         <div className="w-full h-full">
