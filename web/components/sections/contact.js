@@ -31,13 +31,13 @@ export default function Contact(props) {
 
   return (
 
-    <section className="px-4 md:px-0 md:max-w-[93.3%] pt-[120px] md:pt-[173px] vw:pt-[12.01vw] w-full mx-auto flex flex-col">
+    <section className="px-4 md:px-0 md:max-w-[93.3%] pt-[120px] md:pt-[173px] vw:pt-[9.010vw] w-full mx-auto flex flex-col">
 
-      <h1 className="tracking-[.05em] text-center text-[32px] lg:text-[40px] vw:text-[2.777vw] leading-[1.2] uppercase font-extralight mb-6 vw:mb-[1.666vw] opacity-90">
+      <h1 className="tracking-[.05em] text-center text-[32px] lg:text-[40px] vw:text-[2.0833vw] leading-[1.2] uppercase font-extralight mb-6 vw:mb-[1.25vw] opacity-90">
         {title}
       </h1>
 
-      <p className="opacity-80 text-center leading-[1.5] text-[20px] vw:text-[1.3888vw] font-light mb-12 vw:mb-[3.333vw]">
+      <p className="opacity-80 text-center leading-[1.5] text-[20px] vw:text-[1.0416vw] font-light mb-12 vw:mb-[2.5vw]">
         {description}
       </p>
 
@@ -64,7 +64,7 @@ export default function Contact(props) {
       >
 
         <Field
-          className="mb-[18px] vw:mb-[1.25vw]"
+          className="mb-[18px] vw:mb-[.9375vw]"
           register={register}
           type="text"
           label="Name"
@@ -74,7 +74,7 @@ export default function Contact(props) {
         />
 
         <Field
-          className="mb-8 vw:mb-[2.222vw]"
+          className="mb-8 vw:mb-[1.6666vw]"
           register={register}
           type="email"
           label="Email"
@@ -85,13 +85,13 @@ export default function Contact(props) {
 
         {
           activeOption == "press" && (
-            <File className="mb-[18px] vw:mb-[1.25vw]" />
+            <File className="mb-[18px] vw:mb-[.9375vw]" />
           )
         }
         
 
         <Field
-          className="mb-10 md:mb-12 vw:mb-[3.333vw]"
+          className="mb-10 md:mb-12 vw:mb-[2.5vw]"
           type="textarea"
           register={register}
           label="Message"
@@ -100,7 +100,7 @@ export default function Contact(props) {
 
         <button 
           type="submit"
-          className="text-[10px] vw:text-[.69444vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] text-center uppercase opacity-80"
+          className="text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] text-center uppercase opacity-80"
         >
           SEND MESSAGE
         </button>

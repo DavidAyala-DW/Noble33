@@ -10,7 +10,7 @@ export default function NewsCard({news}) {
     <div className="w-full flex flex-col">
 
       <div
-      className="mb-4 lg:mb-6 vw:mb-[1.666vw] w-full aspect-h-1
+      className="mb-4 lg:mb-6 vw:mb-[1.25vw] w-full aspect-h-1
       aspect-w-[1.435] md:aspect-w-[1.469] lg:aspect-w-[1.308] 3xl:aspect-w-[1.78]"
       > 
 
@@ -25,14 +25,14 @@ export default function NewsCard({news}) {
       </div>
 
       <h3
-      className="font-extralight md:font-light text-[24px] lg:text-lg vw:text-[1.25vw]
-      leading-7 lg:leading-[21px] vw:leading-[1.1666] tracking-[.05em] mb-8 lg:mb-6 vw:mb-[1.666vw] lg:max-w-[452px] vw:max-w-[31.38vw]"
+      className="font-extralight md:font-light text-[24px] lg:text-lg vw:text-[.9375vw]
+      leading-7 lg:leading-[21px] vw:leading-[1.1666] tracking-[.05em] mb-8 lg:mb-6 vw:mb-[1.25vw] lg:max-w-[452px] vw:max-w-[23.54vw]"
       >
         {title}
       </h3>
 
       <Link href={`/news/${slug.current}`} passHref>
-        <a className="block font-light lg:font-normal text-[10px] vw:text-[.694vw] leading-[13px] vw:leading-[1.3] tracking-[.05em] uppercase">
+        <a className="block font-light lg:font-normal text-[10px] vw:text-[.520vw] leading-[13px] vw:leading-[1.3] tracking-[.05em] uppercase">
           View
         </a>
       </Link>

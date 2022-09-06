@@ -28,15 +28,15 @@ export default function ImageWithText(props) {
 
 
       <div
-        className={`w-full lg:w-1/2 order-2 flex flex-col space-y-6 vw:space-y-[1.666vw]
+        className={`w-full lg:w-1/2 order-2 flex flex-col space-y-6 vw:space-y-[1.25vw]
         ${position == "firstImage" ? "lg:order-2 lg:pl-[9.86%]" : "lg:order-1 lg:pr-[9.86%]" }`
       }>        
 
-        <h2 className="tracking-[.05em] text-[28px] md:text-[24px] lg:text-[32px] leading-[32px] md:leading-[28px] lg:leading-[37px] vw:text-[2.222vw] vw:leading-[1.156] font-extralight">
+        <h2 className="tracking-[.05em] text-[28px] md:text-[24px] lg:text-[32px] leading-[32px] md:leading-[28px] lg:leading-[37px] vw:text-[1.927vw] vw:leading-[1.156] font-extralight">
           {title}
         </h2>
 
-        <div className="opacity-80 text-lg leading-[21px] vw:text-[1.25vw] vw:leading-[1.1666] font-light md:max-w-[500px] lg:max-w-[400px] vw:max-w-[27.77vw]">
+        <div className="opacity-80 text-lg leading-[21px] vw:text-[.9375vw] vw:leading-[1.1666] font-light md:max-w-[500px] lg:max-w-[400px] vw:max-w-[20.833vw]">
           <SimpleBlockContent blocks={description} />
         </div>
 

@@ -10,15 +10,15 @@ export default function RestaurantsCarousel(props) {
 
   return (
 
-    <section className="pl-4 md:pl-[3.33%] w-full flex flex-col pb-12 vw:pb-[3.333vw] relative">
+    <section className="pl-4 md:pl-[3.33%] w-full flex flex-col pb-12 vw:pb-[2.5vw] relative">
 
-      <div className="flex flex-col w-full space-y-2 vw:space-y-[.5vw] mb-8 md:mb-[52px] vw:mb-[3.61vw]">
+      <div className="flex flex-col w-full space-y-2 vw:space-y-[.416vw] mb-8 md:mb-[52px] vw:mb-[2.708vw]">
 
-        <h2 className="opacity-80 uppercase tracking-[.05em] text-lg vw:text-[1.25vw] leading-[21px] vw:leading-[1.166] font-medium">
+        <h2 className="opacity-80 uppercase tracking-[.05em] text-lg vw:text-[.9375vw] leading-[21px] vw:leading-[1.166] font-medium">
           {title}
         </h2>
 
-        <a href={view_all.link} className="block uppercase tracking-[.05em] text-[10px] vw:text-[.694vw] leading-[11px] vw:leading-[1.1] font-medium">
+        <a href={view_all.link} className="block uppercase tracking-[.05em] text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] font-medium">
           {view_all.title}
         </a>
 
@@ -62,9 +62,9 @@ export default function RestaurantsCarousel(props) {
 
       </Swiper>
 
-      <div className="absolute pl-[3.33%] bottom-0 left-0 flex items-center space-x-4 vw:space-x-[1.111vw]">
+      <div className="absolute pl-[3.33%] bottom-0 left-0 flex items-center space-x-4 vw:space-x-[.83333vw]">
 
-        <div className="left-arrow cursor-pointer w-[11px] vw:w-[.763vw]">
+        <div className="left-arrow cursor-pointer w-[11px] vw:w-[.572vw]">
           <Image
             src="/images/prev.svg"
             alt="Next"
@@ -74,7 +74,7 @@ export default function RestaurantsCarousel(props) {
           />
         </div>
 
-        <div className="right-arrow cursor-pointer w-[11px] vw:w-[.763vw]">
+        <div className="right-arrow cursor-pointer w-[11px] vw:w-[.572vw]">
           <Image
             src="/images/next.svg"
             alt="Next"

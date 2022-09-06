@@ -10,15 +10,15 @@ export default function EventsCarousel(props) {
 
   return (
 
-    <section className="pl-4 md:pl-[3.33%] w-full flex flex-col pb-[74px] md:pb-[95px] vw:pb-[6.59vw] relative">
+    <section className="pl-4 md:pl-[3.33%] w-full flex flex-col pb-[74px] md:pb-[95px] vw:pb-[4.947vw] relative">
 
-      <div className="flex flex-col w-full space-y-2 vw:space-y-[.5vw] mb-8 md:mb-[52px] vw:mb-[3.61vw]">
+      <div className="flex flex-col w-full space-y-2 vw:space-y-[.41666vw] mb-8 md:mb-[52px] vw:mb-[2.708vw]">
 
-        <h2 className="opacity-80 uppercase tracking-[.05em] text-lg vw:text-[1.25vw] leading-[21px] vw:leading-[1.166] font-medium mb-2">
+        <h2 className="opacity-80 uppercase tracking-[.05em] text-lg vw:text-[.9375vw] leading-[21px] vw:leading-[1.166] font-medium mb-2">
           {title}
         </h2>
 
-        <a href={view_all.link} className="block uppercase tracking-[.05em] text-[10px] vw:text-[.694vw] leading-[11px] vw:leading-[1.1] font-medium">
+        <a href={view_all.link} className="block uppercase tracking-[.05em] text-[10px] vw:text-[.5208vw] leading-[11px] vw:leading-[1.1] font-medium">
           {view_all.title}
         </a>
 
@@ -59,7 +59,7 @@ export default function EventsCarousel(props) {
 
             <SwiperSlide key={_key} className="flex flex-col w-full">
 
-              <div className="relative w-full aspect-w-[1.70] aspect-h-1 mb-4 vw:mb-[1.111vw]">
+              <div className="relative w-full aspect-w-[1.70] aspect-h-1 mb-4 vw:mb-[.8333vw]">
 
                 <div className="w-full h-full ">
                   <a href={view_more.link} className="w-full relative h-full block">
@@ -69,15 +69,15 @@ export default function EventsCarousel(props) {
 
               </div>  
 
-              <h3 className="tracking-[.05em] leading-[25px] md:leading-9 vw:leading-[1.125] text-[24px] md:text-[32px] vw:text-[2.222vw] font-extralight mb-6 vw:mb-[1.666vw]">
+              <h3 className="tracking-[.05em] leading-[25px] md:leading-9 vw:leading-[1.125] text-[24px] md:text-[32px] vw:text-[1.6666vw] font-extralight mb-6 vw:mb-[1.25vw]">
                 {title}
               </h3>
 
-              <div className="opacity-80 text-lg vw:text-[1.25vw] leading-[21px] vw:leading-[1.166] font-light mb-8 vw:mb-[2.222vw]">
+              <div className="opacity-80 text-lg vw:text-[.9375vw] leading-[21px] vw:leading-[1.166] font-light mb-8 vw:mb-[1.6666vw]">
                 {description}
               </div>
 
-              <a href={view_more.link} className="block tracking-[.05em] text-[10px] vw:text-[.694vw] leading-[13px] vw:leading-[1.3] font-extralight">
+              <a href={view_more.link} className="block tracking-[.05em] text-[10px] vw:text-[.5208vw] leading-[13px] vw:leading-[1.3] font-extralight">
                 {view_more.title}
               </a>
 
@@ -89,9 +89,9 @@ export default function EventsCarousel(props) {
 
       </Swiper>
 
-      <div className="absolute pl-[3.33%] bottom-0 left-0 flex items-center space-x-4 vw:space-x-[1.111vw]">
+      <div className="absolute pl-[3.33%] bottom-0 left-0 flex items-center space-x-4 vw:space-x-[.83333vw]">
 
-        <div className="left-arrow cursor-pointer w-[11px] vw:w-[.763vw]">
+        <div className="left-arrow cursor-pointer w-[11px] vw:w-[.572vw]">
           <Image
             src="/images/prev.svg"
             alt="Next"
@@ -101,7 +101,7 @@ export default function EventsCarousel(props) {
           />
         </div>
 
-        <div className="right-arrow cursor-pointer w-[11px] vw:w-[.763vw]">
+        <div className="right-arrow cursor-pointer w-[11px] vw:w-[.572vw]">
           <Image
             src="/images/next.svg"
             alt="Next"

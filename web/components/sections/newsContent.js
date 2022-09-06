@@ -20,24 +20,24 @@ export default function NewsContent(props) {
       {( show && query !== undefined) && (
 
         <section
-            className="px-4 md:px-0 md:max-w-[93.3%] w-full mx-auto flex flex-col pt-[107px] md:pt-[142px] vw:pt-[9.86vw]"
+            className="px-4 md:px-0 md:max-w-[93.3%] w-full mx-auto flex flex-col pt-[107px] md:pt-[142px] vw:pt-[7.395vw]"
           >   
 
-            <div className="flex flex-col mb-12 md:mb-[38px] vw:mb-[2.63vw]">
+            <div className="flex flex-col mb-12 md:mb-[38px] vw:mb-[1.979vw]">
 
-              <h1 className="tracking-[.05em] leading-7 md:leading-[37px] vw:leading-[1.156] text-[24px] md:text-[32px] vw:text-[2.222vw] font-extralight mb-6 md:mb-4 lg:mb-3 vw:mb-[.8333vw]">
+              <h1 className="tracking-[.05em] leading-7 md:leading-[37px] vw:leading-[1.156] text-[24px] md:text-[32px] vw:text-[1.666vw] font-extralight mb-6 md:mb-4 lg:mb-3 vw:mb-[.625vw]">
                 {title}
               </h1>
         
-              <p className="hidden md:block font-light text-lg vw:text-[1.25vw] leading-[21px] vw:leading-[1.166] opacity-80 mb-5 vw:mb-[1.3888vw]">
+              <p className="hidden md:block font-light text-lg vw:text-[.9375vw] leading-[21px] vw:leading-[1.166] opacity-80 mb-5 vw:mb-[1.0416vw]">
                 Tuesday 24, May 2022  7:00PM
               </p>
 
-              <div className="font-light text-lg vw:text-[1.25vw] leading-[21px] vw:leading-[1.1666vw] opacity-80 mb-8 md:max-w-[470px] lg:max-w-[880px] vw:max-w-[61.111vw]">
+              <div className="font-light text-lg vw:text-[.9375vw] leading-[21px] vw:leading-[1.1666] opacity-80 mb-8 md:max-w-[470px] lg:max-w-[880px] vw:max-w-[41.66vw]">
                 {description}
               </div>
 
-              <a className="block tracking-[.05em] uppercase text-[10px] vw:text-[.6944vw] leading-[13px] vw:leading-[1.3] font-light" href={link.url}>
+              <a className="block tracking-[.05em] uppercase text-[10px] vw:text-[.520vw] leading-[13px] vw:leading-[1.3] font-light" href={link.url}>
                 {link.title}
               </a>
 

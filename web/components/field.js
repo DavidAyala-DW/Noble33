@@ -20,12 +20,12 @@ export default function Field(props) {
     >
 
       <fieldset
-        className={`flex flex-col space-y-2 md:space-y-1 vw:space-y-[.2777vw] w-full`}
+        className={`flex flex-col space-y-2 md:space-y-1 vw:space-y-[.2083vw] w-full`}
       >
 
         <label
           htmlFor={id}
-          className={`block opacity-80 text-base md:text-[20px] vw:text-[1.3888vw] leading-[1.5] font-light`}
+          className={`block opacity-80 text-base md:text-[20px] vw:text-[1.04166vw] leading-[1.5] font-light`}
         >
           {label}
         </label>
@@ -38,7 +38,7 @@ export default function Field(props) {
               {...register(id)}
               className={`
               outline-none bg-transparent border-2 border-[rgba(205,_205,_205,_0.2)]
-              w-full block py-3 md:py-4 vw:py-[1.111vw] px-4 md:px-5 vw:px-[1.3888vw] opacity-80 text-base md:text-[20px] vw:text-[1.3888vw] leading-[1.5] font-light
+              w-full block py-3 md:py-4 vw:py-[.8333vw] px-4 md:px-5 vw:px-[1.0416vw] opacity-80 text-base md:text-[20px] vw:text-[1.04166vw] leading-[1.5] font-light
               placeholder:text-white
               `}
               type={type}
@@ -61,8 +61,8 @@ export default function Field(props) {
               id={id}
               className={`
               outline-none bg-transparent border-2 border-[rgba(205,_205,_205,_0.2)]
-              w-full block py-3 md:py-4 vw:py-[1.111vw] px-4 md:px-5 vw:px-[1.3888vw] opacity-80 text-base md:text-[20px] vw:text-[1.3888vw] leading-[1.5] font-light
-              placeholder:text-white resize-none min-h-[180px] vw:min-h-[12.5vw]
+              w-full block py-3 md:py-4 vw:py-[.8333vw] px-4 md:px-5 vw:px-[1.0416vw] opacity-80 text-base md:text-[20px] vw:text-[1.0416vw] leading-[1.5] font-light
+              placeholder:text-white resize-none min-h-[180px] vw:min-h-[9.375vw]
               `}
             >
 
@@ -77,7 +77,7 @@ export default function Field(props) {
       {
         error && (
 
-          <div className="text-red-500 mt-2 vw:mt-[.555vw] font-light">
+          <div className="text-red-500 mt-2 vw:mt-[.416vw] font-light">
             {error?.message}
           </div>
 
