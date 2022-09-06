@@ -29,7 +29,7 @@ export default function CollectionGrid(props) {
 
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-6 vw:gap-x-[1.25vw] gap-y-4 md:gap-y-6 lg:gap-y-3 vw:gap-y-[.625vw] w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-[15px] lg:gap-x-4 3xl:gap-x-[21px] vw:gap-x-[1.09375vw] gap-y-4 md:gap-y-[15px] lg:gap-y-3 3xl:gap-y-[15px] vw:gap-y-[.78125vw] w-full">
 
         {collections && collections.map( collection => {
           const {_key} = collection;

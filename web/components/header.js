@@ -19,6 +19,7 @@ export default function Header(props) {
   const [openModal, setOpenModal] = useState(false);
   const [activeModal, setActiveModal] = useState(false);
   const [activeMenuImage, setActiveMenuImage] = useState();
+  const [existHero, setExistHero] = useState(false);
   const [heroVisible, setHeroVisible] = useState(null)
   const [entryObserver, setEntryObserver] = useState(false)
 
@@ -49,28 +50,31 @@ export default function Header(props) {
 
     const mainHero = document.getElementById("mainHero");
 
-    if(mainHero){
-
-      const observer = new IntersectionObserver(
-        entries => {
-          const entry = entries[0]
-          setEntryObserver(entry.isIntersecting)
-          if (entryObserver) {
-            setHeroVisible(true);
-            return;
-          }
-          setHeroVisible(false);
-        },
-        {
-          rootMargin: '0px 0px 0px 0px',
-          root: null,
-          threshold: .45
-        }
-      )
-
-      observer.observe(mainHero)  
-
+    if(!mainHero){
+      setExistHero(false);
+      return;
     }
+
+    const observer = new IntersectionObserver(
+      entries => {
+        const entry = entries[0]
+        setEntryObserver(entry.isIntersecting)
+        if (entryObserver) {
+          setHeroVisible(true);
+          return;
+        }
+        setHeroVisible(false);
+      },
+      {
+        rootMargin: '0px 0px 0px 0px',
+        root: null,
+        threshold: .45
+      }
+    )
+
+    observer.observe(mainHero);
+    
+    setExistHero(true);
 
   }, [entryObserver]);
 
@@ -79,10 +83,11 @@ export default function Header(props) {
     <>
 
       <header
-      className={`${(heroVisible == false && openModal == false ) ? "bg-body duration-[200ms]" :  "bg-transparent duration-[300ms]"} z-[100] 
+      className={`${  existHero ? ((heroVisible == false && openModal == false ) ? "bg-body duration-[200ms]  " : "bg-transparent duration-[300ms]") : "bg-body" } z-[100] 
       ${ openModal ? "justify-center md:!bg-transparent right-0 fixed md:inset-x-0" : `justify-between ${stickyHeader ? "sticky bg-body" :  "fixed inset-x-0"} `} 
       top-0 px-4 md:px-[3.35%] w-full md:mx-auto flex items-center md:justify-between
       py-6 md:pt-8 vw:pt-[1.666vw] md:pb-10 vw:pb-[2.0833vw]`}
+      id="header"
       >
 
         <div className={`cursor-pointer order-3 md:order-1 select-none md:opacity-50 ${openModal && "absolute right-4 md:left-0 md:relative"}`}>
