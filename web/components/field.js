@@ -65,7 +65,9 @@ export default function Field(props) {
               placeholder:text-white resize-none min-h-[180px] vw:min-h-[9.375vw]
               `}
             >
-
+              {placeholder && (
+                placeholder
+              )}
             </textarea>
 
           )

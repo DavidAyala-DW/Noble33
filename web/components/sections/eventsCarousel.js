@@ -39,7 +39,7 @@ export default function EventsCarousel(props) {
             slidesPerView: 1.08,
             spaceBetween: 12
           },
-          768: {
+          744: {
             slidesPerView: 2.08,
             spaceBetween: 12
           },

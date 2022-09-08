@@ -12,6 +12,13 @@ export default {
       name: 'description',
       type: 'text',
       title: 'Description',
+      hidden: ({document}) => document?.site == "casaMadera",
+    },
+    {
+      name: "description2",
+      title: "Description",
+      type: 'simplePortableText',
+      hidden: ({document}) => document?.site != "casaMadera",
     },
     {
       name: "image",
@@ -44,6 +51,33 @@ export default {
         timeFormat: 'HH:mm',
         timeStep: 15
       }
-    }
-  ]
+    },
+    {
+      name: "position",
+      title: "Position",
+      type: "string",
+      options: {
+        list:[
+          {title: "First image", value: "firstImage"},
+          {title: "First text", value: "fistText"},
+        ]
+      },
+      hidden: ({document}) => document?.site != "casaMadera",
+      initialValue: "firstImage",
+    },
+  ],
+  preview: {
+    select: {
+      title: "title",
+      media: 'image',
+    },
+    prepare({ title, media }) {
+      return {
+        title,
+        subtitle: 'Event',
+        media,
+      }
+    },
+  },
+  
 }

@@ -11,7 +11,7 @@ const Space = (props) => {
           height: ${heightMobile}px;
         }
 
-        @media(min-width: 768px){
+        @media(min-width: 744px){
           .space{
             height: ${ heightTablet ?? heightDesktop }px;
           }

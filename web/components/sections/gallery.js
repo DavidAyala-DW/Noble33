@@ -15,13 +15,6 @@ export default function Gallery(props) {
         spaceBetween={24}
         slidesPerView={"auto"}
         initialSlide={1}
-        onSwiper={ (swiper) => {
-
-          // if(typeof window !== 'undefined'){
-          //   swiper.slideTo(2,500)
-          // }
-          
-        }}
         className="w-full gallery"
         breakpoints = {{
 
@@ -29,8 +22,8 @@ export default function Gallery(props) {
             spaceBetween: 9,
             initialSlide: 1
           },
-          768: {
-            spaceBetween: 24,
+          744: {
+            spaceBetween: 8,
             initialSlide: 0
           },
           1024: {
@@ -51,47 +44,24 @@ export default function Gallery(props) {
 
             const formats = {
 
-              "format-1": "!w-[37.6%] md:!w-[19.623%] lg:!w-[22.847%] 3xl:!w-[18.092%] h-auto !pt-[22.5vw]",
-              "format-2": "!w-[38.66%] md:!w-[19.623%] lg:!w-[27.5%] 3xl:!w-[21.71%] h-auto !pt-[9.65vw]",
-              "format-3": "!w-[63.2%] md:!w-[31.989%] lg:!w-[44.79%] 3xl:!w-[35.36%] h-full",
-              "format-4": "!w-[37.6%] md:!w-[34.408%] md:!max-h-[206px] lg:!max-h-max lg:!w-[26.66%] 3xl:!w-[21.05%] h-auto !pt-[3.47vw]"
+              "format-1": "!w-[37.6%] !h-[29.86vw] md:!w-[19.623%] md:!h-[15.725vw] lg:!w-[22.847%] lg:!h-[18.26vw] 3xl:!w-[17.135vw] 3xl:!h-[13.69vw] !mt-[22.5vw]",
+              "format-2": "!w-[38.66%] !h-[30.864vw] md:!w-[19.623%] md:!h-[15.591vw] lg:!w-[27.5%] lg:!h-[21.94vw] 3xl:!w-[20.625vw] 3xl:!h-[16.45vw] !mt-[9.65vw]",
+              "format-3": "!w-[63.2%] !h-[64.58vw] md:!w-[31.989%] md:!h-[32.66vw] lg:!w-[44.79%] lg:!h-[45.83vw] 3xl:!w-[34.89vw] 3xl:!h-[34.375vw]",
+              "format-4": "!w-[37.6%] !h-[40.53vw] md:!w-[34.408%] md:!h-[27.688vw] lg:!max-h-max lg:!h-[28.75vw] lg:!w-[26.66%] 3xl:!w-[20vw] 3xl:!h-[21.6525vw] !mt-[3.47vw]"
 
             }
 
             return(
               <SwiperSlide key={_key} className={`overflow-hidden ${formats[format]}`}>
-                <SanityImage src={image} className="w-full object-cover" layout={"responsive"} />
+                <div className="w-full h-full relative">
+                  <SanityImage src={image} className="w-full object-cover" layout={"fill"} />
+                </div>                
               </SwiperSlide>
             )
 
           })
         }
       </Swiper>
-
-      {/* <div className="flex items-start space-x-2 md:space-x-6 w-full">
-      {
-          gallery.map(item => {
-
-            const {_key, image, format} = item;
-
-            const formats = {
-
-              "format-1": "w-[9.94%] h-auto pt-[22.5vw]",
-              "format-2": "w-[28.94%] h-auto pt-[9.65vw]",
-              "format-3": "w-[47.14%] h-full",
-              "format-4": "w-[13.96%] h-auto pt-[3.47vw]"
-
-            }
-
-            return(
-              <div className={`${formats[format]}`} key={_key}>
-                <SanityImage src={image} className={`object-cover`} layout={"responsive"} />
-              </div>
-            )
-
-          })
-        }
-      </div> */}
 
     </section>
 

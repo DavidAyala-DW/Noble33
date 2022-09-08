@@ -130,9 +130,13 @@ export default function Header(props) {
 
         <div className="hidden md:block order-3 select-none">
 
-          <a onClick={handleClick} href={reservationsButton.link.url}>
-            <p className="font-medium text-lg vw:text-[.9375vw] leading-[21px] vw:leading-[1.166] tracking-[.05em] uppercase opacity-70">{reservationsButton.title}</p>
-          </a>
+          <Link href={reservationsButton?.link?.url} passHref>
+            <a >
+              <p className="font-medium text-lg vw:text-[.9375vw] leading-[21px] vw:leading-[1.166] tracking-[.05em] uppercase opacity-70">
+                {reservationsButton?.title}
+              </p>
+            </a>
+          </Link>
 
         </div>
         
@@ -156,7 +160,7 @@ export default function Header(props) {
                   const {title, link, image} = item;
 
                   return (
-                    <Link href={link.url} passHref key={index} >
+                    <Link href={link?.url} passHref key={index} >
                       <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} className="block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
                         {title}
                       </a>
@@ -178,7 +182,7 @@ export default function Header(props) {
                   const {title, link, image} = item;
 
                   return (
-                    <Link href={link.url} passHref key={index} >
+                    <Link href={link?.url} passHref key={index} >
                       <a onMouseLeave={handleMouseDown} onMouseEnter={() => setActiveMenuImage(image)} onClick={handleClick} className="block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
                         {title}
                       </a>
@@ -189,9 +193,9 @@ export default function Header(props) {
 
               })}
 
-              <Link href="/" passHref>
+              <Link href={reservationsButton?.link?.url} passHref>
                 <a onClick={handleClick} className="md:hidden block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
-                  RESERVATIONS
+                  {reservationsButton?.title}
                 </a>
               </Link>
               
