@@ -258,7 +258,7 @@ export default function Header(props) {
             [...mainNav,{image:menuImage, _key: "_falseKey"}].map((item) => {
               const {image, _key} = item;
               return (
-                <div className={`${JSON.stringify(image) == JSON.stringify(activeMenuImage) ? "block" : "hidden" } relative`}>
+                <div className={`${JSON.stringify(image) == JSON.stringify(activeMenuImage) ? "block" : "hidden" }`}>
                   <SanityImage
                     key={_key}
                     priority={true}
