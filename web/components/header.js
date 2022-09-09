@@ -255,41 +255,26 @@ export default function Header(props) {
         <div className={`hidden ${!activeMenuImage && "bg-body"} lg:flex relative w-full h-full max-w-[26.4%] 3xl:max-w-[33.3333%]`}>
 
           {
-            activeMenuImage && (
-              <SanityImage
-                priority={true}
-                className="object-cover"
-                src={activeMenuImage}
-                layout="fill"
-                quality={80}
-              />
-            )
+            [...mainNav,{image:menuImage, _key: "_falseKey"}].map((item) => {
+              const {image, _key} = item;
+              return (
+                <div className={`${JSON.stringify(image) == JSON.stringify(activeMenuImage) ? "block" : "hidden" }`}>
+                  <SanityImage
+                    key={_key}
+                    priority={true}
+                    className={`object-cover`}
+                    src={image}
+                    layout="fill"
+                    quality={80}
+                  />
+                </div>
+              )
+            })
           }
           
         </div>
 
       </div>
-
-      {
-        mainNav.map((item) => {
-          const {image, _key} = item;
-          return (
-            <div className="w-full h-full absolute">
-              <div className="relative w-full h-screen max-w-[26.4%] 3xl:max-w-[33.3333%] invisible" key={_key}>
-                <SanityImage
-                  src={image}
-                  placeholder="blur"
-                  className="invisible"
-                  layout="fill"
-                  priority={true}
-                  objectFit="contain"
-                  />
-
-              </div>
-            </div>
-          )
-        })
-      }
 
     </>
 

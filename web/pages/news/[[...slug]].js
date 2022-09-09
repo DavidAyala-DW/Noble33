@@ -116,7 +116,7 @@ async function getPageSections(slug){
     `,
     { possibleSlugs: getSlugVariations(slug) }
   )
-  console.log(request._id);
+  
   return request
 }
 
