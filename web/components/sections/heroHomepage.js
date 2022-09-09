@@ -1,5 +1,6 @@
 import BackgroundImage from "../backgroundImage";
 import SimpleBlockContent from '@/components/simple-block-content'
+import Link from "next/link"
 
 const HeroHomepage = (props) => {
 
@@ -32,9 +33,11 @@ const HeroHomepage = (props) => {
             <SimpleBlockContent blocks={description} />
           </div>
 
-          <a href={reservation.link} className="block opacity-80 tracking-[.05em] uppercase text-[10px] vw:text-[0.520vw] leading-[11px] vw:leading-[1.1] font-extralight">
-            {reservation.label}
-          </a>
+          <Link href={reservation.link} passHref>
+            <a target="_blank" rel="noopener nooreferrer" className="block opacity-80 tracking-[.05em] uppercase text-[10px] vw:text-[0.520vw] leading-[11px] vw:leading-[1.1] font-extralight">
+              {reservation.label}
+            </a>
+          </Link>
 
         </div>
 
