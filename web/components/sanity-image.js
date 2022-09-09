@@ -19,7 +19,7 @@ export default function SanityImage(props) {
     delete imageProps.width
     delete imageProps.height
   }
-
+  console.log(imageProps.src);
   return (
     <Image
       {...imageProps}

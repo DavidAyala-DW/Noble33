@@ -48,7 +48,9 @@ export default {
     {
       name: "image",
       title: 'Image',
-      type: 'image'
+      type: 'image',
+      hidden: ({document }) => !document?.mainNav?.length,
+
     }
   ]
 }

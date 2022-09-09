@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useRouter } from 'next/router'
 import SanityImage from './sanity-image'
 import Link from "next/link";
 import Logo from "@/public/images/logo.png"
 
 export default function Header(props) {
-  
+
+  const router = useRouter();
+
   const {
     mainNav,
     menuImage,
@@ -76,7 +79,7 @@ export default function Header(props) {
     
     setExistHero(true);
 
-  }, [entryObserver]);
+  }, [router.asPath,entryObserver]);
 
   return (
 
@@ -183,7 +186,7 @@ export default function Header(props) {
 
                   return (
                     <Link href={link?.url} passHref key={index} >
-                      <a onMouseLeave={handleMouseDown} onMouseEnter={() => setActiveMenuImage(image)} onClick={handleClick} className="block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
+                      <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} className="block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
                         {title}
                       </a>
                     </Link>
@@ -253,13 +256,40 @@ export default function Header(props) {
 
           {
             activeMenuImage && (
-              <SanityImage priority={true} className="object-cover" src={activeMenuImage} layout="fill" />
+              <SanityImage
+                priority={true}
+                className="object-cover"
+                src={activeMenuImage}
+                layout="fill"
+                quality={80}
+              />
             )
           }
           
         </div>
 
       </div>
+
+      {
+        mainNav.map((item) => {
+          const {image, _key} = item;
+          return (
+            <div className="w-full h-full absolute">
+              <div className="relative w-full h-screen max-w-[26.4%] 3xl:max-w-[33.3333%] invisible" key={_key}>
+                <SanityImage
+                  src={image}
+                  placeholder="blur"
+                  className="invisible"
+                  layout="fill"
+                  priority={true}
+                  objectFit="contain"
+                  />
+
+              </div>
+            </div>
+          )
+        })
+      }
 
     </>
 

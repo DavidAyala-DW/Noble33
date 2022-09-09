@@ -39,6 +39,8 @@ export default {
         { type: 'details' },
         { type: 'event' },
         { type: 'newsletter' },
+        { type: 'contact' },
+        { type: 'richtext' },
       ],
     },
     {
