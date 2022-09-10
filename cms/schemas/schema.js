@@ -11,6 +11,7 @@ import siteSettings from './documents/siteSettings'
 import newsPT from './documents/news'
 import pagesCasaMadera from './documents/pagesCasaMadera'
 import routesCasaMadera from "./documents/routesCasaMadera"
+import locations from "./documents/locations"
 
 //We import Page sections
 import heading from "./objects/heading"
@@ -50,6 +51,7 @@ import richtext from "./objects/richtext"
 import socialMedia from './objects/socialMedia'
 import imageFullWidth from './objects/imageFullWidth'
 import eventsSlider from "./objects/eventsSlider"
+import menus from "./objects/menus"
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -66,6 +68,7 @@ export default createSchema({
     route,
     pagesCasaMadera,
     routesCasaMadera,
+    locations,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
@@ -104,6 +107,7 @@ export default createSchema({
     socialMedia,
     imageFullWidth,
     eventsSlider,
+    menus,
     testSection
   ]),
 })

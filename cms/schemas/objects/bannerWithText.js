@@ -22,7 +22,8 @@ export default {
           {title: 'Normal', value: 'format-1'},
           {title: 'Large', value: 'format-2'},
         ]
-      }
+      },
+      hidden: ({document}) => document?.site == "casaMadera"
     },
     {
       name: 'learn_more',
@@ -39,8 +40,7 @@ export default {
           title: "Link",
           type: "string"
         }
-      ]
-      
+      ]      
     },
     {
       name: 'backgroundImage',
@@ -57,7 +57,8 @@ export default {
           {title: 'Format 1', value: 'format-1'},
           {title: 'Format 2', value: 'format-2'},
         ]
-      }
+      },
+      hidden: ({document}) => document?.site == "casaMadera"
     }
   ],
   preview: {

@@ -86,7 +86,6 @@ export default {
       group: 'social',
       fieldset: 'social',
       hidden: ({document}) => document?.site != "casaMadera"
-
     },
     {
       name: 'spotifyHandle',
