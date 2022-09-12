@@ -52,6 +52,7 @@ import socialMedia from './objects/socialMedia'
 import imageFullWidth from './objects/imageFullWidth'
 import eventsSlider from "./objects/eventsSlider"
 import menus from "./objects/menus"
+import menusContent from "./objects/menusContent"
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -108,6 +109,7 @@ export default createSchema({
     imageFullWidth,
     eventsSlider,
     menus,
+    menusContent,
     testSection
   ]),
 })

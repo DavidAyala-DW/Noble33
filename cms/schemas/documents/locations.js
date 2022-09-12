@@ -82,7 +82,7 @@ export default {
       name: 'menus',
       group: "menuPage",
       type: 'array',
-      title: 'Menu page sections',
+      title: 'Menus',
       of: [
         {
           type: 'object',
@@ -107,11 +107,92 @@ export default {
               },
             },
             {
-              name: 'content',
-              type: 'simplePortableText',
-              title: 'Content',
+              name: 'groups',
+              type: 'array',
+              title: 'Groups',
+              of: [
+                {
+                  type: 'object',
+                  title: "Group",
+                  fields:[
+                    {
+                      type: "string",
+                      name: "title",
+                      title: "Group title"
+                    },
+                    {
+                      type: "array",
+                      name: "courses",
+                      title: "Courses",
+                      of: [
+                        {
+                          type: "object",
+                          name: "Course",
+                          fields:[
+                            {
+                              type: "string",
+                              name: "title",
+                              title: "Course title"
+                            },
+                            {
+                              type: "text",
+                              name: "description",
+                              title: "Description"
+                            },
+                            {
+                              type: "string",
+                              name: "extra_text",
+                              title: "Extra text"
+                            },
+                            {
+                              name: "description_size",
+                              title: "Description size",
+                              type: "string",
+                              options: {
+                                list: [
+                                  { title: "Small", value: "small" },
+                                  { title: "Medium", value: "medium" },
+                                  { title: "Large", value: "large" },
+                                ],
+                              },
+                              initialValue: "medium"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             },
           ]
+        },
+      ]
+    },
+
+    {
+      name: 'menuPageContent',
+      group: "menuPage",
+      type: 'array',
+      title: 'Menu page - sections',
+      of: [
+        { type: 'menusContent' },
+        { type: 'hero' },
+        { type: 'bannerWithText' },
+        { type: 'space' },
+        { type: 'textContentCenter' },
+        { type: 'imageWithText' },
+        { type: 'imageFullWidth' },
+        { type: 'eventsSlider' },
+        { type: 'details' },
+        { type: 'event' },
+        { type: 'newsletter' },
+        { type: 'contact' },
+        { type: 'richtext' },
+      ],
+      initialValue: [
+        { 
+          _type: 'menusContent',
         },
       ]
     },
