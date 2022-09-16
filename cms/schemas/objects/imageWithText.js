@@ -41,6 +41,19 @@ export default {
       type: "socialMedias"
     },
     {
+      name: "imageAspectRatio",
+      title: "Image aspect ratio (Desktop)",
+      type: "string",
+      hidden: ({document}) => document?.site != "casaMadera",
+      options: {
+        list: [
+          { title: "Landscape", value: "landscape" },
+          { title: "Portrait", value: "portrait" },
+        ],
+      },
+      initialValue: "landscape"
+    },
+    {
       name: "alignment",
       title: "Alignment",
       type: "string",
@@ -53,6 +66,13 @@ export default {
         ],
       },
       initialValue: "center"
+    },
+    {
+      name: "isPressPage",
+      title: "Is press page?",
+      type: "boolean",
+      hidden: ({document}) => document?.site != "casaMadera",
+      initialValue: false
     }
   ],
   preview: {
