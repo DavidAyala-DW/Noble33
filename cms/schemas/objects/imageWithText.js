@@ -41,6 +41,13 @@ export default {
       type: "socialMedias"
     },
     {
+      name: "menus",
+      title: "Show Menus?",
+      type: "boolean",
+      initialValue: false,
+      hidden: ({document}) => document?.site != "casaMadera",
+    },
+    {
       name: "imageAspectRatio",
       title: "Image aspect ratio (Desktop)",
       type: "string",
@@ -73,7 +80,7 @@ export default {
       type: "boolean",
       hidden: ({document}) => document?.site != "casaMadera",
       initialValue: false
-    }
+    },
   ],
   preview: {
     select: {
