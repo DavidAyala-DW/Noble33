@@ -39,3 +39,37 @@ body, *{
 .swiper-button-disabled{
   opacity: 0.5!important;
 }
+
+.cookie{
+
+  position: fixed;
+  z-index: 99999;
+  background-color: white;
+  width: 100%;
+
+  color: #0C0A06;
+  display: flex;
+  flex-direction: column;
+  @apply space-y-5;
+  @media(min-width:768px){
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    @apply space-y-0;
+  }
+  padding: 20px;
+
+  @apply px-4 md:px-[3.35%];
+  .cookieContent{
+    @apply text-base text-[#0C0A06];
+  }
+  .CookitButtonsWrapper{
+    @apply flex space-x-5 items-center text-[#0C0A06];
+  }
+  .cookieButton{
+    @apply text-sm text-white text-center bg-[#0C0A06]  px-4 py-3 font-bold uppercase;
+  }
+  .cookieDeclineButton{
+    @apply text-sm text-white text-center  bg-red-500 px-4 py-3 font-bold uppercase;
+  }
+}

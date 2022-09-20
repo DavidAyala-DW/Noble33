@@ -2,9 +2,9 @@
 	"name": "next",
 	"private": true,
 	"scripts": {
-    "dev": "sanity start",
-    "build": "sanity build"
-  },
+		"dev": "sanity start",
+		"build": "sanity build"
+	},
 	"version": "1.0.0",
 	"description": "",
 	"main": "package.json",
@@ -26,7 +26,7 @@
 		"react": "^17.0",
 		"react-dom": "^17.0",
 		"sanity-plugin-media": "^1.4.10",
-    "sanity-plugin-order-documents": "^0.0.23",
+		"sanity-plugin-order-documents": "^0.0.23",
 		"styled-components": "^5.2.0"
 	}
 }
