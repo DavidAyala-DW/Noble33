@@ -61,6 +61,34 @@ export default {
       initialValue: "landscape"
     },
     {
+      name: "imagesPosition",
+      title: "Image position (Ultrawide)",
+      type: "string",
+      hidden: ({document}) => document?.site != "casaMadera",
+      options: {
+        list: [
+          { title: "Top", value: "top" },
+          { title: "Center", value: "center" },
+          { title: "Bottom", value: "bottom" },
+        ],
+      },
+      initialValue: "center"
+    },
+    {
+      name: "imagePositionTablet",
+      title: "Image position (Tablet)",
+      type: "string",
+      hidden: ({document}) => document?.site != "casaMadera",
+      options: {
+        list: [
+          { title: "Top", value: "top" },
+          { title: "Center", value: "center" },
+          { title: "Bottom", value: "bottom" },
+        ],
+      },
+      initialValue: "center"
+    },
+    {
       name: "alignment",
       title: "Alignment",
       type: "string",
