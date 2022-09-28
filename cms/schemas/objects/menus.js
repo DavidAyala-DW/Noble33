@@ -15,8 +15,32 @@ export default {
         {
           type: 'reference',
           to: [
-            {type: "locations"}
-          ]
+            {type: "locations"},
+            {type: "locationsSparrow"},
+          ],
+          options: {
+            filter: (props) => {
+    
+              const {document} = props;
+              console.log(document?.site);
+              if(document?.site == "sparrow"){
+                return {
+                  filter: '_type == "locationsSparrow"'
+                }
+              }
+    
+              if(document?.site == "casaMadera"){
+                return {
+                  filter: '_type == "locations"'
+                }
+              }
+    
+              return {
+                
+              }
+    
+            }
+          }
         },
       ],
     },

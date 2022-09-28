@@ -23,7 +23,7 @@ export default {
           {title: 'Large', value: 'format-2'},
         ]
       },
-      hidden: ({document}) => document?.site == "casaMadera"
+      hidden: ({document}) => document?.site != "noble33"
     },
     {
       name: 'learn_more',
@@ -58,7 +58,7 @@ export default {
           {title: 'Format 2', value: 'format-2'},
         ]
       },
-      hidden: ({document}) => document?.site == "casaMadera"
+      hidden: ({document}) => document?.site != "noble33"
     }
   ],
   preview: {

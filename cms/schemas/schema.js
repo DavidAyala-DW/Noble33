@@ -12,6 +12,10 @@ import newsPT from './documents/news'
 import pagesCasaMadera from './documents/pagesCasaMadera'
 import routesCasaMadera from "./documents/routesCasaMadera"
 import locations from "./documents/locations"
+import pagesSparrow from "./documents/pagesSparrow"
+import routesSparrow from "./documents/routesSparrow"
+import locationsSparrow from "./documents/locationsSparrow"
+
 
 //We import Page sections
 import heading from "./objects/heading"
@@ -70,6 +74,9 @@ export default createSchema({
     pagesCasaMadera,
     routesCasaMadera,
     locations,
+    pagesSparrow,
+    routesSparrow,
+    locationsSparrow,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,

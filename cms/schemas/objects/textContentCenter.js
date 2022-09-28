@@ -12,13 +12,13 @@ export default {
       name: 'description',
       type: 'string',
       title: 'Description',
-      hidden: ({document}) => document?.site == "casaMadera",
+      hidden: ({document}) => document?.site != "noble33",
     },
     {
       name: "description2",
       title: "Description",
       type: 'simplePortableText',
-      hidden: ({document}) => document?.site != "casaMadera",
+      hidden: ({document}) => document?.site == "noble33",
     },
     {
       name: 'learn_more',
@@ -41,7 +41,7 @@ export default {
     {
       name: "mobileAlignment",
       title: "Mobile alignment",
-      hidden: ({document}) => document?.site != "casaMadera",
+      hidden: ({document}) => document?.site == "noble33",
       type: "string",
       options: {
         list: [
@@ -54,7 +54,7 @@ export default {
     {
       name: "titleSize",
       title: "Size title",
-      hidden: ({document}) => document?.site != "casaMadera",
+      hidden: ({document}) => document?.site == "noble33",
       type: "string",
       options: {
         list: [
@@ -68,7 +68,7 @@ export default {
     {
       name: "descriptionContent",
       title: "Description content",
-      hidden: ({document}) => document?.site != "casaMadera",
+      hidden: ({document}) => document?.site == "noble33",
       type: "string",
       options: {
         list: [

@@ -29,6 +29,7 @@ export default {
         list: [
           { title: "Noble33", value: "noble33" },
           { title: "Casa Madera", value: "casaMadera" },
+          { title: "Sparrow", value: "sparrow" },
         ],
       },
     },
@@ -85,7 +86,6 @@ export default {
       placeholder: 'link',
       group: 'social',
       fieldset: 'social',
-      hidden: ({document}) => document?.site != "casaMadera"
     },
     {
       name: 'spotifyHandle',
@@ -104,6 +104,7 @@ export default {
       placeholder: 'link',
       group: 'social',
       fieldset: 'social',
+      hidden: ({document}) => document?.site != "casaMadera"
     },
     {
       name: 'privacyPolicyHandle',
@@ -136,6 +137,7 @@ export default {
       const sites = {
         casaMadera: "Casa madera",
         noble33: "Noble33",
+        sparrow: "Sparrow"
       }
 
       return {

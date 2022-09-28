@@ -10,15 +10,21 @@ export default {
       to: [
         {type: 'route'},
         {type: 'routesCasaMadera'},
+        {type: 'routesSparrow'},
       ],
       options: {
         filter: (props) => {
 
           const {document} = props;
+          if(document?.site == "sparrow"){
+            return {
+              filter: '_type == "routesSparrow"'
+            }
+          }
 
           if(document?.site == "casaMadera"){
             return {
-              filter: '_type == "routesCasaMadera" '
+              filter: '_type == "routesCasaMadera"'
             }
           }
 

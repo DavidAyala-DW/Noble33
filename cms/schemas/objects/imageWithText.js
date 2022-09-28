@@ -34,24 +34,25 @@ export default {
       name: "links",
       title: "Link",
       type: "links",
-      hidden: ({document}) => document?.site != "casaMadera",
+      hidden: ({document}) => document?.site == "noble33",
     },
     {
       name: "socialMedias",
-      type: "socialMedias"
+      type: "socialMedias",
+      hidden: ({document}) => document?.site == "noble33",
     },
     {
       name: "menus",
       title: "Show Menus?",
       type: "boolean",
       initialValue: false,
-      hidden: ({document}) => document?.site != "casaMadera",
+      hidden: ({document}) => document?.site == "noble33",
     },
     {
       name: "imageAspectRatio",
       title: "Image aspect ratio (Desktop)",
       type: "string",
-      hidden: ({document}) => document?.site != "casaMadera",
+      hidden: ({document}) => document?.site == "noble33",
       options: {
         list: [
           { title: "Landscape", value: "landscape" },
@@ -64,7 +65,7 @@ export default {
       name: "imagesPosition",
       title: "Image position (Ultrawide)",
       type: "string",
-      hidden: ({document}) => document?.site != "casaMadera",
+      hidden: ({document}) => document?.site == "noble33",
       options: {
         list: [
           { title: "Top", value: "top" },
@@ -78,7 +79,7 @@ export default {
       name: "imagePositionTablet",
       title: "Image position (Tablet)",
       type: "string",
-      hidden: ({document}) => document?.site != "casaMadera",
+      hidden: ({document}) => document?.site == "noble33",
       options: {
         list: [
           { title: "Top", value: "top" },
@@ -92,7 +93,7 @@ export default {
       name: "alignment",
       title: "Alignment",
       type: "string",
-      hidden: ({document}) => document?.site != "casaMadera",
+      hidden: ({document}) => document?.site == "noble33",
       options: {
         list: [
           { title: "Top", value: "top" },
@@ -106,7 +107,7 @@ export default {
       name: "isPressPage",
       title: "Is press page?",
       type: "boolean",
-      hidden: ({document}) => document?.site != "casaMadera",
+      hidden: ({document}) => document?.site == "noble33",
       initialValue: false
     },
   ],
