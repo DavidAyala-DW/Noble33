@@ -44,9 +44,8 @@ body, *{
 
   position: fixed;
   z-index: 99999;
-  background-color: white;
+  background-color: #0C0A06;
   width: 100%;
-
   color: #0C0A06;
   display: flex;
   flex-direction: column;
@@ -57,19 +56,24 @@ body, *{
     justify-content: space-between;
     @apply space-y-0;
   }
+
   padding: 20px;
+  padding-bottom: 32px;
 
   @apply px-4 md:px-[3.35%];
   .cookieContent{
-    @apply text-base text-[#0C0A06];
+    @apply text-base text-[#DEDEDE] font-light;
+  }
+  .cookieContent p, .cookieContent a{
+    @apply text-base text-[#DEDEDE] font-light;
   }
   .CookitButtonsWrapper{
-    @apply flex space-x-5 items-center text-[#0C0A06];
+    @apply flex space-x-reverse space-x-5 items-center text-[#DEDEDE];
   }
   .cookieButton{
-    @apply text-sm text-white text-center bg-[#0C0A06]  px-4 py-3 font-bold uppercase;
+    @apply text-base order-1 leading-[18px] text-[#DEDEDE] text-center font-light cursor-pointer;
   }
   .cookieDeclineButton{
-    @apply text-sm text-white text-center  bg-red-500 px-4 py-3 font-bold uppercase;
+    @apply text-base order-2 leading-[18px] text-[#DEDEDE] text-center font-light cursor-pointer;
   }
 }

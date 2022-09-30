@@ -33,8 +33,6 @@ function Layout(props) {
     reservationsButton,
   ]
 
-  console.log(setGlobalURL);
-
   setGlobalURL.forEach((menuItem,i) => {
 
     console.log(i);

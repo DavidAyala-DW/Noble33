@@ -28,12 +28,13 @@ function MyApp({ Component, pageProps }) {
         containerClasses="cookie"
         contentClasses="cookieContent"
         declineButtonClasses="cookieDeclineButton"
+        declineButtonText="Decline"
         buttonClasses="cookieButton"
         buttonWrapperClasses="CookitButtonsWrapper"
         disableStyles={true}
         enableDeclineButton={true}
         location="bottom"
-        buttonText="Accept all"
+        buttonText="Accept All"
         cookieName="_gtm_all_cookies"
         expires={150}
         onAccept={() => {
