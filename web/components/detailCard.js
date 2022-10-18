@@ -1,8 +1,15 @@
 import SanityImage from "./sanity-image";
+import { useState } from 'react'
+import Video from "./video";
+import dynamic from 'next/dynamic'
+
+const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false })
 
 export default function DetailCard({detail}) {
 
-  const {image, title, description} = detail;
+  const {image, title, description, video} = detail;
+  const [isPlaying, setIsPlaying] = useState(true)
+  console.log(video);
 
   return (
 
@@ -12,7 +19,19 @@ export default function DetailCard({detail}) {
         <div className="aspect-h-1 w-full aspect-w-[1.491] md:aspect-w-[2.802] lg:aspect-w-[1.719] 3xl:aspect-w-[2.30]">
           <div className="w-full h-full">
             <div className="relative w-full h-full">
-              <SanityImage src={image} className="object-cover" layout={"fill"}/>
+
+              {
+                !video && (
+                  <SanityImage src={image} className="object-cover" layout={"fill"}/>
+                )
+              }
+
+              {
+                video && (
+                  <Video src={video} />
+                )
+              }
+              
             </div>
           </div>
         </div>
@@ -25,7 +44,7 @@ export default function DetailCard({detail}) {
       <p className="md:max-w-[500px] vw:max-w-[26.041vw] w-full text-lg vw:text-[.9375vw] leading-[21px] vw:leading-[1.1666] opacity-80 font-light">
         {description}
       </p>
-
+      
     </div>
 
   )

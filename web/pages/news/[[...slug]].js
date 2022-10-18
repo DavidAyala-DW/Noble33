@@ -62,7 +62,6 @@ async function fulfillSectionQueries(page, slug) {
 
       }
 
-      console.log(section._type); //Detectar _type-> el nombre de un documento y para cada documento se tendra un objeto desde el server con query groq, revisar que solo se ejecute una vez
 
       if (section.query) {
         const queryData = await client.fetch(groq`${section.query}`)

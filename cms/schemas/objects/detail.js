@@ -19,6 +19,11 @@ export default {
       title: 'Image',
     },
     {
+      name: "video",
+      type: 'url',
+      label: 'Video'
+    },
+    {
       name: "featuredDetail",
       type: "boolean",
       title: 'Featured detail',

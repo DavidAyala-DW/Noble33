@@ -22,7 +22,6 @@ export default {
             filter: (props) => {
     
               const {document} = props;
-              console.log(document?.site);
               if(document?.site == "sparrow"){
                 return {
                   filter: '_type == "locationsSparrow"'
