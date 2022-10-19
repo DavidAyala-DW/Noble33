@@ -94,7 +94,7 @@ export default {
       placeholder: 'link',
       group: 'social',
       fieldset: 'social',
-      hidden: ({document}) => document?.site != "casaMadera"
+      hidden: ({document}) => document?.site == "noble33"
 
     },
     {
@@ -104,7 +104,7 @@ export default {
       placeholder: 'link',
       group: 'social',
       fieldset: 'social',
-      hidden: ({document}) => document?.site != "casaMadera"
+      hidden: ({document}) => document?.site === "noble33"
     },
     {
       name: 'privacyPolicyHandle',

@@ -49,6 +49,13 @@ export default {
       hidden: ({document}) => document?.site == "noble33",
     },
     {
+      name: "show_locations",
+      title: "Show Locations?",
+      type: "boolean",
+      initialValue: false,
+      hidden: ({document}) => document?.site == "noble33",
+    },
+    {
       name: "imageAspectRatio",
       title: "Image aspect ratio (Desktop)",
       type: "string",
