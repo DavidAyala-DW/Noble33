@@ -39,6 +39,13 @@ export default {
       
     },
     {
+      name: "show_locations",
+      title: "Show Locations?",
+      type: "boolean",
+      initialValue: false,
+      hidden: ({document}) => document?.site == "noble33",
+    },
+    {
       name: "mobileAlignment",
       title: "Mobile alignment",
       hidden: ({document}) => document?.site == "noble33",

@@ -42,6 +42,11 @@ export default {
       },
     },
     {
+      name:"comming_soon",
+      type: "boolean",
+      title: "Comming Soon?"
+    },
+    {
       name: "image",
       title: "Image",
       type: "image",
