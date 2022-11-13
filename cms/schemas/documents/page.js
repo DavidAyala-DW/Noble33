@@ -12,6 +12,19 @@ export default {
       title: 'Title',
     },
     {
+      name: "site",
+      title: "Site",
+      type: "string",
+      options: {
+        list: [
+          { title: "Noble33", value: "noble33" },
+          { title: "Casa Madera", value: "casaMadera" },
+          { title: "Sparrow", value: "sparrow" },
+        ],
+      },
+      initialValue: "noble33"
+    },
+    {
       name: 'content',
       type: 'array',
       title: 'Page sections',

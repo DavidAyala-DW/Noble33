@@ -5,3 +5,8 @@ export function newsDetailsQuery(slug){
   }`
 
 }
+
+export const pageContentQuery = `
+  content[] {
+    ...
+  }`
