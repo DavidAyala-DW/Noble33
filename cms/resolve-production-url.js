@@ -1,13 +1,21 @@
 // Any random string, must match SANITY_PREVIEW_SECRET in the Next.js .env.local file
 const previewSecret = "test"
 
+const urls = {
+  "casaMadera": "https://casa-madera.netlify.app/",
+  "sparrow": "https://noble33-sparrow.netlify.app/",
+  "noble33": "https://noble33.netlify.app/"
+}
+
 const remoteUrl = `https://noble33.netlify.app/`
 const localUrl = `http://localhost:3000`
 
 export default function resolveProductionUrl(doc) {
   
+  const site = doc?.site ?? "noble33"
+
   const baseUrl =
-    window.location.hostname === 'localhost' ? localUrl : remoteUrl
+    window.location.hostname === 'localhost' ? localUrl : urls[site]
 
   const previewUrl = new URL(baseUrl)
 
