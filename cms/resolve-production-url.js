@@ -6,8 +6,6 @@ const localUrl = `http://localhost:3000`
 
 export default function resolveProductionUrl(doc) {
   
-  console.log(doc);
-
   const baseUrl =
     window.location.hostname === 'localhost' ? localUrl : remoteUrl
 
@@ -15,7 +13,7 @@ export default function resolveProductionUrl(doc) {
 
   previewUrl.pathname = `/api/preview`
   previewUrl.searchParams.append(`secret`, previewSecret)
-  previewUrl.searchParams.append(`slug`, doc?.slug?.current ?? `/`)
+  previewUrl.searchParams.append(`slug`,  `/`)
   previewUrl.searchParams.append(`secret2`,  doc?.site ?? "noble33" )
 
   return previewUrl.toString()

@@ -2,7 +2,7 @@ import SanityImage from "./sanity-image";
 import Link from "next/link"
 
 export default function NewsCard({news}) {
-
+  
   const {title, slug, image} = news;
 
   return (

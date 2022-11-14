@@ -15,6 +15,8 @@ export default {
       name: "site",
       title: "Site",
       type: "string",
+      readOnly: true,
+      hidden: true,
       options: {
         list: [
           { title: "Noble33", value: "noble33" },

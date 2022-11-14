@@ -13,19 +13,11 @@ const ExitPreviewButton = dynamic(() =>
   import('@/components/exit-preview-button')
 )
 
-export default function Page(megaprops) {
+export default function Page(props) {
 
-  const {props, preview, data, siteSettings, menus} = megaprops;
+  const { preview, data, siteSettings, menus } = props;
   const stickyHeader = false;
   const title =" "
-  // let {
-  //   title = 'Missing title',
-  //   page:{content = []},
-  //   slug,
-  //   stickyHeader,
-  //   siteSettings,  
-  //   menus // Crear bloque en cms para permitir links internos,externos y crear un provider donde guardar los valores del cms y luego un hook para consumirlo desde ahi con facilidad.
-  // } = props;
 
   const { data: previewData } = usePreviewSubscription(data?.query, {
     params: data?.queryParams ?? {},
@@ -70,16 +62,14 @@ export default function Page(megaprops) {
 }
 
 async function fulfillSectionQueries(page) {
-
-  if (!page?.content) {
+  console.log(page);
+  if (!page?.page?.content) {
     return page
   }
 
   const sectionsWithQueryData = await Promise.all(
-    page.content.map(async (section) => {
-
+    page.page.content.map(async (section) => {
       if(section.news){
-        
         if(Array.isArray(section.news)){
 
           await Promise.all(section.news.map(async (news) => {
@@ -174,7 +164,6 @@ export const getStaticProps = async ({ params, preview = false }) => {
   
   return {
     props:{
-      props: { data,...data, siteSettings, menus } || {},
       data: {page, query, queryParams},
       siteSettings,
       menus,

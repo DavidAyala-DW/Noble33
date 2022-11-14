@@ -14,17 +14,15 @@ const hiddenDocTypes = (listItem) =>
     'routesSparrow',
     'locations',
     'locationsSparrow',
-    'news'
+    'news',
+    'media.tag',
   ].includes(listItem.getId())
 
 export default () =>
   S.list()
     .title('Documents')
     .items([
-      S.listItem()
-        .title('Site settings')
-        .child(S.editor().schemaType('siteSettings').documentId('global-config'))
-        .icon(CogIcon),
+      S.documentTypeListItem('siteSettings').title('Site settings'),
       S.divider(),
       S.documentTypeListItem('page').title('Pages Noble33'),
       S.documentTypeListItem('pagesCasaMadera').title('Pages CasaMadera'),
