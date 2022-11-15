@@ -204,14 +204,16 @@ export default function Header(props) {
               
               <div className="pt-6 vw:pt-[1.25vw] hidden md:flex flex-col space-y-2 vw:space-y-[.416vw]">
 
-                {secondHeaderNav.map( (item,i)  => {
+                {secondHeaderNav.map( (item,index)  => {
 
-                  const {title,link} = item;
+                  const {title,link, image} = item;
 
                   return (
-                    <a onClick={handleClick} href={link.url} key={i} className="block uppercase tracking-[.05em] text-[24px] vw:text-[1.25vw] leading-[28px] vw:leading-[1.166] font-light opacity-80">
-                      {title}
-                    </a>
+                    <Link href={link?.url} passHref key={index} >
+                      <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} className="block uppercase tracking-[.05em] text-[24px] vw:text-[1.25vw] leading-[28px] vw:leading-[1.166] font-light opacity-80">
+                        {title}
+                      </a>
+                    </Link>
                   )
 
                 })}
@@ -255,7 +257,7 @@ export default function Header(props) {
         <div className={`hidden ${!activeMenuImage && "bg-body"} lg:flex relative w-full h-full max-w-[26.4%] 3xl:max-w-[33.3333%]`}>
 
           {
-            [...mainNav,{image:menuImage, _key: "_falseKey"}].map((item) => {
+            [...secondHeaderNav,...mainNav,{image:menuImage, _key: "_falseKey"}].map((item) => {
               const {image, _key} = item;
               return (
                 <div className={`${JSON.stringify(image) == JSON.stringify(activeMenuImage) ? "block" : "hidden" }`}>
