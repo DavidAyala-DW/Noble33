@@ -19,6 +19,11 @@ export default {
       title: 'Image',
     },
     {
+      name: "hover_state_image",
+      type: 'image',
+      title: 'Hover state image',
+    },
+    {
       name: "link",
       type: "string",
       title: 'Link'
