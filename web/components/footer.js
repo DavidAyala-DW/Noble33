@@ -151,7 +151,7 @@ export default function Footer(props) {
           </div>
 
           <p className="block opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
-            ©2022 Noble 33
+            ©{new Date().getFullYear()} Noble 33
           </p>
 
         </div>

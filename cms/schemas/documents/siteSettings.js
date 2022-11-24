@@ -72,6 +72,14 @@ export default {
       ]
     },
     {
+      name: 'footer_noble_link',
+      type: 'string',
+      title: 'Footer Noble33 link',
+      group: 'footer',
+      fieldset: 'footer',
+      hidden: ({document}) => document?.site == "noble33"
+    },
+    {
       name: 'facebookHandle',
       type: 'url',
       title: 'Facebook handle',

@@ -43,7 +43,18 @@ export default {
       title: "Show Locations?",
       type: "boolean",
       initialValue: false,
-      hidden: ({document}) => document?.site == "noble33",
+      hidden: ({document}) => document?.site == "noble33"
+    },
+    {
+      name: "show_menu_buttton",
+      title: "Show menu buttton?",
+      type: "boolean",
+      initialValue: false,
+      hidden: ({document}) => {
+        if(document._type != "locationsSparrow" && document._type != "locations"){
+          return true;
+        }
+      }
     },
     {
       name: "mobileAlignment",

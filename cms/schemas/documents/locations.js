@@ -70,6 +70,7 @@ export default {
         { type: 'newsletter' },
         { type: 'contact' },
         { type: 'richtext' },
+        { type: 'gallery' },
       ],
       initialValue: [
         { 
