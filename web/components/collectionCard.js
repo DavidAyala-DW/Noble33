@@ -6,12 +6,13 @@ export default function CollectionCard({collection}) {
   const {title, location, image, hover_state_image, link} = collection;
 
   return (
+
     <a href={link} className={`relative w-full aspect-w-[1.37] md:aspect-w-[1.324] lg:aspect-w-[1.349] 3xl:aspect-w-[1.859] aspect-h-1  ${hover_state_image && "group"} `}>
 
       <div className="w-full h-full relative">
 
         {image && (
-          <div className="h-full transition-all duration-300 ease-[ease-in-out] group-hover:opacity-0 group-hover:invisible block w-full">
+          <div className="h-full transition-all duration-300 ease-[ease-in-out] group-hover:opacity-0 group-hover:invisible block w-full relative">
             <SanityImage className="w-full h-full"  src={image} layout={"fill"}/> 
           </div>
         )}
@@ -42,7 +43,7 @@ export default function CollectionCard({collection}) {
             
           </div>
 
-          <a className="block w-[11px] vw:w-[.5729vw]" href={link}>
+          <div className="block w-[11px] vw:w-[.5729vw]">
             <Image
               src="/images/whiteRightArrow.svg"
               alt="white arrow"
@@ -50,13 +51,14 @@ export default function CollectionCard({collection}) {
               height={19}
               layout="responsive"
             />
-          </a>
+          </div>
 
         </div>
 
       </div>
       
     </a>
+
   )
 
 }

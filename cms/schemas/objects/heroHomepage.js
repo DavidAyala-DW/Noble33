@@ -32,15 +32,19 @@ export default {
       
     },
     {
-      name: 'backgroundImage',
-      type: 'backgroundImage',
-      title: "image"
+      name: 'slides',
+      title: 'Slides',
+      type: 'array',
+      of:[
+        {type: "backgroundImage"}
+      ]      
     },
+
   ],
   preview: {
     select: {
       title: 'title',
-      media: 'backgroundImage.image',
+      media: 'slides.0.image',
     },
     prepare({ title, media }) {
       return {

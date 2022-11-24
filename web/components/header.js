@@ -160,10 +160,10 @@ export default function Header(props) {
 
                 if(index < 4){
 
-                  const {title, link, image} = item;
+                  const {title, link, image, _key} = item;
 
                   return (
-                    <Link href={link?.url} passHref key={index} >
+                    <Link href={link?.url} passHref key={_key} >
                       <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} className="block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
                         {title}
                       </a>
@@ -182,10 +182,10 @@ export default function Header(props) {
 
                 if(index >= 4){
 
-                  const {title, link, image} = item;
+                  const {title, link, image, _key} = item;
 
                   return (
-                    <Link href={link?.url} passHref key={index} >
+                    <Link href={link?.url} passHref key={_key} >
                       <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} className="block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
                         {title}
                       </a>
@@ -206,10 +206,10 @@ export default function Header(props) {
 
                 {secondHeaderNav.map( (item,index)  => {
 
-                  const {title,link, image} = item;
+                  const {title, link, image, _key} = item;
 
                   return (
-                    <Link href={link?.url} passHref key={index} >
+                    <Link href={link?.url} passHref key={_key} >
                       <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} className="block uppercase tracking-[.05em] text-[24px] vw:text-[1.25vw] leading-[28px] vw:leading-[1.166] font-light opacity-80">
                         {title}
                       </a>
@@ -260,9 +260,8 @@ export default function Header(props) {
             [...secondHeaderNav,...mainNav,{image:menuImage, _key: "_falseKey"}].map((item) => {
               const {image, _key} = item;
               return (
-                <div className={`${JSON.stringify(image) == JSON.stringify(activeMenuImage) ? "block" : "hidden" }`}>
-                  <SanityImage
-                    key={_key}
+                <div key={_key} className={`${JSON.stringify(image) == JSON.stringify(activeMenuImage) ? "block" : "hidden" } relative w-full h-full`}>
+                  <SanityImage                    
                     priority={true}
                     className={`object-cover`}
                     src={image}

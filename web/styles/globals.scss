@@ -77,3 +77,19 @@ body, *{
     @apply text-base order-2 leading-[18px] text-[#DEDEDE] text-center font-light cursor-pointer;
   }
 }
+
+.swiper-pagination-homepage{
+
+  .swiper-pagination-bullet{
+    background-color: #EDEDED!important;
+    width: 10px!important;
+    height: 10px!important;
+    margin-right: 8px!important;
+    cursor: pointer!important;
+  }
+
+  .swiper-pagination-bullet-active{
+    background-color: white!important;
+  }
+
+}

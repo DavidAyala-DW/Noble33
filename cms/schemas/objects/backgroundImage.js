@@ -22,4 +22,16 @@ export default {
       },
     },
   ],
+  preview: {
+    select: {
+      media: 'image',
+    },
+    prepare(props) {
+      const { media } = props;
+      return {
+        title: "Background Image",
+        media
+      }
+    },
+  },
 }
