@@ -178,7 +178,6 @@ export const getStaticProps = async ({ params, preview = false }) => {
   let [siteSettings, menus] = await Promise.all([getSiteConfig(), getMenus()])
   let page = filterDataToSingleItem(data, preview)
   page = await fulfillSectionQueries(page,slug)
-  console.log(page);
 
   page.slug = slug;
   page.query = query;

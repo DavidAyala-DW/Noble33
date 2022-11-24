@@ -62,7 +62,6 @@ export default function Page(props) {
 }
 
 async function fulfillSectionQueries(page) {
-  console.log(page);
   if (!page?.page?.content) {
     return page
   }
