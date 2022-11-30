@@ -1,10 +1,6 @@
-import BackgroundImage from "../backgroundImage";
 import SimpleBlockContent from '@/components/simple-block-content'
 import Link from "next/link"
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from "swiper";
-import 'swiper/css';
-import "swiper/css/pagination";
+import HeroHomepageGallery from "../heroHomepageGallery";
 
 const HeroHomepage = (props) => {
 
@@ -12,55 +8,14 @@ const HeroHomepage = (props) => {
 
   return (
 
-     <section className="px-4 md:px-6 lg:px-0 lg:max-w-[93.3%] w-full mx-auto flex flex-col space-y-8 md:space-y-[37px] lg:space-y-8 vw:space-y-[1.92vw]" id="mainHero">
+     <section className="mt-[67px] md:mt-0 px-4 md:px-6 lg:px-0 lg:max-w-[93.3%] w-full mx-auto flex flex-col space-y-8 md:space-y-[37px] lg:space-y-8 vw:space-y-[1.92vw]">
 
-      <div className="w-full aspect-h-1 aspect-w-[2.13125] md:aspect-w-[1.9333] lg:aspect-w-[2.742] 3xl:aspect-w-[3.722]">
-        <div className="w-full h-full">
-            <div className="relative w-full h-full">
+      <div id="mainHero" className="!mt-0 w-full aspect-h-1 aspect-w-[2.13125] md:aspect-w-[1.9333] lg:aspect-w-[2.742] 3xl:aspect-w-[3.722] hidden flex-col md:flex">
+        <HeroHomepageGallery slides={slides} viewport={"desktop"} />
+      </div>
 
-              {
-                slides && (
-                  <>
-
-                    <Swiper
-                      spaceBetween={24}
-                      slidesPerView={1}
-                      pagination={
-                        {
-                          el: '.swiper-pagination-homepage',
-                          clickable: true,
-                        }
-                      }
-                      modules={[Pagination]}
-                      className="w-full h-full"
-                    >
-                      {
-                        slides.map( slide => {
-
-                          const {_key} = slide;
-                          if(!slide) return;
-
-                          return (
-                            <SwiperSlide key={_key} className=" w-full h-full relative" >
-                              <BackgroundImage className="object-cover w-full h-full relative" layout="fill" {...{...slide,priority:true}} />
-                            </SwiperSlide>
-                          )
-
-                        })
-                      }
-                      
-                    </Swiper>
-
-                    <div className="swiper-pagination-homepage z-[10] absolute !bottom-2 !right-3 !left-[unset] !max-w-max">
-                    </div>
-                    
-                  </>
-                )
-              }
-
-            </div>
-
-        </div>
+      <div className="!mt-0 w-full aspect-h-1 aspect-w-[2.13125] md:aspect-w-[1.9333] lg:aspect-w-[2.742] 3xl:aspect-w-[3.722] flex flex-col md:hidden">
+        <HeroHomepageGallery slides={slides} viewport={"mobile"} />
       </div>
 
       <div className="flex flex-col lg:flex-row items-start space-y-6 lg:space-y-0 lg:space-x-6 vw:space-x-[1.25vw] w-full">

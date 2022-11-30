@@ -78,13 +78,10 @@ body, *{
   }
 }
 
-.swiper-pagination-homepage{
+.swiper-pagination-homepage-desktop, .swiper-pagination-homepage-mobile{
 
   .swiper-pagination-bullet{
     background-color: #EDEDED!important;
-    width: 10px!important;
-    height: 10px!important;
-    margin-right: 8px!important;
     cursor: pointer!important;
   }
 
@@ -92,4 +89,20 @@ body, *{
     background-color: white!important;
   }
 
+}
+
+.swiper-pagination-homepage-desktop{
+  .swiper-pagination-bullet{
+    width: 10px!important;
+    height: 10px!important;
+    margin-right: 8px!important;
+  }
+}
+
+.swiper-pagination-homepage-mobile{
+  .swiper-pagination-bullet{
+    width: 5px!important;
+    height: 5px!important;
+    margin-right: 4px!important;
+  }
 }

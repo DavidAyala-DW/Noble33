@@ -69,7 +69,6 @@ export default function Header(props) {
         setHeroVisible(false);
       },
       {
-        rootMargin: '0px 0px 0px 0px',
         root: null,
         threshold: .45
       }
