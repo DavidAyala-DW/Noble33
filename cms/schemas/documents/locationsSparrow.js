@@ -51,7 +51,10 @@ export default {
       name: "image",
       title: "Image",
       type: "image",
-      group: 'general'
+      group: 'general',
+      description: `
+        Recommended size: 888x657, Aspect ratio: 135:100, Max file size: 350kb
+      `
     },
     {
       name: 'content',

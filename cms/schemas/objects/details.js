@@ -21,7 +21,10 @@ export default {
       type: 'array',
       of:[
         {type: "detail"}
-      ]
+      ],
+      description: `
+        Recommended size: 840x480, Aspect ratio: 175:100, Max file size: 350kb
+      `
       
     },
   ],

@@ -7,6 +7,9 @@ export default {
       name: "image",
       type: 'image',
       title: 'Image',
+      description: `
+        Recommended size: 1780x868, Aspect ratio: 205:100, Max file size: 350kb
+      `
     },
   ],
   preview: {

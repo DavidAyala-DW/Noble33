@@ -14,7 +14,10 @@ export default {
             {
               name: "image",
               type: "image",
-              title: "Image"
+              title: "Image",
+                description: `
+                Recommended size: 525x420, Aspect ratio: 125:100, Max file size: 350kb
+              `
             },
             {
               title: 'Format',

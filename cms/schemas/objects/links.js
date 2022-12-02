@@ -57,6 +57,9 @@ export default {
       name: "image",
       title: 'Image',
       type: 'image',
+      description: `
+        Recommended size: 500x960, Aspect ratio: 52:100, Max file size: 350kb
+      `,
       hidden: ({document }) => !document?.mainNav?.length,
 
     }

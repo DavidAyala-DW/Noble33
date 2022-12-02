@@ -9,8 +9,10 @@ export default {
       type: 'array',
       of:[
         {type: "event"}
-      ]
-      
+      ],
+      description: `
+        Recommended size: 765x637.5, Aspect ratio: 125:100, Max file size: 350kb
+      `
     },
   ],
   preview: {

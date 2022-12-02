@@ -50,6 +50,9 @@ export default {
       name: "menuImage",
       group: 'header',
       fieldset: 'header',
+      description: `
+        Recommended size: 500x960, Aspect ratio: 52:100, Max file size: 350kb
+      `
     },
     {
       name: 'secondHeaderNav',

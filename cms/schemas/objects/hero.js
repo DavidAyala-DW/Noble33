@@ -6,7 +6,11 @@ export default {
     {
       name: 'backgroundImage',
       type: 'backgroundImage',
-      title: "image"
+      title: "image",
+      description: `
+        Desktop: Recommended size: 1900x730, Aspect ratio: 260:100, Max file size: 450kb,
+        Mobile: Recommended size: 675x380, Aspect ratio: 178:100, Max file size: 250kb,
+      `
     },
   ],
   preview: {
