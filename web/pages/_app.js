@@ -49,7 +49,7 @@ function MyApp({ Component, pageProps }) {
         visit
         
         <Link href="/privacy-policy" passHref>
-          <a className="px-2 underline pointer ">
+          <a className="px-2 hover_state_link underline pointer ">
             Privacy policy
           </a>            
         </Link>
@@ -57,7 +57,7 @@ function MyApp({ Component, pageProps }) {
         and
 
         <Link href="/cookies-preference" passHref>
-          <a className="px-2 underline pointer ">
+          <a className="px-2 hover_state_link underline pointer ">
             Cookies preferences
           </a>          
         </Link>

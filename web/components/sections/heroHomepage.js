@@ -8,9 +8,9 @@ const HeroHomepage = (props) => {
 
   return (
 
-     <section className="mt-[67px] md:mt-0 px-4 md:px-6 lg:px-0 lg:max-w-[93.3%] w-full mx-auto flex flex-col space-y-8 md:space-y-[37px] lg:space-y-8 vw:space-y-[1.92vw]">
+     <section className="mt-[67px] md:mt-[83px] px-4 md:px-6 lg:px-0 lg:max-w-[93.3%] w-full mx-auto flex flex-col space-y-8 md:space-y-[37px] lg:space-y-8 vw:space-y-[1.92vw]">
 
-      <div id="mainHero" className="!mt-0 w-full aspect-h-1 aspect-w-[2.13125] md:aspect-w-[1.9333] lg:aspect-w-[2.742] 3xl:aspect-w-[3.722] hidden flex-col md:flex">
+      <div className="!mt-0 w-full aspect-h-1 aspect-w-[2.13125] md:aspect-w-[1.9333] lg:aspect-w-[2.742] 3xl:aspect-w-[3.722] hidden flex-col md:flex">
         <HeroHomepageGallery slides={slides} viewport={"desktop"} />
       </div>
 
@@ -34,7 +34,7 @@ const HeroHomepage = (props) => {
           </div>
 
           <Link href={reservation.link} passHref>
-            <a target="_blank" rel="noopener nooreferrer" className="block opacity-80 tracking-[.05em] uppercase text-[10px] vw:text-[0.520vw] leading-[11px] vw:leading-[1.1] font-extralight">
+            <a target="_blank" rel="noopener nooreferrer" className="block max-w-max hover_state_link opacity-80 tracking-[.05em] uppercase text-[10px] vw:text-[0.520vw] leading-[11px] vw:leading-[1.1] font-extralight">
               {reservation.label}
             </a>
           </Link>

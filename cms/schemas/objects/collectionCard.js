@@ -27,6 +27,12 @@ export default {
       name: "link",
       type: "string",
       title: 'Link'
+    },
+    {
+      name: "is_reservation",
+      type: "boolean",
+      title: 'Is reservation?',
+      initialValue: false
     }
   ]
 }

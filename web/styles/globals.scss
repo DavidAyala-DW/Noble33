@@ -106,3 +106,25 @@ body, *{
     margin-right: 4px!important;
   }
 }
+
+.hover_state_link{
+  transition: all .300s ease-in-out;
+  max-width: max-content;
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;    
+    bottom: -4px;
+    height: 1px;
+    width: 0px;
+    left: 0;
+    background-color: #E5E5E5;
+    transition: all .300s linear;
+  }
+  &:hover{
+    opacity: 1;
+    &::after{
+      width: 100%;
+    }
+  }  
+}

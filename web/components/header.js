@@ -133,8 +133,8 @@ export default function Header(props) {
         <div className="hidden md:block order-3 select-none">
 
           <Link href={reservationsButton?.link?.url} passHref>
-            <a target="_blank" rel="noopener nooreferrer" className="block">
-              <p className="font-medium text-lg vw:text-[.9375vw] leading-[21px] vw:leading-[1.166] tracking-[.05em] uppercase opacity-70">
+            <a className="block">
+              <p className="font-medium hover_state_link text-lg vw:text-[.9375vw] leading-[21px] vw:leading-[1.166] tracking-[.05em] uppercase opacity-70 hover_state_link">
                 {reservationsButton?.title}
               </p>
             </a>
@@ -163,7 +163,7 @@ export default function Header(props) {
 
                   return (
                     <Link href={link?.url} passHref key={_key} >
-                      <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} className="block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
+                      <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} className="block uppercase hover_state_link tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
                         {title}
                       </a>
                     </Link>
@@ -185,7 +185,7 @@ export default function Header(props) {
 
                   return (
                     <Link href={link?.url} passHref key={_key} >
-                      <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} className="block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
+                      <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} className="block hover_state_link uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
                         {title}
                       </a>
                     </Link>
@@ -196,7 +196,7 @@ export default function Header(props) {
               })}
 
               <Link href={reservationsButton?.link?.url} passHref>
-                <a target="_blank" rel="noopener nooreferrer" onClick={handleClick} className="md:hidden block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
+                <a onClick={handleClick} className="md:hidden hover_state_link block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
                   {reservationsButton?.title}
                 </a>
               </Link>
@@ -209,7 +209,7 @@ export default function Header(props) {
 
                   return (
                     <Link href={link?.url} passHref key={_key} >
-                      <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} className="block uppercase tracking-[.05em] text-[24px] vw:text-[1.25vw] leading-[28px] vw:leading-[1.166] font-light opacity-80">
+                      <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} className="block hover_state_link uppercase tracking-[.05em] text-[24px] vw:text-[1.25vw] leading-[28px] vw:leading-[1.166] font-light opacity-80">
                         {title}
                       </a>
                     </Link>

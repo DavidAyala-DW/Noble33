@@ -32,7 +32,7 @@ export default {
       title: 'Title'
     },
     {
-      name: 'slug',
+      name: 'slug', 
       type: 'slug',
       group: 'general',
       title: 'Slug',

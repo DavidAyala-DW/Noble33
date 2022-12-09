@@ -19,7 +19,7 @@ export default function CollectionGrid(props) {
 
             <a
             href={view_all.link}
-            className="block uppercase opacity-80 tracking-[.05em] text-[10px] leading-[11px] vw:text-[.520vw] vw:leading-[1.1] font-light"
+            className="block uppercase hover_state_link opacity-80 tracking-[.05em] text-[10px] leading-[11px] vw:text-[.520vw] vw:leading-[1.1] font-light"
             >
               {view_all.title}
             </a>

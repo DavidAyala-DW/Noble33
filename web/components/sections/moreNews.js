@@ -16,7 +16,7 @@ export default function MoreNews(props) {
           {title}
         </h2>
 
-        <a href={link.url} className="block font-light text-[10px] vw:text-[.520vw] leading-[13px] vw:leading-[1.3] uppercase tracking-[.05em]">
+        <a href={link.url} className="block hover_state_link font-light text-[10px] vw:text-[.520vw] leading-[13px] vw:leading-[1.3] uppercase tracking-[.05em]">
           {link.title}
         </a>
 

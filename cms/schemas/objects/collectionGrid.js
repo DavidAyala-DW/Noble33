@@ -36,6 +36,12 @@ export default {
         Recommended size: 840x624, Aspect ratio: 134:100, Max file size: 350kb
       `      
     },
+    {
+      name: "are_coming_soon",
+      title: "Are comming Soon?",
+      type: "boolean",
+      initialValue: false
+    }
   ],
   preview: {
     select: {

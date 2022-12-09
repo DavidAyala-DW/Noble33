@@ -44,7 +44,7 @@ export default function NewsContent(props) {
 
               <a className="mt-8 vw:mt-[1.6666vw] flex items-center space-x-1.5 max-w-max tracking-[.05em] uppercase text-[10px] vw:text-[.520vw] leading-[13px] vw:leading-[1.3] font-light" href={link.url}>
 
-                <span>
+                <span className="hover_state_link">
                   {link.title}
                 </span>
 

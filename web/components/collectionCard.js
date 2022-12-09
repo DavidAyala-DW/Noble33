@@ -3,7 +3,7 @@ import SanityImage from './sanity-image'
 
 export default function CollectionCard({collection}) {
   
-  const {title, location, image, hover_state_image, link} = collection;
+  const {title, location, image, hover_state_image, link, is_reservation} = collection;
 
   return (
 
@@ -43,14 +43,26 @@ export default function CollectionCard({collection}) {
             
           </div>
 
-          <div className="block w-[11px] vw:w-[.5729vw]">
-            <Image
-              src="/images/whiteRightArrow.svg"
-              alt="white arrow"
-              width={11}
-              height={19}
-              layout="responsive"
-            />
+          <div className="flex items-center gap-4">
+
+            {
+              is_reservation && (
+                <p  className="text-sm font-light leading-[1.5] text-white hover_state_link">
+                  Reserve
+                </p>
+              )
+            }
+
+            <div className="block w-[11px] vw:w-[.5729vw]">
+              <Image
+                src="/images/whiteRightArrow.svg"
+                alt="white arrow"
+                width={11}
+                height={19}
+                layout="responsive"
+              />
+            </div>
+
           </div>
 
         </div>

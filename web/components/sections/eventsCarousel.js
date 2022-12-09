@@ -18,7 +18,7 @@ export default function EventsCarousel(props) {
           {title}
         </h2>
 
-        <a href={view_all.link} className="block uppercase tracking-[.05em] text-[10px] vw:text-[.5208vw] leading-[11px] vw:leading-[1.1] font-medium">
+        <a href={view_all.link} className="block hover_state_link uppercase tracking-[.05em] text-[10px] vw:text-[.5208vw] leading-[11px] vw:leading-[1.1] font-medium">
           {view_all.title}
         </a>
 
@@ -57,7 +57,7 @@ export default function EventsCarousel(props) {
 
           return (
 
-            <SwiperSlide key={_key} className="flex flex-col w-full">
+            <SwiperSlide key={_key} className="flex flex-col w-full pb-1">
 
               <div className="relative w-full aspect-w-[1.70] aspect-h-1 mb-4 vw:mb-[.8333vw]">
 
@@ -77,7 +77,7 @@ export default function EventsCarousel(props) {
                 {description}
               </div>
 
-              <a href={view_more.link} className="block tracking-[.05em] text-[10px] vw:text-[.5208vw] leading-[13px] vw:leading-[1.3] font-extralight">
+              <a href={view_more.link} className="block opacity-90 hover_state_link tracking-[.05em] text-[10px] vw:text-[.5208vw] leading-[13px] vw:leading-[1.3] font-extralight">
                 {view_more.title}
               </a>
 

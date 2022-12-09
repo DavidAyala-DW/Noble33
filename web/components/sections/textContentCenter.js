@@ -17,7 +17,7 @@ export default function TextContentCenter(props) {
         </h3>
 
         <a
-          className="block max-w-max mx-auto text-center uppercase opacity-80 tracking-[.05em] text-[10px] leading-[11px] vw:text-[.520vw] vw:leading-[1.1] font-light"
+          className="block hover_state_link max-w-max mx-auto text-center uppercase opacity-80 tracking-[.05em] text-[10px] leading-[11px] vw:text-[.520vw] vw:leading-[1.1] font-light"
           href={learn_more.link}
         >
           {learn_more.title}

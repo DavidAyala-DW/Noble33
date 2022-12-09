@@ -32,7 +32,7 @@ export default function NewsCard({news}) {
       </h3>
 
       <Link href={`/news/${slug.current}`} passHref>
-        <a className="block font-light lg:font-normal text-[10px] vw:text-[.520vw] leading-[13px] vw:leading-[1.3] tracking-[.05em] uppercase">
+        <a className="block font-light hover_state_link hover_state_link lg:font-normal text-[10px] vw:text-[.520vw] leading-[13px] vw:leading-[1.3] tracking-[.05em] uppercase">
           View
         </a>
       </Link>

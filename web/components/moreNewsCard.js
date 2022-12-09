@@ -34,7 +34,7 @@ export default function MoreNewsCard({news}) {
 
         <a href={`/news/${slug.current}`} className="max-w-max flex items-center opacity-80">
 
-          <p className="font-light md:font-normal text-[10px] vw:text-[.520vw] leading-[13px] vw:leading-[1.3] tracking-[.05em] uppercase">
+          <p className="font-light hover_state_link md:font-normal text-[10px] vw:text-[.520vw] leading-[13px] vw:leading-[1.3] tracking-[.05em] uppercase">
             View
           </p>
 

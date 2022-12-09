@@ -40,7 +40,7 @@ export default function Footer(props) {
 
             const {title,link} = item;
             return (
-              <a href={link.url} key={i} className={`uppercase ${i == 4 && "col-start-2 col-end-4"} opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal`} >
+              <a href={link.url} key={i} className={`uppercase ${i == 4 && "col-start-2 col-end-4"} hover_state_link opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal`} >
                 {title}
               </a>
             )
@@ -52,13 +52,13 @@ export default function Footer(props) {
         <div className="hidden md2:flex items-center space-x-[30px] vw:space-x-[1.5625vw]">
 
           <Link href={privacyPolicyHandle.link.url} passHref>
-            <a className="block opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
+            <a className="block hover_state_link opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
               {privacyPolicyHandle.title}
             </a>
           </Link>
 
           <Link href={cookiesPreferencesHandle.link.url} passHref>  
-            <a className="block opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
+            <a className="block hover_state_link opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
               {cookiesPreferencesHandle.title}
             </a>
           </Link>
@@ -137,13 +137,13 @@ export default function Footer(props) {
           <div className="flex md2:hidden items-center space-x-[50px] vw:space-x-[2.604vw]">
 
             <Link href={privacyPolicyHandle.link.url} passHref>
-              <a className="block opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
+              <a className="block hover_state_link opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
                 {privacyPolicyHandle.title}
               </a>
             </Link>
 
             <Link href={cookiesPreferencesHandle.link.url} passHref>
-              <a className="block opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
+              <a className="block hover_state_link opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
                 {cookiesPreferencesHandle.title}
               </a>
             </Link>

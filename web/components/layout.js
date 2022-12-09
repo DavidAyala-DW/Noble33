@@ -35,7 +35,7 @@ function Layout(props) {
 
   setGlobalURL.forEach((menuItem,i) => {
 
-    const {slug} = menus.find(item => item._id == menuItem.link._ref);
+    const {slug = null} = menus.find(item => item._id == menuItem.link._ref);
     
     if(!slug) {
       menuItem.link.url = "/";
@@ -51,12 +51,27 @@ function Layout(props) {
   })
   
   globalMenus.forEach(menuItem => {
-    menuItem.forEach(menu => {
+    if(!menuItem) return;
 
-      const {slug} = menus.find(item => item._id == menu.link._ref);
+    menuItem.forEach(menu => {
+      
+      if(!menu) return;
+
+      if(menu?.externalLink){
+        menu.link = {url: menu.externalLink};
+        return;
+      }
+
+      const {slug} = menus.find(item => item._id == menu?.link?._ref) ?? {slug : false};
       
       if(!slug) {
-        menu.link.url = "/";
+
+        if(menu.link){
+          menu.link.url = "/";
+        }else{
+          menu.link = {url: "/"};
+        }
+        
         return;
       }
 
