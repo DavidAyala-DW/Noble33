@@ -132,6 +132,13 @@ export default {
       fieldset: 'general',
     },
     {
+      name: 'newsletter_text',
+      type: 'string',
+      title: 'Newsletter Title',
+      group: 'general',
+      fieldset: 'general',
+    },
+    {
       name: 'reservationsButton',
       type: 'links',
       title: 'Reservations Button',

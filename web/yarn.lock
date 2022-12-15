@@ -1919,6 +1919,11 @@
   "resolved" "https://registry.npmjs.org/groq/-/groq-2.33.2.tgz"
   "version" "2.33.2"
 
+"gsap@>=3":
+  "integrity" "sha512-xc/iIJy+LWiMbRa4IdMtdnnKa/7PXEK6NNzV71gdOYUVeTZN7UWnLU0fB7Hi1iwiz4ZZoYkBZPPYGg+2+zzFHA=="
+  "resolved" "https://registry.npmjs.org/gsap/-/gsap-3.11.3.tgz"
+  "version" "3.11.3"
+
 "has-flag@^3.0.0":
   "integrity" "sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw=="
   "resolved" "https://registry.npmjs.org/has-flag/-/has-flag-3.0.0.tgz"
@@ -2484,7 +2489,7 @@
     "hoist-non-react-statics" "^3.0.0"
     "universal-cookie" "^4.0.0"
 
-"react-dom@^17.0.2 || ^18.0.0-0", "react-dom@>=16.0.0", "react-dom@18.2.0":
+"react-dom@^16.0.0-0 || ^17.0.0-0", "react-dom@^17.0.2 || ^18.0.0-0", "react-dom@>=16.0.0", "react-dom@18.2.0":
   "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   "version" "18.2.0"
@@ -2496,6 +2501,13 @@
   "integrity" "sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA=="
   "resolved" "https://registry.npmjs.org/react-fast-compare/-/react-fast-compare-3.2.0.tgz"
   "version" "3.2.0"
+
+"react-gsap@^3.2.1":
+  "integrity" "sha512-IX6XiN1a74hmU385yNZAYV1cFe3/Xmbg8eT99VCjmz7yzQq1qIsR47gkX5rkWeml9KmyEgiIzqArYaipPkKIbw=="
+  "resolved" "https://registry.npmjs.org/react-gsap/-/react-gsap-3.2.1.tgz"
+  "version" "3.2.1"
+  dependencies:
+    "react-is" "^16.13.1"
 
 "react-hook-form@^7.0.0", "react-hook-form@^7.34.0":
   "integrity" "sha512-1lYWbEqr0GW7HHUjMScXMidGvV0BE2RJV3ap2BL7G0EJirkqpccTaawbsvBO8GZaB3JjCeFBEbnEWI1P8ZoLRQ=="
@@ -2518,7 +2530,12 @@
     "prop-types" "^15.7.2"
     "react-fast-compare" "^3.0.1"
 
-"react@^0.14.8", "react@^16.3 || ^17 || ^18", "react@^16.8.0 || ^17 || ^18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17 || ^18", "react@^17.0.2 || ^18.0.0-0", "react@^18.2.0", "react@>= 0.12.x", "react@>= 15", "react@>= 16.3.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>= 17.0.2", "react@>=16", "react@>=16.0.0", "react@>=16.6.0", "react@>=16.8.0", "react@18.2.0":
+"react-scrollmagic@^2.3.0":
+  "integrity" "sha512-yVw85uENSPow/ZJxZhPR84nZuyQZQNGfOAaL22+xNAhF5qMX2vbHv0Jeurydc9lS+6OocSY+09MHWQ0LESy9Mg=="
+  "resolved" "https://registry.npmjs.org/react-scrollmagic/-/react-scrollmagic-2.3.0.tgz"
+  "version" "2.3.0"
+
+"react@^0.14.8", "react@^16.0.0-0 || ^17.0.0-0", "react@^16.3 || ^17 || ^18", "react@^16.8.0 || ^17 || ^18", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17 || ^18", "react@^17.0.2 || ^18.0.0-0", "react@^18.2.0", "react@>= 0.12.x", "react@>= 15", "react@>= 16.3.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>= 17.0.2", "react@>=16", "react@>=16.0.0", "react@>=16.6.0", "react@>=16.8.0", "react@18.2.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"

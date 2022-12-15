@@ -16,7 +16,8 @@ function Layout(props) {
       instagramHandle,
       privacyPolicyHandle,
       cookiesPreferencesHandle,
-      reservationsButton
+      reservationsButton,
+      newsletter_text
     },
     menus
   } = props
@@ -118,7 +119,8 @@ function Layout(props) {
           menus,
           privacyPolicyHandle,
           cookiesPreferencesHandle,
-          footerNav
+          footerNav,
+          newsletter_text
         }}/>
 
       </div>

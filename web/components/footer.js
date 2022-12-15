@@ -10,6 +10,7 @@ export default function Footer(props) {
     privacyPolicyHandle,
     cookiesPreferencesHandle,
     footerNav,
+    newsletter_text
   } = props;
   
   return (
@@ -72,7 +73,7 @@ export default function Footer(props) {
         <div className="flex flex-col space-y-6 md:space-y-8 md2:space-y-8 vw:space-y-[1.666vw]">
 
           <h3 className="block opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
-            Newsletter
+            {newsletter_text ?? "Newsletter"}
           </h3>  
 
           <form className="w-full md:max-w-[78.8%] md2:max-w-full" action="">
