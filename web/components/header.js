@@ -151,9 +151,9 @@ export default function Header(props) {
 
         <div className={`md:pl-[3.35%] w-full h-full max-w-full md2:max-w-[73.6%] 3xl:max-w-[66.666%] flex flex-col items-center md:items-start justify-between pt-[152px] md:pt-[108px] vw:pt-[5.625vw] pb-6 vw:pb-[1.25vw]`}>
 
-          <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 items-start md:space-x-16 vw:space-x-[3.333vw]">
+          <div className="flex flex-col w-full md:flex-row space-y-2 md:space-y-0 items-start md:space-x-16 vw:space-x-[3.333vw]">
 
-            <div className="flex flex-col w-full items-center md:items-start space-y-2 vw:space-y-[.416vw]">
+            <div className="flex flex-col w-full md:w-auto items-center md:items-start space-y-2 vw:space-y-[.416vw]">
 
               { mainNav.map((item,index) => {
 
@@ -175,7 +175,7 @@ export default function Header(props) {
 
             </div>
 
-            <div className="flex flex-col w-full items-center md:items-start space-y-2 vw:space-y-[.416vw]">
+            <div className="flex flex-col w-full md:w-auto items-center md:items-start space-y-2 vw:space-y-[.416vw]">
 
               {mainNav.map((item,index) => {
 

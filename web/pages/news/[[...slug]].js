@@ -14,26 +14,16 @@ export default function Page(megaprops) {
   
   const {props, preview, data, siteSettings, menus} = megaprops;
   const stickyHeader = false;
-  const title =" "
-  // let {
-  //   title = 'Missing title',
-  //   page:{content = []},
-  //   slug,
-  //   stickyHeader,
-  //   siteSettings,  
-  //   menus // Crear bloque en cms para permitir links internos,externos y crear un provider donde guardar los valores del cms y luego un hook para consumirlo desde ahi con facilidad.
-  // } = props;
 
   const { data: previewData } = usePreviewSubscription(data?.query, {
     params: data?.queryParams ?? {},
-    // The hook will return this on first render
-    // This is why it's important to fetch *draft* content server-side!
     initialData: data?.page,
-    // The passed-down preview context determines whether this function does anything
     enabled: preview,
   })
 
-  const page = filterDataToSingleItem(previewData?.page, preview)
+  const page = filterDataToSingleItem(previewData?.page, preview);
+  const title = page?.title ?? "";
+
 
   return (    
     <Layout menus={menus} siteSettings={siteSettings} stickyHeader={stickyHeader}>

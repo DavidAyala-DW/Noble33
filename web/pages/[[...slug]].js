@@ -17,7 +17,6 @@ export default function Page(props) {
 
   const { preview, data, siteSettings, menus } = props;
   const stickyHeader = false;
-  const title =" "
 
   const { data: previewData } = usePreviewSubscription(data?.query, {
     params: data?.queryParams ?? {},
@@ -28,7 +27,8 @@ export default function Page(props) {
     enabled: preview,
   })
 
-  const page = filterDataToSingleItem(previewData?.page, preview)
+  const page = filterDataToSingleItem(previewData?.page, preview);
+  const title = page?.title ?? "";
 
   return (    
     <Layout menus={menus} siteSettings={siteSettings} stickyHeader={stickyHeader}>
