@@ -18,6 +18,7 @@ export default {
         filter: (props) => {
 
           const {document} = props;
+          console.log(document, props);
           if(document?.site == "sparrow"){
             return {
               filter: '_type == "routesSparrow"  || _type == "locationsSparrow" '
@@ -62,6 +63,13 @@ export default {
       `,
       hidden: ({document }) => !document?.mainNav?.length,
 
+    },
+    {
+      name: "is_the_main_menu_option",
+      title: "Is it the primary menu option? ",
+      type: "boolean",
+      description: "Active it only to menu option in navigation menu",
+      hidden: ({document, parent }) => parent.title != "Menus",
     }
   ]
 }
