@@ -9,6 +9,11 @@ export default {
       type: "string"      
     },
     {
+      name: 'is_h1',
+      type: 'boolean',
+      title: 'Is H1?'
+    },
+    {
       title: 'Title size',
       name: 'titleSize',
       type: 'string',

@@ -22,6 +22,11 @@ export default {
       `
     },
     {
+      name: "alt_text",
+      type: "string",
+      title: "Alt Text"
+    },
+    {
       name: "position",
       title: "Position",
       type: "string",

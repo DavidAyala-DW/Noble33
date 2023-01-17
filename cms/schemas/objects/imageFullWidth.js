@@ -11,6 +11,11 @@ export default {
         Recommended size: 1780x868, Aspect ratio: 205:100, Max file size: 350kb
       `
     },
+    {
+      name: "alt_text",
+      type: "string",
+      title: "Alt Text"
+    }
   ],
   preview: {
     select: {

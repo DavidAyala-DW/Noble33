@@ -12,6 +12,11 @@ export default {
         Mobile: Recommended size: 675x380, Aspect ratio: 178:100, Max file size: 250kb,
       `
     },
+    {
+      name: "alt_text",
+      type: "string",
+      title: "Alt Text"
+    }
   ],
   preview: {
     select: {
@@ -20,7 +25,7 @@ export default {
     prepare({ media }) {
       return {
         title: "Hero",
-        subtitle: 'Hero with text',
+        subtitle: 'Hero',
         media,
       }
     },

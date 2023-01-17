@@ -12,6 +12,11 @@ export default {
       title: 'Title',
     },
     {
+      name: 'description',
+      type: 'text',
+      title: 'Description',
+    },
+    {
       name: "site",
       title: "Site",
       type: "string",

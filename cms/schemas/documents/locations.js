@@ -56,6 +56,11 @@ export default {
       `
     },
     {
+      name: "alt_text",
+      type: "string",
+      title: "Alt Text"
+    },
+    {
       name: 'content',
       group: "locationPage",
       type: 'array',

@@ -55,6 +55,11 @@ export default {
       `
     },
     {
+      name: "alt_text",
+      type: "string",
+      title: "Menu image - alt Text"
+    },
+    {
       name: 'secondHeaderNav',
       type: 'array',
       title: 'Second nav menu',

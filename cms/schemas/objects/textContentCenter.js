@@ -9,6 +9,11 @@ export default {
       title: 'Title',
     },
     {
+      name: 'is_h1',
+      type: 'boolean',
+      title: 'Is H1?'
+    },
+    {
       name: 'description',
       type: 'string',
       title: 'Description',

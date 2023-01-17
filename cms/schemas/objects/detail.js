@@ -19,6 +19,11 @@ export default {
       title: 'Image',
     },
     {
+      name: "alt_text",
+      type: "string",
+      title: "Alt Text"
+    },
+    {
       name: "video",
       type: 'url',
       label: 'Video'

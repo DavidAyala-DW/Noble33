@@ -62,7 +62,11 @@ export default {
         Recommended size: 500x960, Aspect ratio: 52:100, Max file size: 350kb
       `,
       hidden: ({document }) => !document?.mainNav?.length,
-
+    },
+    {
+      name: "alt_text",
+      type: "string",
+      title: "Alt Text"
     },
     {
       name: "is_the_main_menu_option",
