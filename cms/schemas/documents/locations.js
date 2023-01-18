@@ -32,6 +32,16 @@ export default {
       title: 'Title'
     },
     {
+      name: 'description_location_page',
+      type: 'text',
+      title: 'Description (Location page)',
+    },
+    {
+      name: 'description_menu_page',
+      type: 'text',
+      title: 'Description (Menu page)',
+    },
+    {
       name: 'slug', 
       type: 'slug',
       group: 'general',
