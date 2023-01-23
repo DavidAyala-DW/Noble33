@@ -6,7 +6,9 @@ export default {
     {
       title: 'Block',
       type: 'block',
-      styles: [],
+      styles: [
+        {title: 'Normal', value: 'normal'},
+      ],
       lists: [
         { title: 'Bullet', value: 'bullet' },
         { title: 'Numbered', value: 'number' },
@@ -15,6 +17,7 @@ export default {
         decorators: [
           { title: 'Strong', value: 'strong' },
           { title: 'Emphasis', value: 'em' },
+          { title: 'Center', value: 'center' },
         ],
         annotations: [{ type: 'link' }, { type: 'internalLink' }],
       },
