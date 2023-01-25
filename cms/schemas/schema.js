@@ -12,6 +12,7 @@ import newsPT from './documents/news'
 import pagesCasaMadera from './documents/pagesCasaMadera'
 import routesCasaMadera from "./documents/routesCasaMadera"
 import locations from "./documents/locations"
+import eventsCasaMadera from "./documents/eventsCasaMadera";
 import pagesSparrow from "./documents/pagesSparrow"
 import routesSparrow from "./documents/routesSparrow"
 import locationsSparrow from "./documents/locationsSparrow"
@@ -56,6 +57,7 @@ import socialMedia from './objects/socialMedia'
 import imageFullWidth from './objects/imageFullWidth'
 import eventsSlider from "./objects/eventsSlider"
 import menus from "./objects/menus"
+import privateEventsList from "./objects/private-events"
 import menusContent from "./objects/menusContent"
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -74,6 +76,7 @@ export default createSchema({
     pagesCasaMadera,
     routesCasaMadera,
     locations,
+    eventsCasaMadera,
     pagesSparrow,
     routesSparrow,
     locationsSparrow,
@@ -117,6 +120,7 @@ export default createSchema({
     eventsSlider,
     menus,
     menusContent,
+    privateEventsList,
     testSection
   ]),
 })

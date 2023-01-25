@@ -47,6 +47,7 @@ export default {
         { type: 'contact' },
         { type: 'richtext' },
         { type: 'menus' },
+        { type: 'privateEventsList' },
       ],
     },
     {
