@@ -50,7 +50,7 @@ export default function Footer(props) {
 
         </div>
 
-        <div className="hidden md2:flex items-center space-x-[30px] vw:space-x-[1.5625vw]">
+        <div className="hidden md2:flex items-center space-x-[16px] vw:space-x-[1.5625vw]">
 
           <Link href={privacyPolicyHandle.link.url} passHref>
             <a className="block hover_state_link opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
@@ -58,11 +58,18 @@ export default function Footer(props) {
             </a>
           </Link>
 
-          <Link href={cookiesPreferencesHandle.link.url} passHref>  
-            <a className="block hover_state_link opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
-              {cookiesPreferencesHandle.title}
-            </a>
-          </Link>
+
+          <Link href="/accessibility-statement" passHref>  
+              <a className="block hover_state_link opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase" >
+                Accessibility Statement
+              </a>
+            </Link>
+
+            <Link href="/website-terms" passHref>  
+              <a className="block hover_state_link opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase" >
+                Website Terms
+              </a>
+            </Link>
 
         </div>
 
@@ -135,7 +142,7 @@ export default function Footer(props) {
 
           </div>
 
-          <div className="flex md2:hidden items-center space-x-[50px] vw:space-x-[2.604vw]">
+          <div className="flex md2:hidden items-center space-x-[16px] vw:space-x-[2.604vw]">
 
             <Link href={privacyPolicyHandle.link.url} passHref>
               <a className="block hover_state_link opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
@@ -143,11 +150,18 @@ export default function Footer(props) {
               </a>
             </Link>
 
-            <Link href={cookiesPreferencesHandle.link.url} passHref>
-              <a className="block hover_state_link opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
-                {cookiesPreferencesHandle.title}
-              </a>
-            </Link>
+
+            <Link href="/accessibility-statement" passHref>  
+                <a className="block hover_state_link opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase" >
+                  Accessibility Statement
+                </a>
+              </Link>
+
+              <Link href="/website-terms" passHref>  
+                <a className="block hover_state_link opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase" >
+                  Website Terms
+                </a>
+              </Link>
 
           </div>
 

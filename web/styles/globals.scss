@@ -146,3 +146,20 @@ body, *{
   // .scrollmagic-pin-spacer{
   //   padding-bottom: 0 !important;
   // }
+
+
+.richtext-page{
+
+  ul{
+    @apply flex flex-col space-y-5;
+  }
+
+  li{
+    @apply leading-[1.5];
+  }
+
+  p{
+    @apply leading-[1.75];
+  }
+
+}
