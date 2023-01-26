@@ -14,6 +14,17 @@ export default {
       title: 'Description',
     },
     {
+      name: "facebook_link",
+      title: "Facebook link",
+      type: "string"
+    },
+    {
+      type: 'boolean',
+      name: "show_facebook_icon",
+      title: "Show Facebook icon?",
+      hidden: ({document}) => document?.site != "casaMadera",
+    },
+    {
       name: 'image',
       type: 'image',
       title: 'Image',

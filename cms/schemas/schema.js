@@ -59,6 +59,7 @@ import eventsSlider from "./objects/eventsSlider"
 import menus from "./objects/menus"
 import privateEventsList from "./objects/private-events"
 import menusContent from "./objects/menusContent"
+import reservations from "./objects/reservations";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -121,6 +122,7 @@ export default createSchema({
     menus,
     menusContent,
     privateEventsList,
+    reservations,
     testSection
   ]),
 })
