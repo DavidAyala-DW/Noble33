@@ -31,6 +31,11 @@ export default {
       type: 'simplePortableText',
       title: 'Description',
     },
+    {
+      name: "location",
+      type: "string",
+      title: 'Location'
+    }
 
   ],
   preview: {

@@ -37,9 +37,21 @@ export default {
       title: 'Description (Location page)',
     },
     {
+      name: 'openGraphImage_location_page',
+      type: 'image',
+      title: 'Open Graph image',
+      description: 'Image for sharing previews on Facebook, Twitter etc. (Location page)'
+    },
+    {
       name: 'description_menu_page',
       type: 'text',
       title: 'Description (Menu page)',
+    },
+    {
+      name: 'openGraphImage_menu_page',
+      type: 'image',
+      title: 'Open Graph image',
+      description: 'Image for sharing previews on Facebook, Twitter etc. (Menu page)'
     },
     {
       name: 'slug', 

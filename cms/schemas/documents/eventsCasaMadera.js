@@ -32,6 +32,12 @@ export default {
       title: 'Description',
     },
     {
+      name: 'openGraphImage',
+      type: 'image',
+      title: 'Open Graph image',
+      description: 'Image for sharing previews on Facebook, Twitter etc.'
+    },
+    {
       name: 'slug', 
       type: 'slug',
       title: 'Slug',
