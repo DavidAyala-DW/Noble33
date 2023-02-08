@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import DetailCard from "../detailCard";
+import Video from "../video";
 
 export default function Details(props) {
 
-  const [featuredDetail, setFeaturedDetail] = useState();
-  const {title, description, details} = props;
-
-  useEffect(() => {
-    const firstFeaturedDetail = details.find(detail => detail.featuredDetail == true);
-    setFeaturedDetail(firstFeaturedDetail);
-  }, []);
+  const {
+    title,
+    description,
+    details,
+    video
+  } = props;
 
   return (
 
@@ -30,9 +30,15 @@ export default function Details(props) {
         </div>
 
         {
-          featuredDetail && (
-            <div className="w-full lg:max-w-[50%]">
-              <DetailCard detail={featuredDetail} />
+          video && (
+            <div className="w-full relative lg:max-w-[50%]">
+              <div className="aspect-h-1 w-full aspect-w-[1.491] md:aspect-w-[2.802] lg:aspect-w-[1.719] 3xl:aspect-w-[2.30]">
+                <div className="w-full h-full">
+                  <div className="relative w-full h-full">
+                    <Video src={video} />
+                  </div>
+                </div>
+              </div>
             </div>            
           )
         }
@@ -43,8 +49,6 @@ export default function Details(props) {
       
         {
           details.map( detail => {
-
-            if(JSON.stringify(detail) == JSON.stringify(featuredDetail) ) return;
 
             const {_key } = detail;
 

@@ -28,12 +28,12 @@ export default {
       type: 'url',
       label: 'Video'
     },
-    {
-      name: "featuredDetail",
-      type: "boolean",
-      title: 'Featured detail',
-      hidden: ({document}) => document?.site == "casaMadera",
-    },
+    // {
+    //   name: "featuredDetail",
+    //   type: "boolean",
+    //   title: 'Featured detail',
+    //   hidden: ({document}) => document?.site == "casaMadera",
+    // },
     
   ]
 }

@@ -8,7 +8,6 @@ const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false })
 export default function DetailCard({detail}) {
 
   const {image, title, description, video} = detail;
-  const [isPlaying, setIsPlaying] = useState(true)
 
   return (
 

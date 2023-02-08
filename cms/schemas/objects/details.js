@@ -16,6 +16,12 @@ export default {
       hidden: ({document}) => document?.site == "casaMadera",
     },
     {
+      name: "video",
+      type: 'url',
+      label: 'Video',
+      hidden: ({document}) => document?.site != "noble33",
+    },
+    {
       name: 'details',
       title: 'Details',
       type: 'array',
