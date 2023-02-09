@@ -1,7 +1,7 @@
 import Image from "next/image"
 import SanityImage from './sanity-image'
 
-export default function CollectionCard({collection}) {
+export default function CollectionCard({collection, is_coming_soon}) {
   
   const {title, location, image, hover_state_image, link, is_reservation} = collection;
 
@@ -68,6 +68,13 @@ export default function CollectionCard({collection}) {
         </div>
 
       </div>
+
+      {
+        is_coming_soon && (
+          <div className="absolute inset-0 w-full h-full z-[2] bg-black bg-opacity-60">
+          </div>
+        )
+      }
       
     </a>
 

@@ -62,7 +62,7 @@ export default function Event({event}) {
 
         <a href={link.url} className="max-w-max flex items-center space-x-2 vw:space-x-[.41666vw] opacity-80">
 
-          <p className="font-light hover_state_link md:font-normal text-[10px] vw:text-[.5208vw] leading-[13px] vw:leading-[1.3] tracking-[.05em] uppercase">
+          <p className="font-light hover_state_link md:font-normal text-xs vw:text-[.625vw] leading-[1.1] tracking-[.05em] uppercase">
             {link.title}
           </p>
 

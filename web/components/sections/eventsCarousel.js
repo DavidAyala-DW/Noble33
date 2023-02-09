@@ -18,7 +18,7 @@ export default function EventsCarousel(props) {
           {title}
         </h2>
 
-        <a href={view_all.link} className="block hover_state_link uppercase tracking-[.05em] text-[10px] vw:text-[.5208vw] leading-[11px] vw:leading-[1.1] font-medium">
+        <a href={view_all.link} className="block hover_state_link uppercase tracking-[.05em] text-xs vw:text-[.625vw] leading-[1.1] font-medium">
           {view_all.title}
         </a>
 
@@ -77,7 +77,7 @@ export default function EventsCarousel(props) {
                 {description}
               </div>
 
-              <a href={view_more.link} className="block opacity-90 hover_state_link tracking-[.05em] text-[10px] vw:text-[.5208vw] leading-[13px] vw:leading-[1.3] font-extralight">
+              <a href={view_more.link} className="block opacity-90 hover_state_link tracking-[.05em] text-xs vw:text-[.625vw] leading-[1.1] font-extralight">
                 {view_more.title}
               </a>
 

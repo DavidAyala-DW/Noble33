@@ -2,7 +2,9 @@ import CollectionCard from "../collectionCard";
 
 export default function CollectionGrid(props) {
 
-  const {title, view_all, collections} = props;
+  console.log(props);
+
+  const {title, view_all, collections, are_coming_soon = false} = props;
 
   return (
 
@@ -19,7 +21,7 @@ export default function CollectionGrid(props) {
 
             <a
             href={view_all.link}
-            className="block uppercase hover_state_link opacity-80 tracking-[.05em] text-[10px] leading-[11px] vw:text-[.520vw] vw:leading-[1.1] font-light"
+            className="block uppercase hover_state_link opacity-80 tracking-[.05em] text-xs vw:text-[.625vw] leading-[1.1] font-light"
             >
               {view_all.title}
             </a>
@@ -34,7 +36,7 @@ export default function CollectionGrid(props) {
         {collections && collections.map( collection => {
           const {_key} = collection;
           return(
-            <CollectionCard key={_key} collection={collection} />
+            <CollectionCard key={_key} collection={collection} is_coming_soon={are_coming_soon} />
           ) 
 
         })}

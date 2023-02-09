@@ -34,7 +34,7 @@ const HeroHomepage = (props) => {
           </div>
 
           <Link href={reservation.link} passHref>
-            <a target="_blank" rel="noopener nooreferrer" className="block max-w-max hover_state_link opacity-80 tracking-[.05em] uppercase text-[10px] vw:text-[0.520vw] leading-[11px] vw:leading-[1.1] font-extralight">
+            <a target="_blank" rel="noopener nooreferrer" className="block max-w-max hover_state_link opacity-80 tracking-[.05em] uppercase text-xs vw:text-[.625vw] leading-[1.1] font-extralight">
               {reservation.label}
             </a>
           </Link>

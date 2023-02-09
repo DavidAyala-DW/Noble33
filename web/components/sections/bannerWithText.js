@@ -43,7 +43,7 @@ export default function BannerWithText(props) {
           <SimpleBlockContent blocks={description} />
         </div>
 
-        <a className="block hover_state_link font-light text-[10px] vw:text-[.520vw] leading-[13px] vw:leading-[1.3] tracking-[.05em] uppercase" href={learn_more.link}>
+        <a className="block hover_state_link font-light text-xs vw:text-[.625vw] leading-[1.1] tracking-[.05em] uppercase" href={learn_more.link}>
           {learn_more.title}
         </a>
 

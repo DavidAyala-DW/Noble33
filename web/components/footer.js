@@ -41,7 +41,7 @@ export default function Footer(props) {
 
             const {title,link} = item;
             return (
-              <a href={link.url} key={i} className={`uppercase ${i == 4 && "col-start-2 col-end-4"} hover_state_link opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal`} >
+              <a href={link.url} key={i} className={`uppercase ${i == 4 && "col-start-2 col-end-4"} hover_state_link opacity-80 text-xs vw:text-[.625vw] leading-[1.1] tracking-[.05em] font-normal`} >
                 {title}
               </a>
             )
@@ -53,20 +53,20 @@ export default function Footer(props) {
         <div className="hidden md2:flex items-center space-x-[16px] vw:space-x-[1.5625vw]">
 
           <Link href={privacyPolicyHandle.link.url} passHref>
-            <a className="block hover_state_link opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
+            <a className="block hover_state_link opacity-80 text-xs vw:text-[.625vw] leading-[1.1] tracking-[.05em] font-normal uppercase">
               {privacyPolicyHandle.title}
             </a>
           </Link>
 
 
           <Link href="/accessibility-statement" passHref>  
-              <a className="block hover_state_link opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase" >
+              <a className="block hover_state_link opacity-80 text-xs vw:text-[.625vw] leading-[1.1] tracking-[.05em] font-normal uppercase" >
                 Accessibility Statement
               </a>
             </Link>
 
             <Link href="/website-terms" passHref>  
-              <a className="block hover_state_link opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase" >
+              <a className="block hover_state_link opacity-80 text-xs vw:text-[.625vw] leading-[1.1] tracking-[.05em] font-normal uppercase" >
                 Website Terms
               </a>
             </Link>
@@ -79,7 +79,7 @@ export default function Footer(props) {
 
         <div className="flex flex-col space-y-6 md:space-y-8 md2:space-y-8 vw:space-y-[1.666vw]">
 
-          <h3 className="block opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
+          <h3 className="block opacity-80 text-xs vw:text-[.625vw] leading-[1.1] tracking-[.05em] font-normal uppercase">
             {newsletter_text ?? "Newsletter"}
           </h3>  
 
@@ -145,27 +145,27 @@ export default function Footer(props) {
           <div className="flex md2:hidden items-center space-x-[16px] vw:space-x-[2.604vw]">
 
             <Link href={privacyPolicyHandle.link.url} passHref>
-              <a className="block hover_state_link opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
+              <a className="block hover_state_link opacity-80 text-xs vw:text-[.625vw] leading-[1.1] tracking-[.05em] font-normal uppercase">
                 {privacyPolicyHandle.title}
               </a>
             </Link>
 
 
             <Link href="/accessibility-statement" passHref>  
-                <a className="block hover_state_link opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase" >
+                <a className="block hover_state_link opacity-80 text-xs vw:text-[.625vw] leading-[1.1] tracking-[.05em] font-normal uppercase" >
                   Accessibility Statement
                 </a>
               </Link>
 
               <Link href="/website-terms" passHref>  
-                <a className="block hover_state_link opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase" >
+                <a className="block hover_state_link opacity-80 text-xs vw:text-[.625vw] leading-[1.1] tracking-[.05em] font-normal uppercase" >
                   Website Terms
                 </a>
               </Link>
 
           </div>
 
-          <p className="block opacity-80 text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] tracking-[.05em] font-normal uppercase">
+          <p className="block opacity-80 text-xs vw:text-[.625vw] leading-[1.1] tracking-[.05em] font-normal uppercase">
             ©{new Date().getFullYear()} Noble 33
           </p>
 

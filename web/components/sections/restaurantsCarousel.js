@@ -18,7 +18,7 @@ export default function RestaurantsCarousel(props) {
           {title}
         </h2>
 
-        <a href={view_all.link} className="block hover_state_link uppercase tracking-[.05em] text-[10px] vw:text-[.520vw] leading-[11px] vw:leading-[1.1] font-medium">
+        <a href={view_all.link} className="block hover_state_link uppercase tracking-[.05em] text-xs vw:text-[.625vw] leading-[1.1] font-medium">
           {view_all.title}
         </a>
 
