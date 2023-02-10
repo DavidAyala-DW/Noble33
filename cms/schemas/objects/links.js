@@ -18,7 +18,6 @@ export default {
         filter: (props) => {
 
           const {document} = props;
-          console.log(document, props);
           if(document?.site == "sparrow"){
             return {
               filter: '_type == "routesSparrow"  || _type == "locationsSparrow" '

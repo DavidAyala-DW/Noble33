@@ -2,8 +2,6 @@ import CollectionCard from "../collectionCard";
 
 export default function CollectionGrid(props) {
 
-  console.log(props);
-
   const {title, view_all, collections, are_coming_soon = false} = props;
 
   return (

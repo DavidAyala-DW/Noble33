@@ -21,7 +21,10 @@ export default function Page(megaprops) {
     enabled: preview,
   })
 
-  const page = filterDataToSingleItem(previewData?.page, preview);
+  // console.log(previewData);
+
+  const page = filterDataToSingleItem(previewData, preview);
+
   const title = page?.title ?? "";
 
 
@@ -61,13 +64,18 @@ export default function Page(megaprops) {
 
 async function fulfillSectionQueries(page, slug) {
 
+
+  let actual_page;
+  actual_page = page.page;
+
+
   if (!page?.page?.content) {
-    return page
+    actual_page = page;
   }
 
   const sectionsWithQueryData = await Promise.all(
-
-    page.page.content.map(async (section) => {
+    
+    actual_page.content.map(async (section) => {
 
       if(section._type == "newsContent"){
         section.query = newsDetailsQuery(slug);
@@ -166,8 +174,8 @@ export const getStaticProps = async ({ params, preview = false }) => {
   const queryParams = { possibleSlugs: getSlugVariations(slug) }
   let data = await client.fetch(query, queryParams)
   let [siteSettings, menus] = await Promise.all([getSiteConfig(), getMenus()])
-  let page = filterDataToSingleItem(data, preview)
-  page = await fulfillSectionQueries(page,slug)
+  let page = filterDataToSingleItem(data, preview);
+  page = await fulfillSectionQueries(page,slug);
 
   page.slug = slug;
   page.query = query;

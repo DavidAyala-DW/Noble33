@@ -26,6 +26,7 @@ export default function MoreNews(props) {
       {
         news.map(menu => {
           const {_key, query} = menu;
+          if(!query) return;
           return (
             <MoreNewsCard key={_key} news={query} />
           )

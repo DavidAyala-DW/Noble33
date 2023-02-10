@@ -52,6 +52,7 @@ export default {
         { type: 'events' },
         { type: 'contact' },
         { type: 'richtext' },
+        { type: 'newsSlider' },
       ],
     },
     {

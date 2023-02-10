@@ -61,6 +61,7 @@ import menus from "./objects/menus"
 import privateEventsList from "./objects/private-events"
 import menusContent from "./objects/menusContent"
 import reservations from "./objects/reservations";
+import newsSlider from "./objects/newsSlider";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -113,6 +114,7 @@ export default createSchema({
     hero,
     event,
     events,
+    newsSlider,
     links,
     newsContent,
     moreNews,
