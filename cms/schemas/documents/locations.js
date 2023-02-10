@@ -29,7 +29,12 @@ export default {
       name: 'title',
       type: 'string',
       group: 'general',
-      title: 'Title'
+      title: 'Location'
+    },
+    {
+      name: 'seo_title_location_page',
+      type: 'string',
+      title: 'Title Location Page (SEO)',
     },
     {
       name: 'description_location_page',
@@ -41,6 +46,11 @@ export default {
       type: 'image',
       title: 'Open Graph image',
       description: 'Image for sharing previews on Facebook, Twitter etc. (Location page)'
+    },
+    {
+      name: 'seo_title_menu_page',
+      type: 'string',
+      title: 'Title menu Page (SEO)',
     },
     {
       name: 'description_menu_page',

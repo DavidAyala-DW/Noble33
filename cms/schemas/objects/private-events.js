@@ -4,7 +4,7 @@ export default {
   title: 'Private events list',
   fields: [
     {
-      title: "Title",
+      title: "Page title",
       name: "title",
       type: "string",
     },

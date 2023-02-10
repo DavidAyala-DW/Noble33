@@ -9,7 +9,12 @@ export default {
     {
       name: 'title',
       type: 'string',
-      title: 'Title',
+      title: 'Page title',
+    },
+    {
+      name: 'seo_title',
+      type: 'string',
+      title: 'Title (SEO)',
     },
     {
       name: 'description',

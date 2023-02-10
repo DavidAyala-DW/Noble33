@@ -27,6 +27,11 @@ export default {
       title: 'Title'
     },
     {
+      name: 'seo_title',
+      type: 'string',
+      title: 'Title (SEO)',
+    },
+    {
       name: 'description',
       type: 'text',
       title: 'Description',
