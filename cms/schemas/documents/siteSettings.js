@@ -123,6 +123,100 @@ export default {
       hidden: ({document}) => document?.site === "noble33"
     },
     {
+      name: 'contact_section',
+      title: "Contact section",
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          name: "contact_option",
+          title: "Contact Option",
+          fields:[
+            {
+              name: "contact_option_text",
+              title: "Contact option text",
+              type: "string"
+            },
+            {
+              name: "contact_option_link",
+              title: "Contact option link",
+              type: "url"
+            },
+            {
+              name: "contact_option_icon",
+              title: "Contact option icon",
+              type: "image"
+            }
+          ]
+        }
+      ],
+      group: 'general',
+      fieldset: 'general',
+      hidden: ({document}) => document?.site != "casaMadera"
+    },
+    {
+      name: 'schedules',
+      title: "Schedules",
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          name: "schedule",
+          title: "Schedule",
+          fields:[
+            {
+              name: "schedule_title",
+              title: "Schedule title",
+              type: "string"
+            },
+            {
+              name: "schedule_options",
+              title: "Schedule options",
+              type: "array",
+              of: [
+                {
+                  type: "object",
+                  name: "schedule_option",
+                  title: "Schedule option",
+                  fields: [
+                    {
+                      type: "string",
+                      name: "days",
+                      title: "Days"
+                    },
+                    {
+                      type: "string",
+                      name: "hours",
+                      title: "Hours"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      group: 'general',
+      fieldset: 'general',
+      hidden: ({document}) => document?.site != "casaMadera"
+    },
+    {
+      name: 'address',
+      title: "Address",
+      type: "text",
+      group: 'general',
+      fieldset: 'general',
+      hidden: ({document}) => document?.site != "casaMadera"
+    },
+    {
+      name: 'about_us',
+      title: "About us (Summary)",
+      type: "text",
+      group: 'general',
+      fieldset: 'general',
+      hidden: ({document}) => document?.site != "casaMadera"
+    },
+    {
       name: 'privacyPolicyHandle',
       type: 'links',
       title: 'Privacy policy handle',
