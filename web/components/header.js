@@ -190,7 +190,7 @@ export default function Header(props) {
                       </a>
                     </Link>
                   ) : (
-                    <div className="group">
+                    <div key="collection" className="group">
                       <Link href={link?.url} passHref key={_key} >
                         <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} className="block hover_state_link uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
                           {title}
@@ -222,7 +222,7 @@ export default function Header(props) {
 
               })}
 
-              <Link href={reservationsButton?.link?.url} passHref>
+              <Link key="reservations" href={reservationsButton?.link?.url} passHref>
                 <a onClick={handleClick} className="md:hidden hover_state_link block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
                   {reservationsButton?.title}
                 </a>
