@@ -8,7 +8,6 @@ import { Navigation } from "swiper";
 export default function NewsSlider(props) {
 
   const {title, view_all, news_slider} = props;
-  // console.log(news_slider);
 
   return (
 
@@ -55,10 +54,7 @@ export default function NewsSlider(props) {
 
         {news_slider.map( news => {
 
-          const {query} = news;
-          if(!query) return;
-
-          const {_key, image, title, description, slug} = query;
+          const {_id, image, title, description, slug} = news;
 
           const view_more = {
             title: "View",
@@ -67,7 +63,7 @@ export default function NewsSlider(props) {
 
           return (
 
-            <SwiperSlide key={_key} className="flex flex-col w-full pb-1">
+            <SwiperSlide key={_id} className="flex flex-col w-full pb-1">
 
               <div className="relative w-full aspect-w-[1.70] aspect-h-1 mb-4 vw:mb-[.8333vw]">
 
