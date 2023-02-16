@@ -53,15 +53,17 @@ export default function CollectionCard({collection, is_coming_soon}) {
               )
             }
 
-            <div className="block w-[11px] vw:w-[.5729vw]">
-              <Image
-                src="/images/whiteRightArrow.svg"
-                alt="white arrow"
-                width={11}
-                height={19}
-                layout="responsive"
-              />
-            </div>
+            {link ? (
+              <div className="block w-[11px] vw:w-[.5729vw]">
+                <Image
+                  src="/images/whiteRightArrow.svg"
+                  alt="white arrow"
+                  width={11}
+                  height={19}
+                  layout="responsive"
+                />
+              </div>
+            ) : null}
 
           </div>
 
