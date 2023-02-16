@@ -11,6 +11,7 @@ export function newsDetailsQuery(slug){
 const newsDetails = groq`
   _id,
   title,
+  slug,
   description,
   link,
   image,
