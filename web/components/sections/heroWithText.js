@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import BackgroundImage from "../backgroundImage";
 
 export default function HeroWithText(props) {
@@ -16,8 +17,8 @@ export default function HeroWithText(props) {
         </div>
         
       </div>
-
-      <div className="flex flex-col px-4 md:px-0 space-y-6 md:space-y-3 vw:space-y-[.625vw] mt-8 md:mt-[-35px] lg:mt-[-30px] vw:mt-[-1.5625vw] z-10">
+      
+      <div className={clsx("flex flex-col px-4 md:px-0 space-y-6 md:space-y-3 vw:space-y-[.625vw] mt-8 z-10", backgroundImage && 'md:mt-24')}>
 
         <h1 className="tracking-[.05em] text-[32px] md:text-[40px] vw:text-[2.083vw] leading-[1.2] font-extralight md:text-center uppercase opacity-90">
           {title}
