@@ -17,14 +17,14 @@ export default function MemberCard({member}) {
       <div className="absolute inset-0 top-auto h-1/2 z-[1] bg-gradient-to-t from-black/80 to-transparent"></div>
 
       <div
-      className="absolute inset-0 w-full h-full flex flex-col justify-end space-y-1 pb-3 pl-[14px] md:pb-4 vw:pb-[1.0416vw] md:pl-5 vw:pl-[1.0416vw] z-[2]"
+        className="absolute inset-0 w-full h-full flex flex-col justify-end space-y-0.5 pb-3 px-[14px] md:pb-4 vw:pb-[1.0416vw] md:px-5 vw:px-[1.0416vw] z-[2]"
       >
 
-        <h3 className="text-base leading-[23px] vw:text-[1.25vw] tracking-[.05em] uppercase font-light">
+        <h3 className="text-sm leading-[23px] vw:text-[1vw] tracking-[.05em] uppercase font-light">
           {title}
         </h3>
 
-        <p className="text-sm vw:text-[.9375vw] opacity-80 font-light leading-tight">
+        <p className="text-sm vw:text-[.8vw] opacity-80 font-light leading-tight">
           {role}
         </p>
 
