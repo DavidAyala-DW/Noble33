@@ -14,6 +14,14 @@
   .button {
     @apply flex items-center w-fit h-[40px] pt-0.5 px-7 border border-white font-medium text-lg vw:text-[.9375vw] whitespace-nowrap tracking-[.05em] uppercase hover:bg-white/10;
   }
+
+  .text-heading-1 {
+    @apply uppercase tracking-[.05em] opacity-80 text-2xl vw:text-[.9375vw] leading-[1.1] font-light;
+  }
+
+  .text-cta {
+    @apply uppercase tracking-[.05em] opacity-80 text-xs vw:text-[.625vw] leading-[1.1] font-light;
+  }
 }
 
 body, *{

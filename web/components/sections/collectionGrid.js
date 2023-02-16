@@ -10,14 +10,14 @@ export default function CollectionGrid(props) {
 
       <div className="flex flex-col space-y-2 vw:space-y-[.4166vw] mb-8 lg:mb-7 vw:mb-[1.1458vw]">
 
-        <h2 className="pb-2 uppercase tracking-[.05em] opacity-80 text-2xl vw:text-[.9375vw] leading-[21px] vw:leading-[1.16] font-light" >
+        <h2 className="text-heading-1">
           {title}
         </h2>
 
         {view_all?.title ? (
           <a
             href={view_all.link}
-            className="block uppercase hover_state_link opacity-80 tracking-[.05em] text-lg vw:text-[.625vw] leading-[1.1] font-light"
+            className="text-cta hover_state_link block text-lg"
           >
             {view_all.title}
           </a>
