@@ -41,6 +41,11 @@ export default {
       }
     },
     {
+      name: 'description2',
+      title: 'Small description',
+      type: "text"      
+    },
+    {
       name: 'placeholder',
       title: 'Placeholder',
       type: "string"      
