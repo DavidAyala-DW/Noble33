@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @import "./fonts";
+
+@layer base {
+  :root {
+    @apply antialiased;
+  }
+}
+
 body, *{
   font-family: "Sofia Pro";
   color: white;
