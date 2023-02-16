@@ -14,6 +14,7 @@ const newsDetails = groq`
   description,
   link,
   image,
+  publicationLogo,
 `
 
 export const pageContentQuery = groq`

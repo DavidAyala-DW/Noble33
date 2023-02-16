@@ -54,7 +54,7 @@ export default function NewsSlider(props) {
 
         {news_slider.map( news => {
 
-          const {_id, image, title, description, slug} = news;
+          const {_id, image, publicationLogo, title, description, slug} = news;
 
           const view_more = {
             title: "View",
@@ -65,7 +65,7 @@ export default function NewsSlider(props) {
 
             <SwiperSlide key={_id} className="flex flex-col w-full pb-1">
 
-              <div className="relative w-full aspect-w-[1.70] aspect-h-1 mb-4 vw:mb-[.8333vw]">
+              <div className="relative w-full aspect-w-[1.70] aspect-h-1 mb-5 vw:mb-[.8333vw]">
 
                 <div className="w-full h-full ">
                   <Link href={view_more?.link} passHref>
@@ -77,6 +77,12 @@ export default function NewsSlider(props) {
 
               </div>  
 
+              {publicationLogo ? (
+                <div className="mb-3">
+                  <SanityImage src={publicationLogo} width={60} height={30} objectFit="contain" />
+                </div>
+              ) : null}
+              
               <Link href={view_more?.link}>
                 <h3 className="tracking-[.05em] limit-2-lines leading-[25px] md:leading-9 vw:leading-[1.125] text-[24px] md:text-[32px] vw:text-[1.6666vw] font-extralight mb-6 vw:mb-[1.25vw]">
                   {title}
