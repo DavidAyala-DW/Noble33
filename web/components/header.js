@@ -183,12 +183,39 @@ export default function Header(props) {
 
                   const {title, link, image, _key} = item;
 
-                  return (
+                  return link.url !== '/locations' ? (
                     <Link href={link?.url} passHref key={_key} >
                       <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} className="block hover_state_link uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
                         {title}
                       </a>
                     </Link>
+                  ) : (
+                    <div className="group">
+                      <Link href={link?.url} passHref key={_key} >
+                        <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} className="block hover_state_link uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
+                          {title}
+                        </a>
+                      </Link>
+
+                      <div className={`
+                        pt-6 vw:pt-[1.25vw] hidden md:flex flex-col space-y-2 vw:space-y-[.416vw] h-0 overflow-hidden opacity-0
+                        group-hover:opacity-100 group-hover:h-auto group-hover:overflow-visible group-focus-within:opacity-100 group-focus-within:h-auto group-focus-within:overflow-visible
+                      `}>
+                        {secondHeaderNav.map( (item)  => {
+
+                          const {title, link, image, _key} = item;
+
+                          return (
+                            <Link href={link?.url} passHref key={_key} >
+                              <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} className="block hover_state_link uppercase tracking-[.05em] text-[24px] vw:text-[1.25vw] leading-[28px] vw:leading-[1.166] font-light opacity-80">
+                                {title}
+                              </a>
+                            </Link>
+                          )
+
+                        })}
+                      </div>
+                    </div>
                   )
 
                 }
@@ -200,24 +227,6 @@ export default function Header(props) {
                   {reservationsButton?.title}
                 </a>
               </Link>
-              
-              <div className="pt-6 vw:pt-[1.25vw] hidden md:flex flex-col space-y-2 vw:space-y-[.416vw]">
-
-                {secondHeaderNav.map( (item,index)  => {
-
-                  const {title, link, image, _key} = item;
-
-                  return (
-                    <Link href={link?.url} passHref key={_key} >
-                      <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} className="block hover_state_link uppercase tracking-[.05em] text-[24px] vw:text-[1.25vw] leading-[28px] vw:leading-[1.166] font-light opacity-80">
-                        {title}
-                      </a>
-                    </Link>
-                  )
-
-                })}
-
-              </div>
 
             </div>
 
