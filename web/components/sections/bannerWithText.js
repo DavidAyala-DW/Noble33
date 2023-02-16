@@ -36,16 +36,20 @@ export default function BannerWithText(props) {
           {title}
         </h2>
 
-        <div className={`opacity-80 text-lg leading-[21px]
-        ${description_container ?  description_container_ratio[description_container] : description_container_ratio["format-1"] }
-        vw:text-[.9375vw] vw:leading-[1.1666] font-light mb-8 vw:mb-[1.6666vw]`
-        }>
-          <SimpleBlockContent blocks={description} />
-        </div>
+        {description ? (
+          <div className={`opacity-80 text-lg leading-[21px]
+          ${description_container ?  description_container_ratio[description_container] : description_container_ratio["format-1"] }
+          vw:text-[.9375vw] vw:leading-[1.1666] font-light mb-8 vw:mb-[1.6666vw]`
+          }>
+            <SimpleBlockContent blocks={description} />
+          </div>
+        ) : null}
 
-        <a className="block hover_state_link font-light text-xs vw:text-[.625vw] leading-[1.1] tracking-[.05em] uppercase" href={learn_more.link}>
-          {learn_more.title}
-        </a>
+        {learn_more?.title && learn_more?.link ? (
+          <a className="block hover_state_link font-light text-xs vw:text-[.625vw] leading-[1.1] tracking-[.05em] uppercase" href={learn_more.link}>
+            {learn_more.title}
+          </a>
+        ) : null}
 
       </div>
 
