@@ -133,10 +133,8 @@ export default function Header(props) {
         <div className="hidden md:block order-3 select-none">
 
           <Link href={reservationsButton?.link?.url} passHref>
-            <a className="block">
-              <p className="font-medium hover_state_link text-lg vw:text-[.9375vw] leading-[21px] vw:leading-[1.166] tracking-[.05em] uppercase opacity-70 hover_state_link">
-                {reservationsButton?.title}
-              </p>
+            <a className="button">
+              {reservationsButton?.title}
             </a>
           </Link>
 

@@ -10,6 +10,12 @@
   }
 }
 
+@layer components {
+  .button {
+    @apply flex items-center w-fit h-[40px] pt-0.5 px-7 border border-white font-medium text-lg vw:text-[.9375vw] whitespace-nowrap tracking-[.05em] uppercase hover:bg-white/10;
+  }
+}
+
 body, *{
   font-family: "Sofia Pro";
   color: white;
