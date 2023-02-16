@@ -88,7 +88,7 @@ export default function Header(props) {
       className={`${  existHero ? ((heroVisible == false && openModal == false ) ? "bg-body duration-[200ms]  " : "bg-transparent duration-[300ms]") : "bg-body" } z-[100] 
       ${ openModal ? "justify-center md:!bg-transparent right-0 fixed md:inset-x-0" : `justify-between ${stickyHeader ? "sticky bg-body" :  "fixed inset-x-0"} `} 
       top-0 px-4 md:px-[3.35%] w-full md:mx-auto flex items-center md:justify-between
-      py-6 md:pt-8 vw:pt-[1.666vw] md:pb-10 vw:pb-[2.0833vw]`}
+      py-6 md:pt-5 vw:pt-[1.666vw] md:pb-6 vw:pb-[2.0833vw]`}
       id="header"
       >
 
