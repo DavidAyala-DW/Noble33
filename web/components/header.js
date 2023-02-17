@@ -189,7 +189,7 @@ export default function Header(props) {
                 <NavLink key={item._key} item={item} />
               ) : (
                 <div key="secondary" className="group">
-                  <NavLink key={item._key} item={item} />
+                  <NavLink item={item} />
 
                   <div className={`
                     pt-6 vw:pt-[1.25vw] hidden md:flex flex-col space-y-2 vw:space-y-[.416vw] h-0 overflow-hidden opacity-0
