@@ -84,14 +84,14 @@ export default function Header(props) {
     }
 
     return (
-      <Link href={item.link.url}>
+      <Link href={!item.isDisabled ? item.link.url : '#'}>
         <a
           onMouseEnter={item.image ? () => setActiveMenuImage(item.image) : undefined}
           onMouseLeave={resetActiveMenuImage}
-          onClick={toggleModalOpen}
+          onClick={!item.isDisabled ? toggleModalOpen : (e) => e.preventDefault()}
           className={clsx(
             'block uppercase tracking-[.05em] font-light',
-            !item.isDisabled ? 'hover_state_link opacity-90' : 'opacity-50 pointer-events-none',
+            !item.isDisabled ? 'hover_state_link opacity-90' : 'opacity-50 cursor-default',
             secondary
               ? 'text-[24px] leading-[28px] vw:leading-[1.166]'
               : 'text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2]'
