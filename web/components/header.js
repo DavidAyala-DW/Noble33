@@ -90,8 +90,8 @@ export default function Header(props) {
           onMouseLeave={resetActiveMenuImage}
           onClick={toggleModalOpen}
           className={clsx(
-            'block uppercase tracking-[.05em] font-light opacity-90',
-            !item.isDisabled ? 'hover_state_link' : 'opacity-50 pointer-events-none',
+            'block uppercase tracking-[.05em] font-light',
+            !item.isDisabled ? 'hover_state_link opacity-90' : 'opacity-50 pointer-events-none',
             secondary
               ? 'text-[24px] leading-[28px] vw:leading-[1.166]'
               : 'text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2]'
