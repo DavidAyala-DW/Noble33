@@ -73,6 +73,14 @@ export default {
       type: "boolean",
       description: "Active it only to menu option in navigation menu",
       hidden: ({document, parent }) => parent.title != "Menus",
+    },
+    {
+      name: "isDisabled",
+      title: "Disabled",
+      type: "boolean",
+      description: "Visible, but users can't interact with it",
+      hidden: ({ document }) => document.site !== "noble33",
+      initialValue: false,
     }
   ]
 }

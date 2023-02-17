@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import SanityImage from './sanity-image'
 import Link from "next/link";
 import Logo from "@/public/images/logo.png"
+import clsx from "clsx";
 
 export default function Header(props) {
 
@@ -26,16 +27,11 @@ export default function Header(props) {
   const [heroVisible, setHeroVisible] = useState(null)
   const [entryObserver, setEntryObserver] = useState(false)
 
-  function handleClick(){
-    const updatedModalValue = !openModal;
-    setOpenModal(updatedModalValue);
+  function toggleModalOpen() {
+    setOpenModal((val) => !val);
   }
 
-  function handleMouseOver(image){
-    setActiveMenuImage(image)
-  }
-
-  function handleMouseDown(){
+  function resetActiveMenuImage() {
     setActiveMenuImage(menuImage)
   }
 
@@ -44,7 +40,7 @@ export default function Header(props) {
     setActiveModal(true);
 
     if(menuImage){
-      handleMouseDown()
+      resetActiveMenuImage()
     }
     
   }, []);
@@ -80,6 +76,35 @@ export default function Header(props) {
 
   }, [router.asPath,entryObserver]);
 
+  function NavLink(props) {
+    const { item, secondary = false } = props
+
+    if (!item) {
+      return null
+    }
+
+    return (
+      <Link href={item.link.url}>
+        <a
+          onMouseEnter={item.image ? () => setActiveMenuImage(item.image) : undefined}
+          onMouseLeave={resetActiveMenuImage}
+          onClick={toggleModalOpen}
+          className={clsx(
+            'block uppercase tracking-[.05em] font-light opacity-90',
+            !item.isDisabled ? 'hover_state_link' : 'opacity-50 pointer-events-none',
+            secondary
+              ? 'text-[24px] leading-[28px] vw:leading-[1.166]'
+              : 'text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2]'
+          )}
+          tabIndex={item.isDisabled ? -1 : 0}
+          aria-disabled={item.isDisabled}
+        >
+          {item.title}
+        </a>
+      </Link>
+    )
+  }
+
   return (
 
     <>
@@ -94,7 +119,7 @@ export default function Header(props) {
 
         <div className={`cursor-pointer order-3 md:order-1 select-none md:opacity-50 ${openModal && "absolute right-4 md:left-0 md:relative"}`}>
 
-          <div onClick={handleClick} className={`${openModal && "hidden"} w-[25px] vw:!w-[1.302vw]`}>
+          <div onClick={toggleModalOpen} className={`${openModal && "hidden"} w-[25px] vw:!w-[1.302vw]`}>
             <Image
               src={"/images/burguer.svg"}
               alt="burger"
@@ -104,7 +129,7 @@ export default function Header(props) {
             />
           </div>
 
-          <div onClick={handleClick} className={`${!openModal && "hidden"} w-[21px] vw:!w-[1.093vw]`}>
+          <div onClick={toggleModalOpen} className={`${!openModal && "hidden"} w-[21px] vw:!w-[1.093vw]`}>
             <Image
               src={"/images/close.svg"}
               alt="burger"
@@ -153,75 +178,32 @@ export default function Header(props) {
 
             <div className="flex flex-col w-full md:w-auto items-center md:items-start space-y-2 vw:space-y-[.416vw]">
 
-              { mainNav.map((item,index) => {
-
-                if(index < 4){
-
-                  const {title, link, image, _key} = item;
-
-                  return (
-                    <Link href={link?.url} passHref key={_key} >
-                      <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} className="block uppercase hover_state_link tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
-                        {title}
-                      </a>
-                    </Link>
-                  )
-
-                }
-
-              })}
+              {mainNav.slice(0, 4).map((item) => (
+                <NavLink key={item._key} item={item} />
+              ))}
 
             </div>
 
             <div className="flex flex-col w-full md:w-auto items-center md:items-start space-y-2 vw:space-y-[.416vw]">
+              {mainNav.slice(4).map((item) => item.link?.url !== '/locations' ? (
+                <NavLink key={item._key} item={item} />
+              ) : (
+                <div key="secondary" className="group">
+                  <NavLink key={item._key} item={item} />
 
-              {mainNav.map((item,index) => {
-
-                if(index >= 4){
-
-                  const {title, link, image, _key} = item;
-
-                  return link.url !== '/locations' ? (
-                    <Link href={link?.url} passHref key={_key} >
-                      <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} className="block hover_state_link uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
-                        {title}
-                      </a>
-                    </Link>
-                  ) : (
-                    <div key="collection" className="group">
-                      <Link href={link?.url} passHref key={_key} >
-                        <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} className="block hover_state_link uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
-                          {title}
-                        </a>
-                      </Link>
-
-                      <div className={`
-                        pt-6 vw:pt-[1.25vw] hidden md:flex flex-col space-y-2 vw:space-y-[.416vw] h-0 overflow-hidden opacity-0
-                        group-hover:opacity-100 group-hover:h-auto group-hover:overflow-visible group-focus-within:opacity-100 group-focus-within:h-auto group-focus-within:overflow-visible
-                      `}>
-                        {secondHeaderNav.map( (item)  => {
-
-                          const {title, link, image, _key} = item;
-
-                          return (
-                            <Link href={link?.url} passHref key={_key} >
-                              <a onMouseLeave={handleMouseDown} onMouseEnter={() => handleMouseOver(image)} onClick={handleClick} className="block hover_state_link uppercase tracking-[.05em] text-[24px] vw:text-[1.25vw] leading-[28px] vw:leading-[1.166] font-light opacity-80">
-                                {title}
-                              </a>
-                            </Link>
-                          )
-
-                        })}
-                      </div>
-                    </div>
-                  )
-
-                }
-
-              })}
+                  <div className={`
+                    pt-6 vw:pt-[1.25vw] hidden md:flex flex-col space-y-2 vw:space-y-[.416vw] h-0 overflow-hidden opacity-0
+                    group-hover:opacity-100 group-hover:h-auto group-hover:overflow-visible group-focus-within:opacity-100 group-focus-within:h-auto group-focus-within:overflow-visible
+                  `}>
+                    {secondHeaderNav.map((item) => (
+                      <NavLink key={item._key} item={item} secondary />
+                    ))}
+                  </div>
+                </div>
+              ))}
 
               <Link key="reservations" href={reservationsButton?.link?.url} passHref>
-                <a onClick={handleClick} className="md:hidden hover_state_link block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
+                <a onClick={toggleModalOpen} className="md:hidden hover_state_link block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
                   {reservationsButton?.title}
                 </a>
               </Link>
@@ -232,7 +214,7 @@ export default function Header(props) {
 
           <div className="flex items-center space-x-6 vw:space-x-[1.25vw]">
 
-            <a onClick={handleClick} href={facebookHandle} className="block w-6 vw:w-[1.25vw]">
+            <a onClick={toggleModalOpen} href={facebookHandle} className="block w-6 vw:w-[1.25vw]">
 
               <Image
                 src={"/images/facebook.svg"}
@@ -244,7 +226,7 @@ export default function Header(props) {
 
             </a>
 
-            <a onClick={handleClick} href={instagramHandle} className="block w-6 vw:w-[1.25vw]">
+            <a onClick={toggleModalOpen} href={instagramHandle} className="block w-6 vw:w-[1.25vw]">
 
               <Image
                 src={"/images/instagram.svg"}
@@ -265,17 +247,18 @@ export default function Header(props) {
           {
             [...secondHeaderNav,...mainNav,{image:menuImage, _key: "_falseKey"}].map((item) => {
               const {image, _key} = item;
-              return (
-                <div key={_key} className={`${JSON.stringify(image) == JSON.stringify(activeMenuImage) ? "block" : "hidden" } relative w-full h-full`}>
-                  <SanityImage                    
-                    priority={true}
-                    className={`object-cover`}
+
+              return image ? (
+                <div key={_key} className={`${image.asset._ref === activeMenuImage?.asset._ref ? "block" : "hidden" } relative w-full h-full`}>
+                  <SanityImage
+                    priority                    
                     src={image}
                     layout="fill"
+                    objectFit="cover"
                     quality={80}
                   />
                 </div>
-              )
+              ) : null
             })
           }
           
