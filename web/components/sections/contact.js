@@ -91,7 +91,7 @@ export default function Contact(props) {
         <Field
           className="mb-10 md:mb-12 vw:mb-[2.5vw]"
           type="textarea"
-          defaultValue="How can we help you?"    
+          placeholder="How can we help you?"    
           register={register}
           label="Message"
           id="message"
