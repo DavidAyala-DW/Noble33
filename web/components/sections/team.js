@@ -6,7 +6,7 @@ export default function Team(props) {
 
   return (
 
-    <section className="px-4 md:px-0 md:max-w-[93.3%] w-full mx-auto flex flex-col space-y-[60px] lg:space-y-0 lg:flex-row lg:justify-between">
+    <section className="px-4 md:px-0 md:max-w-[93.3%] w-full mx-auto flex flex-col space-y-12 lg:space-y-0 lg:flex-row lg:justify-between">
 
       <div className="flex flex-col space-y-6 vw:space-y-[1.25vw] md:max-w-[500px] lg:max-w-[300px] vw:max-w-[20.8333vw] w-full">
 
@@ -14,9 +14,11 @@ export default function Team(props) {
           {title}
         </h2>
 
-        <p className="text-lg vw:text-[.9375vw] leading-[21px] vw:leading-[1.1666] opacity-80 font-light tracking-[.05em] md:tracking-[unset]">
-          {description}
-        </p>
+        {description ? (
+          <p className="text-lg vw:text-[.9375vw] leading-[21px] vw:leading-[1.1666] opacity-80 font-light tracking-[.05em] md:tracking-[unset]">
+            {description}
+          </p>
+        ) : null}
 
       </div>
 
