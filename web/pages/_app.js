@@ -4,7 +4,7 @@ import CookieConsent from "react-cookie-consent";
 import GTM from "@/components/GTM";
 import Cookies from 'js-cookie'
 import { useEffect } from 'react';
-import AccessiBe from '@/components/AccessiBe';
+import AccessiBe from '@/components/accessibe';
 
 function MyApp({ Component, pageProps }) {
 
