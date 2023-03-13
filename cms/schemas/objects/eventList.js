@@ -1,18 +1,8 @@
 export default {
   type: 'object',
-  name: 'eventsSlider',
-  title: 'Events Slider',
+  name: 'eventList',
+  title: 'Event List',
   fields: [
-    {
-      name: 'title',
-      type: 'string',
-      title: 'Title',
-    },
-    {
-      name: "links",
-      title: "Link",
-      type: "links",
-    },
     {
       name: "events",
       type: "array",
@@ -31,14 +21,13 @@ export default {
   ],
   preview: {
     select: {
-      title: 'title',
       media: "events.0.image"
     },
-    prepare({ title,media }) {
+    prepare({ media }) {
       return {
-        title,
+        title: "Events",
         media,
-        subtitle: 'Events carousel',
+        subtitle: 'Event list',
       }
     },
   },

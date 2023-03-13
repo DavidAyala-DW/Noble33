@@ -13,6 +13,7 @@ import pagesCasaMadera from './documents/pagesCasaMadera'
 import routesCasaMadera from "./documents/routesCasaMadera"
 import locations from "./documents/locations"
 import eventsCasaMadera from "./documents/eventsCasaMadera";
+import eventCasaMadera from "./documents/eventCasaMadera";
 import emailsCasaMadera from "./documents/emailsCasaMadera";
 import pagesSparrow from "./documents/pagesSparrow"
 import routesSparrow from "./documents/routesSparrow"
@@ -49,6 +50,7 @@ import newsletter from './objects/newsletter'
 import hero from "./objects/hero"
 import event from './objects/event'
 import events from "./objects/events"
+import eventList from "./objects/eventList"
 import links from "./objects/links"
 import newsContent from "./objects/newsContent"
 import moreNews from './objects/moreNews' 
@@ -80,6 +82,7 @@ export default createSchema({
     routesCasaMadera,
     locations,
     eventsCasaMadera,
+    eventCasaMadera,
     emailsCasaMadera,
     pagesSparrow,
     routesSparrow,
@@ -127,6 +130,7 @@ export default createSchema({
     menusContent,
     privateEventsList,
     reservations,
-    testSection
+    testSection,
+    eventList
   ]),
 })
