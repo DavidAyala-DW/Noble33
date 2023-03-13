@@ -18,6 +18,7 @@ import emailsCasaMadera from "./documents/emailsCasaMadera";
 import pagesSparrow from "./documents/pagesSparrow"
 import routesSparrow from "./documents/routesSparrow"
 import locationsSparrow from "./documents/locationsSparrow"
+import offers from "./documents/offers"
 
 
 //We import Page sections
@@ -87,6 +88,7 @@ export default createSchema({
     pagesSparrow,
     routesSparrow,
     locationsSparrow,
+    offers,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,

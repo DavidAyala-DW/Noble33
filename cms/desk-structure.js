@@ -5,6 +5,7 @@ import { CogIcon } from '@sanity/icons'
 // them from being listed twice
 const hiddenDocTypes = (listItem) =>
   ![
+    'offers',
     'siteSettings',
     'page',
     'pagesCasaMadera',
@@ -26,6 +27,8 @@ export default () =>
     .title('Documents')
     .items([
       S.documentTypeListItem('siteSettings').title('Site settings'),
+      S.divider(),
+      S.documentTypeListItem('offers').title('Offers'),
       S.divider(),
       S.documentTypeListItem('page').title('Pages Noble33'),
       S.documentTypeListItem('route').title('Routes Noble33'),
