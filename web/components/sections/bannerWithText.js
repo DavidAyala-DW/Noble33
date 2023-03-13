@@ -31,21 +31,26 @@ export default function BannerWithText(props) {
       </div>
       
       <div className="flex flex-col px-4 md:px-10 lg:px-0 ">
+        {title ? (
+          <h2 className="tracking-[.05em] font-extralight text-[24px] lg:text-[32px] vw:text-[1.666vw] leading-[28px] lg:leading-[37px] vw:leading-[1.156] mb-6 vw:mb-[1.25vw]">
+            {title}
+          </h2>
+        ) : null}
 
-        <h2 className="tracking-[.05em] font-extralight text-[24px] lg:text-[32px] vw:text-[1.666vw] leading-[28px] lg:leading-[37px] vw:leading-[1.156] mb-6 vw:mb-[1.25vw]">
-          {title}
-        </h2>
+        {description ? (
+          <div className={`opacity-80 text-lg leading-[21px]
+          ${description_container ?  description_container_ratio[description_container] : description_container_ratio["format-1"] }
+          vw:text-[.9375vw] vw:leading-[1.1666] font-light mb-8 vw:mb-[1.6666vw]`
+          }>
+            <SimpleBlockContent blocks={description} />
+          </div>
+        ) : null}
 
-        <div className={`opacity-80 text-lg leading-[21px]
-        ${description_container ?  description_container_ratio[description_container] : description_container_ratio["format-1"] }
-        vw:text-[.9375vw] vw:leading-[1.1666] font-light mb-8 vw:mb-[1.6666vw]`
-        }>
-          <SimpleBlockContent blocks={description} />
-        </div>
-
-        <a className="block hover_state_link font-light text-xs vw:text-[.625vw] leading-[1.1] tracking-[.05em] uppercase" href={learn_more.link}>
-          {learn_more.title}
-        </a>
+        {learn_more?.title && learn_more?.link ? (
+          <a className="block hover_state_link font-light text-xs vw:text-[.625vw] leading-[1.1] tracking-[.05em] uppercase" href={learn_more.link}>
+            {learn_more.title}
+          </a>
+        ) : null}
 
       </div>
 

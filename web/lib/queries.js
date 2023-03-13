@@ -1,3 +1,5 @@
+import groq from "groq"
+
 export function newsDetailsQuery(slug){
   
   return `*[_type == "newsPT" && slug.current == "${slug}" ][0]{
@@ -6,7 +8,31 @@ export function newsDetailsQuery(slug){
 
 }
 
-export const pageContentQuery = `
+const newsDetails = groq`
+  _id,
+  title,
+  slug,
+  description,
+  link,
+  image,
+  publicationLogo,
+`
+
+export const pageContentQuery = groq`
   content[] {
-    ...
+    ...,
+    
+    _type == 'news' => {
+      ...,
+      news[] -> {
+        ${newsDetails}
+      }
+    },
+
+    _type == 'newsSlider' => {
+      ...,
+      news_slider[] -> {
+        ${newsDetails}
+      }
+    }
   }`

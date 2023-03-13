@@ -2,10 +2,10 @@ import Image from "next/image"
 
 export default function Newsletter(props) {
 
-  const {title, titleSize, description, descriptionSize, placeholder} = props;
+  const {title, titleSize, description, descriptionSize, description2, placeholder} = props;
 
   const titleOptions = {
-    "normal" : "text-base lg:text-lg vw:text-[.9375vw] leading-[18px] lg:leading-[21px] vw:leading-[1.1666] font-medium tracking-[.05em]",
+    "normal" : "text-base lg:text-lg vw:text-[.9375vw] leading-[18px] lg:leading-[21px] vw:leading-[1.1666] font-light tracking-[.05em]",
     "large" : "font-extralight text-[32px] md:text-[40px] vw:text-[2.0833vw] leading-[1.2] text-center tracking-[.05em] uppercase",
   }
 
@@ -16,22 +16,28 @@ export default function Newsletter(props) {
 
   return (
 
-    <section className='px-4 md:px-0 md:max-w-[93.3%] w-full mx-auto flex flex-col'>
+    <section className='px-4 md:px-0 md:max-w-[93.3%] w-full mx-auto flex flex-col items-center text-center'>
 
       <h2
-        className={`opacity-80 text-center uppercase mb-6 vw:mb-[1.25vw]
+        className={`opacity-80 uppercase mb-6 vw:mb-[1.25vw]
         ${ titleSize ? titleOptions[titleSize] : titleOptions["normal"] }`}
       >
         {title}
       </h2>
 
       <p
-        className={`opacity-80 mb-9 md:mb-10 vw:mb-[2.0833vw]  md:mx-auto
+        className={`opacity-80 mb-8 vw:mb-[2vw]
         ${descriptionSize ? descriptionOptions[descriptionSize] : descriptionOptions["normal"] }`}
       >
         {description}
       </p>
 
+      {description2 ? (
+        <p className="opacity-80 mb-7 vw:mb-[1.8vw] font-light">
+          {description2}
+        </p>
+      ) : null}
+      
       <form action="" className='w-full flex flex-col'>
 
         <fieldset className='flex items-center space-x-5 justify-between w-full border-2 vw:border-[.104vw] border-[rgba(205,_205,_205,_0.2)] py-3 vw:py-[.625vw] px-4 lg:pl-6 vw:pl-[1.25vw] lg:pr-[14px] vw:pr-[.729vw] md:max-w-[343px] lg:max-w-[546px] vw:max-w-[28.4375vw] md:mx-auto'>

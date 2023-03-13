@@ -44,14 +44,12 @@ export default function Contact(props) {
       <div className="grid grid-cols-[51%_calc(49%-44px)] gap-x-[44px] gap-y-7 w-max mx-auto mb-20 md:hidden">
         <Checkbox {...{activeOption}} {...{setActiveOption}} text="General Inquiry" id="inquiry"/>
         <Checkbox {...{activeOption}} {...{setActiveOption}} text="Investors" id="investors"/>
-        <Checkbox {...{activeOption}} {...{setActiveOption}} text="Reservations" id="reservation"/>
         <Checkbox {...{activeOption}} {...{setActiveOption}} text="Press" id="press"/>
         <Checkbox {...{activeOption}} {...{setActiveOption}} text="Careers" id="careers"/>
       </div>
 
       <div className="w-full md:max-w-[55%] md:mb-[36] lg:mb-20 vw:mb-[5.555vw] hidden md:flex items-center flex-wrap lg:max-w-max mx-auto">
         <Checkbox className="md:pr-[28px] md:mb-[26px] lg:mb-0 lg:pr-[57px] vw:pr-[3.985vw] last-of-type:!pr-0" {...{activeOption}} {...{setActiveOption}} text="General Inquiry" id="inquiry"/>
-        <Checkbox className="md:pr-[28px] md:mb-[26px] lg:mb-0 lg:pr-[57px] vw:pr-[3.985vw] last-of-type:!pr-0" {...{activeOption}} {...{setActiveOption}} text="Reservations" id="reservation"/>        
         <Checkbox className="md:pr-[28px] md:mb-[26px] lg:mb-0 lg:pr-[57px] vw:pr-[3.985vw] last-of-type:!pr-0" {...{activeOption}} {...{setActiveOption}} text="Careers" id="careers"/>
         <Checkbox className="md:pr-[28px] md:mb-[26px] lg:mb-0 lg:pr-[57px] vw:pr-[3.985vw] last-of-type:!pr-0" {...{activeOption}} {...{setActiveOption}} text="Investors" id="investors"/>
         <Checkbox className="md:pr-[28px] md:mb-[26px] lg:mb-0 lg:pr-[57px] vw:pr-[3.985vw] last-of-type:!pr-0" {...{activeOption}} {...{setActiveOption}} text="Press" id="press"/>
@@ -93,7 +91,7 @@ export default function Contact(props) {
         <Field
           className="mb-10 md:mb-12 vw:mb-[2.5vw]"
           type="textarea"
-          defaultValue="How can we help you?"    
+          placeholder="How can we help you?"    
           register={register}
           label="Message"
           id="message"

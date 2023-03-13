@@ -51,6 +51,15 @@ export default {
       ]
     },
     {
+      name: "publicationLogo",
+      type: 'image',
+      group: 'general',
+      title: 'Publication logo',
+      description: `
+        Recommended: SVG or PNG
+      `
+    },
+    {
       name: "image",
       type: 'image',
       group: 'general',

@@ -6,7 +6,7 @@ export default function MemberCard({member}) {
 
   return (
 
-    <div className="w-full aspect-h-1 aspect-w-[.7] md:aspect-w-[.803] lg:aspect-w-[.7727] 3xl:aspect-w-[1.033] relative">
+    <div className="w-full aspect-w-1 aspect-h-1 relative">
 
       <div className="w-full h-full">
         <div className="relative w-full h-full">
@@ -14,18 +14,17 @@ export default function MemberCard({member}) {
         </div>
       </div>
 
-      <div className="absolute inset-0 w-full h-full z-[1] member-gradient"></div>
+      <div className="absolute inset-0 top-auto h-1/2 z-[1] bg-gradient-to-t from-black/80 to-transparent"></div>
 
       <div
-      className="absolute inset-0 w-full h-full flex flex-col space-y-[5px]
-      md:space-y-[2px] vw:space-y-[.104vw] justify-end pb-1 pl-[14px] md:pb-5 vw:pb-[1.0416vw] md:pl-5 vw:pl-[1.0416vw] z-[2]"
+        className="absolute inset-0 w-full h-full flex flex-col justify-end space-y-0.5 pb-3 px-[14px] md:pb-4 vw:pb-[1.0416vw] md:px-5 vw:px-[1.0416vw] z-[2]"
       >
 
-        <h3 className="text-[20px] leading-[23px] md:text-[24px] vw:text-[1.25vw] md:leading-7 vw:leading-[1.1666] tracking-[.05em] uppercase font-medium">
+        <h3 className="text-sm leading-[23px] vw:text-[1vw] tracking-[.05em] uppercase font-light">
           {title}
         </h3>
 
-        <p className="text-lg vw:text-[.9375vw] leading-[21px] vw:leading-[1.1666vw] opacity-80 font-medium">
+        <p className="text-sm vw:text-[.8vw] opacity-80 font-light leading-tight">
           {role}
         </p>
 

@@ -18,8 +18,8 @@ export default {
       type: 'image',
       title: 'Image',
       description: `
-      Recommended size: 600x780, Aspect ratio: 77:100, Max file size: 350kb
-    `
+        Recommended size: 600x600, Aspect ratio: 1:1, Max file size: 350kb
+      `
     }
   ]
 }

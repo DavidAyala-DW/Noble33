@@ -27,14 +27,14 @@ const HeroHomepage = (props) => {
           {title}
         </h1>
 
-        <div className="flex flex-col space-y-10 lg:space-y-12 vw:space-y-[2.5vw] w-full">
+        <div className="flex flex-col space-y-8 vw:space-y-[2.5vw] w-full">
 
           <div className="font-extralight opacity-80 md:max-w-[71.83%] lg:max-w-full leading-[1.5] text-[20px] vw:text-[1.0416vw]">
             <SimpleBlockContent blocks={description} />
           </div>
 
           <Link href={reservation.link} passHref>
-            <a target="_blank" rel="noopener nooreferrer" className="block max-w-max hover_state_link opacity-80 tracking-[.05em] uppercase text-xs vw:text-[.625vw] leading-[1.1] font-extralight">
+            <a target="_blank" rel="noopener nooreferrer" className="button">
               {reservation.label}
             </a>
           </Link>

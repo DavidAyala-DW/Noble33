@@ -74,7 +74,7 @@ export default function Gallery(props) {
 
         </section>
 
-        <div className="flex items-center space-x-4 vw:space-x-[.83333vw] justify-center pt-[55px]">
+        <div className="flex items-center space-x-4 vw:space-x-[.83333vw] pt-[55px] pl-[3.33%]">
 
           <div className="gallery-left-arrow cursor-pointer w-[11px] vw:w-[.572vw]">
             <Image

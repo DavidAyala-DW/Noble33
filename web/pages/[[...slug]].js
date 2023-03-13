@@ -70,30 +70,6 @@ async function fulfillSectionQueries(page) {
   const sectionsWithQueryData = await Promise.all(
 
     page.page.content.map(async (section) => {
-      
-      const news_sections = ["news", "news_slider"]; //Key where we set the reference news
-      const news_section = news_sections.find( section_name => section[section_name] );
-      if(news_section){
-        if(Array.isArray(section[news_section])){
-
-          await Promise.all(section[news_section].map(async (news) => {
-
-            const queryData = await client.fetch(groq`*[_type == "newsPT" && _id == "${news._ref}" ][0]{
-              title,description,slug,image
-            }`);
-            
-            news.query = queryData;
-
-          }))
-        
-        }else{
-          const queryData = await client.fetch(groq`*[_type == "newsPT" && _id == "${section[section_name]._ref}" ][0]{
-            title,description,slug,image
-          }`)
-          section.news.query = queryData;
-        }        
-      }
-
       if (section.query) {
         const queryData = await client.fetch(groq`${section.query}`)
 
@@ -154,7 +130,9 @@ export const getStaticProps = async ({ params, preview = false }) => {
   const client = getClient(preview)
   const query =  groq`
     *[_type == "route" && slug.current in $possibleSlugs][0]{
-      page -> {...}
+      page -> {
+        ${pageContentQuery}
+      }
     }
   `
   const queryParams = { possibleSlugs: getSlugVariations(slug) }
