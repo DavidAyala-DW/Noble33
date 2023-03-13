@@ -123,36 +123,25 @@ export default {
       hidden: ({document}) => document?.site === "noble33"
     },
     {
-      name: 'contact_section',
-      title: "Contact section",
-      type: 'array',
-      of: [
-        {
-          type: 'object',
-          name: "contact_option",
-          title: "Contact Option",
-          fields:[
-            {
-              name: "contact_option_text",
-              title: "Contact option text",
-              type: "string"
-            },
-            {
-              name: "contact_option_link",
-              title: "Contact option link",
-              type: "url"
-            },
-            {
-              name: "contact_option_icon",
-              title: "Contact option icon",
-              type: "image"
-            }
-          ]
-        }
-      ],
+      name: "website",
+      title: "Website",
+      type: "url",
       group: 'general',
-      fieldset: 'general',
-      hidden: ({document}) => document?.site != "casaMadera"
+      fieldset: 'general'
+    },
+    {
+      name: "email",
+      title: "Email",
+      type: "string",
+      group: 'general',
+      fieldset: 'general'
+    },
+    {
+      name: "phone_number",
+      title: "Phone number",
+      type: "string",
+      group: 'general',
+      fieldset: 'general'
     },
     {
       name: 'schedules',
@@ -197,24 +186,21 @@ export default {
         }
       ],
       group: 'general',
-      fieldset: 'general',
-      hidden: ({document}) => document?.site != "casaMadera"
+      fieldset: 'general'
     },
     {
       name: 'address',
       title: "Address",
       type: "text",
       group: 'general',
-      fieldset: 'general',
-      hidden: ({document}) => document?.site != "casaMadera"
+      fieldset: 'general'
     },
     {
       name: 'about_us',
       title: "About us (Summary)",
       type: "text",
       group: 'general',
-      fieldset: 'general',
-      hidden: ({document}) => document?.site != "casaMadera"
+      fieldset: 'general'
     },
     {
       name: 'privacyPolicyHandle',
