@@ -5,7 +5,6 @@ export default {
   type: 'document',
   title: 'Site configuration',
   icon: CogIcon,
-  // __experimental_actions: ['update', 'publish'],
   groups: [
     { name: 'header', title: 'Header' },
     { name: 'footer', title: 'Footer' },
@@ -30,8 +29,14 @@ export default {
           { title: "Noble33", value: "noble33" },
           { title: "Casa Madera", value: "casaMadera" },
           { title: "Sparrow", value: "sparrow" },
+          { title: "Site", value: "site" },
         ],
       },
+    },
+    {
+      name: "venue",
+      title: "Venue",
+      type: "string",      
     },
     {
       name: 'mainNav',
@@ -144,6 +149,20 @@ export default {
       fieldset: 'general'
     },
     {
+      name: "images",
+      title: "Images",
+      type: 'array',
+      of: [
+        {
+          type: "image",
+          title: "Image",
+          name: "image",
+        }
+      ],
+      group: 'general',
+      fieldset: 'general'
+    },
+    {
       name: 'schedules',
       title: "Schedules",
       type: 'array',
@@ -234,8 +253,9 @@ export default {
   preview: {
     select: {
       site: "site",
+      venue : "venue",
     },
-    prepare({site}) {
+    prepare({site, venue}) {
 
       const sites = {
         casaMadera: "Casa madera",
@@ -244,7 +264,7 @@ export default {
       }
 
       return {
-        title: sites[site], 
+        title: sites[site] ?? venue, 
       }
     },
   },
