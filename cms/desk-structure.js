@@ -6,6 +6,7 @@ import { CogIcon } from '@sanity/icons'
 const hiddenDocTypes = (listItem) =>
   ![
     'offers',
+    'contact_fields',
     'siteSettings',
     'page',
     'pagesCasaMadera',
@@ -28,6 +29,7 @@ export default () =>
     .items([
       S.documentTypeListItem('siteSettings').title('Site settings'),
       S.divider(),
+      S.documentTypeListItem('contact_fields').title('Contact'),
       S.documentTypeListItem('offers').title('Offers'),
       S.divider(),
       S.documentTypeListItem('page').title('Pages Noble33'),
