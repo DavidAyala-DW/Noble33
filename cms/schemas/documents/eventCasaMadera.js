@@ -27,6 +27,18 @@ export default {
       type: "boolean"
     },
     {
+      name: "location",
+      title: "Location",
+      type: "string",
+      options: {
+        list: [
+          { title: "West Hollywood, California", value: "West Hollywood, California" },
+          { title: "Toronto, Ontario", value: "Toronto, Ontario" },
+        ],
+      },
+      initialValue: "Toronto, Ontario"
+    },
+    {
       name: 'title',
       type: 'string',
       title: 'Title'
@@ -52,12 +64,7 @@ export default {
     {
       name: "date",
       title: "Date",
-      type: 'datetime',
-      options: {
-        dateFormat: 'LLLL',
-        timeFormat: 'HH:mm',
-        timeStep: 15
-      }
+      type: 'string'
     },
     {
       name: "book_button_text",
