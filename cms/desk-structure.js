@@ -13,6 +13,7 @@ const hiddenDocTypes = (listItem) =>
     'pagesSparrow',
     'route',
     'routesCasaMadera',
+    'eventsSparrow',
     'routesSparrow',
     'locations',
     'eventCasaMadera',
@@ -42,6 +43,7 @@ export default () =>
       S.documentTypeListItem('eventsCasaMadera').title('Private events CasaMadera'),
       S.documentTypeListItem('emailsCasaMadera').title('Emails CasaMadera'),
       S.documentTypeListItem('pagesSparrow').title('Pages Sparrow'),          
+      S.documentTypeListItem('eventsSparrow').title('Events Sparrow'),          
       S.documentTypeListItem('routesSparrow').title('Routes Sparrow'),      
       S.documentTypeListItem('locationsSparrow').title('Locations Sparrow'),
       

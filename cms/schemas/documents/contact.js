@@ -7,8 +7,8 @@ export default {
   icon: EnvelopeIcon,
   fields: [
     {
-      name: "site",
-      title: "Site",
+      name: "venue_name",
+      title: "Venue Name",
       type: "string",
     },
     {
