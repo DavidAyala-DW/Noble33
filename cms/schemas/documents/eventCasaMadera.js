@@ -27,16 +27,23 @@ export default {
       type: "boolean"
     },
     {
-      name: "location",
-      title: "Location",
-      type: "string",
-      options: {
-        list: [
-          { title: "West Hollywood, California", value: "West Hollywood, California" },
-          { title: "Toronto, Ontario", value: "Toronto, Ontario" },
-        ],
-      },
-      initialValue: "Toronto, Ontario"
+      name: "locations",
+      title: "Locations",
+      type: "array",
+      of: [
+        {
+          name: "location",
+          title: "Location",
+          type: "string",
+          options: {
+            list: [
+              { title: "West Hollywood, California", value: "West Hollywood, California" },
+              { title: "Toronto, Ontario", value: "Toronto, Ontario" },
+            ],            
+          },
+          initialValue: "West Hollywood, California"
+        }
+      ]
     },
     {
       name: 'title',
