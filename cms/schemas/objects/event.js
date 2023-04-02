@@ -54,11 +54,18 @@ export default {
       name: "date",
       title: "Date",
       type: 'datetime',
+      hidden: ({document}) => document?.site == "sparrow",
       options: {
         dateFormat: 'LLLL',
         timeFormat: 'HH:mm',
         timeStep: 15
       }
+    },
+    {
+      name: "dates",
+      title: "Dates",
+      type: 'string',
+      hidden: ({document}) => document?.site != "sparrow",
     },
     {
       name: "position",
@@ -70,7 +77,6 @@ export default {
           {title: "First text", value: "fistText"},
         ]
       },
-      hidden: ({document}) => document?.site != "casaMadera",
       initialValue: "firstImage",
     },
   ],
