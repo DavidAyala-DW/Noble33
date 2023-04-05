@@ -21,6 +21,7 @@ export default {
           type: 'reference',
           to: [
             {type: "eventsCasaMadera"},
+            {type: "eventsSparrow"},
           ],
         },
       ],
@@ -30,7 +31,7 @@ export default {
   preview: {
     select: {
       title: "title",
-      media: 'eventsCasaMadera.0.image',
+      media: 'eventsList.0.image',
     },
     prepare({title, media}) {
       return {
