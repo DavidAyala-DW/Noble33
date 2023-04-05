@@ -1,5 +1,5 @@
-import S from '@sanity/desk-tool/structure-builder'
-import { CogIcon } from '@sanity/icons'
+import S from '@sanity/desk-tool/structure-builder';
+import { CogIcon } from '@sanity/icons';
 
 // We filter document types defined in structure to prevent
 // them from being listed twice
@@ -13,6 +13,7 @@ const hiddenDocTypes = (listItem) =>
     'pagesSparrow',
     'route',
     'routesCasaMadera',
+    'eventSparrow',
     'eventsSparrow',
     'routesSparrow',
     'locations',
@@ -22,7 +23,7 @@ const hiddenDocTypes = (listItem) =>
     'locationsSparrow',
     'news',
     'media.tag',
-  ].includes(listItem.getId())
+  ].includes(listItem.getId());
 
 export default () =>
   S.list()
@@ -42,10 +43,11 @@ export default () =>
       S.documentTypeListItem('eventCasaMadera').title('Events CasaMadera'),
       S.documentTypeListItem('eventsCasaMadera').title('Private events CasaMadera'),
       S.documentTypeListItem('emailsCasaMadera').title('Emails CasaMadera'),
-      S.documentTypeListItem('pagesSparrow').title('Pages Sparrow'),          
-      S.documentTypeListItem('eventsSparrow').title('Events Sparrow'),          
-      S.documentTypeListItem('routesSparrow').title('Routes Sparrow'),      
+      S.documentTypeListItem('pagesSparrow').title('Pages Sparrow'),
+      S.documentTypeListItem('eventSparrow').title('Events Sparrow'),
+      S.documentTypeListItem('eventsSparrow').title('Private events Sparrow'),
+      S.documentTypeListItem('routesSparrow').title('Routes Sparrow'),
       S.documentTypeListItem('locationsSparrow').title('Locations Sparrow'),
-      
+
       ...S.documentTypeListItems().filter(hiddenDocTypes),
-    ])
+    ]);

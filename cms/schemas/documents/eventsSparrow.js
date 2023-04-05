@@ -22,19 +22,34 @@ export default {
       initialValue: "sparrow"
     },
     {
-      name: "active",
-      title: "Active",
-      type: "boolean"
-    },
-    {
       name: 'title',
       type: 'string',
       title: 'Title'
     },
     {
+      name: 'seo_title',
+      type: 'string',
+      title: 'Title (SEO)',
+    },
+    {
       name: 'description',
-      type: 'simplePortableText',
+      type: 'text',
       title: 'Description',
+    },
+    {
+      name: 'openGraphImage',
+      type: 'image',
+      title: 'Open Graph image',
+      description: 'Image for sharing previews on Facebook, Twitter etc.'
+    },
+    {
+      name: 'slug', 
+      type: 'slug',
+      title: 'Slug',
+      options: {
+        source: 'title',
+        maxLength: 180,
+      },
     },
     {
       name: "image",
@@ -50,19 +65,40 @@ export default {
       title: "Alt Text"
     },
     {
-      name: "date",
-      title: "Date",
-      type: 'string'
+      name: "book_link",
+      type: "string",
+      title: "Book Link"
     },
     {
-      name: "book_button_text",
-      type: "string",
-      title: "Book button text"
-    },
-    {
-      name: "book_button_link",
-      type: "string",
-      title: "Book button link"
+      name: 'content',
+      type: 'array',
+      title: 'Sections',
+      of: [
+        { type: 'hero' },
+        { type: 'bannerWithText' },
+        { type: 'space' },
+        { type: 'textContentCenter' },
+        { type: 'imageWithText' },
+        { type: 'imageFullWidth' },
+        { type: 'eventsSlider' },
+        { type: 'details' },
+        { type: 'event' },
+        { type: 'newsletter' },
+        { type: 'contact' },
+        { type: 'richtext' },
+        { type: 'gallery' },
+      ],
+      initialValue: [
+        { 
+          _type: 'hero',
+        },
+        {
+          _type: 'space',
+          heightDesktop: 210,
+          heightTablet: 150,
+          heightMobile: 120
+        },
+      ]
     }
   ],
   preview: {

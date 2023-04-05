@@ -25,7 +25,7 @@ export default {
               type: 'eventCasaMadera',
             },
             {
-              type: 'eventsSparrow',
+              type: 'eventSparrow',
             },
           ],
         }
