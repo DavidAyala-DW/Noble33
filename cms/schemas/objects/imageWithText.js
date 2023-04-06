@@ -136,6 +136,15 @@ export default {
       hidden: ({document}) => document?.site == "noble33",
       initialValue: false
     },
+    {
+      name: 'pressImage',
+      type: 'image',
+      title: 'Press image',
+      hidden: ({document}) => document?.site != "sparrow" && !document?.isPressPage,
+      description: `
+        Recommended size: 200x30, Aspect ratio: 20:3, Max file size: 50kb
+      `
+    }
   ],
   preview: {
     select: {
