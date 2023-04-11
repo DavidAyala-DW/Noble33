@@ -42,8 +42,9 @@ export default {
         { type: 'newsletter' },
         { type: 'contact' },
         { type: 'richtext' },
-        { type: 'privateEventsList' },
         { type: 'menus' },
+        { type: 'privateEventsList' },
+        { type: 'reservations' }
       ],
     },
     {
