@@ -87,7 +87,7 @@ export default {
   ],
   preview: {
     select: {
-      site: "site",
+      site: "venue_name",
       media: "image"
     },
     prepare({ site, media }) {
