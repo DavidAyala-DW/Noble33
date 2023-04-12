@@ -1,4 +1,4 @@
-import { FolderIcon } from '@sanity/icons'
+import { FolderIcon } from '@sanity/icons';
 
 export default {
   name: 'locationsSparrow',
@@ -43,9 +43,19 @@ export default {
       },
     },
     {
-      name:"comming_soon",
+      name: "comming_soon",
       type: "boolean",
       title: "Comming Soon?"
+    },
+    {
+      name: 'contactRoute',
+      type: 'reference',
+      title: 'Contact route',
+      to: [
+        {
+          type: 'routesSparrow'
+        }
+      ]
     },
     {
       name: "image",
@@ -76,7 +86,7 @@ export default {
         { type: 'richtext' },
       ],
       initialValue: [
-        { 
+        {
           _type: 'hero',
         },
         {
@@ -107,7 +117,7 @@ export default {
               type: 'slug',
               title: 'Slug',
               options: {
-                source: (doc,options) => {
+                source: (doc, options) => {
                   const menus = doc?.menus;
                   const actualKey = options?.parentPath[1];
                   return menus.find(menu => menu?._key == actualKey?._key)?.title;
@@ -123,7 +133,7 @@ export default {
                 {
                   type: 'object',
                   title: "Group",
-                  fields:[
+                  fields: [
                     {
                       type: "string",
                       name: "title",
@@ -137,7 +147,7 @@ export default {
                         {
                           type: "object",
                           name: "Course",
-                          fields:[
+                          fields: [
                             {
                               type: "string",
                               name: "title",
@@ -200,12 +210,12 @@ export default {
         { type: 'richtext' },
       ],
       initialValue: [
-        { 
+        {
           _type: 'menusContent',
         },
       ]
     },
-    
+
   ],
   preview: {
     select: {
@@ -216,7 +226,7 @@ export default {
       return {
         title,
         media
-      }
+      };
     },
   },
-}
+};
