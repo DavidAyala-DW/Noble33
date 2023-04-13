@@ -38,6 +38,7 @@ export default {
         { type: 'collectionGrid' },
         { type: 'textContentCenter' },
         { type: 'heroText' },
+        { type: 'imageFullWidth' },
         { type: 'eventsCarousel' },
         { type: 'gallery' },
         { type: 'imageWithText' },

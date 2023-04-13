@@ -6,7 +6,7 @@ export default function Heading(prop) {
 
   return (
 
-    <h1 className="text-4xl text-center w-full font-mediumpy-5">
+    <h1 className="text-4xl text-center w-full font-lightpy-5">
       {heading}
     </h1>
 

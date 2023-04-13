@@ -3,7 +3,7 @@ import CollectionCard from "../collectionCard";
 
 export default function CollectionGrid(props) {
 
-  const {title, view_all, collections, are_coming_soon = false} = props;
+  const {title, view_all, collections} = props;
 
   return (
 
@@ -30,12 +30,15 @@ export default function CollectionGrid(props) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-[15px] lg:gap-x-4 3xl:gap-x-[21px] vw:gap-x-[1.09375vw] gap-y-4 md:gap-y-[15px] lg:gap-y-3 3xl:gap-y-[15px] vw:gap-y-[.78125vw] w-full">
 
-        {collections && collections.map( collection => {
-          const {_key} = collection;
+        {collections && collections.map( (collection_object) => {
+          const {_key, collection:{data}, custom_link} = collection_object;
           return(
-            <CollectionCard key={_key} collection={collection} is_coming_soon={are_coming_soon} />
+            <CollectionCard
+              key={_key}
+              collection={data}
+              custom_link={custom_link}
+            />
           ) 
-
         })}
 
       </div>

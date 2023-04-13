@@ -35,7 +35,7 @@ export default function DetailCard({detail}) {
         </div>
       </div>
 
-      <h3 className="uppercase opacity-80 tracking-[.05em] text-lg vw:text-[.9375vw] leading-[21px] vw:leading-[1.16666] font-medium mb-4 vw:mb-[.83333vw]">
+      <h3 className="uppercase opacity-80 tracking-[.05em] text-lg vw:text-[.9375vw] leading-[21px] vw:leading-[1.16666] font-light mb-4 vw:mb-[.83333vw]">
         {title}
       </h3>
 

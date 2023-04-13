@@ -8,6 +8,16 @@ export function newsDetailsQuery(slug){
 
 }
 
+export function collectionsQuery(ref){
+
+  if(!ref) return;
+  
+  return `*[_type == "nobleVenue" && _id == "${ref}" ][0]{
+    _id,title,location,image,mobile_image,hover_state_image,link
+  }`
+
+}
+
 const newsDetails = groq`
   _id,
   title,
@@ -16,7 +26,7 @@ const newsDetails = groq`
   link,
   image,
   publicationLogo,
-`
+`;
 
 export const pageContentQuery = groq`
   content[] {
@@ -35,4 +45,6 @@ export const pageContentQuery = groq`
         ${newsDetails}
       }
     }
-  }`
+
+  },
+  stickyHeader`

@@ -5,7 +5,7 @@ export default function ExitPreviewButton(props) {
       href="/api/exit-preview"
       className="fixed bottom-4 left-4 z-[9999] max-w-[360px] px-5 py-2.5 bg-[white] text-black"
     >
-      <span className="font-medium text-black">
+      <span className="font-light text-black">
         You&apos;re viewing the site in preview mode.
       </span>{' '}
       Click here to exit.

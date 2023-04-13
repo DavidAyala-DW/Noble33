@@ -12,7 +12,7 @@ export default function MoreNews(props) {
 
       <div className="flex flex-col mb-12 vw:mb-[2.5vw]">
 
-        <h2 className="font-extralight text-[24px] vw:text-[1.25vw] leading-7 vw:leading-[1.1666] tracking-[.05em] mb-4 vw:mb-[.83333vw]">
+        <h2 className="font-light text-[24px] vw:text-[1.25vw] leading-7 vw:leading-[1.1666] tracking-[.05em] mb-4 vw:mb-[.83333vw]">
           {title}
         </h2>
 

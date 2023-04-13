@@ -46,7 +46,7 @@ export default function Event({event}) {
 
         <div className="flex flex-col w-full mb-12 md:mb-20 lg:mb-0">
 
-          <h3 className="font-extralight text-[32px] vw:text-[1.6666vw] leading-[37px] vw:leading-[1.156] tracking-[.05em] mb-4 vw:mb-[.8333vw] lg:max-w-[616px] vw:max-w-[32.08vw]">
+          <h3 className="font-light text-[32px] vw:text-[1.6666vw] leading-[37px] vw:leading-[1.156] tracking-[.05em] mb-4 vw:mb-[.8333vw] lg:max-w-[616px] vw:max-w-[32.08vw]">
             {title}
           </h3>
 

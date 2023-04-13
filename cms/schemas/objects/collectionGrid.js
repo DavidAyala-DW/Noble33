@@ -29,8 +29,38 @@ export default {
       name: 'collections',
       title: 'Collections',
       type: 'array',
-      of:[
-        {type: "collectionCard"}
+      of: [
+        {
+          type: 'object',
+          fields:[
+            {
+              type: "reference",
+              name: "collection",
+              title: "Collection",
+              to: [
+                {type: "nobleVenue"}
+              ]
+            },
+            {
+              name: "custom_link",
+              "type": "string",
+              "title": "Custom Link"
+            }
+          ],
+          preview: {
+            select: {
+              title: 'collection.title',
+              media: 'collection.image',
+            },
+            prepare({title, media}) {            
+              return {
+                title,
+                subtitle: 'Collection Item',
+                media,
+              }
+            },
+          }
+        },
       ],
       description: `
         Recommended size: 840x624, Aspect ratio: 134:100, Max file size: 350kb
@@ -46,7 +76,7 @@ export default {
   preview: {
     select: {
       title: 'title',
-      media: 'collections.0.image',
+      media: 'collections.0.collection.image',
     },
     prepare({ title, media }) {
       return {

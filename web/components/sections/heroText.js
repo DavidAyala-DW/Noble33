@@ -10,7 +10,7 @@ export default function HeroText(props) {
 
       <div className="flex flex-col items-center space-y-6 text-center vw:space-y-[1.25vw]">
 
-        <h1 className="opacity-90 uppercase tracking-[.05em] text-[32px] md:text-[40px] vw:text-[2.08333vw] leading-[1.2] font-extralight">
+        <h1 className="opacity-90 uppercase tracking-[.05em] text-[32px] md:text-[40px] vw:text-[2.08333vw] leading-[1.2] font-light">
           {title}
         </h1>
 

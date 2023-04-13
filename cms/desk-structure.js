@@ -21,6 +21,7 @@ const hiddenDocTypes = (listItem) =>
     'eventsCasaMadera',
     'emailsCasaMadera',
     'locationsSparrow',
+    "nobleVenue",
     'news',
     'media.tag',
   ].includes(listItem.getId());
@@ -35,6 +36,7 @@ export default () =>
       S.documentTypeListItem('offers').title('Offers'),
       S.divider(),
       S.documentTypeListItem('page').title('Pages Noble33'),
+      S.documentTypeListItem('nobleVenue').title('Noble33 Venues'),
       S.documentTypeListItem('route').title('Routes Noble33'),
       S.documentTypeListItem('news').title('News Noble33'),
       S.documentTypeListItem('pagesCasaMadera').title('Pages CasaMadera'),

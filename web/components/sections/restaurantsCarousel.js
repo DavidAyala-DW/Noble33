@@ -14,11 +14,11 @@ export default function RestaurantsCarousel(props) {
 
       <div className="flex flex-col w-full space-y-2 vw:space-y-[.416vw] mb-8 md:mb-[52px] vw:mb-[2.708vw]">
 
-        <h2 className="opacity-80 uppercase tracking-[.05em] text-lg vw:text-[.9375vw] leading-[21px] vw:leading-[1.166] font-medium">
+        <h2 className="opacity-80 uppercase tracking-[.05em] text-lg vw:text-[.9375vw] leading-[21px] vw:leading-[1.166] font-light">
           {title}
         </h2>
 
-        <a href={view_all.link} className="block hover_state_link uppercase tracking-[.05em] text-xs vw:text-[.625vw] leading-[1.1] font-medium">
+        <a href={view_all.link} className="block hover_state_link uppercase tracking-[.05em] text-xs vw:text-[.625vw] leading-[1.1] font-light">
           {view_all.title}
         </a>
 

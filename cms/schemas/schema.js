@@ -22,6 +22,7 @@ import routesSparrow from "./documents/routesSparrow"
 import locationsSparrow from "./documents/locationsSparrow"
 import offers from "./documents/offers"
 import contact_fields from "./documents/contact"
+import nobleVenue from "./documents/nobleVenue"
 
 
 //We import Page sections
@@ -96,6 +97,7 @@ export default createSchema({
     locationsSparrow,
     offers,
     contact_fields,
+    nobleVenue,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,

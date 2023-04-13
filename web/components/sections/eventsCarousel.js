@@ -14,11 +14,11 @@ export default function EventsCarousel(props) {
 
       <div className="flex flex-col w-full space-y-2 vw:space-y-[.41666vw] mb-8 md:mb-[52px] vw:mb-[2.708vw]">
 
-        <h2 className="opacity-80 uppercase tracking-[.05em] text-lg vw:text-[.9375vw] leading-[21px] vw:leading-[1.166] font-medium mb-2">
+        <h2 className="opacity-80 uppercase tracking-[.05em] text-lg vw:text-[.9375vw] leading-[21px] vw:leading-[1.166] font-light mb-2">
           {title}
         </h2>
 
-        <a href={view_all.link} className="block hover_state_link uppercase tracking-[.05em] text-xs vw:text-[.625vw] leading-[1.1] font-medium">
+        <a href={view_all.link} className="block hover_state_link uppercase tracking-[.05em] text-xs vw:text-[.625vw] leading-[1.1] font-light">
           {view_all.title}
         </a>
 
@@ -69,7 +69,7 @@ export default function EventsCarousel(props) {
 
               </div>  
 
-              <h3 className="tracking-[.05em] leading-[25px] md:leading-9 vw:leading-[1.125] text-[24px] md:text-[32px] vw:text-[1.6666vw] font-extralight mb-6 vw:mb-[1.25vw]">
+              <h3 className="tracking-[.05em] leading-[25px] md:leading-9 vw:leading-[1.125] text-[24px] md:text-[32px] vw:text-[1.6666vw] font-light mb-6 vw:mb-[1.25vw]">
                 {title}
               </h3>
 
@@ -77,7 +77,7 @@ export default function EventsCarousel(props) {
                 {description}
               </div>
 
-              <a href={view_more.link} className="block opacity-90 hover_state_link tracking-[.05em] text-xs vw:text-[.625vw] leading-[1.1] font-extralight">
+              <a href={view_more.link} className="block opacity-90 hover_state_link tracking-[.05em] text-xs vw:text-[.625vw] leading-[1.1] font-light">
                 {view_more.title}
               </a>
 

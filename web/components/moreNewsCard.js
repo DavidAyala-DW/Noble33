@@ -22,7 +22,7 @@ export default function MoreNewsCard({news}) {
 
         <div className="flex flex-col w-full mb-8 lg:mb-0">
 
-          <h3 className="font-extralight text-[24px] lg:text-[32px] vw:text-[1.6666vw] leading-7 lg:leading-[37px] vw:leading-[1.156] tracking-[.05em] md:max-w-[338px] lg:max-w-[616px] vw:max-w-[32.083vw]">
+          <h3 className="font-light text-[24px] lg:text-[32px] vw:text-[1.6666vw] leading-7 lg:leading-[37px] vw:leading-[1.156] tracking-[.05em] md:max-w-[338px] lg:max-w-[616px] vw:max-w-[32.083vw]">
             {title}
           </h3>
 

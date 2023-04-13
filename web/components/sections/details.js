@@ -20,7 +20,7 @@ export default function Details(props) {
 
         <div className="flex flex-col lg:max-w-[calc(50%-48px)] vw:max-w-[calc(50%-2.5vw)]">
 
-          <h2 className="max-w-[64%] md:max-w-max tracking-[.05em] text-[24px] leading-[28px] md:text-[32px] vw:text-[1.6666vw] md:leading-[37px] vw:leading-[1.56] font-extralight mb-6 vw:mb-[1.25vw]">
+          <h2 className="max-w-[64%] md:max-w-max tracking-[.05em] text-[24px] leading-[28px] md:text-[32px] vw:text-[1.6666vw] md:leading-[37px] vw:leading-[1.56] font-light mb-6 vw:mb-[1.25vw]">
             {title}
           </h2>
 

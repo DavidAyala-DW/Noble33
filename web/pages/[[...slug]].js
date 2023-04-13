@@ -7,7 +7,7 @@ import RenderSections from '@/components/render-sections'
 import { getSlugVariations, slugParamToPath } from '@/lib/urls'
 import { getClient } from '@/lib/sanity.server'
 import { usePreviewSubscription } from '@/lib/sanity'
-import { pageContentQuery } from '@/lib/queries'
+import { pageContentQuery, collectionsQuery } from '@/lib/queries'
 
 const ExitPreviewButton = dynamic(() =>
   import('@/components/exit-preview-button')
@@ -16,7 +16,7 @@ const ExitPreviewButton = dynamic(() =>
 export default function Page(props) {
 
   const { preview, data, siteSettings, menus } = props;
-  const stickyHeader = false;
+  const stickyHeader = data?.page?.page?.stickyHeader ?? false;
 
   const { data: previewData } = usePreviewSubscription(data?.query, {
     params: data?.queryParams ?? {},
@@ -70,6 +70,23 @@ async function fulfillSectionQueries(page) {
   const sectionsWithQueryData = await Promise.all(
 
     page.page.content.map(async (section) => {
+
+      if(section._type == "collections"){
+        section.query = collectionsQuery(slug);
+      }
+
+      if(section.collections){
+        
+        if(Array.isArray(section.collections)){
+
+          await Promise.all(section.collections.map(async ({collection}) => {
+            collection.data = await client.fetch(groq`${collectionsQuery(collection._ref)}`)
+          }))
+
+        }
+
+      }
+
       if (section.query) {
         const queryData = await client.fetch(groq`${section.query}`)
 
@@ -77,6 +94,7 @@ async function fulfillSectionQueries(page) {
       } else {
         return section
       }
+
     })
   )
 

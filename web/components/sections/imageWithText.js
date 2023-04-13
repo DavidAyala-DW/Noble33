@@ -32,7 +32,7 @@ export default function ImageWithText(props) {
         ${position == "firstImage" ? "lg:order-2 lg:pl-[9.86%]" : "lg:order-1 lg:pr-[9.86%]" }`
       }>        
 
-        <h2 className="tracking-[.05em] text-[28px] md:text-[24px] lg:text-[32px] leading-[32px] md:leading-[28px] lg:leading-[37px] vw:text-[1.927vw] vw:leading-[1.156] font-extralight">
+        <h2 className="tracking-[.05em] text-[28px] md:text-[24px] lg:text-[32px] leading-[32px] md:leading-[28px] lg:leading-[37px] vw:text-[1.927vw] vw:leading-[1.156] font-light">
           {title}
         </h2>
 

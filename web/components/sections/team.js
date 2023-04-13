@@ -10,7 +10,7 @@ export default function Team(props) {
 
       <div className="flex flex-col space-y-6 vw:space-y-[1.25vw] md:max-w-[500px] lg:max-w-[300px] vw:max-w-[20.8333vw] w-full">
 
-        <h2 className="text-[24px] md:text-[32px] vw:text-[1.666vw] leading-[28px] md:leading-[37px] vw:leading-[1.156] tracking-[.05em] font-extralight">
+        <h2 className="text-[24px] md:text-[32px] vw:text-[1.666vw] leading-[28px] md:leading-[37px] vw:leading-[1.156] tracking-[.05em] font-light">
           {title}
         </h2>
 

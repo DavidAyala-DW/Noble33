@@ -84,7 +84,7 @@ export default function NewsSlider(props) {
               ) : null}
               
               <Link href={view_more?.link}>
-                <h3 className="tracking-[.05em] limit-2-lines leading-[25px] md:leading-9 vw:leading-[1.125] text-[24px] md:text-[32px] vw:text-[1.6666vw] font-extralight mb-6 vw:mb-[1.25vw]">
+                <h3 className="tracking-[.05em] limit-2-lines leading-[25px] md:leading-9 vw:leading-[1.125] text-[24px] md:text-[32px] vw:text-[1.6666vw] font-light mb-6 vw:mb-[1.25vw]">
                   {title}
                 </h3>
               </Link>
@@ -94,7 +94,7 @@ export default function NewsSlider(props) {
               </div>
 
               <Link href={view_more?.link} passHref>
-                <a className="block opacity-90 hover_state_link tracking-[.05em] text-xs vw:text-[.625vw] leading-[1.1] font-extralight">
+                <a className="block opacity-90 hover_state_link tracking-[.05em] text-xs vw:text-[.625vw] leading-[1.1] font-light">
                   {view_more.title}
                 </a>
               </Link>

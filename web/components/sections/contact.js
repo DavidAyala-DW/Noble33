@@ -33,7 +33,7 @@ export default function Contact(props) {
 
     <section className="px-4 md:px-0 md:max-w-[93.3%] pt-[120px] md:pt-[173px] vw:pt-[9.010vw] w-full mx-auto flex flex-col">
 
-      <h1 className="tracking-[.05em] text-center text-[32px] lg:text-[40px] vw:text-[2.0833vw] leading-[1.2] uppercase font-extralight mb-6 vw:mb-[1.25vw] opacity-90">
+      <h1 className="tracking-[.05em] text-center text-[32px] lg:text-[40px] vw:text-[2.0833vw] leading-[1.2] uppercase font-light mb-6 vw:mb-[1.25vw] opacity-90">
         {title}
       </h1>
 

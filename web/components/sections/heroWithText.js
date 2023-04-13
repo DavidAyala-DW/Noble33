@@ -22,7 +22,7 @@ export default function HeroWithText(props) {
           backgroundImage && 'mt-12 md:mt-20'
         )}
       >
-        <h1 className="tracking-[.05em] text-[32px] md:text-[40px] vw:text-[2.083vw] leading-[1.2] font-extralight md:text-center uppercase opacity-90">
+        <h1 className="tracking-[.05em] text-[32px] md:text-[40px] vw:text-[2.083vw] leading-[1.2] font-light md:text-center uppercase opacity-90">
           {title}
         </h1>
 

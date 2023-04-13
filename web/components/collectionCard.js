@@ -1,21 +1,32 @@
 import Image from "next/image"
 import SanityImage from './sanity-image'
 
-export default function CollectionCard({collection, is_coming_soon}) {
+export default function CollectionCard({collection, custom_link}) {
   
-  const {title, location, image, hover_state_image, link, is_reservation} = collection;
+  const {title, location, image, mobile_image, hover_state_image, link, is_coming_soon = false} = collection;
 
   return (
 
-    <a href={link} className={`relative w-full aspect-w-[1.37] md:aspect-w-[1.324] lg:aspect-w-[1.349] 3xl:aspect-w-[1.859] aspect-h-[0.78]  ${hover_state_image && "group"} `}>
+    <a href={custom_link ?? link} className={`relative w-full aspect-w-[1.344] md:aspect-w-[1.303] lg:aspect-w-[1.341] 3xl:aspect-w-[1.81] aspect-h-[1]  ${hover_state_image && "group"} `}>
 
       <div className="w-full h-full">
         <div className="w-full h-full relative">
-          {image && (
-            <div className="h-full transition-all duration-300 ease-[ease-in-out] group-hover:opacity-0 group-hover:invisible block w-full relative">
-              <SanityImage className="w-full h-full" src={image} layout={"fill"}/> 
-            </div>
-          )}
+
+          <div className="flex flex-col w-full h-full">
+
+            {image && (
+              <div className="h-full transition-all duration-300 ease-[ease-in-out] group-hover:opacity-0 group-hover:invisible block w-full relative md-down:hidden">
+                <SanityImage className="w-full h-full" src={image} layout={"fill"}/> 
+              </div>
+            )}
+
+            {image && (
+              <div className="h-full transition-all duration-300 ease-[ease-in-out] group-hover:opacity-0 group-hover:invisible block w-full relative md:hidden">
+                <SanityImage className="w-full h-full" src={mobile_image ?? image} layout={"fill"}/> 
+              </div>
+            )}
+
+          </div>
 
           {
             hover_state_image && (
@@ -24,6 +35,7 @@ export default function CollectionCard({collection, is_coming_soon}) {
               </div>
             )
           }
+
         </div>
       </div>
 
@@ -33,11 +45,11 @@ export default function CollectionCard({collection, is_coming_soon}) {
 
           <div className="flex flex-col space-y-2 vw:space-y-[.41666vw]">
       
-            <h3 className="uppercase tracking-[.05em] text-[20px] lg:text-[24px] vw:text-[1.25vw] leading-[23px] lg:leading-[28px] vw:leading-[1.166] font-medium">
+            <h3 className="uppercase tracking-[.05em] text-[20px] lg:text-[24px] vw:text-[1.25vw] leading-[23px] lg:leading-[28px] vw:leading-[1.166] font-light">
               {title}
             </h3>
 
-            <p className="opacity-80 max-w-[260px] lg:max-w-full text-lg vw:text-[.9375vw] leading-[21px] vw:leading-[1.166] font-medium">
+            <p className="opacity-80 max-w-[260px] lg:max-w-full text-lg vw:text-[.9375vw] leading-[21px] vw:leading-[1.166] font-light">
               {location}
             </p>
             
@@ -45,15 +57,7 @@ export default function CollectionCard({collection, is_coming_soon}) {
 
           <div className="flex items-center gap-4">
 
-            {
-              is_reservation && (
-                <p  className="text-sm font-light leading-[1.5] text-white hover_state_link">
-                  Reserve
-                </p>
-              )
-            }
-
-            {link ? (
+            {(custom_link || link) ? (
               <div className="block w-[11px] vw:w-[.5729vw]">
                 <Image
                   src="/images/whiteRightArrow.svg"

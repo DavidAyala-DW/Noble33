@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { useRouter } from 'next/router'
 import SanityImage from './sanity-image'
@@ -26,6 +26,11 @@ export default function Header(props) {
   const [existHero, setExistHero] = useState(false);
   const [heroVisible, setHeroVisible] = useState(null)
   const [entryObserver, setEntryObserver] = useState(false)
+  const collectionList = useRef(null);
+
+  function handleOpenCollectionList(){
+    collectionList.current.classList.toggle("md-down:!flex")
+  }
 
   function toggleModalOpen() {
     setOpenModal((val) => !val);
@@ -172,7 +177,7 @@ export default function Header(props) {
         min-h-screen z-[90] w-full flex items-start`}
       >
 
-        <div className={`md:pl-[3.35%] w-full h-full max-w-full md2:max-w-[73.6%] 3xl:max-w-[66.666%] flex flex-col items-center md:items-start justify-between pt-[152px] md:pt-[108px] vw:pt-[5.625vw] pb-6 vw:pb-[1.25vw]`}>
+        <div className={`md-down:max-h-full md-down:overflow-y-auto md:pl-[3.35%] w-full h-full max-w-full md2:max-w-[73.6%] 3xl:max-w-[66.666%] flex flex-col items-center md:items-start justify-between gap-10 pt-[90px] md:pt-[108px] vw:pt-[5.625vw] pb-6 vw:pb-[1.25vw]`}>
 
           <div className="flex flex-col w-full md:flex-row space-y-2 md:space-y-0 items-start md:space-x-16 vw:space-x-[3.333vw]">
 
@@ -188,13 +193,28 @@ export default function Header(props) {
               {mainNav.slice(6).map((item) => item.link?.url !== '/locations' ? (
                 <NavLink key={item._key} item={item} />
               ) : (
-                <div key="secondary" className="group">
-                  <NavLink item={item} />
+                <div key="secondary" className="group flex flex-col md-down:items-center">
+
+                  <div className="flex items-center space-x-2 justify-center">
+
+                    <NavLink item={item}/>
+
+                    <div onClick={handleOpenCollectionList} className="h-6 w-6">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#FFFFFF" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </div>
+
+                  </div>
+                  
 
                   <div className={`
-                    pt-0 vw:pt-[1.25vw] hidden md:flex flex-col space-y-2 vw:space-y-[.416vw] h-0 overflow-hidden opacity-0 group-hover:pt-6
-                    group-hover:opacity-100 group-hover:h-auto group-hover:overflow-visible group-focus-within:opacity-100 group-focus-within:h-auto group-focus-within:overflow-visible
-                  `}>
+                    md-down:py-5 pt-0 vw:pt-[1.25vw] hidden md-down:flex-col md-down:items-center md:flex flex-col space-y-2 vw:space-y-[.416vw] md:h-0 overflow-hidden md:opacity-0 md:group-hover:pt-6
+                    md:group-hover:opacity-100 md:group-hover:h-auto md:group-hover:overflow-visible group-focus-within:opacity-100 group-focus-within:h-auto group-focus-within:overflow-visible
+                  `}
+                  ref={collectionList}
+                  >
                     {secondHeaderNav.map((item) => (
                       <NavLink key={item._key} item={item} secondary />
                     ))}

@@ -32,7 +32,7 @@ export default function BannerWithText(props) {
       
       <div className="flex flex-col px-4 md:px-10 lg:px-0 ">
         {title ? (
-          <h2 className="tracking-[.05em] font-extralight text-[24px] lg:text-[32px] vw:text-[1.666vw] leading-[28px] lg:leading-[37px] vw:leading-[1.156] mb-6 vw:mb-[1.25vw]">
+          <h2 className="tracking-[.05em] font-light text-[24px] lg:text-[32px] vw:text-[1.666vw] leading-[28px] lg:leading-[37px] vw:leading-[1.156] mb-6 vw:mb-[1.25vw]">
             {title}
           </h2>
         ) : null}

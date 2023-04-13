@@ -22,14 +22,14 @@ const HeroHomepage = (props) => {
 
         <h1
           className="max-w-[80%] md:max-w-[70.7%] lg:max-w-[calc(50%-20px)] vw:max-w-[calc(50%-1.0416vw)] w-full
-        uppercase text-[32px] lg:text-[40px] vw:text-[2.083vw] leading-[1.2] tracking-[.05em] opacity-90 font-extralight"
+        uppercase text-[32px] lg:text-[40px] vw:text-[2.083vw] leading-[1.2] tracking-[.05em] opacity-90 font-light"
         >
           {title}
         </h1>
 
         <div className="flex flex-col space-y-8 vw:space-y-[2.5vw] w-full">
 
-          <div className="font-extralight opacity-80 md:max-w-[71.83%] lg:max-w-full leading-[1.5] text-[20px] vw:text-[1.0416vw]">
+          <div className="font-light opacity-80 md:max-w-[71.83%] lg:max-w-full leading-[1.5] text-[20px] vw:text-[1.0416vw]">
             <SimpleBlockContent blocks={description} />
           </div>
 

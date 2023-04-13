@@ -26,7 +26,7 @@ export default function NewsContent(props) {
 
             <div className="flex flex-col mb-12 md:mb-[38px] vw:mb-[1.979vw]">
 
-              <h1 className="tracking-[.05em] leading-7 md:leading-[37px] vw:leading-[1.156] text-[24px] md:text-[32px] vw:text-[1.666vw] font-extralight mb-6 md:mb-4 lg:mb-3 vw:mb-[.625vw]">
+              <h1 className="tracking-[.05em] leading-7 md:leading-[37px] vw:leading-[1.156] text-[24px] md:text-[32px] vw:text-[1.666vw] font-light mb-6 md:mb-4 lg:mb-3 vw:mb-[.625vw]">
                 {title}
               </h1>
         
