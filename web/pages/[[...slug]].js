@@ -80,6 +80,7 @@ async function fulfillSectionQueries(page) {
         if(Array.isArray(section.collections)){
 
           await Promise.all(section.collections.map(async ({collection}) => {
+            if(!collection?._ref) return;
             collection.data = await client.fetch(groq`${collectionsQuery(collection._ref)}`)
           }))
 
