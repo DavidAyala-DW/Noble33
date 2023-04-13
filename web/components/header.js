@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useRouter } from 'next/router'
 import SanityImage from './sanity-image'
 import Link from "next/link";
-import Logo from "@/public/images/logo.png"
+import Logo from "@/public/images/logoWhite.png"
 import clsx from "clsx";
 
 export default function Header(props) {
@@ -178,21 +178,21 @@ export default function Header(props) {
 
             <div className="flex flex-col w-full md:w-auto items-center md:items-start space-y-2 vw:space-y-[.416vw]">
 
-              {mainNav.slice(0, 4).map((item) => (
+              {mainNav.slice(0, 6).map((item) => (
                 <NavLink key={item._key} item={item} />
               ))}
 
             </div>
 
             <div className="flex flex-col w-full md:w-auto items-center md:items-start space-y-2 vw:space-y-[.416vw]">
-              {mainNav.slice(4).map((item) => item.link?.url !== '/locations' ? (
+              {mainNav.slice(6).map((item) => item.link?.url !== '/locations' ? (
                 <NavLink key={item._key} item={item} />
               ) : (
                 <div key="secondary" className="group">
                   <NavLink item={item} />
 
                   <div className={`
-                    pt-6 vw:pt-[1.25vw] hidden md:flex flex-col space-y-2 vw:space-y-[.416vw] h-0 overflow-hidden opacity-0
+                    pt-0 vw:pt-[1.25vw] hidden md:flex flex-col space-y-2 vw:space-y-[.416vw] h-0 overflow-hidden opacity-0 group-hover:pt-6
                     group-hover:opacity-100 group-hover:h-auto group-hover:overflow-visible group-focus-within:opacity-100 group-focus-within:h-auto group-focus-within:overflow-visible
                   `}>
                     {secondHeaderNav.map((item) => (

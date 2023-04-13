@@ -7,7 +7,7 @@ export default function CollectionCard({collection, is_coming_soon}) {
 
   return (
 
-    <a href={link} className={`relative w-full aspect-w-[1.37] md:aspect-w-[1.324] lg:aspect-w-[1.349] 3xl:aspect-w-[1.859] aspect-h-1  ${hover_state_image && "group"} `}>
+    <a href={link} className={`relative w-full aspect-w-[1.37] md:aspect-w-[1.324] lg:aspect-w-[1.349] 3xl:aspect-w-[1.859] aspect-h-[0.78]  ${hover_state_image && "group"} `}>
 
       <div className="w-full h-full">
         <div className="w-full h-full relative">
