@@ -45,7 +45,7 @@ export default function FullscreenNewsletter(props) {
                 aria-label="Email"
                 name="email"
                 placeholder={placeholder}
-                className="outline-none w-full font-light text-base bg-transparent lg:text-lg vw:text-[.9375vw] leading-[1.5] opacity-80 placeholder:opacity-80 placeholder:text-black font-bold"
+                className="outline-none w-full text-base bg-transparent lg:text-lg vw:text-[.9375vw] leading-[1.5] opacity-80 placeholder:opacity-80 placeholder:text-black font-bold"
               />
 
               <button tabIndex={0} type="submit" className="w-[26px] vw:w-[1.354vw]">
