@@ -139,6 +139,7 @@ export default function Footer(props) {
                 className="text-base md2:text-lg vw:text-[.9375vw] bg-transparent outline-none w-full
                 placeholder:text-white text-white leading-[1.5] font-light opacity-80"
                 type="email"
+                aria-label='Email'
                 name="email"
                 id="email"
                 ref={email}
@@ -149,6 +150,7 @@ export default function Footer(props) {
                 !sendedEmail && (
                   <button
                     type="submit"
+                    tabIndex={0}
                     className="w-[26px] vw:w-[1.354vw]"
                     {...{"disabled" : sendingEmail }}
                   >

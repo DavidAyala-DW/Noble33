@@ -62,7 +62,7 @@ export default function EventsCarousel(props) {
               <div className="relative w-full aspect-w-[1.70] aspect-h-1 mb-4 vw:mb-[.8333vw]">
 
                 <div className="w-full h-full ">
-                  <a href={view_more?.link} className="w-full relative h-full block">
+                  <a href={view_more?.link} className="w-full relative h-full block" role='img'>
                     <SanityImage className="w-full h-full"  src={image} layout={"fill"}/> 
                   </a>
                 </div>
@@ -91,17 +91,17 @@ export default function EventsCarousel(props) {
 
       <div className="absolute pl-[3.33%] bottom-0 left-0 flex items-center space-x-4 vw:space-x-[.83333vw]">
 
-        <div className="left-arrow cursor-pointer w-[11px] vw:w-[.572vw]">
+        <div className="left-arrow cursor-pointer w-[11px] vw:w-[.572vw]" role='button'>
           <Image
             src="/images/prev.svg"
-            alt="Next"
+            alt="Previous"
             width={11}
             height={19}
             layout="responsive"
           />
         </div>
 
-        <div className="right-arrow cursor-pointer w-[11px] vw:w-[.572vw]">
+        <div className="right-arrow cursor-pointer w-[11px] vw:w-[.572vw]" role='button'>
           <Image
             src="/images/next.svg"
             alt="Next"

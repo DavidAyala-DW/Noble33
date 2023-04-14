@@ -148,6 +148,7 @@ export default function Contact(props) {
           {
             !sendedMessage && (
               <button 
+                tabIndex={0}
                 type="submit"
                 {...{"disabled" : disabledSubmitButton }}
                 className="text-xs vw:text-[.625vw] leading-[1.1] tracking-[.05em] text-center uppercase opacity-80"

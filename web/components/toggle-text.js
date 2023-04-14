@@ -16,6 +16,7 @@ export default function ToggleText(props) {
   return (
     <div className="toggle-text">
       <button
+        tabIndex={0}
         aria-expanded={String(isOpen)}
         aria-controls={panelId}
         className="w-full text-left"
@@ -33,14 +34,7 @@ export default function ToggleText(props) {
               isOpen && '-scale-100'
             )}
           >
-            <Image
-              layout="responsive"
-              width="16"
-              height="9"
-              src="/images/dd-chevron.svg"
-              alt=""
-              aria-hidden="true"
-            />
+            &lt;
           </span>
         </span>
       </button>

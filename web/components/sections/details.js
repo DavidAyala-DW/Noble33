@@ -46,7 +46,7 @@ export default function Details(props) {
                 <div className="aspect-h-1 w-full aspect-w-[1.491] md:aspect-w-[2.802] lg:aspect-w-[1.719] 3xl:aspect-w-[2.30]">
                   <div className="w-full h-full">
                     <div className="relative w-full h-full">
-                      <Image src={video} layout='fill' />
+                      <Image src={video} alt='Image' layout='fill' />
                     </div>
                   </div>
                 </div>
