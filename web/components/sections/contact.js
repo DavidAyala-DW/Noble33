@@ -42,6 +42,22 @@ export default function Contact(props) {
 
     try {
 
+      try {
+
+        await fetch("/api/mailchimp",{
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            email: values.email
+          })
+        });
+
+      } catch (error) {
+        console.log(error);
+      }
+
       const request = await fetch("/api/email",{
         method: "POST",
         headers: {
