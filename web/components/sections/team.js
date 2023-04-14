@@ -22,7 +22,7 @@ export default function Team(props) {
 
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-4 lg:gap-5 vw:gap-[1.3vw] gap-y-4 w-full lg:max-w-[70%] pt-1">
+      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-x-4 lg:gap-5 vw:gap-[1.3vw] gap-y-4 w-full lg:max-w-[70%] pt-1">
 
         {
           team.map( member => {

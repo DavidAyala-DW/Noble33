@@ -26,6 +26,23 @@ export default {
       ]
     },
     {
+      name: 'reservationsButton',
+      type: 'object',
+      title: 'Reservations Button',
+      fields: [
+        {
+          title: "Title",
+          name: "title",
+          type: "string"
+        },
+        {
+          title: "Link",
+          name: "link",
+          type: "string"
+        }
+      ]
+    },
+    {
       name: 'collections',
       title: 'Collections',
       type: 'array',

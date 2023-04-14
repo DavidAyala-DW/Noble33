@@ -70,6 +70,7 @@ import menusContent from "./objects/menusContent"
 import reservations from "./objects/reservations";
 import newsSlider from "./objects/newsSlider";
 import contactLocations from "./objects/contactLocations";
+import fullscreenNewsletter from "./objects/fullscreenNewsletter";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -143,6 +144,7 @@ export default createSchema({
     reservations,
     testSection,
     eventList,
-    contactLocations
+    contactLocations,
+    fullscreenNewsletter
   ]),
 })

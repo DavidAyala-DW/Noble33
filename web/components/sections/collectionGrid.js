@@ -1,13 +1,21 @@
 import clsx from "clsx";
 import CollectionCard from "../collectionCard";
+import Link from "next/link";
 
 export default function CollectionGrid(props) {
 
-  const {title, view_all, collections} = props;
+  const { title, view_all, collections, reservationsButton } = props;
 
   return (
 
     <section className="px-4 md:px-0 md:max-w-[93.3%] w-full mx-auto flex flex-col">
+      {reservationsButton && <div className='flex sm:hidden w-full justify-center pb-12'>
+        <Link key="reservations" href={reservationsButton?.link} passHref>
+          <a className="button">
+            {reservationsButton?.title}
+          </a>
+        </Link>
+      </div>}
 
       <div className={clsx('flex flex-col space-y-2 vw:space-y-[.4166vw]', title && 'mb-8 lg:mb-7 vw:mb-[1.1458vw]')}>
 
@@ -30,20 +38,20 @@ export default function CollectionGrid(props) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-[15px] lg:gap-x-4 3xl:gap-x-[21px] vw:gap-x-[1.09375vw] gap-y-4 md:gap-y-[15px] lg:gap-y-3 3xl:gap-y-[15px] vw:gap-y-[.78125vw] w-full">
 
-        {collections && collections.map( (collection_object) => {
-          const {_key, collection:{data}, custom_link} = collection_object;
-          return(
+        {collections && collections.map((collection_object) => {
+          const { _key, collection: { data }, custom_link } = collection_object;
+          return (
             <CollectionCard
               key={_key}
               collection={data}
               custom_link={custom_link}
             />
-          ) 
+          );
         })}
 
       </div>
 
     </section>
 
-  )
+  );
 }

@@ -62,7 +62,7 @@ export default function EventsCarousel(props) {
               <div className="relative w-full aspect-w-[1.70] aspect-h-1 mb-4 vw:mb-[.8333vw]">
 
                 <div className="w-full h-full ">
-                  <a href={view_more.link} className="w-full relative h-full block">
+                  <a href={view_more?.link} className="w-full relative h-full block">
                     <SanityImage className="w-full h-full"  src={image} layout={"fill"}/> 
                   </a>
                 </div>
@@ -77,9 +77,9 @@ export default function EventsCarousel(props) {
                 {description}
               </div>
 
-              <a href={view_more.link} className="block opacity-90 hover_state_link tracking-[.05em] text-xs vw:text-[.625vw] leading-[1.1] font-light">
+              {view_more && <a href={view_more?.link} className="block opacity-90 hover_state_link tracking-[.05em] text-xs vw:text-[.625vw] leading-[1.1] font-light">
                 {view_more.title}
-              </a>
+              </a>}
 
             </SwiperSlide>
 

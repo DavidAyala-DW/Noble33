@@ -54,6 +54,7 @@ export default {
         { type: 'contact' },
         { type: 'richtext' },
         { type: 'newsSlider' },
+        { type: 'fullscreenNewsletter' }
       ],
     },
     {
