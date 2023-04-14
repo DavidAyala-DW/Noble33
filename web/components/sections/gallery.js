@@ -76,7 +76,7 @@ export default function Gallery(props) {
 
         <div className="flex items-center space-x-4 vw:space-x-[.83333vw] pt-[55px] pl-[3.33%]">
 
-          <div className="gallery-left-arrow cursor-pointer w-[11px] vw:w-[.572vw]" role='button'>
+          <div className="gallery-left-arrow cursor-pointer w-[11px] vw:w-[.572vw]" role='button' tabIndex={0}>
             <Image
               src="/images/prev.svg"
               alt="Previous"
@@ -86,7 +86,7 @@ export default function Gallery(props) {
             />
           </div>
 
-          <div className="gallery-right-arrow cursor-pointer w-[11px] vw:w-[.572vw]" role='button'>
+          <div className="gallery-right-arrow cursor-pointer w-[11px] vw:w-[.572vw]" role='button' tabIndex={0}>
             <Image
               src="/images/next.svg"
               alt="Next"

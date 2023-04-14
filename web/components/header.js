@@ -124,7 +124,7 @@ export default function Header(props) {
 
         <div className={`cursor-pointer order-3 md:order-1 select-none md:opacity-50 ${openModal && "absolute right-4 md:left-0 md:relative"}`}>
 
-          <div onClick={toggleModalOpen} className={`${openModal && "hidden"} w-[25px] vw:!w-[1.302vw]`} role='button'>
+          <div onClick={toggleModalOpen} className={`${openModal && "hidden"} w-[25px] vw:!w-[1.302vw]`} role='button' tabIndex={0}>
             <Image
               src={"/images/burguer.svg"}
               alt="burger"
@@ -134,7 +134,7 @@ export default function Header(props) {
             />
           </div>
 
-          <div onClick={toggleModalOpen} className={`${!openModal && "hidden"} w-[21px] vw:!w-[1.093vw]`} role='button'>
+          <div onClick={toggleModalOpen} className={`${!openModal && "hidden"} w-[21px] vw:!w-[1.093vw]`} role='button' tabIndex={0}>
             <Image
               src={"/images/close.svg"}
               alt="burger"
