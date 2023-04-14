@@ -98,6 +98,7 @@ export default function Contact(props) {
         />
 
         <button 
+        tabIndex={0}
           type="submit"
           className="text-xs vw:text-[.625vw] leading-[1.1] tracking-[.05em] text-center uppercase opacity-80"
         >

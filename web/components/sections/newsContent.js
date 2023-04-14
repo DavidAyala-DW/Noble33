@@ -51,7 +51,7 @@ export default function NewsContent(props) {
                 <div className="hidden md:block w-[13px] h-[7px] vw:w-[.6770vw] vw:h-[.3645vw]">
                   <Image
                     src="/images/arrowRight.svg"
-                    alt="arrowRight"
+                    alt="See more"
                     layout="responsive"
                     width={13}
                     height={7}

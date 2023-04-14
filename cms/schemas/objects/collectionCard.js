@@ -24,6 +24,11 @@ export default {
       title: 'Hover state image',
     },
     {
+      name: 'alt_text',
+      type: 'string',
+      title: 'Alt text',
+    },
+    {
       name: "link",
       type: "string",
       title: 'Link'

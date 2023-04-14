@@ -91,12 +91,13 @@ export default function Footer(props) {
                 className="text-base md2:text-lg vw:text-[.9375vw] bg-transparent outline-none w-full
                 placeholder:text-white text-white leading-[1.5] font-light opacity-80"
                 type="email"
+                aria-label='Email'
                 name="email"
                 id="email"
                 placeholder="Enter your email address"
               />
 
-              <button type="submit" className="w-[26px] vw:w-[1.354vw]">
+              <button tabIndex={0} type="submit" className="w-[26px] vw:w-[1.354vw]">
                 <Image
                   src="/images/footerArrow.svg"
                   alt="White arrow"

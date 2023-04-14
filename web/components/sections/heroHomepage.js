@@ -35,7 +35,7 @@ const HeroHomepage = (props) => {
 
           {reservation &&
             <Link href={reservation.link} passHref>
-              <a target="_blank" rel="noopener nooreferrer" className="button">
+              <a {...(!reservation.link.startsWith('/') ? { target: "_blank", rel: "noopener nooreferrer" } : {})} className="button">
                 {reservation.label}
               </a>
             </Link>}

@@ -29,6 +29,7 @@ const newsDetails = groq`
 `;
 
 export const pageContentQuery = groq`
+  title,
   content[] {
     ...,
     

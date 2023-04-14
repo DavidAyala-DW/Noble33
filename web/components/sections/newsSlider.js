@@ -69,7 +69,7 @@ export default function NewsSlider(props) {
 
                 <div className="w-full h-full ">
                   <Link href={view_more?.link} passHref>
-                    <a className="w-full relative h-full block">
+                    <a className="w-full relative h-full block" role='img'>
                       <SanityImage className="w-full h-full"  src={image} layout={"fill"}/> 
                     </a>
                   </Link>
@@ -109,17 +109,17 @@ export default function NewsSlider(props) {
 
       <div className="absolute pl-[3.33%] bottom-0 left-0 flex items-center space-x-4 vw:space-x-[.83333vw]">
 
-        <div className="left-arrow cursor-pointer w-[11px] vw:w-[.572vw]">
+        <div className="left-arrow cursor-pointer w-[11px] vw:w-[.572vw]" role='button'>
           <Image
             src="/images/prev.svg"
-            alt="Next"
+            alt="Previous"
             width={11}
             height={19}
             layout="responsive"
           />
         </div>
 
-        <div className="right-arrow cursor-pointer w-[11px] vw:w-[.572vw]">
+        <div className="right-arrow cursor-pointer w-[11px] vw:w-[.572vw]" role='button'>
           <Image
             src="/images/next.svg"
             alt="Next"

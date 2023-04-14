@@ -124,7 +124,7 @@ export default function Header(props) {
 
         <div className={`cursor-pointer order-3 md:order-1 select-none md:opacity-50 ${openModal && "absolute right-4 md:left-0 md:relative"}`}>
 
-          <div onClick={toggleModalOpen} className={`${openModal && "hidden"} w-[25px] vw:!w-[1.302vw]`}>
+          <div onClick={toggleModalOpen} className={`${openModal && "hidden"} w-[25px] vw:!w-[1.302vw]`} role='button'>
             <Image
               src={"/images/burguer.svg"}
               alt="burger"
@@ -134,7 +134,7 @@ export default function Header(props) {
             />
           </div>
 
-          <div onClick={toggleModalOpen} className={`${!openModal && "hidden"} w-[21px] vw:!w-[1.093vw]`}>
+          <div onClick={toggleModalOpen} className={`${!openModal && "hidden"} w-[21px] vw:!w-[1.093vw]`} role='button'>
             <Image
               src={"/images/close.svg"}
               alt="burger"
@@ -174,7 +174,7 @@ export default function Header(props) {
 
       <div
         className={`fixed inset-0 h-full w-full transition-[transform] !duration-[300ms] ${openModal ? "!translate-x-0" : `${(!activeModal && "invisible")}` } -translate-x-full bg-body
-        min-h-screen z-[90] w-full flex items-start`}
+        min-h-screen z-[90] w-full flex items-start`} hidden={!openModal} aria-hidden={!openModal}
       >
 
         <div className={`md-down:max-h-full md-down:overflow-y-auto md:pl-[3.35%] w-full h-full max-w-full md2:max-w-[73.6%] 3xl:max-w-[66.666%] flex flex-col items-center md:items-start justify-between gap-10 pt-[90px] md:pt-[108px] vw:pt-[5.625vw] pb-6 vw:pb-[1.25vw]`}>

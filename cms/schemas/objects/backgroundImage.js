@@ -19,6 +19,11 @@ export default {
         hotspot: true,
       },
     },
+    {
+      name: 'alt_text',
+      type: 'string',
+      title: 'Alt text',
+    }
   ],
   preview: {
     select: {
