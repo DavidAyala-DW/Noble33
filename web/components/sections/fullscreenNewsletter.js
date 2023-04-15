@@ -17,22 +17,22 @@ export default function FullscreenNewsletter(props) {
       />
       <div className='absolute bottom-0 left-0 bg-gradient-to-t z-10 from-body to-transparent h-[35%] w-full' />
 
-      <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center'>
+      <div className='absolute top-0 left-0 w-full h-full flex items-center justify-center px-4'>
         <section className='md:max-w-[93.3%] w-full mx-auto flex flex-col items-center text-center'>
 
           <h2
-            className='opacity-80 uppercase mb-6 vw:mb-[1.25vw] text-black text-base lg:text-lg vw:text-[.9375vw] leading-[18px] lg:leading-[21px] vw:leading-[1.1666] font-light tracking-[.05em]'
+            className='opacity-80 uppercase mb-6 vw:mb-[1.25vw] text-black text-base lg:text-lg vw:text-[.9375vw] leading-[21px] lg:leading-[21px] vw:leading-[1.1666] font-light tracking-[.05em]'
           >
             {title}
           </h2>
 
           <p
-            className='max-w-full w-[450px] opacity-80 mb-8 vw:mb-[2vw] text-black font-[400] text-center text-[24px] lg:text-[32px] vw:text-[1.6666vw] leading-[1.2]  md:max-w-[500px] lg:max-w-[660px] vw:max-w-[34.375vw] tracking-[.05em]'
+            className='max-w-full w-[450px] opacity-80 mb-8 vw:mb-[2vw] text-black font-[400] text-center text-[24px] lg:text-[32px] vw:text-[1.6666vw] leading-[120%]  md:max-w-[500px] lg:max-w-[660px] vw:max-w-[34.375vw] tracking-[.05em]'
           >
             {description}
           </p>
 
-          <p className="max-w-full w-[290px] opacity-80 mb-7 vw:mb-[1.8vw] font-light text-black">
+          <p className="max-w-full w-[290px] opacity-80 mb-7 vw:mb-[1.8vw] leading-4 font-light text-black">
             {subtitle}
           </p>
 
@@ -45,7 +45,7 @@ export default function FullscreenNewsletter(props) {
                 aria-label="Email"
                 name="email"
                 placeholder={placeholder}
-                className="outline-none w-full text-base bg-transparent lg:text-lg vw:text-[.9375vw] leading-[1.5] opacity-80 placeholder:opacity-80 placeholder:text-black font-bold"
+                className="outline-none w-full text-base bg-transparent lg:text-lg vw:text-[.9375vw] leading-[150%] opacity-80 placeholder:opacity-80 placeholder:text-black font-light"
               />
 
               <button tabIndex={0} type="submit" className="w-[26px] vw:w-[1.354vw]">
