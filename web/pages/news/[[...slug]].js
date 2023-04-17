@@ -15,7 +15,6 @@ export default function Page(megaprops) {
   
   const {props, preview, data, siteSettings, menus} = megaprops;
   const {page: {title, seo_title, description = "", description_seo, openGraphImage}} = data;
-  console.log(seo_title);
   const builder = imageUrlBuilder(getClient(preview))
   const stickyHeader = false;
 
