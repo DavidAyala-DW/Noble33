@@ -48,4 +48,8 @@ export const pageContentQuery = groq`
     }
 
   },
-  stickyHeader`
+  stickyHeader,
+  seo_title,
+  description,
+  openGraphImage
+`

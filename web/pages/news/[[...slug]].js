@@ -1,4 +1,5 @@
 import groq from 'groq'
+import imageUrlBuilder from '@sanity/image-url'
 import { NextSeo } from 'next-seo'
 import dynamic from 'next/dynamic'
 import client from '@/lib/sanity-client'
@@ -13,6 +14,9 @@ import { pageContentQuery } from '@/lib/queries'
 export default function Page(megaprops) {
   
   const {props, preview, data, siteSettings, menus} = megaprops;
+  const {page: {title, seo_title, description = "", description_seo, openGraphImage}} = data;
+  console.log(seo_title);
+  const builder = imageUrlBuilder(getClient(preview))
   const stickyHeader = false;
 
   const { data: previewData } = usePreviewSubscription(data?.query, {
@@ -21,17 +25,30 @@ export default function Page(megaprops) {
     enabled: preview,
   })
 
-  // console.log(previewData);
-
   const page = filterDataToSingleItem(previewData, preview);
 
-  const title = page?.title ?? "";
-
+  let seo_title_value = seo_title ?? title;
 
   return (    
     <Layout menus={menus} siteSettings={siteSettings} stickyHeader={stickyHeader}>
       <NextSeo
-        title={title}
+        title={seo_title_value}
+        description={description_seo ?? description}
+
+        {...(openGraphImage ? {openGraph: 
+          {
+            images: [
+              {
+                url: builder.image(openGraphImage).width(1200).height(630).url(),
+                width: 1200,
+                height: 630,
+                alt: title,
+              },
+            ]
+          }
+
+        } : {})}
+        
       />
       {page?.content && <RenderSections sections={page?.content} />}
       {preview && <ExitPreviewButton />}
@@ -168,6 +185,10 @@ export const getStaticProps = async ({ params, preview = false }) => {
   *[_type == "newsPT" && slug.current in $possibleSlugs][0]{
     _id,
     title,
+    seo_title,
+    description,
+    description_seo,
+    openGraphImage,
     content
   }
   `

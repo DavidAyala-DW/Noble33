@@ -17,6 +17,23 @@ export default {
       title: 'Title'
     },
     {
+      name: 'seo_title',
+      type: 'string',
+      title: 'Title (SEO)',
+    },
+    {
+      name: 'description_seo',
+      type: 'text',
+      title: 'Description (SEO',
+      description: 'Description shown in search results'
+    },
+    {
+      name: 'openGraphImage',
+      type: 'image',
+      title: 'Open Graph image',
+      description: 'Image for sharing previews on Facebook, Twitter etc.'
+    },
+    {
       name: "description",
       title: "Description",
       type: "text",

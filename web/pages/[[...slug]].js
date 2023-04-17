@@ -1,4 +1,5 @@
 import groq from 'groq'
+import imageUrlBuilder from '@sanity/image-url'
 import { NextSeo } from 'next-seo'
 import dynamic from 'next/dynamic'
 import client from '@/lib/sanity-client'
@@ -16,6 +17,8 @@ const ExitPreviewButton = dynamic(() =>
 export default function Page(props) {
 
   const { preview, data, siteSettings, menus } = props;
+  const {page: {page : {title, seo_title, description, openGraphImage}}} = data;
+  const builder = imageUrlBuilder(getClient(preview))
   const stickyHeader = data?.page?.page?.stickyHeader ?? false;
 
   const { data: previewData } = usePreviewSubscription(data?.query, {
@@ -28,12 +31,28 @@ export default function Page(props) {
   })
 
   const page = filterDataToSingleItem(previewData?.page, preview);
-  const title = page?.title ?? "";
+  let seo_title_value = seo_title ?? title;
 
   return (    
     <Layout menus={menus} siteSettings={siteSettings} stickyHeader={stickyHeader}>
       <NextSeo
-        title={title}
+        title={seo_title_value}
+        description={description ?? ""}
+
+        {...(openGraphImage ? {openGraph: 
+          {
+            images: [
+              {
+                url: builder.image(openGraphImage).width(1200).height(630).url(),
+                width: 1200,
+                height: 630,
+                alt: title,
+              },
+            ]
+          }
+
+        } : {})}
+        
       />
       {page?.content && <RenderSections sections={page?.content} />}
       {preview && <ExitPreviewButton />}
