@@ -49,7 +49,12 @@ export default function Page(megaprops) {
         } : {})}
         
       />
+      <main
+        className='flex flex-col w-full'
+        id="main-content"
+      >
       {page?.content && <RenderSections sections={page?.content} />}
+      </main>      
       {preview && <ExitPreviewButton />}
     </Layout>
   )

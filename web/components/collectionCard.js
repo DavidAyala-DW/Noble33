@@ -16,13 +16,13 @@ export default function CollectionCard({ collection, custom_link }) {
 
             {image && (
               <div className="h-full transition-all duration-300 ease-[ease-in-out] group-hover:opacity-0 group-hover:invisible block w-full relative md-down:hidden">
-                <SanityImage className="w-full h-full" src={image} alt={collection.alt_text} layout={"fill"} />
+                <SanityImage className="w-full h-full" src={image} alt={collection?.alt_text} layout={"fill"} />
               </div>
             )}
 
             {image && (
               <div className="h-full transition-all duration-300 ease-[ease-in-out] group-hover:opacity-0 group-hover:invisible block w-full relative md:hidden">
-                <SanityImage className="w-full h-full" src={mobile_image ?? image} alt={collection.alt_text} layout={"fill"} />
+                <SanityImage className="w-full h-full" src={mobile_image ?? image} alt={collection?.alt_text} layout={"fill"} />
               </div>
             )}
 
@@ -31,7 +31,7 @@ export default function CollectionCard({ collection, custom_link }) {
           {
             hover_state_image && (
               <div className="h-full absolute inset-0 transition-all duration-300 ease-[ease-in-out] group-hover:opacity-100 group-hover:visible group-hover:z-[2] opacity-0 invisible w-full">
-                <SanityImage className="w-full h-full" src={hover_state_image} alt={collection.alt_text} layout={"fill"} />
+                <SanityImage className="w-full h-full" src={hover_state_image} alt={collection?.alt_text} layout={"fill"} />
               </div>
             )
           }
@@ -61,7 +61,7 @@ export default function CollectionCard({ collection, custom_link }) {
               <div className="block w-[11px] vw:w-[.5729vw]">
                 <Image
                   src="/images/whiteRightArrow.svg"
-                  alt="white arrow"
+                  alt=""
                   width={11}
                   height={19}
                   layout="responsive"

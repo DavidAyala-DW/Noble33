@@ -13,7 +13,7 @@ export function collectionsQuery(ref){
   if(!ref) return;
   
   return `*[_type == "nobleVenue" && _id == "${ref}" ][0]{
-    _id,title,location,image,mobile_image,hover_state_image,link
+    _id,title,location,image,alt_text,mobile_image,hover_state_image,link
   }`
 
 }
@@ -26,6 +26,8 @@ const newsDetails = groq`
   link,
   image,
   publicationLogo,
+  image_alt_text,
+  publication_logo_alt_text
 `;
 
 export const pageContentQuery = groq`

@@ -54,7 +54,7 @@ export default function NewsSlider(props) {
 
         {news_slider.map( news => {
 
-          const {_id, image, publicationLogo, title, description, slug} = news;
+          const {_id, image, publicationLogo, title, description, slug, image_alt_text, publication_logo_alt_text} = news;
 
           const view_more = {
             title: "View",
@@ -70,7 +70,12 @@ export default function NewsSlider(props) {
                 <div className="w-full h-full ">
                   <Link href={view_more?.link} passHref>
                     <a className="w-full relative h-full block" role='img'>
-                      <SanityImage className="w-full h-full"  src={image} layout={"fill"}/> 
+                      <SanityImage
+                        className="w-full h-full"
+                        alt={image_alt_text} 
+                        src={image}
+                        layout={"fill"}
+                      /> 
                     </a>
                   </Link>
                 </div>
@@ -79,7 +84,13 @@ export default function NewsSlider(props) {
 
               {publicationLogo ? (
                 <div className="mb-3">
-                  <SanityImage src={publicationLogo} width={60} height={30} objectFit="contain" />
+                  <SanityImage
+                    src={publicationLogo}
+                    alt={publication_logo_alt_text}
+                    width={60}
+                    height={30}
+                    objectFit="contain"
+                  />
                 </div>
               ) : null}
               
@@ -112,7 +123,7 @@ export default function NewsSlider(props) {
         <div className="left-arrow cursor-pointer w-[11px] vw:w-[.572vw]" role='button' tabIndex={0}>
           <Image
             src="/images/prev.svg"
-            alt="Previous"
+            aria-label="Previous Article"
             width={11}
             height={19}
             layout="responsive"
@@ -122,7 +133,7 @@ export default function NewsSlider(props) {
         <div className="right-arrow cursor-pointer w-[11px] vw:w-[.572vw]" role='button' tabIndex={0}>
           <Image
             src="/images/next.svg"
-            alt="Next"
+            aria-label="Next Article"
             width={11}
             height={19}
             layout="responsive"

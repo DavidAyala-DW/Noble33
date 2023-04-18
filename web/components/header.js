@@ -127,7 +127,7 @@ export default function Header(props) {
           <div onClick={toggleModalOpen} className={`${openModal && "hidden"} w-[25px] vw:!w-[1.302vw]`} role='button' tabIndex={0}>
             <Image
               src={"/images/burguer.svg"}
-              alt="burger"
+              alt=""
               layout="responsive"
               width={25}
               height={16}
@@ -137,7 +137,7 @@ export default function Header(props) {
           <div onClick={toggleModalOpen} className={`${!openModal && "hidden"} w-[21px] vw:!w-[1.093vw]`} role='button' tabIndex={0}>
             <Image
               src={"/images/close.svg"}
-              alt="burger"
+              alt=""
               layout="responsive"
               width={21}
               height={20}
@@ -238,7 +238,7 @@ export default function Header(props) {
 
               <Image
                 src={"/images/facebook.svg"}
-                alt="facebook logo"
+                alt="Facebook logo"
                 layout="responsive"
                 width={24}
                 height={24}
@@ -250,7 +250,7 @@ export default function Header(props) {
 
               <Image
                 src={"/images/instagram.svg"}
-                alt="instagram logo"
+                alt="Instagram logo"
                 layout="responsive"
                 width={24}
                 height={24}

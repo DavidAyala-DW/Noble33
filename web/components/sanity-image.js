@@ -23,7 +23,7 @@ export default function SanityImage(props) {
   return (
     <Image
       {...imageProps}
-      alt={props?.alt ?? 'Image'}
+      alt={props?.alt ?? ''}
       quality={quality}
       // Smoothly transition from placeholder
       className={clsx('transition duration-200', className)}

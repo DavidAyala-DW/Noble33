@@ -20,6 +20,11 @@ export default {
               `
             },
             {
+              type: "string",
+              name: "alt_text",
+              title: "Imag alt text"
+            },
+            {
               title: 'Format',
               name: 'format',
               type: 'string',

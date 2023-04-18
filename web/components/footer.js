@@ -156,7 +156,7 @@ export default function Footer(props) {
                   >
                     <Image
                       src="/images/footerArrow.svg"
-                      alt="White arrow"
+                      alt=""
                       width={26}
                       height={19}
                       layout="responsive"

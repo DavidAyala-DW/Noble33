@@ -69,7 +69,7 @@ export default function Event({event}) {
           <div className="w-[13px] vw:w-[.6770vw] h-[7px] vw:h-[.3645vw]">
             <Image
               src="/images/arrowRight.svg"
-              alt="Arrow right"
+              alt=""
               width={13}
               height={7}
               layout="responsive"

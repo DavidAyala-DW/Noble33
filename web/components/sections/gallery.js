@@ -49,7 +49,7 @@ export default function Gallery(props) {
           {
             gallery.map(item => {
 
-              const {_key, image, format} = item;
+              const {_key, image, alt_text, format} = item;
 
               const formats = {
 
@@ -63,7 +63,7 @@ export default function Gallery(props) {
               return(
                 <SwiperSlide key={_key} className={`overflow-hidden ${formats[format]}`}>
                   <div className="w-full h-full relative">
-                    <SanityImage src={image} className="w-full object-cover" layout={"fill"} />
+                    <SanityImage src={image} alt={alt_text} className="w-full object-cover" layout={"fill"} />
                   </div>                
                 </SwiperSlide>
               )
@@ -79,7 +79,7 @@ export default function Gallery(props) {
           <div className="gallery-left-arrow cursor-pointer w-[11px] vw:w-[.572vw]" role='button' tabIndex={0}>
             <Image
               src="/images/prev.svg"
-              alt="Previous"
+              aria-label="Previous Image"
               width={11}
               height={19}
               layout="responsive"
@@ -89,7 +89,7 @@ export default function Gallery(props) {
           <div className="gallery-right-arrow cursor-pointer w-[11px] vw:w-[.572vw]" role='button' tabIndex={0}>
             <Image
               src="/images/next.svg"
-              alt="Next"
+              aria-label="Next Image"
               width={11}
               height={19}
               layout="responsive"

@@ -72,9 +72,12 @@ export default {
       type: 'image',
       group: 'general',
       title: 'Publication logo',
-      description: `
-        Recommended: SVG or PNG
-      `
+      description: `Recommended: SVG or PNG`
+    },
+    {
+      name: "publication_logo_alt_text",
+      type: "string",
+      title: "Publication logo - Alt text"
     },
     {
       name: "image",
@@ -84,6 +87,11 @@ export default {
       description: `
         Recommended size: 1050x810, Aspect ratio: 130:100, Max file size: 350kb
       `
+    },
+    {
+      name: "image_alt_text",
+      type: "string",
+      title: "Featured Image - Alt text"
     },
     {
       name: 'content',

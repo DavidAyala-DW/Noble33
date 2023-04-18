@@ -75,7 +75,7 @@ export default function RestaurantsCarousel(props) {
         <div className="left-arrow cursor-pointer w-[11px] vw:w-[.572vw]" role='button' tabIndex={0}>
           <Image
             src="/images/prev.svg"
-            alt="Previous"
+            aria-label="Previous Restaurant"
             width={11}
             height={19}
             layout="responsive"
@@ -85,7 +85,7 @@ export default function RestaurantsCarousel(props) {
         <div className="right-arrow cursor-pointer w-[11px] vw:w-[.572vw]" role='button' tabIndex={0}>
           <Image
             src="/images/next.svg"
-            alt="Next"
+            aria-label="Next Restaurant"
             width={11}
             height={19}
             layout="responsive"

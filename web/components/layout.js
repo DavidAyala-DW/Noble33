@@ -1,6 +1,7 @@
 import Header from './header'
 import Head from "next/head"
 import Footer from './footer'
+import SkipLinks from './SkipLinks'
 
 function Layout(props) {
 
@@ -97,6 +98,8 @@ function Layout(props) {
       <div
       className="bg-body flex flex-col"
       >
+
+        <SkipLinks/>
 
         <Header {...{
           mainNav,
