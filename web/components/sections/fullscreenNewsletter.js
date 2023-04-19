@@ -38,7 +38,7 @@ export default function FullscreenNewsletter(props) {
 
           <form action="" className='w-full flex flex-col'>
 
-            <fieldset className='flex items-center space-x-5 justify-between w-full border-2 vw:border-[.104vw] border-[rgb(0,0,0,0.4)] py-3 vw:py-[.625vw] px-4 lg:pl-6 vw:pl-[1.25vw] lg:pr-[14px] vw:pr-[.729vw] md:max-w-[343px] lg:max-w-[546px] vw:max-w-[28.4375vw] md:mx-auto text-black'>
+            <fieldset className='flex items-center space-x-5 justify-between w-full border-2 vw:border-[.104vw] border-[rgb(0,0,0,0.4)] py-3 vw:py-[.625vw] px-4 lg:pl-6 vw:pl-[1.25vw] lg:pr-[14px] vw:pr-[.729vw] max-w-[343px] lg:max-w-[546px] vw:max-w-[28.4375vw] mx-auto text-black'>
 
               <input
                 type="text"
