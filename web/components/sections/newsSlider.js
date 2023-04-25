@@ -87,9 +87,10 @@ export default function NewsSlider(props) {
                   <SanityImage
                     src={publicationLogo}
                     alt={publication_logo_alt_text}
-                    width={60}
-                    height={30}
+                    width={100}
+                    height={40}
                     objectFit="contain"
+                    objectPosition="left bottom"
                   />
                 </div>
               ) : null}
