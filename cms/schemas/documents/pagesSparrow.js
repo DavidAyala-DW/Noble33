@@ -45,7 +45,8 @@ export default {
         { type: 'menus' },
         { type: 'privateEventsList' },
         { type: 'reservations' },
-        { type: 'contactLocations' }
+        { type: 'contactLocations' },
+        { type: 'sparrowEventList' }
       ],
     },
     {
