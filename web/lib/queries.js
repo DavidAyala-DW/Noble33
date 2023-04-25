@@ -13,7 +13,7 @@ export function collectionsQuery(ref){
   if(!ref) return;
   
   return `*[_type == "nobleVenue" && _id == "${ref}" ][0]{
-    _id,title,location,image,alt_text,mobile_image,hover_state_image,link
+    _id,title,location,image,alt_text,hover_state_image,link
   }`
 
 }

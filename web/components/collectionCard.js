@@ -3,7 +3,7 @@ import SanityImage from './sanity-image';
 
 export default function CollectionCard({ collection, custom_link }) {
 
-  const { title, location, image, mobile_image, hover_state_image, link, is_coming_soon = false } = collection;
+  const { title, location, image, hover_state_image, link, is_coming_soon = false } = collection;
 
   return (
 
@@ -12,17 +12,11 @@ export default function CollectionCard({ collection, custom_link }) {
       <div className="w-full h-full">
         <div className="w-full h-full relative">
 
-          <div className="flex flex-col w-full h-full">
+          <div className="flex w-full h-full">
 
             {image && (
-              <div className="h-full transition-all duration-300 ease-[ease-in-out] group-hover:opacity-0 group-hover:invisible block w-full relative md-down:hidden">
-                <SanityImage className="w-full h-full" src={image} alt={collection?.alt_text} layout={"fill"} />
-              </div>
-            )}
-
-            {image && (
-              <div className="h-full transition-all duration-300 ease-[ease-in-out] group-hover:opacity-0 group-hover:invisible block w-full relative md:hidden">
-                <SanityImage className="w-full h-full" src={mobile_image ?? image} alt={collection?.alt_text} layout={"fill"} />
+              <div className="h-full transition-all duration-300 ease-[ease-in-out] group-hover:opacity-0 group-hover:invisible block w-full relative">
+                <SanityImage src={image} alt={collection?.alt_text} layout="fill" />
               </div>
             )}
 
@@ -31,7 +25,7 @@ export default function CollectionCard({ collection, custom_link }) {
           {
             hover_state_image && (
               <div className="h-full absolute inset-0 transition-all duration-300 ease-[ease-in-out] group-hover:opacity-100 group-hover:visible group-hover:z-[2] opacity-0 invisible w-full">
-                <SanityImage className="w-full h-full" src={hover_state_image} alt={collection?.alt_text} layout={"fill"} />
+                <SanityImage src={hover_state_image} alt={collection?.alt_text} layout="fill" />
               </div>
             )
           }

@@ -19,12 +19,7 @@ export default {
     {
       name: "image",
       type: 'image',
-      title: 'Image (Desktop)',
-    },
-    {
-      name: "mobile_image",
-      type: 'image',
-      title: 'Image (Mobile)',
+      title: 'Image',
     },
     {
       name: "hover_state_image",
