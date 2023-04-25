@@ -16,7 +16,7 @@ export default function CollectionCard({ collection, custom_link }) {
 
             {image && (
               <div className="h-full transition-all duration-300 ease-[ease-in-out] group-hover:opacity-0 group-hover:invisible block w-full relative">
-                <SanityImage src={image} alt={collection?.alt_text} layout="fill" />
+                <SanityImage src={image} alt={collection?.alt_text} layout="fill" objectFit="cover" />
               </div>
             )}
 
@@ -25,7 +25,7 @@ export default function CollectionCard({ collection, custom_link }) {
           {
             hover_state_image && (
               <div className="h-full absolute inset-0 transition-all duration-300 ease-[ease-in-out] group-hover:opacity-100 group-hover:visible group-hover:z-[2] opacity-0 invisible w-full">
-                <SanityImage src={hover_state_image} alt={collection?.alt_text} layout="fill" />
+                <SanityImage src={hover_state_image} alt={collection?.alt_text} layout="fill" objectFit="cover" />
               </div>
             )
           }
