@@ -26,6 +26,9 @@ function MyApp({ Component, pageProps }) {
       <GTM/>
       <AccessiBe />
       <Component {...pageProps} />
+      <Head>
+        <link rel="shortcut icon" href="/images/Noble33 Favicon.png" />
+      </Head>
       <CookieConsent
         containerClasses="cookie"
         contentClasses="cookieContent"
