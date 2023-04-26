@@ -5,6 +5,8 @@ import GTM from "@/components/GTM";
 import Cookies from 'js-cookie'
 import { useEffect } from 'react';
 import AccessiBe from '@/components/accessibe';
+import Head from 'next/head';
+
 
 function MyApp({ Component, pageProps }) {
 
