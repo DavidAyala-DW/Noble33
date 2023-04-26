@@ -46,7 +46,8 @@ export default {
         { type: 'privateEventsList' },
         { type: 'reservations' },
         { type: 'contactLocations' },
-        { type: 'sparrowEventList' }
+        { type: 'sparrowEventList' },
+        { type: 'sparrowGiftCardList' },
       ],
     },
     {
