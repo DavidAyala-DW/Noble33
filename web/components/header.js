@@ -222,12 +222,6 @@ export default function Header(props) {
                 </div>
               ))}
 
-              <Link key="reservations" href={reservationsButton?.link?.url} passHref>
-                <a onClick={toggleModalOpen} className="md:hidden hover_state_link block uppercase tracking-[.05em] text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2] font-light opacity-90">
-                  {reservationsButton?.title}
-                </a>
-              </Link>
-
             </div>
 
           </div>
