@@ -28,7 +28,7 @@ export default function NewsCard(props) {
       <div className={clsx(primary && 'max-md:px-4')}>
         {publicationLogo ? (
           <div className="mb-3">
-            <SanityImage src={publicationLogo} width={100} height={40} sizes="100px" objectFit="contain" objectPosition="left" />
+            <SanityImage src={publicationLogo} width={100} height={40} objectFit="contain" objectPosition="left" />
           </div>
         ) : null}
 
