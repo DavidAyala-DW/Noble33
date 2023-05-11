@@ -81,33 +81,10 @@ export default function Header(props) {
 
   }, [router.asPath,entryObserver]);
 
-  function NavLink(props) {
-    const { item, secondary = false } = props
-
-    if (!item) {
-      return null
+  const handleNavLinkMouseEnter = (event, item) => {
+    if (item.image) {
+      setActiveMenuImage(item.image)
     }
-
-    return (
-      <Link href={!item.isDisabled ? item.link.url : '#'}>
-        <a
-          onMouseEnter={item.image ? () => setActiveMenuImage(item.image) : undefined}
-          onMouseLeave={resetActiveMenuImage}
-          onClick={!item.isDisabled ? toggleModalOpen : (e) => e.preventDefault()}
-          className={clsx(
-            'block uppercase tracking-[.05em] font-light',
-            !item.isDisabled ? 'hover_state_link opacity-90' : 'opacity-50 cursor-default',
-            secondary
-              ? 'text-[24px] leading-[28px] vw:leading-[1.166]'
-              : 'text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2]'
-          )}
-          tabIndex={item.isDisabled ? -1 : 0}
-          aria-disabled={item.isDisabled}
-        >
-          {item.title}
-        </a>
-      </Link>
-    )
   }
 
   return (
@@ -184,20 +161,37 @@ export default function Header(props) {
             <div className="flex flex-col w-full md:w-auto items-center md:items-start space-y-2 vw:space-y-[.416vw]">
 
               {mainNav.slice(0, 6).map((item) => (
-                <NavLink key={item._key} item={item} />
+                <NavLink
+                  key={item._key}
+                  item={item}
+                  onClick={toggleModalOpen}
+                  onMouseEnter={(event) => handleNavLinkMouseEnter(event, item)}
+                  onMouseLeave={resetActiveMenuImage}
+                />
               ))}
 
             </div>
 
             <div className="flex flex-col w-full md:w-auto items-center md:items-start space-y-2 vw:space-y-[.416vw]">
               {mainNav.slice(6).map((item) => item.link?.url !== '/locations' ? (
-                <NavLink key={item._key} item={item} />
+                <NavLink
+                  key={item._key}
+                  item={item}
+                  onClick={toggleModalOpen}
+                  onMouseEnter={(event) => handleNavLinkMouseEnter(event, item)}
+                  onMouseLeave={resetActiveMenuImage}
+                />
               ) : (
                 <div key="secondary" className="group flex flex-col md-down:items-center">
 
                   <div className="flex items-center space-x-2 justify-center">
 
-                    <NavLink item={item}/>
+                    <NavLink
+                      item={item}
+                      onClick={toggleModalOpen}
+                      onMouseEnter={(event) => handleNavLinkMouseEnter(event, item)}
+                      onMouseLeave={resetActiveMenuImage}
+                    />
 
                     <div onClick={handleOpenCollectionList} className="h-6 w-6">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#FFFFFF" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -284,4 +278,32 @@ export default function Header(props) {
 
   )
 
+}
+
+function NavLink(props) {
+  const { item, secondary = false, onClick, ...rest } = props
+
+  if (!item) {
+    return null
+  }
+
+  return (
+    <Link href={!item.isDisabled ? item.link.url : '#'}>
+      <a
+        onClick={!item.isDisabled ? onClick : (e) => e.preventDefault()}
+        className={clsx(
+          'block uppercase tracking-[.05em] font-light',
+          !item.isDisabled ? 'hover_state_link opacity-90' : 'opacity-50 cursor-default',
+          secondary
+            ? 'text-[24px] leading-[28px] vw:leading-[1.166]'
+            : 'text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2]'
+        )}
+        tabIndex={item.isDisabled ? -1 : 0}
+        aria-disabled={item.isDisabled}
+        {...rest}
+      >
+        {item.title}
+      </a>
+    </Link>
+  )
 }
