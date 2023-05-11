@@ -231,7 +231,7 @@ export default {
     {
       name: 'cookiesPreferencesHandle',
       type: 'links',
-      title: 'Cookies preferences Handle',
+      title: 'Cookie preferences handle',
       group: 'general',
       fieldset: 'general',
     },
