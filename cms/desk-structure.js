@@ -1,5 +1,4 @@
 import S from '@sanity/desk-tool/structure-builder';
-import { CogIcon } from '@sanity/icons';
 
 // We filter document types defined in structure to prevent
 // them from being listed twice
@@ -19,6 +18,8 @@ const hiddenDocTypes = (listItem) =>
     'locations',
     'eventCasaMadera',
     'eventsCasaMadera',
+    'articleCasaMadera',
+    'authorCasaMadera',
     'emailsCasaMadera',
     'locationsSparrow',
     "nobleVenue",
@@ -45,6 +46,8 @@ export default () =>
       S.documentTypeListItem('locations').title('Casa Madera - Locations'),
       S.documentTypeListItem('eventCasaMadera').title('Casa Madera - Events'),
       S.documentTypeListItem('eventsCasaMadera').title('Casa Madera - Private Events'),
+      S.documentTypeListItem('articleCasaMadera').title('Casa Madera - Articles'),
+      S.documentTypeListItem('authorCasaMadera').title('Casa Madera - Authors'),
       S.documentTypeListItem('emailsCasaMadera').title('Casa Madera - Emails'),
       S.divider(),
       S.documentTypeListItem('pagesSparrow').title('Sparrow - Pages'),

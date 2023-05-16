@@ -14,6 +14,8 @@ import routesCasaMadera from "./documents/routesCasaMadera"
 import locations from "./documents/locations"
 import eventsCasaMadera from "./documents/eventsCasaMadera";
 import eventCasaMadera from "./documents/eventCasaMadera";
+import articleCasaMadera from './documents/articleCasaMadera';
+import authorCasaMadera from './documents/authorCasaMadera';
 import emailsCasaMadera from "./documents/emailsCasaMadera";
 import pagesSparrow from "./documents/pagesSparrow"
 import eventSparrow from "./documents/eventSparrow";
@@ -92,6 +94,8 @@ export default createSchema({
     locations,
     eventsCasaMadera,
     eventCasaMadera,
+    articleCasaMadera,
+    authorCasaMadera,
     emailsCasaMadera,
     pagesSparrow,
     eventSparrow,
