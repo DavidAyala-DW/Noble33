@@ -1,34 +1,28 @@
+import React from 'react';
+
 export default {
   type: 'object',
   name: 'eventList',
   title: 'Event List',
   fields: [
     {
-      name: "events",
-      type: "array",
-      title: "Events",
-      of: [        
-        {
-          type: "reference",
-          to: [
-            {
-              type: 'eventCasaMadera',
-            },
-          ],
-        }
-      ]
-    }
+      name: 'editorInfo',
+      title: 'Editor info',
+      type: 'string',
+      inputComponent: () => (
+        <p>
+          This section shows the latest active events. Go to the Events tab to
+          edit events.
+        </p>
+      ),
+    },
   ],
   preview: {
-    select: {
-      media: "events.0.image"
-    },
-    prepare({ media }) {
+    prepare() {
       return {
-        title: "Events",
-        media,
+        title: 'Events',
         subtitle: 'Event list',
-      }
+      };
     },
   },
-}
+};

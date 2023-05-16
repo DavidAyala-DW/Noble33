@@ -22,14 +22,12 @@ export default {
           type: "reference",
           to: [
             {
-              type: 'eventCasaMadera',
-            },
-            {
               type: 'eventSparrow',
             },
           ],
         }
-      ]
+      ],
+      hidden: ({ document }) => document.site !== 'sparrow',
     }
   ],
   preview: {
