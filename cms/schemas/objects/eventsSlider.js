@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default {
   type: 'object',
   name: 'eventsSlider',
@@ -14,31 +16,24 @@ export default {
       type: "links",
     },
     {
-      name: "events",
-      type: "array",
-      title: "Events",
-      of: [        
-        {
-          type: "reference",
-          to: [
-            {
-              type: 'eventSparrow',
-            },
-          ],
-        }
-      ],
-      hidden: ({ document }) => document.site !== 'sparrow',
-    }
+      name: 'editorInfo',
+      title: 'Editor info',
+      type: 'string',
+      inputComponent: () => (
+        <p>
+          This section shows the latest active events. Go to the Events tab to
+          edit events.
+        </p>
+      ),
+    },
   ],
   preview: {
     select: {
       title: 'title',
-      media: "events.0.image"
     },
-    prepare({ title,media }) {
+    prepare({ title }) {
       return {
         title,
-        media,
         subtitle: 'Events carousel',
       }
     },
