@@ -7,6 +7,12 @@ export default {
   icon: ArticleIcon,
   fields: [
     {
+      name: 'isFeatured',
+      title: 'Featured',
+      type: 'boolean',
+      initialValue: false,
+    },
+    {
       name: 'title',
       title: 'Title',
       type: 'string',
@@ -51,12 +57,6 @@ export default {
       title: 'Excerpt',
       type: 'text',
       rows: 4,
-    },
-    {
-      name: 'isFeatured',
-      title: 'Featured',
-      type: 'boolean',
-      initialValue: false,
     },
   ],
   preview: {
