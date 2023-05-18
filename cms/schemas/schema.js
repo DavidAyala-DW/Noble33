@@ -75,6 +75,8 @@ import contactLocations from "./objects/contactLocations";
 import fullscreenNewsletter from "./objects/fullscreenNewsletter";
 import sparrowEventList from "./objects/sparrowEventList";
 import sparrowGiftCardList from './objects/sparrowGiftCardList'
+import articleSlider from './objects/articleSlider'
+import articleGrid from './objects/articleGrid'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -153,6 +155,8 @@ export default createSchema({
     contactLocations,
     fullscreenNewsletter,
     sparrowEventList,
-    sparrowGiftCardList
+    sparrowGiftCardList,
+    articleGrid,
+    articleSlider,
   ]),
 })
