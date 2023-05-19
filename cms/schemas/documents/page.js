@@ -75,16 +75,11 @@ export default {
       ],
     },
     {
-      title: 'Sticky Header?',
+      title: 'Sticky header',
       name: 'stickyHeader',
-      type: 'boolean'
+      type: 'boolean',
+      initialValue: true,
     },
-    // {
-    //   title: 'Background color in header?',
-    //   name: 'dinamycHeader',
-    //   type: 'boolean',
-    //   initialValue: false
-    // },
   ],
 
   preview: {

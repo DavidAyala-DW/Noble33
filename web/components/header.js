@@ -86,20 +86,28 @@ export default function Header(props) {
       setActiveMenuImage(item.image)
     }
   }
+  console.log(stickyHeader)
 
   return (
 
     <>
 
       <header
-      className={`${  existHero ? ((heroVisible == false && openModal == false ) ? "bg-body duration-[200ms]  " : "bg-transparent duration-[300ms]") : "bg-body" } z-[100] 
-      ${ openModal ? "justify-center md:!bg-transparent right-0 fixed md:inset-x-0" : `justify-between ${stickyHeader ? "sticky bg-body" :  "fixed inset-x-0"} `} 
-      top-0 px-4 md:px-[3.35%] w-full md:mx-auto flex items-center md:justify-between
-      py-6 md:pt-5 vw:pt-[1.1vw] md:pb-6 vw:pb-[1.2vw]`}
-      id="header"
+        className={clsx(
+          existHero
+            ? !heroVisible && !openModal
+              ? 'bg-body duration-[200ms]'
+              : 'bg-transparent duration-[300ms]'
+            : 'bg-body',
+          stickyHeader && 'fixed',
+          openModal ? 'justify-center md:!bg-transparent' : `justify-between`,
+          openModal && !stickyHeader && 'sticky',
+          'top-0 inset-x-0 z-[100] px-4 md:px-[3.35%] w-full md:mx-auto grid grid-cols-2 items-center md:grid-cols-3 py-6 md:pt-5 vw:pt-[1.1vw] md:pb-6 vw:pb-[1.2vw]'
+        )}
+        id="header"
       >
 
-        <div className={`cursor-pointer order-3 md:order-1 select-none md:opacity-50 ${openModal && "absolute right-4 md:left-0 md:relative"}`}>
+        <div className={`flex justify-end cursor-pointer order-3 md:order-1 select-none md:justify-start md:opacity-50 ${openModal && "absolute right-4 md:left-0 md:relative"}`}>
 
           <div onClick={toggleModalOpen} className={`${openModal && "hidden"} w-[25px] vw:!w-[1.302vw]`} role='button' tabIndex={0}>
             <Image
@@ -123,7 +131,7 @@ export default function Header(props) {
           
         </div>
 
-        <div className={`order order-1 md:absolute md:inset-0 md:w-max md:top-[-5px] vw:top-[-.260vw] md:m-auto md:h-max select-none md:order-2`}>
+        <div className="select-none md:order-2 md:mx-auto">
           
           <Link href="/" passHref>
             <a onClick={ () => setOpenModal(false)  } className="block cursor-pointer w-[115px] vw:w-[5.989vw]">
@@ -137,7 +145,7 @@ export default function Header(props) {
 
         </div>
 
-        <div className="hidden md:block order-3 select-none">
+        <div className="hidden order-3 select-none md:block md:ml-auto">
 
           <Link href={reservationsButton?.link?.url} passHref>
             <a className="button">
