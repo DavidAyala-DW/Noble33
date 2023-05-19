@@ -151,14 +151,14 @@ export default function Header(props) {
 
       <div
         className={`fixed inset-0 h-full w-full transition-[transform] !duration-[300ms] ${openModal ? "!translate-x-0" : `${(!activeModal && "invisible")}` } -translate-x-full bg-body
-        min-h-screen z-[90] w-full flex items-start`} hidden={!openModal} aria-hidden={!openModal}
+        min-h-screen z-[90] w-full overflow-hidden flex items-start`} hidden={!openModal} aria-hidden={!openModal}
       >
 
-        <div className={`md-down:max-h-full md-down:overflow-y-auto md:pl-[3.35%] w-full h-full max-w-full md2:max-w-[73.6%] 3xl:max-w-[66.666%] flex flex-col items-center md:items-start justify-between gap-10 pt-[90px] md:pt-[108px] vw:pt-[5.625vw] pb-6 vw:pb-[1.25vw]`}>
+        <div className={`md-down:max-h-full md-down:overflow-y-auto md:pl-[3.35%] w-full h-full max-w-full 3xl:max-w-[66.666%] flex flex-col items-center md:items-start justify-between gap-10 pt-[90px] md:pt-[108px] vw:pt-[5.625vw] pb-6 vw:pb-[1.25vw]`}>
 
-          <div className="flex flex-col w-full md:flex-row space-y-2 md:space-y-0 items-start md:space-x-16 vw:space-x-[3.333vw]">
+          <div className="flex flex-col w-full xl:flex-row space-y-2 xl:space-y-0 items-start xl:space-x-16 vw:space-x-[3.333vw]">
 
-            <div className="flex flex-col w-full md:w-auto items-center md:items-start space-y-2 vw:space-y-[.416vw]">
+            <div className="flex flex-col w-full lg:w-auto items-center lg:items-start space-y-2 vw:space-y-[.416vw]">
 
               {mainNav.slice(0, 6).map((item) => (
                 <NavLink
@@ -172,7 +172,7 @@ export default function Header(props) {
 
             </div>
 
-            <div className="flex flex-col w-full md:w-auto items-center md:items-start space-y-2 vw:space-y-[.416vw]">
+            <div className="flex flex-col w-full lg:w-auto items-center lg:items-start space-y-2 vw:space-y-[.416vw]">
               {mainNav.slice(6).map((item) => item.link?.url !== '/locations' ? (
                 <NavLink
                   key={item._key}
@@ -184,7 +184,7 @@ export default function Header(props) {
               ) : (
                 <div key="secondary" className="group flex flex-col md-down:items-center">
 
-                  <div className="flex items-center space-x-2 justify-center">
+                  <div className="flex items-center justify-center space-x-2 lg:justify-start">
 
                     <NavLink
                       item={item}
@@ -204,8 +204,9 @@ export default function Header(props) {
                   
 
                   <div className={`
-                    md-down:py-5 pt-0 vw:pt-[1.25vw] hidden md-down:flex-col md-down:items-center md:flex flex-col space-y-2 vw:space-y-[.416vw] md:h-0 overflow-hidden md:opacity-0 md:group-hover:pt-6
-                    md:group-hover:opacity-100 md:group-hover:h-auto md:group-hover:overflow-visible group-focus-within:opacity-100 group-focus-within:h-auto group-focus-within:overflow-visible
+                    md-down:py-5 pt-0 hidden md-down:flex-col md-down:items-center md:flex flex-col space-y-2 vw:space-y-[.416vw] md:h-0 overflow-hidden md:opacity-0
+                    md:group-hover:pt-6 md:group-hover:opacity-100 md:group-hover:h-auto md:group-hover:overflow-visible
+                    group-focus-within:pt-6 group-focus-within:opacity-100 group-focus-within:h-auto group-focus-within:overflow-visible
                   `}
                   ref={collectionList}
                   >
@@ -296,7 +297,7 @@ function NavLink(props) {
           !item.isDisabled ? 'hover_state_link opacity-90' : 'opacity-50 cursor-default',
           secondary
             ? 'text-[24px] leading-[28px] vw:leading-[1.166]'
-            : 'text-[32px] md:text-[48px] vw:text-[2.5vw] leading-[1.2]'
+            : 'text-[32px] lg:text-[48px] vw:text-[2.5vw] leading-[1.2]'
         )}
         tabIndex={item.isDisabled ? -1 : 0}
         aria-disabled={item.isDisabled}
