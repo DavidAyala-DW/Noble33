@@ -23,52 +23,30 @@ async function sendEmail(body){
 
   try {
 
-    if(body?.option == "press"){
+    let to;
 
-      await transporter.sendMail({
-        from: `"New Message from ${body?.name}" <${process.env.NODEMAILER_USER}>`, // sender address
-        to: "press@noble33.com", // list of receivers
-        subject: "New Message", // Subject line
-        html: html, // html body
-      });
-
+    if (body?.option == 'press') {
+      to = 'press@noble33.com';
+    } else if (body?.option == 'general_inquiry') {
+      to = 'inquiries@noble33.com';
+    } else if (body?.option == 'careers') {
+      to = 'careers@noble33.com';
+    } else if (body?.option == 'investors') {
+      to = 'opportunities@noble33.com';
     }
 
-    if(body?.option == "general_inquiry"){
-
-      const to = "inquiries@noble33.com";
-
-      await transporter.sendMail({
-        from: `"New Message from ${body?.name}" <${process.env.NODEMAILER_USER}>`, // sender address
-        to, // list of receivers
-        subject: "New Message", // Subject line
-        html: html, // html body
-      });
-
-    }
-    
-    if(body?.option == "careers"){
-      await transporter.sendMail({
-        from: `"New Message from ${body?.name}" <${process.env.NODEMAILER_USER}>`, // sender address
-        to: "careers@noble33.com", // list of receivers
-        subject: "New Message", // Subject line
-        html: html, // html body
-      });
-    }
-
-    if(body?.option == "investors"){
-      await transporter.sendMail({
-        from: `"New Message from ${body?.name}" <${process.env.NODEMAILER_USER}>`, // sender address
-        to: "opportunities@noble33.com", // list of receivers
-        subject: "New Message", // Subject line
-        html: html, // html body
-      });
-    }  
+    await transporter.sendMail({
+      from: `"Messages (Noble 33)" <${process.env.NODEMAILER_USER}>`, // sender address
+      replyTo: body.email,
+      to, // list of receivers
+      subject: `Message from ${body.name}`, // Subject line
+      html, // html body
+    });
 
     return {
-      "status" : "successful",
-      "message": "The email has been sended"
-    }
+      status: 'successful',
+      message: 'The email was sent.',
+    };
 
   } catch (error) {
 
