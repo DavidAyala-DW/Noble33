@@ -132,7 +132,8 @@ export default function Contact(props) {
           placeholder="Your email"
         />
 
-        <File className="mb-[18px] vw:mb-[.9375vw]" />        
+        {/* Hidden until we can actually send the file */}
+        {/* <File className="mb-[18px] vw:mb-[.9375vw]" /> */}
 
         <Field
           className="mb-10 md:mb-12 vw:mb-[2.5vw]"
