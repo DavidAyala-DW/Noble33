@@ -5,6 +5,7 @@ import SanityImage from './sanity-image'
 import Link from "next/link";
 import Logo from "@/public/images/logoWhite.png"
 import clsx from "clsx";
+import { useMediaQuery } from "react-responsive";
 
 export default function Header(props) {
 
@@ -23,9 +24,7 @@ export default function Header(props) {
   const [openModal, setOpenModal] = useState(false);
   const [activeModal, setActiveModal] = useState(false);
   const [activeMenuImage, setActiveMenuImage] = useState();
-  const [existHero, setExistHero] = useState(false);
   const [heroVisible, setHeroVisible] = useState(null)
-  const [entryObserver, setEntryObserver] = useState(false)
   const collectionList = useRef(null);
 
   function handleOpenCollectionList(){
@@ -50,24 +49,26 @@ export default function Header(props) {
     
   }, []);
 
+  const isMinLg = useMediaQuery({ query: '(min-width: 1024px)' });
+
   useEffect(() => {
+    if (isMinLg) {
+      setHeroVisible(false);
+      return;
+    }
 
-    const mainHero = document.getElementById("mainHero");
+    const hero = document.querySelector('[data-js-flush-hero]');
 
-    if(!mainHero){
-      setExistHero(false);
+    if(!hero){
+      setHeroVisible(false);
       return;
     }
 
     const observer = new IntersectionObserver(
       entries => {
         const entry = entries[0]
-        setEntryObserver(entry.isIntersecting)
-        if (entryObserver) {
-          setHeroVisible(true);
-          return;
-        }
-        setHeroVisible(false);
+        
+        setHeroVisible(entry.isIntersecting);
       },
       {
         root: null,
@@ -75,18 +76,17 @@ export default function Header(props) {
       }
     )
 
-    observer.observe(mainHero);
+    observer.observe(hero);
     
-    setExistHero(true);
+    return () => observer.disconnect()
 
-  }, [router.asPath,entryObserver]);
+  }, [router.asPath, isMinLg]);
 
   const handleNavLinkMouseEnter = (event, item) => {
     if (item.image) {
       setActiveMenuImage(item.image)
     }
   }
-  console.log(stickyHeader)
 
   return (
 
@@ -94,20 +94,16 @@ export default function Header(props) {
 
       <header
         className={clsx(
-          existHero
-            ? !heroVisible && !openModal
-              ? 'bg-body duration-[200ms]'
-              : 'bg-transparent duration-[300ms]'
-            : 'bg-body',
-          stickyHeader && 'fixed',
-          openModal ? 'justify-center md:!bg-transparent' : `justify-between`,
-          openModal && !stickyHeader && 'sticky',
-          'top-0 inset-x-0 z-[100] px-4 md:px-[3.35%] w-full md:mx-auto grid grid-cols-2 items-center md:grid-cols-3 py-6 md:pt-5 vw:pt-[1.1vw] md:pb-6 vw:pb-[1.2vw]'
+          !openModal && (heroVisible ? 'bg-gradient-to-b from-[#000000bf] to-transparent lg:from-transparent' :  'bg-body'),
+          openModal && !isMinLg && !heroVisible && 'bg-body',
+          stickyHeader ? 'fixed' : (openModal && 'sticky'),
+          openModal ? 'justify-center' : 'justify-between',
+          'top-0 inset-x-0 z-[100] px-4 md:px-[3.35%] w-full md:mx-auto grid grid-cols-2 items-center md:grid-cols-3 py-6 md:pt-5 vw:pt-[1.1vw] md:pb-6 vw:pb-[1.2vw] duration-200'
         )}
         id="header"
       >
 
-        <div className={`flex justify-end cursor-pointer order-3 md:order-1 select-none md:justify-start md:opacity-50 ${openModal && "absolute right-4 md:left-0 md:relative"}`}>
+        <div className={`flex justify-end cursor-pointer order-3 md:order-1 select-none md:justify-start ${openModal && "absolute right-4 md:left-0 md:relative"}`}>
 
           <div onClick={toggleModalOpen} className={`${openModal && "hidden"} w-[25px] vw:!w-[1.302vw]`} role='button' tabIndex={0}>
             <Image
