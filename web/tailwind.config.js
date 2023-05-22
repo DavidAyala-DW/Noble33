@@ -20,7 +20,6 @@ module.exports = {
       'sm2': '580px',
       'sm3': '680px',
       'md': '744px',
-      'md-down': {'max': '744px'},
       'md2': '980px',
       'lg': '1024px',
       'lg2': '1120px',

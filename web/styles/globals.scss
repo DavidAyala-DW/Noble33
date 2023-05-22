@@ -100,31 +100,22 @@ body,
   }
 }
 
-.swiper-pagination-homepage-desktop,
-.swiper-pagination-homepage-mobile {
+.swiper-pagination-homepage {
   .swiper-pagination-bullet {
+    width: 5px !important;
+    height: 5px !important;
+    margin-right: 8px !important;
     background-color: #ededed !important;
     cursor: pointer !important;
+
+    @media (min-width: 744px) {
+      width: 10px !important;
+      height: 10px !important;
+    }
   }
 
   .swiper-pagination-bullet-active {
     background-color: white !important;
-  }
-}
-
-.swiper-pagination-homepage-desktop {
-  .swiper-pagination-bullet {
-    width: 10px !important;
-    height: 10px !important;
-    margin-right: 8px !important;
-  }
-}
-
-.swiper-pagination-homepage-mobile {
-  .swiper-pagination-bullet {
-    width: 5px !important;
-    height: 5px !important;
-    margin-right: 4px !important;
   }
 }
 

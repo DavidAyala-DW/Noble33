@@ -8,12 +8,8 @@ const HeroHomepage = (props) => {
   return (
     <section className="lg:mt-[83px] lg:max-w-[93.3%] w-full mx-auto flex flex-col space-y-8 md:space-y-[37px] lg:space-y-8 vw:space-y-[1.92vw]">
       <div data-js-flush-hero>
-        <div className="!mt-0 w-full aspect-h-1 aspect-w-[2.13125] md:aspect-w-[1.9333] lg:aspect-w-[2.742] 3xl:aspect-w-[3.722] hidden flex-col md:flex">
-          <HeroHomepageGallery slides={slides} viewport={'desktop'} />
-        </div>
-
-        <div className="!mt-0 w-full aspect-h-1 aspect-w-[2.13125] md:aspect-w-[1.9333] lg:aspect-w-[2.742] 3xl:aspect-w-[3.722] flex flex-col md:hidden">
-          <HeroHomepageGallery slides={slides} viewport={'mobile'} />
+        <div className="aspect-h-1 aspect-w-[1.6] md2:aspect-w-2 lg:aspect-w-[2.742] 3xl:aspect-w-[3.722]">
+          <HeroHomepageGallery slides={slides} />
         </div>
       </div>
 

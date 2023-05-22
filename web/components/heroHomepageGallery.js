@@ -4,7 +4,7 @@ import { Pagination } from "swiper";
 import 'swiper/css';
 import "swiper/css/pagination";
 
-function HeroHomepageGallery({slides, viewport}) {
+function HeroHomepageGallery({ slides }) {
   return (
     <div className="w-full h-full">
       <div className="relative w-full h-full">
@@ -18,7 +18,7 @@ function HeroHomepageGallery({slides, viewport}) {
                 slidesPerView={1}
                 pagination={
                   {
-                    el: `.swiper-pagination-homepage-${viewport}`,
+                    el: '.swiper-pagination-homepage',
                     clickable: true,
                   }
                 }
@@ -33,7 +33,7 @@ function HeroHomepageGallery({slides, viewport}) {
 
                     return (
                       <SwiperSlide key={_key} className=" w-full h-full relative" >
-                        <BackgroundImage className="object-cover w-full h-full relative" layout="fill" {...{...slide,priority:true}} />
+                        <BackgroundImage layout="fill" objectFit="cover" {...{...slide,priority:true}} />
                       </SwiperSlide>
                     )
 
@@ -42,7 +42,7 @@ function HeroHomepageGallery({slides, viewport}) {
                 
               </Swiper>
 
-              <div className={`swiper-pagination-homepage-${viewport} z-[10] absolute !bottom-2 !right-3 !left-[unset] !max-w-max`}>
+              <div className="swiper-pagination-homepage z-[10] absolute !bottom-2 !right-3 !left-[unset] !max-w-max">
               </div>
               
             </>
