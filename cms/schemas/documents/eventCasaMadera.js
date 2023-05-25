@@ -27,23 +27,17 @@ export default {
       type: "boolean"
     },
     {
-      name: "locations",
-      title: "Locations",
-      type: "array",
+      name: 'locations',
+      title: 'Locations',
+      type: 'array',
       of: [
         {
-          name: "location",
-          title: "Location",
-          type: "string",
-          options: {
-            list: [
-              { title: "West Hollywood, California", value: "West Hollywood, California" },
-              { title: "Toronto, Ontario", value: "Toronto, Ontario" },
-            ],            
-          },
-          initialValue: "West Hollywood, California"
-        }
-      ]
+          title: 'Choose location',
+          type: 'reference',
+          to: { type: 'locations' },
+        },
+      ],
+      validation: (Rule) => Rule.required().unique(),
     },
     {
       name: 'title',

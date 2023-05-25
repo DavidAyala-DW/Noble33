@@ -27,6 +27,19 @@ export default {
       type: "boolean"
     },
     {
+      name: 'locations',
+      title: 'Locations',
+      type: 'array',
+      of: [
+        {
+          title: 'Choose location',
+          type: 'reference',
+          to: { type: 'locationsSparrow' },
+        },
+      ],
+      validation: (Rule) => Rule.required().unique(),
+    },
+    {
       name: 'title',
       type: 'string',
       title: 'Title'
