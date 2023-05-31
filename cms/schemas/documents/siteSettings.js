@@ -26,10 +26,10 @@ export default {
       type: "string",
       options: {
         list: [
-          { title: "Noble33", value: "noble33" },
+          { title: "Noble 33", value: "noble33" },
           { title: "Casa Madera", value: "casaMadera" },
+          { title: 'Toca Madera', value: 'tocaMadera' },
           { title: "Sparrow", value: "sparrow" },
-          { title: "Site", value: "site" },
         ],
       },
     },
@@ -252,20 +252,7 @@ export default {
   ],
   preview: {
     select: {
-      site: "site",
-      venue : "venue",
-    },
-    prepare({site, venue}) {
-
-      const sites = {
-        casaMadera: "Casa madera",
-        noble33: "Noble33",
-        sparrow: "Sparrow"
-      }
-
-      return {
-        title: sites[site] ?? venue, 
-      }
+      title: 'venue',
     },
   },
 }
