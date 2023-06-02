@@ -8,6 +8,12 @@ export default {
       title: 'Title',
       type: 'string',
     },
+    {
+      name: 'hasFeatured',
+      title: 'Include featured articles',
+      type: 'boolean',
+      initialValue: false,
+    },
   ],
   preview: {
     select: {
@@ -20,4 +26,4 @@ export default {
       };
     },
   },
-}
+};
