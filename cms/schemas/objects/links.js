@@ -11,6 +11,8 @@ export default {
         {type: 'route'},
         {type: 'routesCasaMadera'},
         {type: 'locations'},
+        { type: 'routeTocaMadera' },
+        { type: 'locationTocaMadera' },
         {type: 'routesSparrow'},
         {type: 'locationsSparrow'},
       ],
@@ -28,6 +30,12 @@ export default {
             return {
               filter: '_type == "routesCasaMadera" || _type == "locations" '
             }
+          }
+
+          if (document?.site == 'tocaMadera') {
+            return {
+              filter: '_type == "routeTocaMadera" || _type == "locationTocaMadera"',
+            };
           }
 
           if(document?.site == "noble33"){
