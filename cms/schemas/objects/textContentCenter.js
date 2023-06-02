@@ -11,7 +11,8 @@ export default {
     {
       name: 'is_h1',
       type: 'boolean',
-      title: 'Is H1?'
+      title: 'Is H1?',
+      initialValue: false,
     },
     {
       name: 'description',

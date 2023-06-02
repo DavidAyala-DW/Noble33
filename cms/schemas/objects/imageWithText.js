@@ -23,6 +23,7 @@ export default {
       name: "show_facebook_icon",
       title: "Show Facebook icon?",
       hidden: ({document}) => document?.site != "casaMadera",
+      initialValue: true,
     },
     {
       name: 'image',
@@ -62,14 +63,14 @@ export default {
     },
     {
       name: "menus",
-      title: "Show Menus?",
+      title: "Show menus",
       type: "boolean",
       initialValue: false,
       hidden: ({document}) => document?.site == "noble33",
     },
     {
       name: "show_locations",
-      title: "Show Locations?",
+      title: "Show locations",
       type: "boolean",
       initialValue: false,
       hidden: ({document}) => document?.site == "noble33",
