@@ -12,7 +12,11 @@ export default function MoreNewsCard({news}) {
         <div className="w-full aspect-h-1 aspect-w-[1.435] md:aspect-w-[2.91] lg:aspect-w-[1.25]">
           <div className="w-full">
             <div className="w-full h-full relative">
-              <SanityImage className="object-cover" src={image} alt="Event image" layout="fill"/>
+              {
+                image && (
+                  <SanityImage className="object-cover" src={image} alt="Event image" layout="fill"/>
+                )
+              }              
             </div>
           </div>
         </div>
