@@ -143,9 +143,10 @@ async function fulfillSectionQueries(page, slug) {
 export async function getStaticPaths() {
 
   const routes = await client.fetch(groq`*[_type == 'newsPT']{slug}`);
-  const paths = routes.map(({ slug }) => ({
+  const parsedRoutes = routes.filter(route => route.slug != null);
+  const paths = parsedRoutes.map(({ slug }) => ({    
     params: {
-      slug: slug.current === '/' ? false : [slug.current],
+      slug: slug?.current === '/' ? false : [slug?.current],
     },
   }))
 
