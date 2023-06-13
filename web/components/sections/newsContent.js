@@ -67,7 +67,11 @@ export default function NewsContent(props) {
                 <div className="w-full aspect-h-1 aspect-w-[1.055] md:aspect-w-[1.45] lg:aspect-w-[1.7]">
                   <div className="w-full h-full">
                     <div className="relative w-full h-full">
-                      <SanityImage src={image} layout={"fill"} className="object-cover"/>
+                      {
+                        image && (
+                          <SanityImage src={image} layout={"fill"} className="object-cover"/>
+                        )
+                      }                                            
                     </div>
                   </div>
                 </div>       
