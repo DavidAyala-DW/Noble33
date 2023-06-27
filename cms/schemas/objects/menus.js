@@ -4,58 +4,62 @@ export default {
   title: 'Menus',
   fields: [
     {
-      title: "Title",
-      name: "title",
-      type: "string",
+      title: 'Title',
+      name: 'title',
+      type: 'string',
     },
     {
       name: 'locations',
       type: 'array',
       of: [
         {
+          title: 'Choose location',
           type: 'reference',
           to: [
-            {type: "locations"},
-            {type: "locationsSparrow"},
+            { type: 'locations' },
+            { type: 'locationsSparrow' },
+            { type: 'locationTocaMadera' },
           ],
           options: {
             filter: (props) => {
-    
-              const {document} = props;
-              if(document?.site == "sparrow"){
+              const { document } = props;
+              if (document?.site == 'sparrow') {
                 return {
-                  filter: '_type == "locationsSparrow"'
-                }
+                  filter: '_type == "locationsSparrow"',
+                };
               }
-    
-              if(document?.site == "casaMadera"){
+
+              if (document?.site == 'casaMadera') {
                 return {
-                  filter: '_type == "locations"'
-                }
+                  filter: '_type == "locations"',
+                };
               }
-    
-              return {
-                
+
+              if (document?.site == 'tocaMadera') {
+                return {
+                  filter: '_type == "locationTocaMadera"',
+                };
               }
-    
-            }
-          }
+
+              return {};
+            },
+          },
         },
       ],
     },
   ],
-  
+
   preview: {
     select: {
-      title: "title",
+      title: 'title',
       media: 'locations.0.image',
     },
-    prepare({title, media}) {
+    prepare({ title, media }) {
       return {
         title,
-        subtitle: 'menus',
+        subtitle: 'List of menus by location',
         media,
-      }
+      };
     },
   },
-}
+};
