@@ -13,6 +13,8 @@ export default {
         {type: 'locations'},
         {type: 'routesSparrow'},
         {type: 'locationsSparrow'},
+        {type: 'meduzaRoutes'},
+        {type: 'meduzaLocations'},
       ],
       options: {
         filter: (props) => {
@@ -36,9 +38,13 @@ export default {
             }
           }
 
-          return {
-            
+          if(document?.site == "meduza"){
+            return {
+              filter: '_type == "meduzaRoutes" || _type == "meduzaLocations" '
+            }
           }
+
+          return {}
 
         }
       }

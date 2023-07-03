@@ -29,7 +29,7 @@ export default {
           { title: "Noble33", value: "noble33" },
           { title: "Casa Madera", value: "casaMadera" },
           { title: "Sparrow", value: "sparrow" },
-          { title: "Site", value: "site" },
+          { title: "Meduza", value: "meduza" },
         ],
       },
     },
@@ -260,7 +260,8 @@ export default {
       const sites = {
         casaMadera: "Casa madera",
         noble33: "Noble33",
-        sparrow: "Sparrow"
+        sparrow: "Sparrow",
+        meduza: "Meduza"
       }
 
       return {

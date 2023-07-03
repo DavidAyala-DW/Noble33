@@ -25,6 +25,11 @@ import locationsSparrow from "./documents/locationsSparrow"
 import offers from "./documents/offers"
 import contact_fields from "./documents/contact"
 import nobleVenue from "./documents/nobleVenue"
+import meduzaRoutes from "./documents/meduzaRoutes"
+import meduzaPages from "./documents/meduzaPages"
+import meduzaLocations from "./documents/meduzaLocations"
+import meduzaEvents from "./documents/meduzaEvents"
+import meduzaArticles from "./documents/meduzaArticles"
 
 
 //We import Page sections
@@ -77,6 +82,7 @@ import sparrowEventList from "./objects/sparrowEventList";
 import sparrowGiftCardList from './objects/sparrowGiftCardList'
 import articleSlider from './objects/articleSlider'
 import articleGrid from './objects/articleGrid'
+import headingWithCTA from "./objects/headingWithCTA"
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -107,6 +113,11 @@ export default createSchema({
     offers,
     contact_fields,
     nobleVenue,
+    meduzaRoutes,
+    meduzaPages,
+    meduzaLocations,
+    meduzaArticles,
+    meduzaEvents,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
@@ -158,5 +169,6 @@ export default createSchema({
     sparrowGiftCardList,
     articleGrid,
     articleSlider,
+    headingWithCTA
   ]),
 })
