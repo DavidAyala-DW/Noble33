@@ -56,8 +56,7 @@ export default {
         { type: 'menus' },
         { type: 'privateEventsList' },
         { type: 'reservations' },
-        { type: 'articleGrid' },
-        { type: 'articleSlider' },
+        { type: 'pressList' },
       ],
     },
     {

@@ -11,7 +11,7 @@ export default {
     {
       name: 'is_h1',
       type: 'boolean',
-      title: 'Is H1?',
+      title: 'H1',
       initialValue: false,
     },
     {
@@ -31,7 +31,7 @@ export default {
       type: 'text',
     },
     {
-      title: 'Description size',
+      title: 'Description width',
       name: 'descriptionSize',
       type: 'string',
       options: {
@@ -40,6 +40,7 @@ export default {
           { title: 'Large', value: 'large' },
         ],
       },
+      initialValue: 'normal',
     },
     {
       name: 'description2',
