@@ -1,44 +1,48 @@
 export default {
   type: 'object',
   name: 'privateEventsList',
-  title: 'Private events list',
+  title: 'Private events index',
   fields: [
     {
-      title: "Page title",
-      name: "title",
-      type: "string",
+      title: 'Title',
+      name: 'title',
+      type: 'string',
+      initialValue: 'Private Events',
     },
     {
-      title: "Description",
-      name: "description",
-      type: "text",
+      title: 'Description',
+      name: 'description',
+      type: 'text',
     },
     {
       name: 'eventsList',
+      title: 'Private event pages',
       type: 'array',
       of: [
         {
+          title: 'Choose event page',
           type: 'reference',
           to: [
-            {type: "eventsCasaMadera"},
-            {type: "eventsSparrow"},
+            { type: 'eventsCasaMadera' },
+            { type: 'privateEventsTocaMadera' },
+            { type: 'eventsSparrow' },
           ],
         },
       ],
     },
   ],
-  
+
   preview: {
     select: {
-      title: "title",
+      title: 'title',
       media: 'eventsList.0.image',
     },
-    prepare({title, media}) {
+    prepare({ title, media }) {
       return {
         title,
-        subtitle: 'Private Events',
+        subtitle: 'Private events index',
         media,
-      }
+      };
     },
   },
-}
+};

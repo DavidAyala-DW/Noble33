@@ -24,6 +24,8 @@ export default {
           { title: 'Large', value: 'large' },
         ],
       },
+      initialValue: 'normal',
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'description',
@@ -41,6 +43,7 @@ export default {
         ],
       },
       initialValue: 'normal',
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'description2',

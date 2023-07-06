@@ -82,6 +82,7 @@ import locationTocaMadera from './documents/locationTocaMadera';
 import eventTocaMadera from './documents/eventTocaMadera';
 import pressTocaMadera from './documents/pressTocaMadera';
 import pressList from './objects/pressList';
+import privateEventsTocaMadera from './documents/privateEventsTocaMadera';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -113,6 +114,7 @@ export default createSchema({
     routeTocaMadera,
     locationTocaMadera,
     eventTocaMadera,
+    privateEventsTocaMadera,
     pressTocaMadera,
     offers,
     contact_fields,
