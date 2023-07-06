@@ -1,14 +1,12 @@
 export default {
-  title: 'Simple Portable Text',
+  title: 'Simple rich text',
   name: 'simplePortableText',
   type: 'array',
   of: [
     {
       title: 'Block',
       type: 'block',
-      styles: [
-        {title: 'Normal', value: 'normal'},
-      ],
+      styles: [{ title: 'Normal', value: 'normal' }],
       lists: [
         { title: 'Bullet', value: 'bullet' },
         { title: 'Numbered', value: 'number' },
@@ -23,4 +21,4 @@ export default {
       },
     },
   ],
-}
+};

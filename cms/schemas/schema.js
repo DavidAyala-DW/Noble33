@@ -83,6 +83,7 @@ import eventTocaMadera from './documents/eventTocaMadera';
 import pressTocaMadera from './documents/pressTocaMadera';
 import pressList from './objects/pressList';
 import privateEventsTocaMadera from './documents/privateEventsTocaMadera';
+import portableText from './objects/portableText';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -125,6 +126,7 @@ export default createSchema({
     link,
     internalLink,
     simplePortableText,
+    portableText,
     heading,
     backgroundImage,
     heroHomepage,

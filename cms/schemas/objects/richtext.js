@@ -1,7 +1,7 @@
 export default {
   type: 'object',
   name: 'richtext',
-  title: 'Richtext',
+  title: 'Rich text',
   fields: [
     {
       name: 'title',
@@ -10,7 +10,7 @@ export default {
     },
     {
       name: 'text',
-      type: 'simplePortableText',
+      type: 'portableText',
       title: 'Text',
     },
   ],
@@ -19,11 +19,10 @@ export default {
       title: 'title',
     },
     prepare({ title }) {
-
       return {
         title,
-        subtitle: 'Only text section',
-      }
+        subtitle: 'Rich text',
+      };
     },
   },
-}
+};
