@@ -12,25 +12,25 @@ export default {
   ],
   fields: [
     {
-      name: "site",
-      title: "Site",
-      type: "string",
+      name: 'site',
+      title: 'Site',
+      type: 'string',
       readOnly: true,
       hidden: true,
       options: {
         list: [
-          { title: "Noble33", value: "noble33" },
-          { title: "Casa Madera", value: "casaMadera" },
-          { title: "Sparrow", value: "sparrow" },
+          { title: 'Noble33', value: 'noble33' },
+          { title: 'Casa Madera', value: 'casaMadera' },
+          { title: 'Sparrow', value: 'sparrow' },
         ],
       },
-      initialValue: "sparrow"
+      initialValue: 'sparrow',
     },
     {
       name: 'title',
       type: 'string',
       group: 'general',
-      title: 'Title'
+      title: 'Title',
     },
     {
       name: 'slug',
@@ -43,9 +43,15 @@ export default {
       },
     },
     {
-      name: "comming_soon",
-      type: "boolean",
-      title: "Comming Soon?"
+      name: 'comming_soon',
+      type: 'boolean',
+      title: 'Coming soon',
+    },
+    {
+      name: 'giftCardUrl',
+      title: 'Gift card URL',
+      type: 'url',
+      group: 'general',
     },
     {
       name: 'contactRoute',
@@ -53,22 +59,22 @@ export default {
       title: 'Contact route',
       to: [
         {
-          type: 'routesSparrow'
-        }
-      ]
+          type: 'routesSparrow',
+        },
+      ],
     },
     {
-      name: "image",
-      title: "Image",
-      type: "image",
+      name: 'image',
+      title: 'Image',
+      type: 'image',
       group: 'general',
       description: `
         Recommended size: 888x657, Aspect ratio: 135:100, Max file size: 350kb
-      `
+      `,
     },
     {
       name: 'content',
-      group: "locationPage",
+      group: 'locationPage',
       type: 'array',
       title: 'Location page - sections',
       of: [
@@ -93,24 +99,24 @@ export default {
           _type: 'space',
           heightDesktop: 210,
           heightTablet: 150,
-          heightMobile: 120
+          heightMobile: 120,
         },
-      ]
+      ],
     },
     {
       name: 'menus',
-      group: "menuPage",
+      group: 'menuPage',
       type: 'array',
       title: 'Menus',
       of: [
         {
           type: 'object',
-          title: "Menu",
+          title: 'Menu',
           fields: [
             {
-              name: "title",
-              type: "string",
-              title: "Title",
+              name: 'title',
+              type: 'string',
+              title: 'Title',
             },
             {
               name: 'slug',
@@ -120,7 +126,8 @@ export default {
                 source: (doc, options) => {
                   const menus = doc?.menus;
                   const actualKey = options?.parentPath[1];
-                  return menus.find(menu => menu?._key == actualKey?._key)?.title;
+                  return menus.find((menu) => menu?._key == actualKey?._key)
+                    ?.title;
                 },
                 maxLength: 180,
               },
@@ -132,66 +139,66 @@ export default {
               of: [
                 {
                   type: 'object',
-                  title: "Group",
+                  title: 'Group',
                   fields: [
                     {
-                      type: "string",
-                      name: "title",
-                      title: "Group title"
+                      type: 'string',
+                      name: 'title',
+                      title: 'Group title',
                     },
                     {
-                      type: "array",
-                      name: "courses",
-                      title: "Courses",
+                      type: 'array',
+                      name: 'courses',
+                      title: 'Courses',
                       of: [
                         {
-                          type: "object",
-                          name: "Course",
+                          type: 'object',
+                          name: 'Course',
                           fields: [
                             {
-                              type: "string",
-                              name: "title",
-                              title: "Course title"
+                              type: 'string',
+                              name: 'title',
+                              title: 'Course title',
                             },
                             {
-                              type: "text",
-                              name: "description",
-                              title: "Description"
+                              type: 'text',
+                              name: 'description',
+                              title: 'Description',
                             },
                             {
-                              type: "string",
-                              name: "extra_text",
-                              title: "Extra text"
+                              type: 'string',
+                              name: 'extra_text',
+                              title: 'Extra text',
                             },
                             {
-                              name: "description_size",
-                              title: "Description size",
-                              type: "string",
+                              name: 'description_size',
+                              title: 'Description size',
+                              type: 'string',
                               options: {
                                 list: [
-                                  { title: "Small", value: "small" },
-                                  { title: "Medium", value: "medium" },
-                                  { title: "Large", value: "large" },
+                                  { title: 'Small', value: 'small' },
+                                  { title: 'Medium', value: 'medium' },
+                                  { title: 'Large', value: 'large' },
                                 ],
                               },
-                              initialValue: "medium"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+                              initialValue: 'medium',
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
             },
-          ]
+          ],
         },
-      ]
+      ],
     },
 
     {
       name: 'menuPageContent',
-      group: "menuPage",
+      group: 'menuPage',
       type: 'array',
       title: 'Menu page - sections',
       of: [
@@ -213,19 +220,18 @@ export default {
         {
           _type: 'menusContent',
         },
-      ]
+      ],
     },
-
   ],
   preview: {
     select: {
-      title: "title",
-      media: "image"
+      title: 'title',
+      media: 'image',
     },
     prepare({ title, media }) {
       return {
         title,
-        media
+        media,
       };
     },
   },

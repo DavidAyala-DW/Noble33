@@ -1,4 +1,4 @@
-import { DocumentIcon } from '@sanity/icons'
+import { DocumentIcon } from '@sanity/icons';
 
 export default {
   name: 'pagesSparrow',
@@ -12,19 +12,19 @@ export default {
       title: 'Title',
     },
     {
-      name: "site",
-      title: "Site",
-      type: "string",
+      name: 'site',
+      title: 'Site',
+      type: 'string',
       readOnly: true,
       hidden: true,
       options: {
         list: [
-          { title: "Noble33", value: "noble33" },
-          { title: "Casa Madera", value: "casaMadera" },
-          { title: "Sparrow", value: "sparrow" },
+          { title: 'Noble33', value: 'noble33' },
+          { title: 'Casa Madera', value: 'casaMadera' },
+          { title: 'Sparrow', value: 'sparrow' },
         ],
       },
-      initialValue: "sparrow"
+      initialValue: 'sparrow',
     },
     {
       name: 'content',
@@ -47,14 +47,14 @@ export default {
         { type: 'reservations' },
         { type: 'contactLocations' },
         { type: 'sparrowEventList' },
-        { type: 'sparrowGiftCardList' },
+        { type: 'giftCardList' },
       ],
     },
     {
       title: 'Sticky Header?',
       name: 'stickyHeader',
-      type: 'boolean'
-    }
+      type: 'boolean',
+    },
   ],
 
   preview: {
@@ -62,4 +62,4 @@ export default {
       title: 'title',
     },
   },
-}
+};

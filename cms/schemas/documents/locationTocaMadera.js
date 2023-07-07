@@ -76,6 +76,12 @@ export default {
       initialValue: false,
     },
     {
+      name: 'giftCardUrl',
+      title: 'Gift card URL',
+      type: 'url',
+      group: 'general',
+    },
+    {
       name: 'image',
       title: 'Image',
       type: 'image',

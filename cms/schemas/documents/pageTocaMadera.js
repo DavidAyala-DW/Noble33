@@ -57,6 +57,7 @@ export default {
         { type: 'privateEventsList' },
         { type: 'reservations' },
         { type: 'pressList' },
+        { type: 'giftCardList' },
       ],
     },
     {

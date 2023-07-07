@@ -73,7 +73,6 @@ import newsSlider from './objects/newsSlider';
 import contactLocations from './objects/contactLocations';
 import fullscreenNewsletter from './objects/fullscreenNewsletter';
 import sparrowEventList from './objects/sparrowEventList';
-import sparrowGiftCardList from './objects/sparrowGiftCardList';
 import articleSlider from './objects/articleSlider';
 import articleGrid from './objects/articleGrid';
 import pageTocaMadera from './documents/pageTocaMadera';
@@ -84,6 +83,7 @@ import pressTocaMadera from './documents/pressTocaMadera';
 import pressList from './objects/pressList';
 import privateEventsTocaMadera from './documents/privateEventsTocaMadera';
 import portableText from './objects/portableText';
+import giftCardList from './objects/giftCardList';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -169,9 +169,9 @@ export default createSchema({
     contactLocations,
     fullscreenNewsletter,
     sparrowEventList,
-    sparrowGiftCardList,
     articleGrid,
     articleSlider,
     pressList,
+    giftCardList,
   ]),
 });
