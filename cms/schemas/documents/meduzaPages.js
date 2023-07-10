@@ -31,6 +31,7 @@ export default {
         { type: 'imageFullWidth' },
         { type: 'eventsSlider' },
         { type: 'news' },
+        { type: 'contact' },
       ],
     },
     {

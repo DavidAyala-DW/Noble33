@@ -12,6 +12,37 @@ export default {
       name: "description",
       type: 'text',
       title: "Description"
+    },
+    {
+      name: "locations",
+      type: "array",
+      title: "Locations",
+      of: [
+        {
+          type: 'object',
+          title: "Location",
+          name: "location",
+          fields:[
+            {
+              type: "string",
+              name: "title",
+              title: "Title"
+            },
+            {
+              type: "string",
+              name: "phone_number",
+              title: "Phone number"
+            }
+          ]
+        }
+      ],
+      hidden: ({document}) => document?.site != "meduza",
+    },
+    {
+      name: "consent_message",
+      type: "text",
+      title: "Consent message",
+      hidden: ({document}) => document?.site != "meduza",
     }
   ],
   preview: {
