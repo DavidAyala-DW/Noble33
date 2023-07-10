@@ -1,7 +1,7 @@
 import { ArticleIcon } from '@sanity/icons'
 
 export default {
-  name: 'meduzaArticles',
+  name: 'articleCasaMadera',
   title: 'Article',
   type: 'document',
   icon: ArticleIcon,
@@ -38,7 +38,7 @@ export default {
       name: 'author',
       title: 'Author',
       type: 'reference',
-      to: { type: 'meduzaAuthor' },
+      to: { type: 'authorCasaMadera' },
       validation: (Rule) => Rule.required(),
     },
     {
@@ -51,11 +51,6 @@ export default {
       name: 'content',
       title: 'Content',
       type: 'blockContent',
-    },
-    {
-      name: 'category',
-      title: 'Category',
-      type: 'string',
     },
     {
       name: 'excerpt',

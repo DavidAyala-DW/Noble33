@@ -27,7 +27,7 @@ export default {
           type: 'reference',
           to: [
             {type: 'newsPT'},
-            {type: 'meduzaArticles'},
+            {type: 'meduzaNews'},
           ],
           options: {
             filter: (props) => {
@@ -35,7 +35,7 @@ export default {
               const {document} = props;
               if(document?.site == "meduza"){
                 return {
-                  filter: '_type == "meduzaArticles"'
+                  filter: '_type == "meduzaNews"'
                 }
               }
     

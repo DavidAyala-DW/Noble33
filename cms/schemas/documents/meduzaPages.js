@@ -32,6 +32,8 @@ export default {
         { type: 'eventsSlider' },
         { type: 'news' },
         { type: 'contact' },
+        { type: 'articleGrid' },
+        { type: 'featuredArticles' },
       ],
     },
     {
