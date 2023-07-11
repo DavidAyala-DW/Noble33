@@ -76,6 +76,12 @@ export default {
       initialValue: false,
     },
     {
+      name: 'reservationsUrl',
+      title: 'Reservations URL',
+      type: 'url',
+      group: 'general',
+    },
+    {
       name: 'giftCardUrl',
       title: 'Gift card URL',
       type: 'url',

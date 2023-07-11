@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default {
   type: 'object',
   name: 'menus',
@@ -15,11 +17,7 @@ export default {
         {
           title: 'Choose location',
           type: 'reference',
-          to: [
-            { type: 'locations' },
-            { type: 'locationsSparrow' },
-            { type: 'locationTocaMadera' },
-          ],
+          to: [{ type: 'locations' }, { type: 'locationsSparrow' }],
           options: {
             filter: (props) => {
               const { document } = props;
@@ -35,17 +33,21 @@ export default {
                 };
               }
 
-              if (document?.site == 'tocaMadera') {
-                return {
-                  filter: '_type == "locationTocaMadera"',
-                };
-              }
-
               return {};
             },
           },
         },
       ],
+      hidden: ({ document }) => document.site === 'tocaMadera',
+    },
+    {
+      name: 'editorInfo',
+      title: 'Editor info',
+      type: 'string',
+      inputComponent: () => (
+        <p>This section lists all active locations and their menus.</p>
+      ),
+      hidden: ({ document }) => document.site !== 'tocaMadera',
     },
   ],
 
