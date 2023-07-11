@@ -69,6 +69,7 @@ export default {
       group: 'header',
       fieldset: 'header',
       of: [{ type: 'links' }],
+      hidden: ({ document }) => document.site === 'tocaMadera',
     },
     {
       name: 'footerNav',
