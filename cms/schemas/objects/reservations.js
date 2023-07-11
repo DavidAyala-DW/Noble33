@@ -35,6 +35,11 @@ export default {
               title: 'Heading',
             },
             {
+              type: 'simplePortableText',
+              name: 'description',
+              title: 'Description',
+            },
+            {
               type: 'string',
               name: 'reservation_link',
               title: 'Reservation Link',

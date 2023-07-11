@@ -2,7 +2,7 @@ import clsx from "clsx";
 import NewsCard from "../newsCard";
 
 export default function News(props) {
-
+  
   const {news} = props;
 
   return (

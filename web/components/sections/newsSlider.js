@@ -6,7 +6,7 @@ import 'swiper/css';
 import { Navigation } from "swiper";
 
 export default function NewsSlider(props) {
-
+  
   const {title, view_all, news_slider} = props;
 
   return (
@@ -70,12 +70,16 @@ export default function NewsSlider(props) {
                 <div className="w-full h-full ">
                   <Link href={view_more?.link} passHref>
                     <a className="w-full relative h-full block" role='img'>
-                      <SanityImage
-                        className="w-full h-full"
-                        alt={image_alt_text} 
-                        src={image}
-                        layout={"fill"}
-                      /> 
+                      {
+                        image && (
+                          <SanityImage
+                            className="w-full h-full"
+                            alt={image_alt_text} 
+                            src={image}
+                            layout={"fill"}
+                          /> 
+                        )
+                      }
                     </a>
                   </Link>
                 </div>
@@ -84,14 +88,18 @@ export default function NewsSlider(props) {
 
               {publicationLogo ? (
                 <div className="mb-3">
-                  <SanityImage
-                    src={publicationLogo}
-                    alt={publication_logo_alt_text}
-                    width={100}
-                    height={40}
-                    objectFit="contain"
-                    objectPosition="left bottom"
-                  />
+                  {
+                    publicationLogo && (
+                      <SanityImage
+                        src={publicationLogo}
+                        alt={publication_logo_alt_text}
+                        width={100}
+                        height={40}
+                        objectFit="contain"
+                        objectPosition="left bottom"
+                      />
+                    )
+                  }                  
                 </div>
               ) : null}
               

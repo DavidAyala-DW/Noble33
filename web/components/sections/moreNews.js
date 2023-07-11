@@ -1,7 +1,7 @@
 import MoreNewsCard from "../moreNewsCard";
 
 export default function MoreNews(props) {
-
+  
   const {title, link, news} = props;
 
   return (
@@ -27,15 +27,15 @@ export default function MoreNews(props) {
       </div>
 
       <div className="grid grid-cols-1 w-full gap-y-10 lg:gap-y-[65px] vw:gap-y-[3.3854vw]">
-      {
-        news.map(menu => {
-          const {_key, query} = menu;
-          if(!query) return;
-          return (
-            <MoreNewsCard key={_key} news={query} />
-          )
-        })
-      }
+        {
+          Array.isArray(news) && news.map(menu => {
+            const {_key, query} = menu;
+            if(!query) return;
+            return (
+              <MoreNewsCard key={_key} news={query} />
+            )
+          })
+        }
       </div>
 
     </section>
