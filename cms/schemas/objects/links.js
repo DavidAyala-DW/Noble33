@@ -75,10 +75,10 @@ export default {
     },
     {
       name: 'is_the_main_menu_option',
-      title: 'Is it the primary menu option? ',
+      title: 'Primary menu option',
       type: 'boolean',
-      description: 'Active it only to menu option in navigation menu',
-      hidden: ({ document, parent }) => parent.title != 'Menus',
+      description: 'Make this the only menu option',
+      hidden: ({ parent }) => parent.title != 'Menus',
     },
     {
       name: 'isDisabled',
@@ -89,4 +89,14 @@ export default {
       initialValue: false,
     },
   ],
+  // TODO: Take another crack at this - this version makes every links object required,
+  // which causes issues in some sections
+  // validation: (Rule) =>
+  //   Rule.custom((fields) => {
+  //     if (!fields.link && !fields.externalLink) {
+  //       return 'Choose a document to link to or enter an external URL';
+  //     }
+
+  //     return true;
+  //   }),
 };
