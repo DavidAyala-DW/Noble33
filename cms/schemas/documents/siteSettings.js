@@ -213,18 +213,23 @@ export default {
     {
       name: 'privacyPolicyHandle',
       type: 'links',
-      title: 'Privacy policy handle',
+      title: 'Privacy policy link',
       group: 'general',
       fieldset: 'general',
-      validation: false,
+    },
+    {
+      name: 'termsLink',
+      type: 'links',
+      title: 'Terms of use link',
+      group: 'general',
+      fieldset: 'general',
     },
     {
       name: 'cookiesPreferencesHandle',
       type: 'links',
-      title: 'Cookie preferences handle',
+      title: 'Cookie preferences link',
       group: 'general',
       fieldset: 'general',
-      validation: false,
     },
     {
       name: 'newsletter_text',
