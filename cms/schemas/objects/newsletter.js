@@ -6,12 +6,13 @@ export default {
     {
       name: 'title',
       title: 'Title',
-      type: "string"      
+      type: 'string',
     },
     {
       name: 'is_h1',
       type: 'boolean',
-      title: 'Is H1?'
+      title: 'H1',
+      initialValue: false,
     },
     {
       title: 'Title size',
@@ -19,49 +20,53 @@ export default {
       type: 'string',
       options: {
         list: [
-          {title: 'Normal', value: 'normal'},
-          {title: 'Large', value: 'large'},
-        ]
-      }
+          { title: 'Normal', value: 'normal' },
+          { title: 'Large', value: 'large' },
+        ],
+      },
+      initialValue: 'normal',
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'description',
       title: 'Description',
-      type: "text"      
+      type: 'text',
     },
     {
-      title: 'Description size',
+      title: 'Description width',
       name: 'descriptionSize',
       type: 'string',
       options: {
         list: [
-          {title: 'Normal', value: 'normal'},
-          {title: 'Large', value: 'large'},
-        ]
-      }
+          { title: 'Normal', value: 'normal' },
+          { title: 'Large', value: 'large' },
+        ],
+      },
+      initialValue: 'normal',
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'description2',
       title: 'Small description',
-      type: "text"      
+      type: 'text',
     },
     {
       name: 'placeholder',
       title: 'Placeholder',
-      type: "string"      
+      type: 'string',
     },
   ],
-  
+
   preview: {
     select: {
       title: 'title',
-      subtitle: "description"
+      subtitle: 'description',
     },
-    prepare({title, subtitle}) {
+    prepare({ title, subtitle }) {
       return {
         title,
-        subtitle
-      }
+        subtitle,
+      };
     },
   },
-}
+};

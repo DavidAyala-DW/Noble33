@@ -1,15 +1,32 @@
 import { DocumentIcon } from '@sanity/icons';
 
 export default {
-  name: 'pagesSparrow',
+  name: 'pageTocaMadera',
   type: 'document',
-  title: 'Sparrow - pages',
+  title: 'Toca Madera - Page',
   icon: DocumentIcon,
   fields: [
     {
       name: 'title',
       type: 'string',
-      title: 'Title',
+      title: 'Page title',
+    },
+    {
+      name: 'seo_title',
+      type: 'string',
+      title: 'Title (SEO)',
+    },
+    {
+      name: 'description',
+      type: 'text',
+      title: 'Description',
+      description: 'Description shown in search results',
+    },
+    {
+      name: 'openGraphImage',
+      type: 'image',
+      title: 'Open Graph image',
+      description: 'Image for sharing previews on Facebook, Twitter etc.',
     },
     {
       name: 'site',
@@ -17,14 +34,7 @@ export default {
       type: 'string',
       readOnly: true,
       hidden: true,
-      options: {
-        list: [
-          { title: 'Noble33', value: 'noble33' },
-          { title: 'Casa Madera', value: 'casaMadera' },
-          { title: 'Sparrow', value: 'sparrow' },
-        ],
-      },
-      initialValue: 'sparrow',
+      initialValue: 'tocaMadera',
     },
     {
       name: 'content',
@@ -37,6 +47,7 @@ export default {
         { type: 'imageWithText' },
         { type: 'imageFullWidth' },
         { type: 'eventsSlider' },
+        { type: 'eventList' },
         { type: 'details' },
         { type: 'event' },
         { type: 'newsletter' },
@@ -45,15 +56,15 @@ export default {
         { type: 'menus' },
         { type: 'privateEventsList' },
         { type: 'reservations' },
-        { type: 'contactLocations' },
-        { type: 'sparrowEventList' },
+        { type: 'pressList' },
         { type: 'giftCardList' },
       ],
     },
     {
-      title: 'Sticky Header?',
+      title: 'Sticky header',
       name: 'stickyHeader',
       type: 'boolean',
+      initialValue: true,
     },
   ],
 

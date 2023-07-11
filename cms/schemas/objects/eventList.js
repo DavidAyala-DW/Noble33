@@ -9,6 +9,7 @@ export default {
       name: 'editorInfo',
       title: 'Editor info',
       type: 'string',
+      initialValue: '-',
       inputComponent: () => (
         <p>
           This section shows the latest active events. Go to the Events tab to

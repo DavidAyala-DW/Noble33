@@ -1,9 +1,9 @@
 import { LockIcon } from '@sanity/icons';
 
 export default {
-  name: 'eventsSparrow',
+  name: 'privateEventsTocaMadera',
   type: 'document',
-  title: 'Sparrow - Private Events Page',
+  title: 'Toca Madera - Private Events Page',
   icon: LockIcon,
   fields: [
     {
@@ -11,7 +11,7 @@ export default {
       title: 'Site',
       type: 'string',
       hidden: true,
-      initialValue: 'sparrow',
+      initialValue: 'tocaMadera',
     },
     {
       name: 'title',

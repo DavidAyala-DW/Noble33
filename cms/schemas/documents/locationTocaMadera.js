@@ -1,9 +1,10 @@
 import { FolderIcon } from '@sanity/icons';
+import { orderRankField } from '@sanity/orderable-document-list';
 
 export default {
-  name: 'locationsSparrow',
+  name: 'locationTocaMadera',
   type: 'document',
-  title: 'Sparrow - Locations',
+  title: 'Toca Madera - Location',
   icon: FolderIcon,
   groups: [
     { name: 'general', title: 'General' },
@@ -11,26 +12,54 @@ export default {
     { name: 'menuPage', title: 'Menu page' },
   ],
   fields: [
+    orderRankField({ type: 'locationTocaMadera' }),
     {
       name: 'site',
       title: 'Site',
       type: 'string',
       readOnly: true,
       hidden: true,
-      options: {
-        list: [
-          { title: 'Noble33', value: 'noble33' },
-          { title: 'Casa Madera', value: 'casaMadera' },
-          { title: 'Sparrow', value: 'sparrow' },
-        ],
-      },
-      initialValue: 'sparrow',
+      initialValue: 'tocaMadera',
     },
     {
       name: 'title',
       type: 'string',
       group: 'general',
-      title: 'Title',
+      title: 'Name',
+    },
+    {
+      name: 'seo_title_location_page',
+      type: 'string',
+      title: 'Title Location Page (SEO)',
+    },
+    {
+      name: 'description_location_page',
+      type: 'text',
+      title: 'Description (Location page)',
+    },
+    {
+      name: 'openGraphImage_location_page',
+      type: 'image',
+      title: 'Open Graph image',
+      description:
+        'Image for sharing previews on Facebook, Twitter etc. (Location page)',
+    },
+    {
+      name: 'seo_title_menu_page',
+      type: 'string',
+      title: 'Title menu Page (SEO)',
+    },
+    {
+      name: 'description_menu_page',
+      type: 'text',
+      title: 'Description (Menu page)',
+    },
+    {
+      name: 'openGraphImage_menu_page',
+      type: 'image',
+      title: 'Open Graph image',
+      description:
+        'Image for sharing previews on Facebook, Twitter etc. (Menu page)',
     },
     {
       name: 'slug',
@@ -46,22 +75,19 @@ export default {
       name: 'comming_soon',
       type: 'boolean',
       title: 'Coming soon',
+      initialValue: false,
+    },
+    {
+      name: 'reservationsUrl',
+      title: 'Reservations URL',
+      type: 'url',
+      group: 'general',
     },
     {
       name: 'giftCardUrl',
       title: 'Gift card URL',
       type: 'url',
       group: 'general',
-    },
-    {
-      name: 'contactRoute',
-      type: 'reference',
-      title: 'Contact route',
-      to: [
-        {
-          type: 'routesSparrow',
-        },
-      ],
     },
     {
       name: 'image',
@@ -71,6 +97,11 @@ export default {
       description: `
         Recommended size: 888x657, Aspect ratio: 135:100, Max file size: 350kb
       `,
+    },
+    {
+      name: 'alt_text',
+      type: 'string',
+      title: 'Alt Text',
     },
     {
       name: 'content',
@@ -90,6 +121,7 @@ export default {
         { type: 'newsletter' },
         { type: 'contact' },
         { type: 'richtext' },
+        { type: 'gallery' },
       ],
       initialValue: [
         {

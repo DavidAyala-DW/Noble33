@@ -1,7 +1,3 @@
-import React from 'react'
-
-const LinkRender = ({ children }) => <span>{children} 🌍</span>
-
 export default {
   title: 'URL',
   name: 'link',
@@ -18,8 +14,4 @@ export default {
         }),
     },
   ],
-  blockEditor: {
-    icon: () => '🌍',
-    render: LinkRender,
-  },
-}
+};
