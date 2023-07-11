@@ -13,12 +13,13 @@
     "@sanity/default-login",
     "@sanity/desk-tool",
     "media",
-    "order-documents",
     "@sanity/production-preview"
   ],
   "env": {
     "development": {
-      "plugins": ["@sanity/vision"]
+      "plugins": [
+        "@sanity/vision"
+      ]
     }
   },
   "parts": [
