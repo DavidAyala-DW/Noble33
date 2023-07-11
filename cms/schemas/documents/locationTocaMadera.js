@@ -1,4 +1,5 @@
 import { FolderIcon } from '@sanity/icons';
+import { orderRankField } from '@sanity/orderable-document-list';
 
 export default {
   name: 'locationTocaMadera',
@@ -11,6 +12,7 @@ export default {
     { name: 'menuPage', title: 'Menu page' },
   ],
   fields: [
+    orderRankField({ type: 'locationTocaMadera' }),
     {
       name: 'site',
       title: 'Site',

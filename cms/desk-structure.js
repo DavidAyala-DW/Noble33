@@ -1,4 +1,6 @@
 import S from '@sanity/desk-tool/structure-builder';
+import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list';
+import { PinIcon } from '@sanity/icons';
 
 // We filter document types defined in structure to prevent
 // them from being listed twice
@@ -22,7 +24,7 @@ const hiddenDocTypes = (listItem) =>
     'authorCasaMadera',
     'emailsCasaMadera',
     'locationsSparrow',
-    "nobleVenue",
+    'nobleVenue',
     'newsPT',
     'media.tag',
   ].includes(listItem.getId());
@@ -45,8 +47,12 @@ export default () =>
       S.documentTypeListItem('routesCasaMadera').title('Casa Madera - Routes'),
       S.documentTypeListItem('locations').title('Casa Madera - Locations'),
       S.documentTypeListItem('eventCasaMadera').title('Casa Madera - Events'),
-      S.documentTypeListItem('eventsCasaMadera').title('Casa Madera - Private Events'),
-      S.documentTypeListItem('articleCasaMadera').title('Casa Madera - Articles'),
+      S.documentTypeListItem('eventsCasaMadera').title(
+        'Casa Madera - Private Events'
+      ),
+      S.documentTypeListItem('articleCasaMadera').title(
+        'Casa Madera - Articles'
+      ),
       S.documentTypeListItem('authorCasaMadera').title('Casa Madera - Authors'),
       S.documentTypeListItem('emailsCasaMadera').title('Casa Madera - Emails'),
       S.divider(),
@@ -55,6 +61,12 @@ export default () =>
       S.documentTypeListItem('locationsSparrow').title('Sparrow - Locations'),
       S.documentTypeListItem('eventSparrow').title('Sparrow - Events'),
       S.documentTypeListItem('eventsSparrow').title('Sparrow - Private Events'),
+
+      orderableDocumentListDeskItem({
+        type: 'locationTocaMadera',
+        title: 'Toca Madera - Locations',
+        icon: PinIcon,
+      }),
 
       ...S.documentTypeListItems().filter(hiddenDocTypes),
     ]);
