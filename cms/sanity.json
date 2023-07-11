@@ -1,7 +1,7 @@
 {
   "root": true,
   "project": {
-    "name": "Noble33"
+    "name": "Noble 33"
   },
   "api": {
     "projectId": "kq13uftm",
@@ -18,9 +18,7 @@
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [
