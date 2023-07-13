@@ -17,6 +17,7 @@ export default {
           to: [
             {type: "locations"},
             {type: "locationsSparrow"},
+            {type: "meduzaLocations"},
           ],
           options: {
             filter: (props) => {
@@ -31,6 +32,12 @@ export default {
               if(document?.site == "casaMadera"){
                 return {
                   filter: '_type == "locations"'
+                }
+              }
+
+              if(document?.site == "meduza"){
+                return {
+                  filter: '_type == "meduzaLocations"'
                 }
               }
     

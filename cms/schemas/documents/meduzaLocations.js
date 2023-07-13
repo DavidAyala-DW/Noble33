@@ -92,7 +92,20 @@ export default {
       type: 'array',
       title: 'Location page - sections',
       of: [
+        { type: 'menusContent' },
+        { type: 'headingWithCTA' },
+        { type: 'hero' },
         { type: 'space' },
+        { type: 'imageWithText' },
+        { type: 'imageFullWidth' },
+        { type: 'eventsSlider' },
+        { type: 'news' },
+        { type: 'contact' },
+        { type: 'articleGrid' },
+        { type: 'featuredArticles' },
+        { type: 'richtext' },
+        { type: 'menus' },
+        { type: 'faqs' },
       ],
       initialValue: [
         {
@@ -100,6 +113,24 @@ export default {
           heightDesktop: 210,
           heightTablet: 150,
           heightMobile: 120
+        },
+      ]
+    },
+    {
+      name: "chef_details",
+      type: "object",
+      group: "menuPage",
+      title: "Chef Details",
+      fields: [
+        {
+          type: "string",
+          name: "role",
+          title: "Role",
+        },
+        {
+          type: "string",
+          name: "chef",
+          title: "Chef",
         },
       ]
     },
@@ -155,6 +186,11 @@ export default {
                           name: "Course",
                           fields:[
                             {
+                              type: "boolean",
+                              name: "add_icon",
+                              title: "Add icon"
+                            },
+                            {
                               type: "string",
                               name: "title",
                               title: "Course title"
@@ -202,7 +238,18 @@ export default {
       title: 'Menu page - sections',
       of: [
         { type: 'menusContent' },
+        { type: 'headingWithCTA' },
+        { type: 'hero' },
         { type: 'space' },
+        { type: 'imageWithText' },
+        { type: 'imageFullWidth' },
+        { type: 'eventsSlider' },
+        { type: 'news' },
+        { type: 'contact' },
+        { type: 'articleGrid' },
+        { type: 'featuredArticles' },
+        { type: 'richtext' },
+        { type: 'menus' },
       ],
       initialValue: [
         { 

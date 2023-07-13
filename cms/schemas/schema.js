@@ -86,6 +86,7 @@ import articleSlider from './objects/articleSlider'
 import articleGrid from './objects/articleGrid'
 import headingWithCTA from "./objects/headingWithCTA"
 import featuredArticles from "./objects/featuredArticles"
+import faqs from "./objects/faqs"
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -175,6 +176,7 @@ export default createSchema({
     articleGrid,
     articleSlider,
     headingWithCTA,
-    featuredArticles
+    featuredArticles,
+    faqs
   ]),
 })

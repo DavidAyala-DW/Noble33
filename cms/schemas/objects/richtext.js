@@ -12,6 +12,13 @@ export default {
       name: 'text',
       type: 'simplePortableText',
       title: 'Text',
+      hidden: ({document}) => document?.site == "meduza"
+    },
+    {
+      name: 'content',
+      type: 'blockContent',
+      title: 'Content',
+      hidden: ({document}) => document?.site != "meduza"
     },
   ],
   preview: {

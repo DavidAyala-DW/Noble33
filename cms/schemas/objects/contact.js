@@ -14,7 +14,7 @@ export default {
       title: "Description"
     },
     {
-      name: "locations",
+      name: "contact_locations",
       type: "array",
       title: "Locations",
       of: [

@@ -34,6 +34,8 @@ export default {
         { type: 'contact' },
         { type: 'articleGrid' },
         { type: 'featuredArticles' },
+        { type: 'richtext' },
+        { type: 'menus' },
       ],
     },
     {
