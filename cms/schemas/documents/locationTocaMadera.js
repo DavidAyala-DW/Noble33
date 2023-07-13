@@ -57,6 +57,12 @@ export default {
       group: 'general',
     },
     {
+      name: 'phone',
+      title: 'Phone number',
+      type: 'string',
+      group: 'general',
+    },
+    {
       name: 'image',
       title: 'Image',
       type: 'image',
