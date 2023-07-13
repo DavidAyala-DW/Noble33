@@ -22,44 +22,17 @@ export default {
       initialValue: 'tocaMadera',
     },
     {
+      name: 'comming_soon',
+      type: 'boolean',
+      title: 'Coming soon',
+      initialValue: false,
+      group: 'general',
+    },
+    {
       name: 'title',
       type: 'string',
       group: 'general',
       title: 'Name',
-    },
-    {
-      name: 'seo_title_location_page',
-      type: 'string',
-      title: 'Title Location Page (SEO)',
-    },
-    {
-      name: 'description_location_page',
-      type: 'text',
-      title: 'Description (Location page)',
-    },
-    {
-      name: 'openGraphImage_location_page',
-      type: 'image',
-      title: 'Open Graph image',
-      description:
-        'Image for sharing previews on Facebook, Twitter etc. (Location page)',
-    },
-    {
-      name: 'seo_title_menu_page',
-      type: 'string',
-      title: 'Title menu Page (SEO)',
-    },
-    {
-      name: 'description_menu_page',
-      type: 'text',
-      title: 'Description (Menu page)',
-    },
-    {
-      name: 'openGraphImage_menu_page',
-      type: 'image',
-      title: 'Open Graph image',
-      description:
-        'Image for sharing previews on Facebook, Twitter etc. (Menu page)',
     },
     {
       name: 'slug',
@@ -70,12 +43,6 @@ export default {
         source: 'title',
         maxLength: 180,
       },
-    },
-    {
-      name: 'comming_soon',
-      type: 'boolean',
-      title: 'Coming soon',
-      initialValue: false,
     },
     {
       name: 'reservationsUrl',
@@ -99,9 +66,44 @@ export default {
       `,
     },
     {
-      name: 'alt_text',
+      name: 'seo_title_location_page',
       type: 'string',
-      title: 'Alt Text',
+      title: 'Title Location Page (SEO)',
+      group: 'locationPage',
+    },
+    {
+      name: 'description_location_page',
+      type: 'text',
+      title: 'Description (Location page)',
+      group: 'locationPage',
+    },
+    {
+      name: 'openGraphImage_location_page',
+      type: 'image',
+      title: 'Open Graph image',
+      description:
+        'Image for sharing previews on Facebook, Twitter etc. (Location page)',
+      group: 'locationPage',
+    },
+    {
+      name: 'seo_title_menu_page',
+      type: 'string',
+      title: 'Title menu Page (SEO)',
+      group: 'menuPage',
+    },
+    {
+      name: 'description_menu_page',
+      type: 'text',
+      title: 'Description (Menu page)',
+      group: 'menuPage',
+    },
+    {
+      name: 'openGraphImage_menu_page',
+      type: 'image',
+      title: 'Open Graph image',
+      description:
+        'Image for sharing previews on Facebook, Twitter etc. (Menu page)',
+      group: 'menuPage',
     },
     {
       name: 'content',
@@ -126,12 +128,6 @@ export default {
       initialValue: [
         {
           _type: 'hero',
-        },
-        {
-          _type: 'space',
-          heightDesktop: 210,
-          heightTablet: 150,
-          heightMobile: 120,
         },
       ],
     },
@@ -227,7 +223,6 @@ export default {
         },
       ],
     },
-
     {
       name: 'menuPageContent',
       group: 'menuPage',
