@@ -45,6 +45,18 @@ export default {
       },
     },
     {
+      name: 'address',
+      title: 'Address',
+      type: 'string',
+      group: 'general',
+    },
+    {
+      name: 'phone',
+      title: 'Phone number',
+      type: 'string',
+      group: 'general',
+    },
+    {
       name: 'reservationsUrl',
       title: 'Reservations URL',
       type: 'url',
@@ -54,12 +66,6 @@ export default {
       name: 'giftCardUrl',
       title: 'Gift card URL',
       type: 'url',
-      group: 'general',
-    },
-    {
-      name: 'phone',
-      title: 'Phone number',
-      type: 'string',
       group: 'general',
     },
     {
