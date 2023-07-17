@@ -33,6 +33,7 @@ export default {
       type: 'string',
       group: 'general',
       title: 'Name',
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'slug',
@@ -43,6 +44,7 @@ export default {
         source: 'title',
         maxLength: 180,
       },
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'address',
@@ -76,6 +78,7 @@ export default {
       description: `
         Recommended size: 888x657, Aspect ratio: 135:100, Max file size: 350kb
       `,
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'seo_title_location_page',
@@ -157,6 +160,7 @@ export default {
               name: 'title',
               type: 'string',
               title: 'Title',
+              validation: (Rule) => Rule.required(),
             },
             {
               name: 'slug',
@@ -171,6 +175,7 @@ export default {
                 },
                 maxLength: 180,
               },
+              validation: (Rule) => Rule.required(),
             },
             {
               name: 'groups',
