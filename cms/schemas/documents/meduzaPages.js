@@ -36,6 +36,7 @@ export default {
         { type: 'featuredArticles' },
         { type: 'richtext' },
         { type: 'menus' },
+        { type: 'careers' },
       ],
     },
     {
