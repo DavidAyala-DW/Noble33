@@ -12,11 +12,13 @@ export default {
       type: 'string',
       hidden: true,
       initialValue: 'tocaMadera',
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'title',
       type: 'string',
       title: 'Title',
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'seo_title',
@@ -42,6 +44,7 @@ export default {
         source: 'title',
         maxLength: 180,
       },
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'image',
@@ -50,6 +53,7 @@ export default {
       description: `
         Recommended size: 888x657, Aspect ratio: 135:100, Max file size: 350kb
       `,
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'book_link',
@@ -78,12 +82,6 @@ export default {
       initialValue: [
         {
           _type: 'hero',
-        },
-        {
-          _type: 'space',
-          heightDesktop: 210,
-          heightTablet: 150,
-          heightMobile: 120,
         },
       ],
     },
