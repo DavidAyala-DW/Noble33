@@ -1,4 +1,5 @@
 import { LockIcon } from '@sanity/icons';
+import { orderRankField } from '@sanity/orderable-document-list';
 
 export default {
   name: 'privateEventsTocaMadera',
@@ -6,6 +7,7 @@ export default {
   title: 'Toca Madera - Private Events Page',
   icon: LockIcon,
   fields: [
+    orderRankField({ type: 'privateEventsTocaMadera' }),
     {
       name: 'site',
       title: 'Site',

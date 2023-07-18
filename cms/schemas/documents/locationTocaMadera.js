@@ -1,11 +1,11 @@
-import { FolderIcon } from '@sanity/icons';
+import { PinIcon } from '@sanity/icons';
 import { orderRankField } from '@sanity/orderable-document-list';
 
 export default {
   name: 'locationTocaMadera',
   type: 'document',
   title: 'Toca Madera - Location',
-  icon: FolderIcon,
+  icon: PinIcon,
   groups: [
     { name: 'general', title: 'General' },
     { name: 'locationPage', title: 'Location page' },

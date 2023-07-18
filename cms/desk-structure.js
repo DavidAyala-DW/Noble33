@@ -1,6 +1,6 @@
 import S from '@sanity/desk-tool/structure-builder';
 import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list';
-import { PinIcon } from '@sanity/icons';
+import { PinIcon, LockIcon } from '@sanity/icons';
 
 // We filter document types defined in structure to prevent
 // them from being listed twice
@@ -86,9 +86,11 @@ export default () =>
         icon: PinIcon,
       }),
       S.documentTypeListItem('eventTocaMadera').title('Toca Madera - Events'),
-      S.documentTypeListItem('privateEventsTocaMadera').title(
-        'Toca Madera - Private Events'
-      ),
+      orderableDocumentListDeskItem({
+        type: 'privateEventsTocaMadera',
+        title: 'Toca Madera - Private Events',
+        icon: LockIcon,
+      }),
       S.documentTypeListItem('pressTocaMadera').title('Toca Madera - Press'),
 
       ...S.documentTypeListItems().filter(hiddenDocTypes),
