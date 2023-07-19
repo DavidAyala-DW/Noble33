@@ -9,6 +9,12 @@ export default {
   fields: [
     orderRankField({ type: 'privateEventsTocaMadera' }),
     {
+      name: 'isComingSoon',
+      title: 'Coming soon',
+      type: 'boolean',
+      initialValue: false,
+    },
+    {
       name: 'site',
       title: 'Site',
       type: 'string',
