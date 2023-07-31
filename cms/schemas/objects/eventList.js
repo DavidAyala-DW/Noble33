@@ -17,6 +17,13 @@ export default {
         </p>
       ),
     },
+    {
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+      initialValue: 'Events',
+      hidden: true
+    }
   ],
   preview: {
     prepare() {

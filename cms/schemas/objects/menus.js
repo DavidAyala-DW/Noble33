@@ -1,35 +1,45 @@
-import React from 'react';
+import React from "react";
 
 export default {
-  type: 'object',
-  name: 'menus',
-  title: 'Menus',
+  type: "object",
+  name: "menus",
+  title: "Menus",
   fields: [
     {
-      title: 'Title',
-      name: 'title',
-      type: 'string',
+      title: "Title",
+      name: "title",
+      type: "string",
     },
     {
-      name: 'locations',
-      type: 'array',
+      name: "locations",
+      type: "array",
       of: [
         {
-          title: 'Choose location',
-          type: 'reference',
-          to: [{ type: 'locations' }, { type: 'locationsSparrow' }],
+          title: "Choose location",
+          type: "reference",
+          to: [
+            { type: "locations" },
+            { type: "locationsSparrow" },
+            { type: "meduzaLocations" },
+          ],
           options: {
             filter: (props) => {
               const { document } = props;
-              if (document?.site == 'sparrow') {
+              if (document?.site == "sparrow") {
                 return {
                   filter: '_type == "locationsSparrow"',
                 };
               }
 
-              if (document?.site == 'casaMadera') {
+              if (document?.site == "casaMadera") {
                 return {
                   filter: '_type == "locations"',
+                };
+              }
+
+              if (document?.site == "meduza") {
+                return {
+                  filter: '_type == "meduzaLocations"',
                 };
               }
 
@@ -38,28 +48,28 @@ export default {
           },
         },
       ],
-      hidden: ({ document }) => document.site === 'tocaMadera',
+      hidden: ({ document }) => document.site === "tocaMadera",
     },
     {
-      name: 'editorInfo',
-      title: 'Editor info',
-      type: 'string',
+      name: "editorInfo",
+      title: "Editor info",
+      type: "string",
       inputComponent: () => (
         <p>This section lists all active locations and their menus.</p>
       ),
-      hidden: ({ document }) => document.site !== 'tocaMadera',
+      hidden: ({ document }) => document.site !== "tocaMadera",
     },
   ],
 
   preview: {
     select: {
-      title: 'title',
-      media: 'locations.0.image',
+      title: "title",
+      media: "locations.0.image",
     },
     prepare({ title, media }) {
       return {
         title,
-        subtitle: 'List of menus by location',
+        subtitle: "List of menus by location",
         media,
       };
     },

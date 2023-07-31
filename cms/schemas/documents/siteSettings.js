@@ -29,7 +29,8 @@ export default {
           { title: 'Noble 33', value: 'noble33' },
           { title: 'Casa Madera', value: 'casaMadera' },
           { title: 'Toca Madera', value: 'tocaMadera' },
-          { title: 'Sparrow', value: 'sparrow' },
+          { title: "Sparrow", value: "sparrow" },
+          { title: "Meduza", value: "meduza" },
         ],
       },
     },
@@ -249,6 +250,22 @@ export default {
   preview: {
     select: {
       title: 'venue',
+      site: "site",
+      venue : "venue",
+    },
+    prepare({site, venue}) {
+
+      const sites = {
+        casaMadera: "Casa madera",
+        noble33: "Noble33",
+        sparrow: "Sparrow",
+        meduza: "Meduza",
+        tocaMadera: "Toca madera",        
+      }
+
+      return {
+        title: sites[site] ?? venue, 
+      }
     },
   },
 };

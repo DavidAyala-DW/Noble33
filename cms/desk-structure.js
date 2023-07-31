@@ -33,6 +33,15 @@ const hiddenDocTypes = (listItem) =>
     'eventTocaMadera',
     'privateEventsTocaMadera',
     'pressTocaMadera',
+    'meduzaRoutes',
+    'meduzaPages',
+    'meduzaLocations',
+    'meduzaEvents',
+    'meduzaNews',
+    'meduzaArticles',
+    'meduzaAuthor',
+    'meduzaPrivateEvents',
+    'media.tag',
   ].includes(listItem.getId());
 
 export default () =>
@@ -75,6 +84,15 @@ export default () =>
       S.documentTypeListItem('locationsSparrow').title('Sparrow - Locations'),
       S.documentTypeListItem('eventSparrow').title('Sparrow - Events'),
       S.documentTypeListItem('eventsSparrow').title('Sparrow - Private Events'),
+      S.divider(),
+      S.documentTypeListItem('meduzaRoutes').title('Meduza - Routes'),
+      S.documentTypeListItem('meduzaPages').title('Meduza - Pages'),
+      S.documentTypeListItem('meduzaLocations').title('Meduza - Locations'),
+      S.documentTypeListItem('meduzaEvents').title('Meduza - Events'),
+      S.documentTypeListItem('meduzaPrivateEvents').title('Meduza - Private Events'),
+      S.documentTypeListItem('meduzaNews').title('Meduza - News'),
+      S.documentTypeListItem('meduzaArticles').title('Meduza - Articles'),
+      S.documentTypeListItem('meduzaAuthor').title('Meduza - Authors'),
 
       S.divider(),
 

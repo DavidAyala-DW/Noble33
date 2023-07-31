@@ -15,6 +15,8 @@ export default {
         { type: 'locationTocaMadera' },
         { type: 'routesSparrow' },
         { type: 'locationsSparrow' },
+        {type: 'meduzaRoutes'},
+        {type: 'meduzaLocations'},
       ],
       options: {
         filter: (props) => {
@@ -36,6 +38,13 @@ export default {
             return {
               filter:
                 '_type == "routeTocaMadera" || _type == "locationTocaMadera"',
+            };
+          }
+
+          if (document?.site == 'meduza') {
+            return {
+              filter:
+                '_type == "meduzaRoutes" || _type == "meduzaLocations"',
             };
           }
 

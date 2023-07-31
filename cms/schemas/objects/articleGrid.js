@@ -13,6 +13,7 @@ export default {
       title: 'Include featured articles',
       type: 'boolean',
       initialValue: false,
+      hidden: ({document}) => document?.site == "meduza"
     },
   ],
   preview: {
