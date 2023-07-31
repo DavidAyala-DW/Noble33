@@ -14,6 +14,16 @@ export default {
       title: 'Address',
     },
     {
+      name: 'ubication',
+      type: 'string',
+      title: 'Ubication',
+    },
+    {
+      name: "description",
+      type: "text",
+      title: "Description"
+    },
+    {
       name: "jobs",
       type: "array",
       title: "Jobs",

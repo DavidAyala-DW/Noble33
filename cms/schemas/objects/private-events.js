@@ -22,10 +22,17 @@ export default {
           to: [
             {type: "eventsCasaMadera"},
             {type: "eventsSparrow"},
+            {type: "meduzaPrivateEvents"},
           ],
         },
       ],
     },
+    {
+      name: "reservation_page",
+      type: "boolean",
+      title: "Reservation page?",
+      hidden: ({document}) => document?.site != "meduza"
+    }
   ],
   
   preview: {

@@ -31,6 +31,7 @@ const hiddenDocTypes = (listItem) =>
     'meduzaNews',
     'meduzaArticles',
     'meduzaAuthor',
+    'meduzaPrivateEvents',
     'media.tag',
   ].includes(listItem.getId());
 
@@ -67,6 +68,7 @@ export default () =>
       S.documentTypeListItem('meduzaPages').title('Meduza - Pages'),
       S.documentTypeListItem('meduzaLocations').title('Meduza - Locations'),
       S.documentTypeListItem('meduzaEvents').title('Meduza - Events'),
+      S.documentTypeListItem('meduzaPrivateEvents').title('Meduza - Private Events'),
       S.documentTypeListItem('meduzaNews').title('Meduza - News'),
       S.documentTypeListItem('meduzaArticles').title('Meduza - Articles'),
       S.documentTypeListItem('meduzaAuthor').title('Meduza - Authors'),

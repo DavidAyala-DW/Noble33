@@ -32,6 +32,7 @@ import meduzaEvents from "./documents/meduzaEvents"
 import meduzaNews from "./documents/meduzaNews"
 import meduzaArticles from './documents/meduzaArticles';
 import meduzaAuthor from './documents/meduzaAuthor';
+import meduzaPrivateEvents from './documents/meduzaPrivateEvents'
 
 
 //We import Page sections
@@ -88,6 +89,7 @@ import headingWithCTA from "./objects/headingWithCTA"
 import featuredArticles from "./objects/featuredArticles"
 import faqs from "./objects/faqs"
 import careers from "./objects/careers"
+import knowBeforeYouGo from "./objects/knowBeforeYouGo"
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -125,6 +127,7 @@ export default createSchema({
     meduzaEvents,
     meduzaArticles,
     meduzaAuthor,
+    meduzaPrivateEvents,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
     blockContent,
@@ -179,6 +182,7 @@ export default createSchema({
     headingWithCTA,
     featuredArticles,
     faqs,
-    careers
+    careers,
+    knowBeforeYouGo
   ]),
 })

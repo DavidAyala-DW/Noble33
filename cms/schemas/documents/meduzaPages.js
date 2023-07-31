@@ -30,6 +30,7 @@ export default {
         { type: 'imageWithText' },
         { type: 'imageFullWidth' },
         { type: 'eventsSlider' },
+        { type: 'eventList' },
         { type: 'news' },
         { type: 'contact' },
         { type: 'articleGrid' },
@@ -37,6 +38,8 @@ export default {
         { type: 'richtext' },
         { type: 'menus' },
         { type: 'careers' },
+        { type: 'privateEventsList' },
+        { type: 'knowBeforeYouGo' },
       ],
     },
     {
