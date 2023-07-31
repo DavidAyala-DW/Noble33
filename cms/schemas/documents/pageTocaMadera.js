@@ -49,7 +49,6 @@ export default {
         { type: 'eventsSlider' },
         { type: 'eventList' },
         { type: 'details' },
-        { type: 'event' },
         { type: 'newsletter' },
         { type: 'contact' },
         { type: 'richtext' },

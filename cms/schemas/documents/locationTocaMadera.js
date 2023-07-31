@@ -1,11 +1,11 @@
-import { FolderIcon } from '@sanity/icons';
+import { PinIcon } from '@sanity/icons';
 import { orderRankField } from '@sanity/orderable-document-list';
 
 export default {
   name: 'locationTocaMadera',
   type: 'document',
   title: 'Toca Madera - Location',
-  icon: FolderIcon,
+  icon: PinIcon,
   groups: [
     { name: 'general', title: 'General' },
     { name: 'locationPage', title: 'Location page' },
@@ -33,6 +33,7 @@ export default {
       type: 'string',
       group: 'general',
       title: 'Name',
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'slug',
@@ -43,6 +44,7 @@ export default {
         source: 'title',
         maxLength: 180,
       },
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'address',
@@ -76,6 +78,7 @@ export default {
       description: `
         Recommended size: 888x657, Aspect ratio: 135:100, Max file size: 350kb
       `,
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'seo_title_location_page',
@@ -131,7 +134,6 @@ export default {
         { type: 'imageFullWidth' },
         { type: 'eventsSlider' },
         { type: 'details' },
-        { type: 'event' },
         { type: 'newsletter' },
         { type: 'contact' },
         { type: 'richtext' },
@@ -157,6 +159,7 @@ export default {
               name: 'title',
               type: 'string',
               title: 'Title',
+              validation: (Rule) => Rule.required(),
             },
             {
               name: 'slug',
@@ -171,6 +174,7 @@ export default {
                 },
                 maxLength: 180,
               },
+              validation: (Rule) => Rule.required(),
             },
             {
               name: 'groups',
@@ -250,7 +254,6 @@ export default {
         { type: 'imageFullWidth' },
         { type: 'eventsSlider' },
         { type: 'details' },
-        { type: 'event' },
         { type: 'newsletter' },
         { type: 'contact' },
         { type: 'richtext' },

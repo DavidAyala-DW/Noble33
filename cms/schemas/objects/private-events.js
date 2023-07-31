@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default {
   type: "object",
   name: "privateEventsList",
@@ -30,6 +32,19 @@ export default {
           ],
         },
       ],
+      hidden: ({ document }) => document.site === 'tocaMadera',
+    },
+    {
+      name: 'editorInfo',
+      title: 'Editor info',
+      type: 'string',
+      inputComponent: () => (
+        <p>
+          This section lists all private event pages. Go to the Private Events
+          tab to edit details for these pages.
+        </p>
+      ),
+      hidden: ({ document }) => document.site !== 'tocaMadera',
     },
     {
       name: "reservation_page",

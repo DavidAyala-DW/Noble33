@@ -1,4 +1,5 @@
 import { LockIcon } from '@sanity/icons';
+import { orderRankField } from '@sanity/orderable-document-list';
 
 export default {
   name: 'privateEventsTocaMadera',
@@ -6,17 +7,26 @@ export default {
   title: 'Toca Madera - Private Events Page',
   icon: LockIcon,
   fields: [
+    orderRankField({ type: 'privateEventsTocaMadera' }),
+    {
+      name: 'isComingSoon',
+      title: 'Coming soon',
+      type: 'boolean',
+      initialValue: false,
+    },
     {
       name: 'site',
       title: 'Site',
       type: 'string',
       hidden: true,
       initialValue: 'tocaMadera',
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'title',
       type: 'string',
       title: 'Title',
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'seo_title',
@@ -42,6 +52,7 @@ export default {
         source: 'title',
         maxLength: 180,
       },
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'image',
@@ -50,6 +61,7 @@ export default {
       description: `
         Recommended size: 888x657, Aspect ratio: 135:100, Max file size: 350kb
       `,
+      validation: (Rule) => Rule.required(),
     },
     {
       name: 'book_link',
@@ -69,7 +81,6 @@ export default {
         { type: 'imageFullWidth' },
         { type: 'eventsSlider' },
         { type: 'details' },
-        { type: 'event' },
         { type: 'newsletter' },
         { type: 'contact' },
         { type: 'richtext' },
@@ -78,12 +89,6 @@ export default {
       initialValue: [
         {
           _type: 'hero',
-        },
-        {
-          _type: 'space',
-          heightDesktop: 210,
-          heightTablet: 150,
-          heightMobile: 120,
         },
       ],
     },
