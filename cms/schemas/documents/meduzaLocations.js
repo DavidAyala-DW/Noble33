@@ -161,6 +161,7 @@ export default {
                 },
                 maxLength: 180,
               },
+              validation: (Rule) => Rule.required()
             },
             {
               name: 'groups',
