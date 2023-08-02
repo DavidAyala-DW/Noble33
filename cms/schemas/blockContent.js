@@ -52,7 +52,7 @@ export default {
               {
                 title: 'URL',
                 name: 'href',
-                type: 'url',
+                type: 'string',
               },
             ],
           },
