@@ -98,6 +98,7 @@ import featuredArticles from "./objects/featuredArticles";
 import faqs from "./objects/faqs";
 import careers from "./objects/careers";
 import knowBeforeYouGo from "./objects/knowBeforeYouGo";
+import reservation from "./objects/reservation";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -200,5 +201,6 @@ export default createSchema({
     faqs,
     careers,
     knowBeforeYouGo,
+    reservation
   ]),
 });
