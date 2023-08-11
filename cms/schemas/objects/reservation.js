@@ -10,6 +10,11 @@ export default {
       initialValue: 'Reservations',
     },
     {
+      title: "Subtitle",
+      name: "subtitle",
+      type: "string"
+    },
+    {
       name: 'reservation_image',
       type: 'image',
       title: 'Image'
@@ -36,6 +41,16 @@ export default {
               type: 'url',
               name: 'link',
               title: 'Link',
+            },
+            {
+              type: "image",
+              name: "image",
+              title: "Image"
+            },
+            {
+              type: "text",
+              name: "description",
+              title: "Description"
             }
           ],
         },
