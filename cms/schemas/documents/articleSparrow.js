@@ -1,8 +1,8 @@
 import { DocumentTextIcon } from '@sanity/icons';
 
 export default {
-  name: 'meduzaArticles',
-  title: 'Article',
+  name: 'articleSparrow',
+  title: 'Sparrow - Article',
   type: 'document',
   icon: DocumentTextIcon,
   fields: [
@@ -38,7 +38,7 @@ export default {
       name: 'author',
       title: 'Author',
       type: 'reference',
-      to: { type: 'meduzaAuthor' },
+      to: { type: 'authorCasaMadera' },
       validation: (Rule) => Rule.required(),
     },
     {
@@ -51,11 +51,6 @@ export default {
       name: 'content',
       title: 'Content',
       type: 'blockContent',
-    },
-    {
-      name: 'category',
-      title: 'Category',
-      type: 'string',
     },
     {
       name: 'excerpt',

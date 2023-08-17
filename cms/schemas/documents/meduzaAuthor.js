@@ -1,10 +1,10 @@
-import { PersonIcon } from '@sanity/icons'
+import { UserIcon } from '@sanity/icons';
 
 export default {
   name: 'meduzaAuthor',
   title: 'Author',
   type: 'document',
-  icon: PersonIcon,
+  icon: UserIcon,
   fields: [
     {
       name: 'name',
@@ -24,4 +24,4 @@ export default {
       media: 'image',
     },
   },
-}
+};
