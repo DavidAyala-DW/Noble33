@@ -18,10 +18,12 @@ import articleCasaMadera from './documents/articleCasaMadera';
 import authorCasaMadera from './documents/authorCasaMadera';
 import emailsCasaMadera from './documents/emailsCasaMadera';
 import pagesSparrow from './documents/pagesSparrow';
-import eventSparrow from './documents/eventSparrow';
-import eventsSparrow from './documents/eventsSparrow';
 import routesSparrow from './documents/routesSparrow';
 import locationsSparrow from './documents/locationsSparrow';
+import eventSparrow from './documents/eventSparrow';
+import eventsSparrow from './documents/eventsSparrow';
+import articleSparrow from './documents/articleSparrow';
+import authorSparrow from './documents/authorSparrow';
 import offers from './documents/offers';
 import contact_fields from './documents/contact';
 import nobleVenue from './documents/nobleVenue';
@@ -97,8 +99,7 @@ import featuredArticles from './objects/featuredArticles';
 import faqs from './objects/faqs';
 import careers from './objects/careers';
 import knowBeforeYouGo from './objects/knowBeforeYouGo';
-import articleSparrow from './documents/articleSparrow';
-import authorSparrow from './documents/authorSparrow';
+import reservation from './objects/reservation';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -203,5 +204,6 @@ export default createSchema({
     faqs,
     careers,
     knowBeforeYouGo,
+    reservation,
   ]),
 });

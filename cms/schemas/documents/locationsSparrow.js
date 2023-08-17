@@ -9,6 +9,7 @@ export default {
     { name: 'general', title: 'General' },
     { name: 'locationPage', title: 'Location page' },
     { name: 'menuPage', title: 'Menu page' },
+    { name: 'reservationPage', title: 'Reservation Page' },
   ],
   fields: [
     {
@@ -220,6 +221,33 @@ export default {
       initialValue: [
         {
           _type: 'menusContent',
+        },
+      ],
+    },
+    {
+      name: 'reservationPageContent',
+      group: 'reservationPage',
+      type: 'array',
+      title: 'Reservation page - sections',
+      of: [
+        { type: 'menusContent' },
+        { type: 'hero' },
+        { type: 'bannerWithText' },
+        { type: 'space' },
+        { type: 'textContentCenter' },
+        { type: 'imageWithText' },
+        { type: 'imageFullWidth' },
+        { type: 'eventsSlider' },
+        { type: 'details' },
+        { type: 'event' },
+        { type: 'newsletter' },
+        { type: 'contact' },
+        { type: 'richtext' },
+        { type: 'reservation' },
+      ],
+      initialValue: [
+        {
+          _type: 'reservation',
         },
       ],
     },
