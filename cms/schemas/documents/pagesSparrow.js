@@ -48,6 +48,8 @@ export default {
         { type: 'contactLocations' },
         { type: 'sparrowEventList' },
         { type: 'giftCardList' },
+        { type: 'articleGrid' },
+        { type: 'articleSlider' },
       ],
     },
     {
