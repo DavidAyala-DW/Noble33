@@ -1,10 +1,10 @@
-import { ArticleIcon } from '@sanity/icons'
+import { DocumentTextIcon } from '@sanity/icons';
 
 export default {
   name: 'meduzaArticles',
   title: 'Article',
   type: 'document',
-  icon: ArticleIcon,
+  icon: DocumentTextIcon,
   fields: [
     {
       name: 'isFeatured',
@@ -77,7 +77,7 @@ export default {
           dateStyle: 'medium',
         }),
         media,
-      }
+      };
     },
   },
-}
+};
