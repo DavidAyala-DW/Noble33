@@ -51,6 +51,29 @@ export default {
               type: "text",
               name: "description",
               title: "Description"
+            },
+            {
+              type: "array",
+              name: "menus_array",
+              title: "Menus",
+              of: [
+                {
+                  type: "object",
+                  name: "menu",
+                  fields: [
+                    {
+                      type: "string",
+                      name: "text",
+                      title: "Text"
+                    },
+                    {
+                      type: "string",
+                      name: "link",
+                      title: "Link"
+                    }
+                  ]
+                }
+              ]
             }
           ],
         },
