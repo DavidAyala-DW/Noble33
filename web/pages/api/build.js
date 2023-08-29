@@ -8,7 +8,7 @@ const buildHooks = {
   casaMadera: 'https://api.netlify.com/build_hooks/6377d5eaea257027c51539ec',
   tocaMadera: 'https://api.netlify.com/build_hooks/64adeb12f993f55779120527',
   sparrow: 'https://api.netlify.com/build_hooks/6452ea312dfff80f46d0d683',
-  meduza: 'https://api.netlify.com/build_hooks/64e3c0ff350b1d008d7723e6',
+  meduza: 'https://api.netlify.com/build_hooks/64ee2db50abdd607a41eec24', // TODO: use prod hook once Meduza is live 'https://api.netlify.com/build_hooks/64e3c0ff350b1d008d7723e6',
 };
 
 export default async function handler(req, res) {
