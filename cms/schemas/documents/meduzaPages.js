@@ -1,4 +1,4 @@
-import { DocumentIcon } from '@sanity/icons'
+import { DocumentIcon } from '@sanity/icons';
 
 export default {
   name: 'meduzaPages',
@@ -12,12 +12,12 @@ export default {
       title: 'Title',
     },
     {
-      name: "site",
-      title: "Site",
-      type: "string",
+      name: 'site',
+      title: 'Site',
+      type: 'string',
       readOnly: true,
       hidden: true,
-      initialValue: "meduza"
+      initialValue: 'meduza',
     },
     {
       name: 'content',
@@ -28,6 +28,7 @@ export default {
         { type: 'headingWithCTA' },
         { type: 'space' },
         { type: 'imageWithText' },
+        { type: 'imageSection' },
         { type: 'imageFullWidth' },
         { type: 'eventsSlider' },
         { type: 'eventList' },
@@ -40,13 +41,16 @@ export default {
         { type: 'careers' },
         { type: 'privateEventsList' },
         { type: 'knowBeforeYouGo' },
+        { type: 'newsletter' },
+        { type: 'textContentCenter' },
+        { type: 'brandBanner' },
       ],
     },
     {
       title: 'Sticky Header?',
       name: 'stickyHeader',
-      type: 'boolean'
-    }
+      type: 'boolean',
+    },
   ],
 
   preview: {
@@ -54,4 +58,4 @@ export default {
       title: 'title',
     },
   },
-}
+};
