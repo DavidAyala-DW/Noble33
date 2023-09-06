@@ -20,6 +20,23 @@ export default {
       initialValue: 'meduza',
     },
     {
+      name: 'seo_title',
+      type: 'string',
+      title: 'Title (SEO)',
+    },
+    {
+      name: 'description',
+      type: 'text',
+      title: 'Description',
+      description: 'Description shown in search results'
+    },
+    {
+      name: 'openGraphImage',
+      type: 'image',
+      title: 'Open Graph image',
+      description: 'Image for sharing previews on Facebook, Twitter etc.'
+    },
+    {
       name: 'content',
       type: 'array',
       title: 'Page sections',
