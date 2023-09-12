@@ -111,6 +111,7 @@ export default {
         { type: 'contact' },
         { type: 'richtext' },
         { type: 'gallery' },
+        { type: 'faqs' },
       ],
       initialValue: [
         { 
