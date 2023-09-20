@@ -92,5 +92,10 @@ export default {
         },
       ],
     },
+    {
+      name: 'seo',
+      title: 'SEO & metadata',
+      type: 'seo',
+    },
   ],
 };

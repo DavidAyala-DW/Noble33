@@ -146,6 +146,12 @@ export default {
       ],
     },
     {
+      name: 'locationPageSeo',
+      title: 'Location page - SEO & metadata',
+      type: 'seo',
+      group: 'locationPage',
+    },
+    {
       name: 'menus',
       group: 'menuPage',
       type: 'array',
@@ -263,6 +269,12 @@ export default {
           _type: 'menusContent',
         },
       ],
+    },
+    {
+      name: 'menuPageSeo',
+      title: 'Menu page - SEO & metadata',
+      type: 'seo',
+      group: 'menuPage',
     },
   ],
   preview: {

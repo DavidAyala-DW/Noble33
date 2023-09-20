@@ -53,6 +53,7 @@ import space from './objects/space';
 import collectionCard from './objects/collectionCard';
 import collectionGrid from './objects/collectionGrid';
 import internalLink from './objects/internal-link';
+import seo from './objects/seo';
 import textContentCenter from './objects/textContentCenter';
 import heroText from './objects/heroText';
 import eventsCarousel from './objects/eventsCarousel';
@@ -148,8 +149,6 @@ export default createSchema({
     meduzaArticles,
     meduzaAuthor,
     meduzaPrivateEvents,
-    // When added to this list, object types can be used as
-    // { type: 'typename' } in other document schemas
     blockContent,
     link,
     internalLink,
@@ -157,6 +156,7 @@ export default createSchema({
     portableText,
     heading,
     backgroundImage,
+    seo,
     heroHomepage,
     space,
     collectionCard,
