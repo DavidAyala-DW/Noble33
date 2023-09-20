@@ -65,6 +65,11 @@ export default {
       type: 'boolean',
       initialValue: true,
     },
+    {
+      name: 'seo',
+      title: 'SEO & metadata',
+      type: 'seo',
+    },
   ],
 
   preview: {

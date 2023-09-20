@@ -1,5 +1,13 @@
 import { CogIcon } from '@sanity/icons';
 
+const sites = [
+  { title: 'Noble 33', value: 'noble33' },
+  { title: 'Casa Madera', value: 'casaMadera' },
+  { title: 'Toca Madera', value: 'tocaMadera' },
+  { title: 'Sparrow', value: 'sparrow' },
+  { title: 'Meduza', value: 'meduza' },
+];
+
 export default {
   name: 'siteSettings',
   type: 'document',
@@ -25,19 +33,28 @@ export default {
       hidden: true,
       type: 'string',
       options: {
-        list: [
-          { title: 'Noble 33', value: 'noble33' },
-          { title: 'Casa Madera', value: 'casaMadera' },
-          { title: 'Toca Madera', value: 'tocaMadera' },
-          { title: "Sparrow", value: "sparrow" },
-          { title: "Meduza", value: "meduza" },
-        ],
+        list: sites,
       },
     },
     {
       name: 'venue',
       title: 'Venue',
       type: 'string',
+      group: 'general',
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: 'baseUrl',
+      title: 'URL',
+      type: 'url',
+      description: "The base site URL. You probably shouldn't change this.",
+      group: 'general',
+      validation: (Rule) =>
+        Rule.required().custom((url) =>
+          url.length > 1 && url.endsWith('/')
+            ? 'URL must not end with a slash'
+            : true
+        ),
     },
     {
       name: 'mainNav',
@@ -96,6 +113,14 @@ export default {
       group: 'footer',
       fieldset: 'footer',
       hidden: ({ document }) => document?.site == 'noble33',
+    },
+    {
+      name: 'openGraphImage',
+      title: 'Default Open Graph image',
+      description:
+        'Image for sharing previews on Facebook, Twitter, etc. Pages can override this.',
+      type: 'image',
+      group: 'social',
     },
     {
       name: 'facebookHandle',
@@ -249,23 +274,13 @@ export default {
   ],
   preview: {
     select: {
-      title: 'venue',
-      site: "site",
-      venue : "venue",
+      siteId: 'site',
+      venue: 'venue',
     },
-    prepare({site, venue}) {
-
-      const sites = {
-        casaMadera: "Casa madera",
-        noble33: "Noble33",
-        sparrow: "Sparrow",
-        meduza: "Meduza",
-        tocaMadera: "Toca madera",        
-      }
-
+    prepare({ siteId, venue }) {
       return {
-        title: sites[site] ?? venue, 
-      }
+        title: sites.find((site) => siteId === site.value).title ?? venue,
+      };
     },
   },
 };
