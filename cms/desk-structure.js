@@ -45,6 +45,8 @@ const hiddenDocTypes = (listItem) =>
     'meduzaArticles',
     'meduzaAuthor',
     'meduzaPrivateEvents',
+    'articleTocaMadera',
+    'authorTocaMadera',
     'media.tag',
   ].includes(listItem.getId());
 
@@ -120,6 +122,10 @@ export default () =>
         icon: LockIcon,
       }),
       S.documentTypeListItem('pressTocaMadera').title('Toca Madera - Press'),
+      S.documentTypeListItem('articleTocaMadera').title(
+        'Toca Madera - Articles'
+      ),
+      S.documentTypeListItem('authorTocaMadera').title('Toca Madera - Authors'),
 
       ...S.documentTypeListItems().filter(hiddenDocTypes),
     ]);

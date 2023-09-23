@@ -41,6 +41,8 @@ import locationTocaMadera from './documents/locationTocaMadera';
 import eventTocaMadera from './documents/eventTocaMadera';
 import pressTocaMadera from './documents/pressTocaMadera';
 import privateEventsTocaMadera from './documents/privateEventsTocaMadera';
+import articleTocaMadera from './documents/articleTocaMadera';
+import authorTocaMadera from './documents/authorTocaMadera';
 
 //We import Page sections
 import heading from './objects/heading';
@@ -138,6 +140,8 @@ export default createSchema({
     eventTocaMadera,
     privateEventsTocaMadera,
     pressTocaMadera,
+    articleTocaMadera,
+    authorTocaMadera,
     offers,
     contact_fields,
     nobleVenue,
